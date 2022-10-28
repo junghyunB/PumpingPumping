@@ -5,7 +5,7 @@ contract RaffleV1 {
     address public owner;
     uint _epoch = 0;
     uint private decimals = 10 ** 18; 
-    address public account2 = address(0);
+    
     struct userInfo {
         bool isEntered;
         uint investAmount;
@@ -29,6 +29,7 @@ contract RaffleV1 {
         require(msg.sender.balance >= msg.value, "Not Enough Ethers");
         require(userdata[msg.sender][_epoch].isEntered == false, "already entered this system");
         require(_amount <= 5, "maximum amount is 5");
+        require(epochWinner[_epoch] == address(0), "already this epoch pick the winner");
 
         for(uint i = 0; i < _amount; i++) {
             winningTicket.push(msg.sender);
@@ -42,9 +43,9 @@ contract RaffleV1 {
         return address(this).balance;
     }
 
-    function getRatio(address _to) public view returns(uint) {
+    function getInvestAmount(address _to) public view returns(uint) {
         uint myinvestAmount = userdata[_to][_epoch].investAmount;
-        return myinvestAmount / address(this).balance; 
+        return myinvestAmount;
     }
 
     function randomGenerate() public view returns(uint) {
@@ -52,10 +53,14 @@ contract RaffleV1 {
         return randomNumber;
     }
 
-    function WinnerOfRaffle() public onlyOwner{
+    function winnerOfRaffle() public onlyOwner{
         require(epochWinner[_epoch] == address(0), "this epoch already electric winner!");
         address winner = winningTicket[randomGenerate()];
         epochWinner[_epoch] = winner; 
+    }
+
+    function getWinner() public view returns(address) {
+        return epochWinner[_epoch];
     }
 
     function calculateFee() internal view returns(uint) {

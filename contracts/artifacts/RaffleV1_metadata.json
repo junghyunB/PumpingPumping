@@ -11,26 +11,6 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "WinnerOfRaffle",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "account2",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -70,12 +50,25 @@
 						"type": "address"
 					}
 				],
-				"name": "getRatio",
+				"name": "getInvestAmount",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getWinner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -157,6 +150,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "winnerOfRaffle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -204,10 +204,10 @@
 	},
 	"sources": {
 		"Lottery.sol": {
-			"keccak256": "0xa455243024ef2aa7d2c00af2d478c55d486672366e5f942f6bfe497692c6a811",
+			"keccak256": "0xb18c265c87083725c7992279c0c22be26d82924299f8dab858faeb98a262369f",
 			"urls": [
-				"bzz-raw://bd1c9804557aa15cbfc150ebfb7cd9ee7e42f03d25f73082f0fc61b77bd0d02f",
-				"dweb:/ipfs/QmdfbK6sTaNGaMJRLGch3L25mSGbBYuukGfoNcDT7AtCZa"
+				"bzz-raw://44dfd370994c40c67397fb066db49e997fe23e70da0db602424ba2a0953af1c4",
+				"dweb:/ipfs/QmdVc33dGizZdd3Z8keKXLspo2zBkHxF1cZ9KPKzPeiUhG"
 			]
 		}
 	},

@@ -1,31 +1,11 @@
 import Caver from "caver-js";
 
-export const RAFFLEV1_CONTRACT_ADDRESS = "0xD0ddf3865CD2CD50a425EE446E336484Fd7Cd5FB";
+export const RAFFLEV1_CONTRACT_ADDRESS = "0x4AF3974689FDE3d121895De3c57D9c9E31FA2691";
 export const RAFFLEV1_CONTRACT_ABI = [
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
-	},
-	{
-		"inputs": [],
-		"name": "WinnerOfRaffle",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "account2",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
 	},
 	{
 		"inputs": [
@@ -67,12 +47,25 @@ export const RAFFLEV1_CONTRACT_ABI = [
 				"type": "address"
 			}
 		],
-		"name": "getRatio",
+		"name": "getInvestAmount",
 		"outputs": [
 			{
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getWinner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
@@ -151,6 +144,13 @@ export const RAFFLEV1_CONTRACT_ABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "winnerOfRaffle",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{

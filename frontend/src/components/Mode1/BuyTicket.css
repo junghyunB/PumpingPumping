@@ -1,0 +1,11 @@
+.section {
+   text-align: center;
+}
+.buy-section {
+   display:flex;
+   align-items: center;
+   margin: 10px;
+}
+.text-section {
+   text-align: center;
+}

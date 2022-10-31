@@ -1,5 +1,9 @@
 import Caver from "caver-js";
 
+
+var global = global || window;
+global.Buffer = global.Buffer || require("buffer").Buffer;
+
 export const RAFFLEV1_CONTRACT_ADDRESS = "0x4AF3974689FDE3d121895De3c57D9c9E31FA2691";
 export const RAFFLEV1_CONTRACT_ABI = [
 	{
@@ -175,6 +179,9 @@ export const RAFFLEV1_CONTRACT_ABI = [
 ];
 
 export const caver = new Caver(window.caver);
+export const adminAccount = caver.klay.accounts.wallet.add("0xa5ef834ed522e87f5718be527f30a883979a1025a53a1172a60ba8b6a77c30a3")
+const keyring = caver.wallet.keyring.create("0x058eb1928A62EDc57B626A02b2EFa397a96f78E8", "0xa5ef834ed522e87f5718be527f30a883979a1025a53a1172a60ba8b6a77c30a3");
+caver.wallet.add(keyring); 
 
 export const raffleV1Contract = new caver.klay.Contract(
     RAFFLEV1_CONTRACT_ABI,

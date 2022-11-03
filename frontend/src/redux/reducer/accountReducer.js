@@ -1,17 +1,18 @@
 let initialState = {
-    account : "",
+  accountKaiKas: "",
+  accountMetaMask: "",
+};
+
+function accountReducer(state = initialState, action) {
+  let { type, payload } = action;
+  switch (type) {
+    case "GET_KAIKAS_ACCOUNT":
+      return { ...state, accountKaiKas: payload.accountKaiKas };
+    case "GET_METAMASK_ACCOUNT":
+      return { ...state, accountMetaMask: payload.accountMetaMask };
+    default:
+      return { ...state };
+  }
 }
 
-function accountReducer(state=initialState,action) {
-    let {type, payload} = action
-
-    switch(type) {
-        case "GET_ACCOUNT" :
-            return {...state, account : payload.account}
-
-        default :
-            return {...state}
-    }
-}   
-
-export default accountReducer
+export default accountReducer;

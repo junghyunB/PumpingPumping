@@ -104,11 +104,11 @@ contract RaffleMode1 {
     }
 
     // 역대 회차 총 티켓수 조회 
-    function totalTicketM1(uint epoch) public view returns(uint) {
+    function (uint epoch) public view returns(uint) {
         return epochPrizeM1[epoch] / (5 * decimals);
     }
     // 역대 내 당첨 확률 조회 
-    function myRatioM1(address _to, uint epoch) public view returns(uint) {
+    function (address _to, uint epoch) public view returns(uint) {
         return 100000 *  userdataM1[_to][epoch].applyCount / totalTicketM1(epoch);  
     }
     

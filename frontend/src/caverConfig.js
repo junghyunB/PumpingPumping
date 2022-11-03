@@ -598,7 +598,7 @@ export const RAFFLEV2_CONTRACT_ABI = [
 ];
 
 export const caver = new Caver(window.caver);
-export const adminAccount = caver.klay.accounts.wallet.add(process.env.REACT_APP_PRIVATE_KEY)
+export const adminAccount = caver.klay.accounts.wallet.add(process.env.REACT_APP_PRIVATE_KEY);
 const keyring = caver.wallet.keyring.create(process.env.REACT_APP_ADMIN_ADDRESS, process.env.REACT_APP_PRIVATE_KEY);
 caver.wallet.add(keyring); 
 

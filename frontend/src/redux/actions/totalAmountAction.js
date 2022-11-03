@@ -4,7 +4,7 @@ function totalAmountAct() {
 
     return async (dispatch) => {
         try {
-              const response = await raffleV1Contract.methods.totalTicketM1(1).call();
+              const response = await raffleV1Contract.methods.totalAmountM1(1).call();
               const totalAmount = response / 10 ** 18;
               dispatch({type: "GET_TOTALAMOUNT", 
                 payload : {

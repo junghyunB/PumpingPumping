@@ -1,0 +1,151 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [],
+  "impls": {
+    "3a3779827f5d6692fdd35f342aef93d1a00423ffb89d52cecdd6f458160cb749": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "txHash": "0x66b3f55e1f594cc522491ee95eb4cd34906065653802a94b6dfd5cbf6ecc6bdf",
+      "layout": {
+        "solcVersion": "0.8.15",
+        "storage": [
+          {
+            "label": "initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:9"
+          },
+          {
+            "label": "owner",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:10"
+          },
+          {
+            "label": "ticketPriceM1",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:11"
+          },
+          {
+            "label": "_epoch",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:12"
+          },
+          {
+            "label": "decimals",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:13"
+          },
+          {
+            "label": "ticketId",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:14"
+          },
+          {
+            "label": "userdataM1",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(userInfoM1)467_storage))",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:23"
+          },
+          {
+            "label": "epochWinnerM1",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:24"
+          },
+          {
+            "label": "epochPrizeM1",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:25"
+          },
+          {
+            "label": "winningTicketPoolM1",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "RaffleMode1",
+            "src": "contracts/RaffleMode1.sol:28"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_struct(userInfoM1)467_storage))": {
+            "label": "mapping(address => mapping(uint256 => struct RaffleMode1.userInfoM1))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(userInfoM1)467_storage)": {
+            "label": "mapping(uint256 => struct RaffleMode1.userInfoM1)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(userInfoM1)467_storage": {
+            "label": "struct RaffleMode1.userInfoM1",
+            "members": [
+              {
+                "label": "applyCount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "myTicket",
+                "type": "t_array(t_uint256)dyn_storage",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    }
+  }
+}

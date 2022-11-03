@@ -4,13 +4,8 @@ import Caver from "caver-js";
 var global = global || window;
 global.Buffer = global.Buffer || require("buffer").Buffer;
 
-export const RAFFLEV1_CONTRACT_ADDRESS = "0x4AF3974689FDE3d121895De3c57D9c9E31FA2691";
+export const RAFFLEV1_CONTRACT_ADDRESS = "0x65346bd08A00Cf6DcaA4Eb52Bd0F62d44A4ef942";
 export const RAFFLEV1_CONTRACT_ABI = [
-	{
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
 	{
 		"inputs": [
 			{
@@ -19,9 +14,60 @@ export const RAFFLEV1_CONTRACT_ABI = [
 				"type": "uint256"
 			}
 		],
-		"name": "applyToRaffle",
+		"name": "buyTicketM1",
 		"outputs": [],
 		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "claimRewardM1",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "winnerOfRaffleM1",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "_epoch",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "contractBalanceM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -32,12 +78,50 @@ export const RAFFLEV1_CONTRACT_ABI = [
 				"type": "uint256"
 			}
 		],
-		"name": "epochWinner",
+		"name": "epochPrizeM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "epochWinnerM1",
 		"outputs": [
 			{
 				"internalType": "address",
 				"name": "",
 				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "epochWinningTicketId",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -49,9 +133,14 @@ export const RAFFLEV1_CONTRACT_ABI = [
 				"internalType": "address",
 				"name": "_to",
 				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
 			}
 		],
-		"name": "getInvestAmount",
+		"name": "getInvestAmountM1",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -63,13 +152,86 @@ export const RAFFLEV1_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "getWinner",
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "getMyTicketNumberM1",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "getWinnerM1",
 		"outputs": [
 			{
 				"internalType": "address",
 				"name": "",
 				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "getWinningTicketId",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "myRatioM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -90,7 +252,7 @@ export const RAFFLEV1_CONTRACT_ABI = [
 	},
 	{
 		"inputs": [],
-		"name": "randomGenerate",
+		"name": "ticketId",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -103,13 +265,282 @@ export const RAFFLEV1_CONTRACT_ABI = [
 	},
 	{
 		"inputs": [],
-		"name": "rewardTransfer",
+		"name": "ticketPriceM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "totalAmountM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "totalTicketM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "userdataM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "applyCount",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+
+export const RAFFLEV2_CONTRACT_ADDRESS = "0x4894806079a7567619e3175B9665cC08286f27F1";
+export const RAFFLEV2_CONTRACT_ABI = [
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "ticketType",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "ticketNumber",
+				"type": "uint256[]"
+			}
+		],
+		"name": "buyTicketM1",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "claimRewardM2",
 		"outputs": [],
 		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
 		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "winnerOfRaffleM2",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "_epoch",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "contractBalanceM2",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "getMyTicketNumberM2",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "getWinnerM2",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "getWinningNumber",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "ticket1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "ticketOwnedUserM2",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
 		"name": "totalAmount",
 		"outputs": [
 			{
@@ -124,26 +555,16 @@ export const RAFFLEV1_CONTRACT_ABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			},
-			{
 				"internalType": "uint256",
-				"name": "",
+				"name": "epoch",
 				"type": "uint256"
 			}
 		],
-		"name": "userdata",
+		"name": "totalTicketM2",
 		"outputs": [
 			{
-				"internalType": "bool",
-				"name": "isEntered",
-				"type": "bool"
-			},
-			{
 				"internalType": "uint256",
-				"name": "investAmount",
+				"name": "",
 				"type": "uint256"
 			}
 		],
@@ -151,26 +572,24 @@ export const RAFFLEV1_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "winnerOfRaffle",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
 			{
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
 			}
 		],
-		"name": "winningTicket",
+		"name": "userdataM2",
 		"outputs": [
 			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
+				"internalType": "uint256",
+				"name": "amountTicket",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -179,11 +598,16 @@ export const RAFFLEV1_CONTRACT_ABI = [
 ];
 
 export const caver = new Caver(window.caver);
-export const adminAccount = caver.klay.accounts.wallet.add("0xa5ef834ed522e87f5718be527f30a883979a1025a53a1172a60ba8b6a77c30a3")
-const keyring = caver.wallet.keyring.create("0x058eb1928A62EDc57B626A02b2EFa397a96f78E8", "0xa5ef834ed522e87f5718be527f30a883979a1025a53a1172a60ba8b6a77c30a3");
+export const adminAccount = caver.klay.accounts.wallet.add(process.env.REACT_APP_PRIVATE_KEY)
+const keyring = caver.wallet.keyring.create(process.env.REACT_APP_ADMIN_ADDRESS, process.env.REACT_APP_PRIVATE_KEY);
 caver.wallet.add(keyring); 
 
 export const raffleV1Contract = new caver.klay.Contract(
     RAFFLEV1_CONTRACT_ABI,
     RAFFLEV1_CONTRACT_ADDRESS
+);
+
+export const raffleV2Contract = new caver.klay.Contract(
+    RAFFLEV2_CONTRACT_ABI,
+    RAFFLEV2_CONTRACT_ADDRESS
 );

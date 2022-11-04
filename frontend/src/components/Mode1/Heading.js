@@ -4,15 +4,18 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "./Heading.css";
 import { useSelector, useDispatch } from 'react-redux';
+import Timer from './Timer';
 
 import { totalAmountAction } from '../../redux/actions/totalAmountAction';
 import { myRatioAction } from '../../redux/actions/myRatioAction';
 import { totalTicketAmountAction } from '../../redux/actions/totalTicketAmountAction';
 
+
 const Heading = () => {
 
   const dispatch = useDispatch();
-  const account = useSelector(state => state.account.account);
+  const storedMetaMask = localStorage.getItem("metamaskAccount");
+  const storedKaiKas = localStorage.getItem("kaikasAccount");
   let totalAmount = useSelector(state => state.ticket.totalAmount);
   const myRatio = useSelector(state => state.ticket.myRatio);
   const totalTicketAmount = useSelector(state => state.ticket.totalTicketAmount);
@@ -22,9 +25,9 @@ const Heading = () => {
 
   useEffect(() => {
     dispatch(totalAmountAction.totalAmountAct());
-    dispatch(myRatioAction.myRatioAct(account));
+    dispatch(myRatioAction.myRatioAct());
     dispatch(totalTicketAmountAction.totalTicketAmountAct());
-  },[account])
+  },[storedMetaMask, storedKaiKas])
   return (
     <Container>
     <Row>
@@ -34,6 +37,7 @@ const Heading = () => {
     </Row>
     <Row>
       <Col>
+      <Timer />
       <h1>내 당첨 확률 : {myRatio} % </h1>
       </Col>
     <Col>

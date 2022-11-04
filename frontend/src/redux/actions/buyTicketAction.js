@@ -1,9 +1,13 @@
 import { raffleV1Contract, RAFFLEV1_CONTRACT_ADDRESS, caver} from "../../caverConfig";
+import { web3RaffleV1Contract } from "../../web3Config";
 
+function buyTicketAct(amount) {
 
-function buyTicketAct(account, amount) {
-  console.log(caver.utils.convertToPeb(5 * amount, "KLAY"))
+  const localKey = localStorage.key(0);
+  const account = localStorage.getItem(localKey);
+  const decimal = 10 ** 18;
   return async (dispatch) => {
+    if(localKey === "kaikasAccount") {
     try {
       const response = await caver.klay.sendTransaction({
         from: account,
@@ -12,12 +16,30 @@ function buyTicketAct(account, amount) {
         gas: "3000000",
         data: raffleV1Contract.methods.buyTicketM1(amount).encodeABI(),
       });
-      console.log(1);
     dispatch({type:"SUCCESS_BUY_TICKET", payload : {buyTicketSuccess : true}});
+    if(response.status) {
+      alert("구매 성공")
+    }
     } catch (error) {
       console.error(error);
     }
-  };
+  } else if(localKey === "metamaskAccount") {
+    try{
+    const response = await web3RaffleV1Contract.methods.buyTicketM1(amount).send({ 
+      from : account,
+      to :  RAFFLEV1_CONTRACT_ADDRESS,
+      value: String(amount * 5 * decimal),
+      gas : "3000000"
+    });
+    dispatch({type:"SUCCESS_BUY_TICKET", payload : {buyTicketSuccess : true}});
+    if(response.status) {
+      alert("구매 성공");
+    }
+  } catch(error) {
+    console.error(error);
+  }
+  }  
+} 
 }
 
 

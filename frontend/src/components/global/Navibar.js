@@ -9,17 +9,13 @@ import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccou
 import { Link } from "react-router-dom";
 
 const Navibar = () => {
-  const accountKaiKas = useSelector((state) => state.account.accountKaiKas);
-  console.log(accountKaiKas);
-  const accountMetaMask = useSelector((state) => state.account.accountMetaMask);
   const dispatch = useDispatch();
+  const accountKaiKas = useSelector(state => state.account.accountKaiKas);
+  const accountMetaMask = useSelector(state => state.account.accountMetaMask);
 
-
-  const storedMetaMask = localStorage.getItem("metamaskAccount");
-  const storedKaiKas = localStorage.getItem("kaikasAccount");
 
   const connectKaiKasWallet = () => {
-  dispatch(connectKaiKasAccount.getKaiKasAccount());
+    dispatch(connectKaiKasAccount.getKaiKasAccount());
   };
 
   const connectMetaMaskWallet = () => {
@@ -33,22 +29,29 @@ const Navibar = () => {
   }
 
   const walletChangeMetaMask = () => {
-    if(window.location.reload && storedMetaMask !== null) {
+    if(storedMetaMask !== null) {
       dispatch(connectMetaMaskAccount.getMetaMaskAccount())
     }
   }
 
   const walletChangeKaiKas = () => {
-    if(window.location.reload && storedKaiKas !== null) {
+    if(storedKaiKas !== null) {
       dispatch(connectKaiKasAccount.getKaiKasAccount());
+
     }
   }
 
+  const storedMetaMask = localStorage.getItem("metamaskAccount");
+  const storedKaiKas = localStorage.getItem("kaikasAccount");
 
-  
   useEffect(() => {
-    walletChangeKaiKas()
-    walletChangeMetaMask()
+    if(accountKaiKas === "")
+    walletChangeKaiKas();
+  }, [])
+
+  useEffect(() => {
+    if(accountMetaMask === "")
+    walletChangeMetaMask();
   }, [])
   return (
     <Container>
@@ -56,7 +59,8 @@ const Navibar = () => {
         <Container>
           <Link to="/">Raffle</Link>
           <Link to="/mode1">Mode#1</Link>
-          <Link to="/mode2">Mode#2</Link>
+          <Link to="/mode2">Mode#2</Link> 
+          <a>{storedMetaMask !== null ? storedMetaMask : storedKaiKas}</a>
           {storedMetaMask == null && storedKaiKas == null ? (
             <>
             <Dropdown>

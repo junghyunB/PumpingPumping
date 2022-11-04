@@ -1,7 +1,8 @@
 import {raffleV1Contract} from "../../caverConfig";
 
-
-function myRatioAct(account) {
+function myRatioAct() {
+  const localKey = localStorage.key(0);
+  const account = localStorage.getItem(localKey);
     return async (dispatch) => {
         try {
               const epoch = await raffleV1Contract.methods._epoch().call();

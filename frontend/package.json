@@ -11,6 +11,7 @@
     "caver-js": "^1.9.0",
     "crypto-browserify": "^3.12.0",
     "https-browserify": "^1.0.0",
+    "node-sass": "^7.0.3",
     "os": "^0.1.2",
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
@@ -24,7 +25,8 @@
     "redux-thunk": "^2.4.1",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "web3": "^1.8.0"
   },
   "scripts": {
     "start": "react-app-rewired start",

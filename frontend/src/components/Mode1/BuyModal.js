@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Card from 'react-bootstrap/Card';
@@ -32,7 +32,7 @@ const BuyModal = () => {
   }
 
   const buyTicket = () => {
-    dispatch(buyTicketAction.buyTicketAct(account, amount));
+    dispatch(buyTicketAction.buyTicketAct(amount));
   }
 
   return (

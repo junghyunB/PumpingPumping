@@ -1,0 +1,8 @@
+.App {
+    font-family: "googlePoorStory";
+}
+
+@font-face {
+    font-family: "googlePoorStory";
+    src: url(./assets/font/Poor_Story/PoorStory-Regular.ttf);
+  }

@@ -1,7 +1,9 @@
 .navbarContainer {
     width: 100%;
     height: 100vh;
-    background-color: aquamarine;
+    position: fixed;
+    z-index: 20;
+    // background-color: aquamarine;
 }
 
 .topNav{
@@ -14,7 +16,7 @@
     margin:0px;
     float: right;
     overflow:hidden;
-    font-family:'Nanum Gothic', sans-serif;
+    // font-family:'Nanum Gothic', sans-serif;
     perspective:699.997px;
     // background:#333;
     *{
@@ -38,6 +40,7 @@
         transition:all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
         li{
         //   float: left;
+          cursor: pointer;
           display:inline-block;
           padding:30px;
           flex-grow:1;
@@ -48,7 +51,7 @@
                 ol{
                   &:after{
                     content:"\f06d";
-                    font-family:FontAwesome;
+                    // font-family:FontAwesome;
                   }
                 }
               }
@@ -124,7 +127,7 @@
           ol{
             &:after{
             //   content:"\f25b";
-              font-family:FontAwesome;
+              // font-family:FontAwesome;
               vertical-align:center;
             //   font-size:150px;
             //   color:#ff8000;
@@ -148,6 +151,7 @@
                 }
                 ol{
                   li{
+                    cursor: pointer;
                     a{
                       color:#fff;
                     }
@@ -266,6 +270,7 @@
         &:hover{
           ol{
             li{
+              cursor: pointer;
               &:nth-of-type(1n){
                 transform:rotate(0deg);
                 margin:0px;
@@ -396,6 +401,7 @@
     left: 0;
     height: 100%;
     width: 300px;
+    border-right: 5px solid black;
 }
 
 .leftNavSection {
@@ -405,15 +411,21 @@
 
 .firstLeftNav {
     display: flex;
-    height: 200.003px;
+    height: 100.003px;
+    text-align: center;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
     /* background-color: green; */
 }
 
+.firstLeftNav h1 {
+  color: black;
+}
 .firstLeftNavBtn {
     width: 249.997px;
     height: 120px;
+    background-size: auto;
 }
 
 .secondLeftNav {
@@ -422,7 +434,7 @@
     align-items: center;
     flex-direction: column;
     /* background-color: yellow; */
-    height: 150px;
+    height: 100px;
 }
 
 .secondLeftNavTxt1 {
@@ -433,10 +445,10 @@
 
 .thirdLeftNav {
     display: flex;
-    flex: 100%;
+    flex: 60%;
     flex-direction: column;
     align-items: center;
-    /* background-color: brown; */
+    // background-color: brown; 
     height: 450px;
 }
 
@@ -444,80 +456,95 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 33%;
-    /* background-color: aqua; */
-    /* height: 120px; */
+    flex: 20%;
 }
 
 .thirdLeftNav1 button {
     height: 129.998px;
     width: 249.997px;
+    border: none;
     text-align: center;
     border-radius: 2rem;
-
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222;
 }
 
-.thirdLeftNav2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 33%;
-    /* background-color: blue; */
-    /* height: 120px; */
+.thirdLeftNav1 span {
+  position: relative; 
+  z-index: 1;
 }
 
-.thirdLeftNav2 button {
-    display: flex;
-    text-align: center;
-    height: 129.998px;
-    width: 249.997px;
-    border-radius: 2rem;
+.thirdLeftNav1 button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200%;
+    width: 180%;
+    background: #FF4500;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
 }
 
-.thirdLeftNav3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 33%;
-    /* background-color: red; */
+.thirdLeftNav1 button:hover::after {
+  -webkit-transform: translateX(-20%) translateY(-25%) rotate(45deg);
+  transform: translateX(-20%) translateY(-25%) rotate(45deg);
 }
 
-.thirdLeftNav3 button {
-    display: flex;
-    text-align: center;
-    height: 129.998px;
-    width: 249.997px;
-    border-radius: 2rem;
-}
 
 
 .fotLeftNav {
     display: flex;
-    height: 30px;
+    height: 50px;
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    /* background-color: blue; */
 }
 
 .fotLeftNav1 {
     display: flex;
     padding-right: 39.998px;
-    /* background-color: blueviolet; */
+    // background-color: blueviolet;
 }
 .fotLeftNav1 button {
     width: 80.002px;
+   
+    height: 30px;
 }
 
 .fotLeftNav2 {
     display: flex;
     padding-left: 40x;
-    /* background-color: brown; */
+    
+    // background-color: brown;
 }
 
 .fotLeftNav2 button {
     width: 80.002px;
+    height: 30px;
 }
+
+.homeimg {
+  width:60px;
+  height: 50px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.text-color {
+  color:#fff;
+}
+
+
+
 
 
 @media (max-width:800px) {

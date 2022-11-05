@@ -1,0 +1,59 @@
+.dashBoardPageContainer{
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+}
+
+.dashBoardLeftSection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 200px;
+    margin-right: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+.dashBoardLeftTable table{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    /* border-top: 1px solid #444444; */
+    /* border-collapse: collapse; */
+}
+
+.dashBoardLeftTable table thead {
+    align-items: center;
+}
+
+tr {
+    border: none;
+}
+
+.dashBoardRightSection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.dashBoardRightTable table{
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    /* border-top: 1px solid #444444; */
+    /* border-collapse: collapse; */
+}
+
+.dashBoardRightTable table thead {
+    align-items: center;
+}
+
+tr {
+    border: none;
+}

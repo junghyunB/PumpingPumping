@@ -154,6 +154,7 @@
                     cursor: pointer;
                     a{
                       color:#fff;
+                      display:block;
                     }
                   }
                 }
@@ -419,8 +420,13 @@
     /* background-color: green; */
 }
 
+p {
+  font-weight: 900;
+}
+
 .firstLeftNav h1 {
   color: black;
+  font-weight: bold;
 }
 .firstLeftNavBtn {
     width: 249.997px;
@@ -464,7 +470,7 @@
     width: 249.997px;
     border: none;
     text-align: center;
-    border-radius: 2rem;
+    border-radius: 3rem;
     text-transform: uppercase;
     outline: none;
     overflow: hidden;
@@ -542,6 +548,8 @@
 .text-color {
   color:#fff;
 }
+
+
 
 
 

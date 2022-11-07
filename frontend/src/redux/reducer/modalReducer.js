@@ -1,6 +1,7 @@
+
 let initialState = {
   show: false,
-  amount:0,
+  amount: 1,
 };
 
 

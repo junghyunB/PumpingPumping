@@ -4,7 +4,7 @@ import Caver from "caver-js";
 var global = global || window;
 global.Buffer = global.Buffer || require("buffer").Buffer;
 
-export const RAFFLEV1_CONTRACT_ADDRESS = "0x65346bd08A00Cf6DcaA4Eb52Bd0F62d44A4ef942";
+export const RAFFLEV1_CONTRACT_ADDRESS = "0xDA30f936fBdCfefC1717fEA3B68cCB583b516DD7";
 export const RAFFLEV1_CONTRACT_ABI = [
 	{
 		"inputs": [
@@ -78,6 +78,25 @@ export const RAFFLEV1_CONTRACT_ABI = [
 				"type": "uint256"
 			}
 		],
+		"name": "dashBoardDataM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
 		"name": "epochPrizeM1",
 		"outputs": [
 			{
@@ -128,6 +147,19 @@ export const RAFFLEV1_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "getDashBoardDataM1",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -141,6 +173,30 @@ export const RAFFLEV1_CONTRACT_ABI = [
 			}
 		],
 		"name": "getInvestAmountM1",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "getMyRatioM1",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -203,30 +259,6 @@ export const RAFFLEV1_CONTRACT_ABI = [
 			}
 		],
 		"name": "getWinningTicketId",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "epoch",
-				"type": "uint256"
-			}
-		],
-		"name": "myRatioM1",
 		"outputs": [
 			{
 				"internalType": "uint256",

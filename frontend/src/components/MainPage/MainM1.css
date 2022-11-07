@@ -1,0 +1,104 @@
+.mainPageLeftSection {
+    display: flex;
+    margin-left: 310px;
+    margin-right: 100px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.mainPageLeftSection1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    /* background-color: greenyellow; */
+    width: 300px;
+    height: 500px;
+}
+
+.mainPageLeftSectionTitle {
+    /* padding-bottom: 50px; */
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.mainPageLeftSectionTitle p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.mainPageLeftSectionTitle hr {
+    border: solid 5px yellowgreen;
+}
+
+.mainPageLeftSectionSilder {
+    display: flex;
+    position: relative;
+    /* width: 100%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.leftSectionLeftBtn {
+    z-index: 20;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -35%;
+    top: 10%;
+    background-color: whitesmoke;
+}
+
+.leftSectionRightBtn {
+    z-index: 20;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -27%;
+    top: 10%;
+    background-color: whitesmoke;
+}
+
+.mainPageLeftSectionSilder p {
+    font-size: 20px;
+}
+
+.mainPageLeftPrizedSection table {
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainPageLeftPrizedSection th, td {
+    border: 1px solid black;
+}
+
+.tableInfo {
+    height: 75px;
+}
+
+.LeftBuyBtn {
+    display: flex;
+    margin-top: 30px;
+}
+
+.LeftBuyBtn button {
+    width: 150px;
+    height: 50px;
+    z-index: 20;
+    font-weight: 900;
+}
+
+
+

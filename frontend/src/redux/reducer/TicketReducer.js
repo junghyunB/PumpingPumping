@@ -3,6 +3,9 @@ let initialState = {
   myRatio: 0,
   totalTicketAmount: 0,
   buyTicketSuccess: false,
+  winningTicketId: 0,
+  myTicketAmount:0,
+  
 };
 
 function TicketReducer(state = initialState, action) {
@@ -17,6 +20,10 @@ function TicketReducer(state = initialState, action) {
       return { ...state, totalTicketAmount: payload.totalTicketAmount };
     case "SUCCESS_BUY_TICKET":
       return { ...state, buyTicketSuccess: payload };
+    case "GET_WINNING_TICKET":
+      return { ...state, winningTicketId: payload.winningTicketId };
+    case "GET_MY_TICKET_AMOUNT":
+      return { ...state, myTicketAmount: payload.myTicketAmount };
     default:
       return { ...state };
   }

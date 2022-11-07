@@ -27,6 +27,7 @@ contract RaffleMode1 {
 
     
     address[] private winningTicketPoolM1;
+    uint[] public dashBoardDataM1;
 
     constructor() {
         owner = msg.sender;
@@ -63,17 +64,35 @@ contract RaffleMode1 {
         return randomNumber;
     }
 
+        function setDashBoardDataM1() internal {
+        dashBoardDataM1.push(_epoch);
+        dashBoardDataM1.push(totalTicketM1(_epoch));
+        dashBoardDataM1.push(totalAmountM1(_epoch) / decimals);
+    }
+
     // 이번 회차 승자 추출
     function winnerOfRaffleM1() public onlyOwner{
         require(epochWinnerM1[_epoch] == address(0), "this epoch already electric winner!");
+        if(winningTicketPoolM1.length > 0) {
         uint randomNumber = randomGenerate();
         address winner = winningTicketPoolM1[randomNumber];
         epochWinnerM1[_epoch] = winner; 
         epochWinningTicketId[_epoch] = randomNumber + 1;
+        setDashBoardDataM1();
         ticketId = 1;
         delete winningTicketPoolM1;
         _epoch++;
+        } else {
+            epochWinnerM1[_epoch] = address(0); 
+            epochWinningTicketId[_epoch] = 0;
+            setDashBoardDataM1();
+            ticketId = 1;
+            delete winningTicketPoolM1;
+            _epoch++;
+        }
     }
+
+
 
     function calculateWinnerFee(uint epoch) internal view returns(uint) {
         return ( epochPrizeM1[epoch] * 95 ) / 100;
@@ -91,6 +110,7 @@ contract RaffleMode1 {
         require(success, "Not send Klay1");
         (bool success2, ) = owner.call{value: calculateOwnerFee(epoch)}("");
         require(success2, "Not send Klay2");
+        epochWinnerM1[epoch] = address(0);
     } 
 
     // 컨트랙트 보유 금액 
@@ -104,11 +124,11 @@ contract RaffleMode1 {
     }
 
     // 역대 회차 총 티켓수 조회 
-    function (uint epoch) public view returns(uint) {
+    function totalTicketM1(uint epoch) public view returns(uint) {
         return epochPrizeM1[epoch] / (5 * decimals);
     }
     // 역대 내 당첨 확률 조회 
-    function (address _to, uint epoch) public view returns(uint) {
+    function getMyRatioM1(address _to, uint epoch) public view returns(uint) {
         return 100000 *  userdataM1[_to][epoch].applyCount / totalTicketM1(epoch);  
     }
     
@@ -132,4 +152,10 @@ contract RaffleMode1 {
     function getWinningTicketId(uint epoch) public view returns(uint) {
         return epochWinningTicketId[epoch];
     }
+
+    // DashBoard에 들어갈 데이터 추출
+    function getDashBoardDataM1() public view returns(uint[] memory) {
+        return dashBoardDataM1;
+    }
+
 }

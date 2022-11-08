@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
-import { Mode1, Mode2, MainPage, DashBoard, ChoiceMode, Mode1BuyPage, Mode1MyPage } from "./pages/index";
+import { MainPage, DashBoard, ChoiceMode, Mode1BuyPage, Mode1MyPage } from "./pages/index";
 import {Navbar} from "./components/index";
 import "./App.css";
 

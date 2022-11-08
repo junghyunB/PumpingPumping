@@ -24,7 +24,7 @@ const Mode1BuyPage = () => {
     setAmount(e.target.value)
   }
 
-  const maxBuy = (e) => {
+  const maxBuy = () => {
     setAmount(availavble);
   }
 
@@ -34,6 +34,7 @@ const Mode1BuyPage = () => {
   }, [account, epoch])
 
   const buyTicketM1 = () => {
+    availavble < amount ? alert("허용 갯수보다 많습니다.") : 
     dispatch(buyTicketAction.buyTicketAct(amount));
   }
 

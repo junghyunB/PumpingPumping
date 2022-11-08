@@ -12,7 +12,7 @@ import { buyTicketAction } from "../redux/actions/buyTicketAction";
 const Mode1BuyPage = () => {
   const dispatch = useDispatch();
   const epoch = useSelector(state => state.epochM1.epoch);
-  const ownedMyTicket = useSelector(state => state.ticket.myTicketAmount)
+  const ownedMyTicket = useSelector(state => state.user.myTicketAmount)
   const localKey = localStorage.key(0);
   const account = localStorage.getItem(localKey);
   const availavble = 20 - ownedMyTicket;
@@ -50,7 +50,7 @@ const Mode1BuyPage = () => {
               </Link>
             </div>
             <div className="mypagebuttonSection">
-              <Link to="/" className="z-indexZone">
+              <Link to="/mode1my" className="z-indexZone">
                 <Button variant="outline-dark">MyPage</Button>
               </Link>
             </div>

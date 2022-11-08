@@ -4,7 +4,7 @@ import Caver from "caver-js";
 var global = global || window;
 global.Buffer = global.Buffer || require("buffer").Buffer;
 
-export const RAFFLEV1_CONTRACT_ADDRESS = "0xDA30f936fBdCfefC1717fEA3B68cCB583b516DD7";
+export const RAFFLEV1_CONTRACT_ADDRESS = "0x49D66e660Bf5a95be4e38f37381ebcBFdA432dc2";
 export const RAFFLEV1_CONTRACT_ABI = [
 	{
 		"inputs": [
@@ -120,7 +120,7 @@ export const RAFFLEV1_CONTRACT_ABI = [
 		"outputs": [
 			{
 				"internalType": "address",
-				"name": "",
+				"name": "winnerAddress",
 				"type": "address"
 			}
 		],
@@ -259,6 +259,30 @@ export const RAFFLEV1_CONTRACT_ABI = [
 			}
 		],
 		"name": "getWinningTicketId",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "isClaimedRewardM1",
 		"outputs": [
 			{
 				"internalType": "uint256",

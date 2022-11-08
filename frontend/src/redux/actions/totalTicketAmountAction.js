@@ -1,10 +1,10 @@
 import {raffleV1Contract} from "../../caverConfig";
 
-function totalTicketAmountAct() {
+function totalTicketAmountAct(epoch) {
 
     return async (dispatch) => {
         try {
-              const response = await raffleV1Contract.methods.totalTicketM1(1).call();
+              const response = await raffleV1Contract.methods.totalTicketM1(epoch).call();
               dispatch({type: "GET_TOTAL_TICKET_AMOUNT", 
                 payload : {
                     totalTicketAmount: response

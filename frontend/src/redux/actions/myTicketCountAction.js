@@ -4,7 +4,6 @@ function myTicketCountAct(account, epoch) {
     return async (dispatch) => {
         try {
               const myTicketAmount = await raffleV1Contract.methods.getInvestAmountM1(account, epoch).call();
-              console.log(myTicketAmount);
               dispatch({type: "GET_MY_TICKET_AMOUNT",
                 payload : {
                     myTicketAmount : myTicketAmount

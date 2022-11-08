@@ -19,9 +19,14 @@ contract RaffleMode1 {
         uint applyCount;
         uint[] myTicket;
     }
+
+    struct winnerInfoM1 {
+        address winnerAddress;
+        mapping(address => uint) isclaim;
+    }
     
     mapping(address => mapping(uint => userInfoM1)) public userdataM1;
-    mapping(uint => address) public epochWinnerM1;
+    mapping(uint => winnerInfoM1) public epochWinnerM1;
     mapping(uint => uint) public epochPrizeM1;
     mapping(uint => uint) public epochWinningTicketId;
 
@@ -44,7 +49,7 @@ contract RaffleMode1 {
         require(msg.sender.balance >= msg.value, "Not Enough Ethers");
         require(userdataM1[msg.sender][_epoch].applyCount <= 20, "already entered this system");
         require(userdataM1[msg.sender][_epoch].applyCount + _amount <= 20, "maximum apply are 10");
-        require(epochWinnerM1[_epoch] == address(0), "already this epoch pick the winner");
+        require(epochWinnerM1[_epoch].winnerAddress == address(0), "already this epoch pick the winner");
         require(_amount * ticketPriceM1 * decimals == msg.value, "correct paid");
 
         for(uint i = 0; i < _amount; i++) {
@@ -72,18 +77,19 @@ contract RaffleMode1 {
 
     // 이번 회차 승자 추출
     function winnerOfRaffleM1() public onlyOwner{
-        require(epochWinnerM1[_epoch] == address(0), "this epoch already electric winner!");
+        require(epochWinnerM1[_epoch].winnerAddress == address(0), "this epoch already electric winner!");
         if(winningTicketPoolM1.length > 0) {
         uint randomNumber = randomGenerate();
         address winner = winningTicketPoolM1[randomNumber];
-        epochWinnerM1[_epoch] = winner; 
+        epochWinnerM1[_epoch].winnerAddress = winner; 
+        epochWinnerM1[_epoch].isclaim[winner] = 1; 
         epochWinningTicketId[_epoch] = randomNumber + 1;
         setDashBoardDataM1();
         ticketId = 1;
         delete winningTicketPoolM1;
         _epoch++;
         } else {
-            epochWinnerM1[_epoch] = address(0); 
+            epochWinnerM1[_epoch].winnerAddress = address(0); 
             epochWinningTicketId[_epoch] = 0;
             setDashBoardDataM1();
             ticketId = 1;
@@ -103,14 +109,15 @@ contract RaffleMode1 {
     }
 
     function claimRewardM1(uint epoch) public payable {
-        require(epochWinnerM1[epoch] != address(0), "No Winner");
-        require(epochWinnerM1[epoch] == msg.sender, "Call must be Winner");
+        require(epochWinnerM1[epoch].winnerAddress != address(0), "No Winner");
+        require(epochWinnerM1[epoch].winnerAddress == msg.sender, "Call must be Winner");
+        require(epochWinnerM1[epoch].isclaim[msg.sender] == 1, "already claim");
 
-        (bool success, ) = epochWinnerM1[epoch].call{value: calculateWinnerFee(epoch)}("");
+        (bool success, ) = epochWinnerM1[epoch].winnerAddress.call{value: calculateWinnerFee(epoch)}("");
         require(success, "Not send Klay1");
         (bool success2, ) = owner.call{value: calculateOwnerFee(epoch)}("");
         require(success2, "Not send Klay2");
-        epochWinnerM1[epoch] = address(0);
+        epochWinnerM1[epoch].isclaim[msg.sender] = 2; 
     } 
 
     // 컨트랙트 보유 금액 
@@ -145,7 +152,7 @@ contract RaffleMode1 {
 
     // 역대 회차 승리자 조회
     function getWinnerM1(uint epoch) public view returns(address) {
-        return epochWinnerM1[epoch];
+        return epochWinnerM1[epoch].winnerAddress;
     }
     
     // 역대 회차 당첨 티켓Id 조회 
@@ -156,6 +163,10 @@ contract RaffleMode1 {
     // DashBoard에 들어갈 데이터 추출
     function getDashBoardDataM1() public view returns(uint[] memory) {
         return dashBoardDataM1;
+    }
+    // 이미 청구 했는지 확인
+    function isClaimedRewardM1(address _to, uint epoch) public view returns(uint) {
+        return epochWinnerM1[epoch].isclaim[_to];
     }
 
 }

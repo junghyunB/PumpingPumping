@@ -6,6 +6,7 @@ import { SiDiscord, SiTwitter } from "react-icons/si";
 import { useDispatch, useSelector } from "react-redux";
 import { connectKaiKasAccount } from "../../redux/actions/connectKaiKasAccount";
 import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccount";
+import { pickWinnerAction } from "../../redux/actions/pickWinnerAction";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,10 @@ const Navbar = () => {
 
   const colorstyle = {
     color : "red",
+  }
+
+  const pickWinner = () => {
+    dispatch(pickWinnerAction.pickWinnerAct());
   }
 
   const IsConnectedWallet = () => {
@@ -189,6 +194,7 @@ const Navbar = () => {
             <div className="fotLeftNav2">
               <SiDiscord size={30} />
             </div>
+            <div className="fotLeftNav3"><button onClick={pickWinner}>PickWinnerM1</button></div>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ const useResultOfIntervalCalculator = (calculator, delay) => {
   };
 
 const Timer = () => {
-    const targetISOString = "2022-11-05T22:00:00.000Z";
+    const targetISOString = "2022-11-07T22:00:00.000Z";
     const isNotYet = useResultOfIntervalCalculator(
       () => new Date(targetISOString) - new Date() > 0,
       10

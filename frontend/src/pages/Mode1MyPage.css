@@ -1,0 +1,159 @@
+.mode1MyPageContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+}
+.mode1MyPageSection {
+    display: flex;
+    margin-left: 310px;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.mod1MyPageSection1 {
+    display:flex;
+    width: 500px;
+    height: 600px;
+    margin-left: 100px;
+    /* background-color: white; */
+}
+
+.buyMypageselect {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    /* background-color: aqua; */
+}
+
+.buybuttonSection {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.buybuttonSection button {
+    z-index: 20;
+    height: 70px;
+    width: 200px;
+    font-weight: 900;
+}
+
+.mypagebuttonSection {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* background-color: black; */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mypagebuttonSection button {
+    z-index: 20;
+    height: 70px;
+    width: 200px;
+    font-weight: 900;
+}
+
+.z-indexZone {
+    z-index: 20;
+}
+
+.mode1epochSection {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    z-index: 20;
+    /* background-color: aquamarine; */
+    justify-content: center;
+}
+.mode1epochSection h3 {
+    font-weight: 900;
+    text-align: center;
+    padding-top: 9px;
+}
+.mode1epochSection button {
+    border : none;
+    background-color : white;
+}
+
+.ownedTicketSection {
+    width: 100%;
+    height: 150px;
+    /* background-color: aqua; */
+}
+.ownedTicketEaSection {
+    width: 100%;
+    /* background-color: brown; */
+}
+
+.ownedTicketEaSection p {
+    padding-left: 30px;
+    font-weight: 900;
+}
+
+.ownedTicketNumSection {
+    display: inline;
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+.dataSection {
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+    /* background-color: aquamarine; */
+    
+}
+.dataSection h5 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.dataSection2 {
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+}
+
+.dataSection2 h5 {
+    text-align: center;
+    font-weight: bold;
+    display: inline;
+    margin-left: 80px;
+}
+
+.claimButtonSection {
+    display: flex;
+    width: 100%;
+    height: 105px;
+    justify-content: center;
+    align-items: center;
+}
+.claimButtonSection button {
+    z-index:20;
+    width : 200px;
+    height: 70px; 
+    font-size: 30px;   
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+

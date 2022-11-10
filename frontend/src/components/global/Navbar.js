@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { connectKaiKasAccount } from "../../redux/actions/connectKaiKasAccount";
 import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccount";
 import { pickWinnerAction } from "../../redux/actions/pickWinnerAction";
+import { pickWinnerM2Action } from "../../redux/actions/pickWinnerM2Action";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -46,6 +47,10 @@ const Navbar = () => {
 
   const pickWinner = () => {
     dispatch(pickWinnerAction.pickWinnerAct());
+  }
+
+  const pickWinnerM2 = () => {
+    dispatch(pickWinnerM2Action.pickWinnerM2Act());
   }
 
   const IsConnectedWallet = () => {
@@ -195,6 +200,7 @@ const Navbar = () => {
               <SiDiscord size={30} />
             </div>
             <div className="fotLeftNav3"><button onClick={pickWinner}>PickWinnerM1</button></div>
+            <div className="fotLeftNav3"><button onClick={pickWinnerM2}>PickWinnerM2</button></div>
           </div>
         </div>
       </div>

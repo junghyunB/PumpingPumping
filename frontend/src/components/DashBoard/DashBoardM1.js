@@ -35,7 +35,7 @@ const DashBoardM1 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>N회차</td>
+              <td>회차</td>
               <td>Total Ticket</td>
               <td>Prize</td>
             </tr>

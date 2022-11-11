@@ -1,0 +1,136 @@
+.mode2BuyDetailContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+}
+
+.mode2BuyDetailSection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.mode2selectSection {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+    padding-bottom: 40px;
+    /* background-color: red; */
+}
+.chooseNumberSection {
+    display: flex;
+    align-items: center;
+    padding-left:80px;
+    width: 50%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+.availableSection {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+}
+.availableSection1 {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+}
+
+.amountSection {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    width: 100%;
+    height: 50%;
+    /* background-color: darkcyan; */
+}
+
+.choiceSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:100%;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+.ticketSection {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    /* background-color: aquamarine; */
+}
+
+.buyButtonSection {
+    display: flex;
+    width: 80%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blueviolet; */
+}
+
+.ticketContainer1 {
+    display: flex;
+    width:100%;
+    height: 20%;
+    /* background-color: cornflowerblue; */
+}
+
+.ticketSmallSection {
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    /* background-color: tomato; */
+}
+
+.ticketSize {
+    width: 100px;
+    height: 100px;
+}
+
+.imgText {
+    /* position: absolute; */
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    transform: translate(5%, -180%);
+    font-size: 25px;
+    font-weight: 900;
+    z-index: 20;
+}
+.ticketSmallSection button {
+    border: none;
+    z-index: 20;
+    background-color: none !important;
+    border-color: transparent;
+}
+
+.buyButtonSection button {
+    width: 300px;
+    height: 38px;
+    z-index: 20;
+}
+
+.BackPage {
+    color: black;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    z-index: 20;
+}

@@ -7,6 +7,9 @@ import { epochM2Action } from '../../redux/actions/epochM2Action';
 import { winningNumberM2Action } from '../../redux/actions/winningNumberM2Action';
 import { winningTicketIdM2Action } from '../../redux/actions/winningTicketIdM2Action';
 import { totalAmountM2Action } from '../../redux/actions/totalAmountM2Action';
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+
 
 const MainM2 = () => {
     const dispatch = useDispatch();
@@ -76,9 +79,11 @@ const MainM2 = () => {
                     </tr>
                 </table>
             </div>
+            <Link to="/mode2buy" style={{ textDecoration: "none" }}>
             <div className='rightBuyBtn'>
-                <button>Buy</button>
+            <Button variant="outline-dark">BuyTicket</Button>
             </div>
+            </Link>
         </div>
     </div>
 

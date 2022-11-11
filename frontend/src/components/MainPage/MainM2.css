@@ -30,7 +30,7 @@
 }
 
 .mainPageRightSectionTitle hr {
-    border: solid 5px red;
+    border: solid 2px black;
 }
 
 .mainPageRightSectionSilder {
@@ -93,4 +93,6 @@
 .rightBuyBtn button {
     width: 150px;
     height: 50px;
+    z-index: 20;
+    font-weight: 900;
 }

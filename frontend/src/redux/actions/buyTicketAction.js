@@ -19,6 +19,7 @@ function buyTicketAct(amount) {
     dispatch({type:"SUCCESS_BUY_TICKET", payload : {buyTicketSuccess : true}});
     if(response.status) {
       alert("구매 성공")
+      window.location.reload();
     }
     } catch (error) {
       console.error(error);
@@ -34,6 +35,7 @@ function buyTicketAct(amount) {
     dispatch({type:"SUCCESS_BUY_TICKET", payload : {buyTicketSuccess : true}});
     if(response.status) {
       alert("구매 성공");
+      window.location.reload();
     }
   } catch(error) {
     console.error(error);

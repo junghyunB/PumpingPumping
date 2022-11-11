@@ -17,6 +17,7 @@ const Navbar = () => {
     dispatch(connectKaiKasAccount.getKaiKasAccount());
   };
 
+
   const connectMetaMaskWallet = () => {
     dispatch(connectMetaMaskAccount.getMetaMaskAccount());
   };
@@ -101,6 +102,7 @@ const Navbar = () => {
   useEffect(() => {
     if (accountMetaMask === "") walletChangeMetaMask();
   }, []);
+
 
   return (
     <div className="navbarContainer">

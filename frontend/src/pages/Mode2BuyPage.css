@@ -1,0 +1,194 @@
+.mode2BuyPageContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+}
+
+.mode2BuyPageSection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.mode2selectSection {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.z-indexZone {
+    z-index: 20;
+    text-decoration: none;
+    color: black;
+}
+
+.mode2selectSection button {
+    width: 200px;
+    height: 70px;
+}
+
+
+.mode2selectTicketSection1 {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    /* background-color: yellow; */
+}
+.TicketSection1 {
+    display: flex;
+    width: 33.3%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: aquamarine; */
+}
+
+.Ticket1 {
+    width:250px;
+    height: 250px;
+    border: 5px solid black;
+    border-radius: 3rem;
+    /* background-color: gray; */
+}
+.TicketSection2 {
+    display: flex;
+    width: 33.3%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+.Ticket2 {
+    width:250px;
+    height: 250px;
+    border: 5px solid black;
+    border-radius: 3rem;
+    /* background-color: blue; */
+}
+
+.TicketSection3 {
+    display: flex;
+    width: 33.3%;
+    height: 100%;
+    align-items: center;
+    /* background-color: darksalmon; */
+}
+
+.Ticket3 {
+    width:250px;
+    height: 250px;
+    border: 5px solid black;
+    border-radius: 3rem;
+    /* background-color: yellow; */
+}
+
+
+.mode2selectTicketSection2 {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    /* background-color: green; */
+}
+.TicketSection4 {
+    display: flex;
+    width: 50%;
+    height:100%;
+    /* background-color: yellowgreen; */
+}
+.ticketSection4-1 {
+    display: flex;
+    width:50%;
+    height: 100%;
+    /* background-color: bisque; */
+}
+
+.ticketSection4-2 {
+    display: flex;
+    width:50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: darkblue; */
+}
+
+.Ticket4 {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    border: 5px solid black;
+    border-radius: 3rem;
+    /* background-color: pink; */
+}
+
+.TicketSection5 {
+    display: flex;
+    width: 50%;
+    height:100%;
+    /* background-color: wheat; */
+}
+.ticketSection5-1 {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.Ticket5 {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    border: 5px solid black;
+    border-radius: 3rem;
+    /* background-color: blueviolet; */
+}
+
+.ticketSection5-2 {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+}
+
+.imageSection {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: cadetblue; */
+}
+
+.textSection {
+    /* display:flex; */
+    width: 100%;
+    height: 20%;
+    /* background-color: skyblue; */
+    text-align: center;
+}
+
+.textSection p {
+    line-height: 10px;
+    font-size: larger;
+    font-weight: 900;
+}
+
+
+.imgSize {
+    width: 150px;
+    height: 150px;
+}

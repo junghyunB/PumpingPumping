@@ -14,7 +14,7 @@ const ChoiceMode = () => {
         </Link>
       </div>
       <div className="choicePageRightSection">
-      <Link to="/" style={{ textDecoration: "none" }} className="link-Mode">
+      <Link to="/mode2buy" style={{ textDecoration: "none" }} className="link-Mode">
         <div className="choicePageRightSection1">
       <img className="choiceImageRightSection" src={mode2main}></img>
         <h1 className="choiceImageRightSectionText">Mode#2</h1>

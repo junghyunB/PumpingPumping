@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Mode2DetailPage.css";
 import { useParams } from "react-router-dom";
 import { mode1ticket } from "../assets/images";
@@ -8,17 +8,26 @@ import { Link } from "react-router-dom";
 
 const Mode2DetailPage = () => {
   const { id } = useParams();
+  const [selectTicket, setSelectTicket] = useState([]);
+  let count = 0;
   let section1 = [];
   let section2 = [];
   let section3 = [];
   let section4 = [];
   let section5 = [];
- 
+  
+
+  const test23 = (num) => {
+     if(count % 2  == 0) {
+      selectTicket.push(num)
+     } 
+  }
+
     for (let i = 1; i < 51; i++) {
       if (i < 11){
         section1.push(
           <div className="ticketSmallSection">
-            <button>
+            <button onClick={() => {test23(i + (id - 1) * 50)} }>
               <img alt="ticket" className="ticketSize" src={mode1ticket}></img>
               <div className="imgText">#{i + (id - 1) * 50}</div>
             </button>

@@ -394,7 +394,7 @@ const RAFFLEV1_CONTRACT_ABI = [
 	}
 ];
 
-const RAFFLEV2_CONTRACT_ADDRESS = "0xF8f8218551356d87cb7615Ed999A6ce0600FB761";
+const RAFFLEV2_CONTRACT_ADDRESS = "0xdaEe224d79f236419a7Af553678ecf2Ebd1f36A2";
 const RAFFLEV2_CONTRACT_ABI = [
 	{
 		"inputs": [
@@ -409,7 +409,7 @@ const RAFFLEV2_CONTRACT_ABI = [
 				"type": "uint256[]"
 			}
 		],
-		"name": "buyTicketM1",
+		"name": "buyTicketM2",
 		"outputs": [],
 		"stateMutability": "payable",
 		"type": "function"
@@ -492,6 +492,30 @@ const RAFFLEV2_CONTRACT_ABI = [
 				"internalType": "uint256[]",
 				"name": "",
 				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
+		"name": "getMyTicketCountM2",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",

@@ -95,7 +95,7 @@ contract RaffleMode2 {
             }            
     }
 
-    function buyTicketM1(uint ticketType, uint[] memory ticketNumber) public payable {
+    function buyTicketM2(uint ticketType, uint[] memory ticketNumber) public payable {
         require(ticketType < 6, "is not Ticket Type");
         uint ticketPrice = (ticketType + 1) * 3;
         if (ticketType == 1) {
@@ -217,6 +217,12 @@ contract RaffleMode2 {
     function getMyTicketNumberM2(address _to, uint epoch) public view returns(uint[] memory, uint[] memory) {
         return (userdataM2[_to][epoch].myTicket, userdataM2[_to][epoch].myTicketId);
     }
+
+    // 역대 회차 내가 보유한 티켓 갯수 조회
+    function getMyTicketCountM2(address _to, uint epoch) public view returns(uint) {
+        return userdataM2[_to][epoch].amountTicket;
+    }
+
 
     // 역대 회차 승리자 조회
     function getWinnerM2(uint epoch) public view returns(address) {

@@ -36,7 +36,6 @@ const Mode1MyPage = () => {
   const account = localStorage.getItem(localKey);
   let [changeEpoch, setChangeEpoch] = useState(currentEpoch);
   epochWinner = epochWinner.toLowerCase();
-  console.log(isClaimM1);
   const setData = () => {
     setChangeEpoch(currentEpoch);
   };

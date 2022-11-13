@@ -32,6 +32,11 @@
     height: 100%;
     /* background-color: yellow; */
 }
+
+.chooseNumberSection p {
+    font-size: 17px;
+} 
+
 .availableSection {
     display: flex;
     flex-direction: column;
@@ -131,6 +136,6 @@
 .BackPage {
     color: black;
     padding-right: 10px;
-    padding-bottom: 4px;
+    padding-bottom: 14px;
     z-index: 20;
 }

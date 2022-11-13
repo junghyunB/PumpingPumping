@@ -12,7 +12,7 @@ const Mode2BuyPage = () => {
           <Link to="/mode2buy" className="z-indexZone">
             <Button variant="outline-dark">BuyTicket</Button>
           </Link>
-          <Link to="/" className="z-indexZone">
+          <Link to="/mode2my" className="z-indexZone">
             <Button variant="outline-dark">MyPage</Button>
           </Link>
         </div>

@@ -5,6 +5,7 @@ import epochM2Reducer from "./epochM2Reducer";
 import TicketM2Reducer from "./TicketM2Reducer";
 import TicketReducer from "./TicketReducer";
 import userDataReducer from "./userDataReducer";
+import userDataM2Reducer from "./userDataM2Reducer";
 
 export default combineReducers({
     account : accountReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
     epochM1 : epochM1Reducer,
     user : userDataReducer,
     epochM2 : epochM2Reducer,
-    ticketM2 : TicketM2Reducer
+    ticketM2 : TicketM2Reducer,
+    userM2 : userDataM2Reducer,
 })

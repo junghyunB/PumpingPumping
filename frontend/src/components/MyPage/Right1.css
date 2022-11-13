@@ -1,0 +1,41 @@
+.mode2MyPageRightModeSelectContainer {
+    /* background-color: red; */
+    display: flex;
+    margin-left: 200px;
+    margin-bottom: 150px;
+}
+
+.mode2MyPageRightModeSelectSection {
+    width: 250px;
+    height: 250px;
+    /* background-color: aqua; */
+    border: 3px solid black;
+}
+
+.mode2MyPageRightModeCircleSection {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modeMyPageRightModeCircle {
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.rightCircleTxt {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    font-size: 30px;
+}
+
+.mode2MyPageRightTxtSection {
+    
+}

@@ -162,9 +162,9 @@ const Mode1MyPage = () => {
               <BiLeftArrow size={30} />
             </button>
             {changeEpoch === currentEpoch ? (
-              <h3>Mode#1 {changeEpoch}회차 proceeding...</h3>
+              <h3>{changeEpoch} round proceeding...</h3>
             ) : (
-              <h3>Mode#1 {changeEpoch}회차</h3>
+              <h3>{changeEpoch} round</h3>
             )}
             <button onClick={addEpoch}>
               <BiRightArrow size={30} />

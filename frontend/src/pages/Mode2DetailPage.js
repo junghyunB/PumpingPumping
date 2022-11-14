@@ -156,19 +156,19 @@ const Mode2DetailPage = () => {
         <div className="choiceSection">
           <div className="ticketSection">
             <div className="ticketContainer1">
-              {section1.map((item) => item)}
+              {section1?.map((item) => item)}
             </div>
             <div className="ticketContainer1">
-              {section2.map((item) => item)}
+              {section2?.map((item) => item)}
             </div>
             <div className="ticketContainer1">
-              {section3.map((item) => item)}
+              {section3?.map((item) => item)}
             </div>
             <div className="ticketContainer1">
-              {section4.map((item) => item)}
+              {section4?.map((item) => item)}
             </div>
             <div className="ticketContainer1">
-              {section5.map((item) => item)}
+              {section5?.map((item) => item)}
             </div>
           </div>
           <div className="buyButtonSection">

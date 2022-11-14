@@ -40,215 +40,138 @@
 /* --------------- MainSection --------------- */
 .mode2MyPageMainSelectSection {
     display: flex;
+    flex-direction: row;
+    /* align-items: center; */
     justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
-}
-
-.mode2MyPageInfoSection {
-    width: 300px;
-    height: 400px;
-    border: 5px solid black;
-    /* background-color: aqua; */
-}
-.mode2MyPageOwnTicketSection {
-    height: 140px;
-    /* background-color: gold; */
-}
-
-.mode2MyPageOwnTicketTitleTxt {
-    /* background-color: gray; */
-    width: 100%;
-    /* height: 100px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mode2MyPageOwnTicketSelectModeSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: blue; */
-}
-
-.mode2MyPageOwnTicketSelectModeInfoSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 3px solid black;
-    justify-content: center;
-    width: 100%;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.mode2MyPageOwnTicketSelectModeTxt1 {
-    display: flex;
-    justify-content: center;
-}
-
-.mode2MyPageOwnTicketSelectModeTxt2 {
-    display: flex;
-    justify-content: center;
-}
-
-.mode2MyPageTotalTicketSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
     /* background-color: brown; */
 }
 
-.mode2MyPageResultSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    /* background-color: yellow; */
+.mode2MyContents {
+    display:flex;
+    flex-direction: column;
+    width: 450px;
+    height: 550px;
+    border-radius: 3rem;
+    border: solid 2px black;
+    box-shadow: 5px 5px 15px 5px #dadce0;
+    background-color: white;
 }
 
-.mode2MyPageClaimBtnSection {
-    height: 60px;
-    /* background-color: rebeccapurple; */
-    display: flex;
-    justify-content: center;
-
-}
-
-.mode2MyPageClaimBtnSection button {
-    width: 300px;
-    height: 70px;
-}
-
-/* --------------- LeftMode1Section --------------- */
-.mode2MyPageLeftSelectSection1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mode2MyTitle {
     width: 100%;
-    height: 100%;
-}
-
-.mode2MyPageInfoSection {
-    width: 300px;
-    height: 400px;
-    border: 5px solid black;
-    /* background-color: aqua; */
-}
-.mode2MyPageOwnTicketSection {
-    height: 140px;
-    /* background-color: gold; */
-}
-
-.mode2MyPageOwnTicketTitleTxt {
-    /* background-color: gray; */
-    width: 100%;
-    /* height: 100px; */
-    display: flex;
+    height: 80px;
+    border-radius: 3rem;
+    text-align: center;
     justify-content: center;
     align-items: center;
-}
-
-.mode2MyPageOwnTicketSelectModeSection {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: blue; */
+    /* background-color: brown; */
+    z-index: 20;
 }
 
-.mode2MyPageOwnTicketSelectModeInfoSection {
+.mode2MyTitle h3 {
+    padding-top: 10px;
+    font-weight: 900;
+}
+
+
+.mode2MyTitle button {
+    border: none;
+    z-index: 20;
+    background-color: white;
+}
+
+.mode2MyTicketList {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 3px solid black;
-    justify-content: center;
+    width:100%;
+    height: 150px;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+}
+
+.myTicketTitle {
+    display: flex;
     width: 100%;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.mode2MyPageOwnTicketSelectModeTxt1 {
-    display: flex;
-    justify-content: center;
-}
-
-.mode2MyPageOwnTicketSelectModeTxt2 {
-    display: flex;
-    justify-content: center;
-}
-
-.mode2MyPageTotalTicketSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    /* background-color: brown; */
-}
-
-.mode2MyPageResultSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
+    height: 25px;
+    padding-left: 15px;
     /* background-color: yellow; */
 }
 
-.mode2MyPageClaimBtnSection {
-    height: 60px;
-    /* background-color: rebeccapurple; */
-    display: flex;
-    justify-content: center;
-
+.ticketListSection {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    cursor: pointer;
+    /* background-color: chocolate; */
 }
 
-.mode2MyPageClaimBtnSection button {
-    width: 300px;
-    height: 70px;
+.img-wrap {
+    display: inline-block;
+    width: 20%;
+    height: 62px;
+    /* background-color: coral; */
 }
 
-.mode2MyPageRightModeSelectContainer {
-    /* background-color: red; */
-    display: flex;
-    margin-left: 200px;
-    margin-bottom: 150px;
+.img-wrap button {
+    /* width: auto; */
+    /* background-color: none; */
+    /* border : none; */
+    /* z-index: 20; */
 }
 
-.mode2MyPageRightModeSelectSection {
-    width: 250px;
-    height: 250px;
-    /* background-color: aqua; */
-    border: 3px solid black;
+.img-wrap img {
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 90%;
+    height: 90%;
+    /* background-color: yellow; */
 }
 
-.mode2MyPageRightModeCircleSection {
-    /* background-color: blue; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modeMyPageRightModeCircle {
-    position: relative;
-    display: flex;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    border: 3px solid black;
-    border-radius: 50%;
-}
-
-.rightCircleTxt {
+.img-text {
     position: absolute;
-    top: 25%;
-    left: 45%;
-    font-size: 30px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    /* padding: 5px 10px; */
+    transform: translate( -120%, 5% );
+    text-align: center;
+    padding-top: 20px;
+    /* background-color: green; */
 }
 
-.mode2MyPageRightTxtSection {
-    
+.img-text p {
+    line-height: 10%;
+}
+.text-interval {
+    padding-left:8px;
 }
 
-/* --------------- LeftMode2Section --------------- */
+.mode2TicketInfo {
+    width: 100%;
+    height: 80px;
+    border-bottom: solid 1px black;
+    /* background-color: yellow; */
+}
+
+.mode2Result {
+    width: 100%;
+    height: 80px;
+    border-bottom: solid 1px black;
+}
+
+.mode2Claim {
+    width: 100%;
+    height: 160px;
+    /* background-color: chocolate; */
+    border-radius: 3rem;
+}
+
+
+
+
+
+

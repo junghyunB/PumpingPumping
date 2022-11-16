@@ -52,7 +52,7 @@
     display:flex;
     flex-direction: column;
     width: 450px;
-    height: 550px;
+    height: 630px;
     border-radius: 3rem;
     border: solid 2px black;
     box-shadow: 5px 5px 15px 5px #dadce0;
@@ -116,12 +116,6 @@
     /* background-color: coral; */
 }
 
-.img-wrap button {
-    /* width: auto; */
-    /* background-color: none; */
-    /* border : none; */
-    /* z-index: 20; */
-}
 
 .img-wrap img {
     padding-left: 10px;
@@ -151,23 +145,222 @@
 }
 
 .mode2TicketInfo {
+    display: flex;
     width: 100%;
-    height: 80px;
+    height: 50px;
     border-bottom: solid 1px black;
     /* background-color: yellow; */
 }
 
+.mode2totalTicketSection {
+    width: 50%;
+    height: 100%;
+}
+.mode2totalTicketSection p {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.mode2totalAmountSection {
+    width: 50%;
+    height: 100%;
+}
+
+.mode2totalAmountSection p {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.winningTicketSection {
+    display: flex;
+    width: 100%;
+    height: 160px;
+    border-bottom: solid 1px black;
+    /* background-color: brown; */
+}
+
+.winningTicket {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.winningTicketNotTie {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+}
+
+.winningTicketTitle h3 {
+    padding-left: 150px;
+    font-weight: 900;
+}
+
+.winningTicketTitle {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    /* background-color: blueviolet; */
+}
+
+
+.winningTicketTitle h4 { 
+    padding-left: 12px;
+    font-weight: 900;
+    padding-top: 10px;
+}
+
+.winningTicketimgSection {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: brown; */
+}
+
+.winningTicketimgSection img {
+    width: 100px;
+    height: 70px;
+}
+
+.winningNumberData {
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 12px;
+}
+.winningNumberData p {
+    line-height: 10px;
+    font-size: 20px;
+}
+
+.tieTicket {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+
+.tieTicketTitle {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+}
+.tieTicketTitle h4 {
+    padding-top: 10px;
+    font-weight: 900;
+}
+
+.tieTicketImgSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+.tieImgSmallSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:25%;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+
+.tieTicketImgSection img {
+    width: 80px;
+    height: 60px;
+}
+
+
+.tieNumberData {
+    position: absolute;
+}
+
+.tieNumberData p {
+    line-height: 6px;
+    font-size: 17px;
+}
+
+.currnetEpochWinningTicket {
+    width: 100%;
+    height: 100%;
+    text-align: center;  
+    padding-top: 25px;  
+}
+
+.currnetEpochWinningTicket h2 {
+    font-weight: 900;
+}
+
 .mode2Result {
+    display: flex;
     width: 100%;
     height: 80px;
     border-bottom: solid 1px black;
 }
 
+.resultSection {
+    padding-top: 7px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.resultSection p {
+    font-size: 30px;
+}
+
+.winningresultSection {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+    justify-content: center;
+}
+
+.winningresultSection p {
+    padding-top: 17px;
+    font-size: 20px;
+}
+
+.winningclaimSection {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    justify-content: center;
+}
+
+.winningclaimSection p {
+    padding-top: 17px;
+    font-size: 20px;
+}
+
+
 .mode2Claim {
+    display: flex;
     width: 100%;
     height: 160px;
     /* background-color: chocolate; */
+    align-items: center;
+    justify-content: center;
     border-radius: 3rem;
+}
+
+.mode2Claim button{
+    width: 80%;
+    height: 70px;
+    font-size: 25px;
+    z-index: 20;
 }
 
 

@@ -1,7 +1,7 @@
 function getMetaMaskAccount() {
     return async (dispatch) => {
         try {
-            const accounts = await window.ethereum.enable();
+            const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
             let accountMetaMask = accounts[0]
             if(localStorage.getItem("kaikasAccount") === null) {
                 localStorage.setItem("metamaskAccount", accountMetaMask);

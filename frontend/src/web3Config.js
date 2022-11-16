@@ -1,6 +1,6 @@
 import Web3 from "web3";
 
-const web3 = new Web3(window.ethereum);
+export const web3 = new Web3(window.ethereum);
 
 const RAFFLEV1_CONTRACT_ADDRESS = "0x49D66e660Bf5a95be4e38f37381ebcBFdA432dc2";
 const RAFFLEV1_CONTRACT_ABI = [

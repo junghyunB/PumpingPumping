@@ -393,12 +393,48 @@
     
   }
 
+.timerSaction {
+  position: absolute;
+  display: flex;
+  width: 400px;
+  height: 100px;
+  // background-color: #FF4500;
+  left: 350px;
+  top: 20px;
+}
 
+.mode1Timer {
+  width: 50%;
+  height: 100%;
+  border: solid 3px black;
+  border-radius: 2rem;
+  text-align: center;
+  margin-right: 20px;
+  // background-color: #FF4500;
+}
+
+
+.mode2Timer {
+  width: 50%;
+  height: 100%;
+  border: solid 3px black;
+  border-radius: 2rem;
+  text-align: center;
+  margin-left: 20px;
+  // background-color: darkblue;
+}
+
+.mode2Timer p {
+  
+  padding-top: 20px;
+  font-size: 20px;
+  line-height: 10px;
+}
 
 
 .leftNavSection {
     position: relative;
-    /* background-color: aqua; */
+    // background-color: aqua; 
     position: fixed;
     left: 0;
     height: 100%;

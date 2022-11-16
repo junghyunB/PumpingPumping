@@ -13,7 +13,7 @@ function pickWinnerM2Act() {
       });
     dispatch({type:"SUCCESS_PICK_WINNERM2", payload : {pickWinnerM2 : true}});
     if(response.status) {
-      alert("winner선정 성공")
+      window.location.reload();
     }
     } catch (error) {
       console.error(error);

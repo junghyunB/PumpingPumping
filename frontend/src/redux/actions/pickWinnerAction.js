@@ -13,7 +13,7 @@ function pickWinnerAct() {
       });
     dispatch({type:"SUCCESS_PICK_WINNER", payload : {pickWinner : true}});
     if(response.status) {
-      alert("winner선정 성공")
+      window.location.reload();
     }
     } catch (error) {
       console.error(error);

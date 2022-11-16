@@ -8,6 +8,7 @@ import { connectKaiKasAccount } from "../../redux/actions/connectKaiKasAccount";
 import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccount";
 import { pickWinnerAction } from "../../redux/actions/pickWinnerAction";
 import { pickWinnerM2Action } from "../../redux/actions/pickWinnerM2Action";
+import Timer from "../Timer/Timer";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -38,9 +39,15 @@ const Navbar = () => {
       dispatch(connectKaiKasAccount.getKaiKasAccount());
     }
   };
-
   const metaMaskNetWork = window.ethereum.networkVersion;
   const kaiKasNetWork = window.klaytn.networkVersion;
+
+  const changeNetWork = () => {
+    if(storedMetaMask !== null && metaMaskNetWork !== "1001") {
+      localStorage.removeItem("metamaskAccount");
+      localStorage.removeItem("kaikasAccount");
+    }
+  }
 
   const colorstyle = {
     color : "red",
@@ -97,11 +104,17 @@ const Navbar = () => {
 
   useEffect(() => {
     if (accountKaiKas === "") walletChangeKaiKas();
-  }, []);
+  }, [storedKaiKas]);
 
   useEffect(() => {
     if (accountMetaMask === "") walletChangeMetaMask();
-  }, []);
+  }, [storedMetaMask]);
+
+  useEffect(() => {
+    dispatch({type:"KAIKAS_NETWORK", payload:kaiKasNetWork});
+    dispatch({type:"METAMASK_NETWORK", payload:metaMaskNetWork});
+    changeNetWork();
+  },[metaMaskNetWork, kaiKasNetWork])
 
 
   return (
@@ -155,8 +168,12 @@ const Navbar = () => {
             )}
           </ol>
         </nav>
+     
       </div>
-
+              <div className="timerSaction">
+                <div className="mode1Timer"></div>
+                <div className="mode2Timer"><Timer /></div>
+              </div>
       <div className="leftNavContainer">
         <div className="leftNavSection">
           <Link to="/" style={{ textDecoration: "none" }}>

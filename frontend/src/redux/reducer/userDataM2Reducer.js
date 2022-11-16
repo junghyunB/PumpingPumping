@@ -1,9 +1,10 @@
-
 let initialState = {
     myTicketCountM2: 0,
     myTicketInfoM2: [[]],
     myTicketDetailM2: [],
     detailState: false,
+    isClaimedM2: 0,
+    claimM2Success: false,
   };
   
   function userDataM2Reducer(state = initialState, action) {
@@ -20,6 +21,10 @@ let initialState = {
         return { ...state, detailState: true };
       case "CLOSE_DETAIL":
         return { ...state, detailState: false };
+      case "GET_ISCLAIM_M2":
+        return { ...state, isClaimedM2: payload.isClaimedM2 };
+      case "CLAIM_REWARD_M2":
+        return { ...state, claimM2Success: payload.claimM2Success };
         default:
         return { ...state };
     }

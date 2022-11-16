@@ -1,0 +1,20 @@
+.notSupportedContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+}
+.notSupportedSection {
+    display: flex;
+    margin-left: 300px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.notSupportedSection h1 {
+    font-weight: 900;
+}

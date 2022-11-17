@@ -8,7 +8,7 @@ import { connectKaiKasAccount } from "../../redux/actions/connectKaiKasAccount";
 import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccount";
 import { pickWinnerAction } from "../../redux/actions/pickWinnerAction";
 import { pickWinnerM2Action } from "../../redux/actions/pickWinnerM2Action";
-import Timer from "../Timer/Timer";
+import {TimerM1, TimerM2} from "../"
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -171,8 +171,8 @@ const Navbar = () => {
      
       </div>
               <div className="timerSaction">
-                <div className="mode1Timer"></div>
-                <div className="mode2Timer"><Timer /></div>
+                <div className="mode1Timer"><TimerM1 /></div>
+                <div className="mode2Timer"><TimerM2 /></div>
               </div>
       <div className="leftNavContainer">
         <div className="leftNavSection">

@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import { useInterval } from "./hooks";
 import { useDispatch } from "react-redux";
+import { pickWinnerAction } from "../../redux/actions/pickWinnerAction";
 import { pickWinnerM2Action } from "../../redux/actions/pickWinnerM2Action";
 
 const useResultOfIntervalCalculator = (calculator, delay) => {
+    const dispatch = useDispatch();
     const [result, setResult] = useState(calculator());
     useInterval(() => {
       const newResult = calculator();
       if (newResult !== result) setResult(newResult);
     }, delay);
-  
+    if(result === 1) {
+      dispatch(pickWinnerM2Action.pickWinnerM2Act());
+      dispatch(pickWinnerAction.pickWinnerAct());
+    }
     return result;
   };
   
@@ -17,36 +22,40 @@ const useResultOfIntervalCalculator = (calculator, delay) => {
     const remain = useResultOfIntervalCalculator(() =>
       Math.floor((new Date(targetISOString) - new Date()) / 1000, 10)
     );
+
     var hour = parseInt((remain / 3600));
     var min = parseInt((remain % 3600) / 60);
     var sec = remain % 60;
-    return <div className="CountDownWrap">남은 시간 :{hour} 시간 {min} 분 {sec} 초</div>;
+    return <div className="CountDownWrap"><p>MODE#1 Remain</p><p>{hour} H {min} M {sec} S</p></div>;
   };
 
-const TimerT1 = () => {
-    const dispatch = useDispatch();
-    const [targetISOString, setTargetISOString] = useState("11 16 2022 16:51:00");
+const TimerM1 = () => {
+    const [targetISOString, setTargetISOString] = useState("11 17 2022 16:40:00");
     const isNotYet = useResultOfIntervalCalculator(
       () => new Date(targetISOString) - new Date() > 0, 10
     );
+  
     const ChangeTimer = () => {
-      const year = new Date().getFullYear();
-      const month = new Date().getMonth();
-      const date = new Date().getDate();
-      const hour = new Date().getHours();
-      const minutes = new Date().getMinutes();
+        const crt = new Date()
+        const year = crt.getFullYear();
+        const month = crt.getMonth();
+        const date = crt.getDate();
+      const hour = crt.getHours();
+      const minutes = crt.getMinutes();
       if(!isNotYet) {
-        setTargetISOString(`${month + 1} ${date + 2} ${year} ${hour}:${minutes}:00 `)
+        if(minutes + 1 < 60)
+        setTargetISOString(`${month + 1} ${date} ${year} ${hour}:${minutes + 1}:00 `)
+        else if(minutes + 1 === 60 && hour + 1 < 24)
+        setTargetISOString(`${month + 1} ${date} ${year} ${hour + 1}:00:00 `)
+        else if(minutes + 1 === 60 && hour + 1 === 24)
+        setTargetISOString(`${month + 1} ${date + 1} ${year} 00:00:00 `)
       }
     }
+
     useEffect(() => {
       ChangeTimer();
     },[isNotYet])
 
-    useEffect(() => {
-      if(new Date(targetISOString) - new Date() > 19000) {
-      }
-    }, [targetISOString])
 
     return (
       <div>
@@ -55,4 +64,4 @@ const TimerT1 = () => {
     );
 }
 
-export default TimerT1
+export default TimerM1

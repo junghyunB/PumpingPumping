@@ -13,7 +13,6 @@ function pickWinnerM2Act() {
       });
     dispatch({type:"SUCCESS_PICK_WINNERM2", payload : {pickWinnerM2 : true}});
     if(response.status) {
-      window.location.reload();
     }
     } catch (error) {
       console.error(error);

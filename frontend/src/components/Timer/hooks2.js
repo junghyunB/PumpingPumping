@@ -2,9 +2,7 @@ import { useEffect, useRef } from "react";
 
 export function useInterval(callback, delay) {
   const savedCallback = useRef();
-  // console.log(savedCallback.current)
-
-  // Remember the latest callback.
+  
   useEffect(() => {
     savedCallback.current = callback;
   }, [callback]);

@@ -6,6 +6,7 @@ import DashBoardM2 from "./DashBoard/DashBoardM2";
 import Right1 from "./MyPage/Right1";
 import NotConnectedWallet from "./NotConnectedWallet/NotConnectedWallet";
 import NotSupportedNetWork from "./NotSupportedNetWork/NotSupportedNetWork";
-import Timer from "./Timer/Timer";
+import TimerM1 from "./Timer/TimerM1";
+import TimerM2 from "./Timer/TimerM2";
 
-export { Navbar, MainM1, MainM2, DashBoardM1, DashBoardM2, Right1, NotConnectedWallet, NotSupportedNetWork, Timer};
+export { Navbar, MainM1, MainM2, DashBoardM1, DashBoardM2, Right1, NotConnectedWallet, NotSupportedNetWork, TimerM2, TimerM1};

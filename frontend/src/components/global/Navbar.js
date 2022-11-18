@@ -42,12 +42,12 @@ const Navbar = () => {
   const metaMaskNetWork = window.ethereum.networkVersion;
   const kaiKasNetWork = window.klaytn.networkVersion;
 
-  const changeNetWork = () => {
-    if(storedMetaMask !== null && metaMaskNetWork !== "1001") {
-      localStorage.removeItem("metamaskAccount");
-      localStorage.removeItem("kaikasAccount");
-    }
-  }
+  // const changeNetWork = () => {
+  //   if(storedMetaMask !== null && metaMaskNetWork !== "1001") {
+  //     localStorage.removeItem("metamaskAccount");
+  //     localStorage.removeItem("kaikasAccount");
+  //   }
+  // }
 
   const colorstyle = {
     color : "red",
@@ -113,7 +113,7 @@ const Navbar = () => {
   useEffect(() => {
     dispatch({type:"KAIKAS_NETWORK", payload:kaiKasNetWork});
     dispatch({type:"METAMASK_NETWORK", payload:metaMaskNetWork});
-    changeNetWork();
+    // changeNetWork();
   },[metaMaskNetWork, kaiKasNetWork])
 
 

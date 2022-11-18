@@ -12,8 +12,7 @@ const useResultOfIntervalCalculator = (calculator, delay) => {
       if (newResult !== result) setResult(newResult);
     }, delay);
     if(result === 1) {
-      dispatch(pickWinnerM2Action.pickWinnerM2Act());
-      dispatch(pickWinnerAction.pickWinnerAct());
+      // dispatch(pickWinnerAction.pickWinnerAct());
     }
     return result;
   };
@@ -35,7 +34,7 @@ const TimerM1 = () => {
       () => new Date(targetISOString) - new Date() > 0, 10
     );
   
-    const ChangeTimer = () => {
+    const changeTimer = () => {
         const crt = new Date()
         const year = crt.getFullYear();
         const month = crt.getMonth();
@@ -53,7 +52,7 @@ const TimerM1 = () => {
     }
 
     useEffect(() => {
-      ChangeTimer();
+      changeTimer();
     },[isNotYet])
 
 

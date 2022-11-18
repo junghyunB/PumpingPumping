@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./DashBoardM2.css";
 import {useSelector, useDispatch} from "react-redux";
 import { dashBoardM2Action } from '../../redux/actions/dashBoardM2Action';
+import Pagination from "react-js-pagination";
 const DashBoardM2 = () => {
 
     const dispatch = useDispatch();
@@ -20,25 +21,28 @@ const DashBoardM2 = () => {
       }
       let dashboardM2Arr = chunk(dashBoardDataM2).reverse();
 
-      useEffect(() => {
-        dispatch(dashBoardM2Action.dashBoardM2Act());
-      },[])
 
-  return (
-    <div className='dashBoardRightSection'>
-    <div className='dashBoardRightTable'>
+      const Paging = () => {
+        const [page, setPage] = useState(1);
+        const handlePageChange = (page) => { 
+          setPage(page); 
+        };
+        const pagelist = dashboardM2Arr.slice(((page - 1) * 10) + 1, (page) * 10)
+    
+        return (
+          <>
         <table>
             <thead>
                 <tr>
-                <th colSpan="4">Mode#2</th>
+                <th colSpan="4"><h3>Mode#2</h3></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                 <td>회차</td><td>Total Ticket</td><td>Prize</td><td>winningNumber</td>
                 </tr>
-                {dashboardM2Arr.map((item) => 
-                  <tr>
+                {pagelist.map((item) => 
+                  <tr key={item[0]}>
                     <td>{item[0]}회차</td>
                     <td>{item[1]} Ticket</td>
                     <td>{item[2]} Klay</td>
@@ -47,6 +51,27 @@ const DashBoardM2 = () => {
             )}
             </tbody>
         </table>
+          <Pagination 
+          activePage={page}
+          itemsCountPerPage={10}
+          totalItemsCount={dashboardM2Arr.length}
+          pageRangeDisplayed={5}
+          prevPageText={"‹"}
+          nextPageText={"›"}
+          onChange={handlePageChange} 
+          />
+          </>
+        ); 
+      }; 
+
+      useEffect(() => {
+        dispatch(dashBoardM2Action.dashBoardM2Act());
+      },[])
+
+  return (
+    <div className='dashBoardRightSection'>
+    <div className='dashBoardRightTable'>
+    <Paging />
     </div>
 </div>
   )

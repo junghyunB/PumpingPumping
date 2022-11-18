@@ -1,0 +1,38 @@
+.mode2BuyPageContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+}
+
+.mode2BuyPageSection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    align-items: center;
+    justify-content: center;
+}
+.center {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    z-index: 20;
+    background-color: red;
+}
+
+.sprSlider {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    background-color: red;
+}
+
+.asd {
+    justify-content: center;
+    align-items: center;
+}

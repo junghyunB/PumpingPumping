@@ -59,6 +59,7 @@ const Mode2MyPage = () => {
     }
   };
 
+
   for (let i = 0; i < myTicketInfoM2[0].length; i++) {
     TicketArr.push(
       <div
@@ -77,6 +78,8 @@ const Mode2MyPage = () => {
       </div>
     );
   }
+
+
 
   const addEpoch = () => {
     if (changeEpochM2 === currentEpochM2) {
@@ -112,6 +115,7 @@ const Mode2MyPage = () => {
   return (
     <>
       <div className="mode2MyPageContainer">
+        
         <div className="mode2MyPageSection">
           <div className="mode2selectSection">
             <Link to="/mode2buy" className="z-indexZone">
@@ -142,7 +146,8 @@ const Mode2MyPage = () => {
               </div>
               <div className="mode2TicketInfo">
                 <div className="mode2totalTicketSection">
-                  <p>Total Ticket : {totalTicketAmountM2} EA</p>
+                  <p>Total Ticket : {totalTicketAmountM2} EA</p> 
+ 
                 </div>
                 <div className="mode2totalAmountSection">
                   <p>Total Prize : {totalAmountM2} KLAY</p>
@@ -162,7 +167,7 @@ const Mode2MyPage = () => {
                         <h4>winningTicket </h4>
                       </div>
                       <div className="winningTicketimgSection">
-                        <img src={mode1ticket}></img>
+                        <img src={mode1ticket} alt="Ticket"></img>
                         <div className="winningNumberData">
                           <p>#{winningNumberM2}</p>
                           <p>
@@ -177,7 +182,7 @@ const Mode2MyPage = () => {
                       </div>
                       <div className="tieTicketImgSection">
                         <div className="tieImgSmallSection">
-                          <img src={mode1ticket}></img>
+                          <img src={mode1ticket} alt="Ticket"></img>
                           <div className="tieNumberData">
                             <p>#{winningNumberM2}</p>
                             <p>{changeEpochM2}, 2</p>
@@ -192,7 +197,7 @@ const Mode2MyPage = () => {
                         <h3>winningTicket</h3>
                       </div>
                       <div className="winningTicketimgSection">
-                        <img src={mode1ticket}></img>
+                        <img src={mode1ticket} alt="Ticket"></img>
                         <div className="winningNumberData">
                           <p>#{winningNumberM2}</p>
                           <p>

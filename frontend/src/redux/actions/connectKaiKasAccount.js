@@ -6,7 +6,7 @@ function getKaiKasAccount() {
             if(localStorage.getItem("metamaskAccount") === null) { 
                 localStorage.setItem("kaikasAccount", accountKaiKas) 
             } 
-            const res = dispatch({type : "GET_KAIKAS_ACCOUNT", payload : {accountKaiKas}})  
+           dispatch({type : "GET_KAIKAS_ACCOUNT", payload : {accountKaiKas}})  
             
         } 
         catch(error) {

@@ -3,35 +3,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Test.css"
 
-const SliderT = () => {
+const SliderT = ({ticketArr}) => {
   const settings = {
     className : "slider variable-width",
-    arrows: false,
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
+    arrows: true,
+      // dots: true,
+      infinite: false,
+      slidesToShow: 2,
       centerMode: true,
       slidesToScroll: 1,
       variableWidth: true
     }
+
   return (
     <div>
     <Slider {...settings}>
-    	<div className='sprSlider'>
-    	  <h3>1</h3>
-    	</div>
-    	<div className='sprSlider'>
-    	  <h3>2</h3>
-    	</div>
-    	<div className='sprSlider'>
-    	  <h3>3</h3>
-    	</div>
-    	<div className='sprSlider'>
-    	  <h3>4</h3>
-    	</div>
-    	<div className='sprSlider'>
-    	  <h3>5</h3>
-    	</div>
+   {ticketArr?.map((item) => item)} 
       </Slider>
       </div>
   );

@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { metaMaskNetworkAction } from "./redux/actions/metaMaskNetworkAction";
-import { connectKaiKasAccount } from "./redux/actions/connectKaiKasAccount";
-import { connectMetaMaskAccount } from "./redux/actions/connectMetaMaskAccount";
 import {
   MainPage,
   DashBoard,
@@ -26,32 +24,11 @@ import SliderT from "./lib/SliderT";
 function App() {
   const localKey = localStorage.key(0);
   const dispatch = useDispatch();
-  const accountKaiKas = useSelector((state) => state.account.accountKaiKas);
-  const accountMetaMask = useSelector((state) => state.account.accountMetaMask);
   const metamaskNetWork = useSelector((state) => state.account.metamaskNetWork);
 
-  const walletChangeMetaMask = () => {
-    if (localKey !== null) {
-      dispatch(connectMetaMaskAccount.getMetaMaskAccount());
-    }
-  };
-  const walletChangeKaiKas = () => {
-    if (localKey !== null) {
-      dispatch(connectKaiKasAccount.getKaiKasAccount());
-    }
-  };
   const networkChangeMetaMask = () => {
     dispatch(metaMaskNetworkAction.metaMaskNetworkAct());
   }
-
-
-  useEffect(() => {
-    if (accountKaiKas === "") walletChangeKaiKas();
-  }, [localKey]);
-
-  useEffect(() => {
-    if (accountMetaMask === "") walletChangeMetaMask();
-  }, [localKey]);
 
   useEffect(() => {
     networkChangeMetaMask();

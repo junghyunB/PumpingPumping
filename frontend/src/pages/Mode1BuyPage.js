@@ -6,12 +6,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { mode1ticket } from "../assets/images";
 import { epochAction } from "../redux/actions/epochAction";
+import { epochM2Action } from "../redux/actions/epochM2Action";
 import { myTicketCountAction } from "../redux/actions/myTicketCountAction";
 import { buyTicketAction } from "../redux/actions/buyTicketAction";
 
 const Mode1BuyPage = () => {
   const dispatch = useDispatch();
   const epoch = useSelector(state => state.epochM1.epoch);
+  const epochM2 = useSelector(state => state.epochM2.epochM2);
   const ownedMyTicket = useSelector(state => state.user.myTicketAmount)
   const localKey = localStorage.key(0);
   const account = localStorage.getItem(localKey);
@@ -30,8 +32,9 @@ const Mode1BuyPage = () => {
 
   useEffect(() => {
     dispatch(epochAction.epochAct());
+    dispatch(epochM2Action.epochM2Act());
     dispatch(myTicketCountAction.myTicketCountAct(account, epoch));
-  }, [account, epoch])
+  }, [account, epoch, epochM2])
 
   const buyTicketM1 = () => {
     availavble < amount ? alert("허용 갯수보다 많습니다.") : 

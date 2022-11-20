@@ -4,7 +4,7 @@ import Caver from "caver-js";
 var global = global || window;
 global.Buffer = global.Buffer || require("buffer").Buffer;
 
-export const RAFFLEV1_CONTRACT_ADDRESS = "0x49D66e660Bf5a95be4e38f37381ebcBFdA432dc2";
+export const RAFFLEV1_CONTRACT_ADDRESS = "0x7F99B7040b738c2d950543B7eED33Bdab0dec96b";
 export const RAFFLEV1_CONTRACT_ABI = [
 	{
 		"inputs": [
@@ -33,12 +33,36 @@ export const RAFFLEV1_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "date",
+				"type": "string"
+			}
+		],
+		"name": "setTimerM1",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
 	{
-		"inputs": [],
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "date",
+				"type": "string"
+			}
+		],
 		"name": "winnerOfRaffleM1",
 		"outputs": [],
 		"stateMutability": "nonpayable",
@@ -239,6 +263,25 @@ export const RAFFLEV1_CONTRACT_ABI = [
 				"type": "uint256"
 			}
 		],
+		"name": "getTimerM1",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
 		"name": "getWinnerM1",
 		"outputs": [
 			{
@@ -336,6 +379,25 @@ export const RAFFLEV1_CONTRACT_ABI = [
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "timerDataBaseM1",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
 				"name": "epoch",
 				"type": "uint256"
 			}
@@ -396,7 +458,7 @@ export const RAFFLEV1_CONTRACT_ABI = [
 	}
 ];
 
-export const RAFFLEV2_CONTRACT_ADDRESS = "0xdaEe224d79f236419a7Af553678ecf2Ebd1f36A2";
+export const RAFFLEV2_CONTRACT_ADDRESS = "0xbD7bf728d870970118852Cb0FED12e847387866c";
 export const RAFFLEV2_CONTRACT_ABI = [
 	{
 		"inputs": [
@@ -430,12 +492,36 @@ export const RAFFLEV2_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "date",
+				"type": "string"
+			}
+		],
+		"name": "setTimerM2",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
 	{
-		"inputs": [],
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "date",
+				"type": "string"
+			}
+		],
 		"name": "winnerOfRaffleM2",
 		"outputs": [],
 		"stateMutability": "nonpayable",
@@ -579,6 +665,25 @@ export const RAFFLEV2_CONTRACT_ABI = [
 				"type": "uint256"
 			}
 		],
+		"name": "getTimerM2",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "epoch",
+				"type": "uint256"
+			}
+		],
 		"name": "getWinnerM2",
 		"outputs": [
 			{
@@ -673,6 +778,25 @@ export const RAFFLEV2_CONTRACT_ABI = [
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "timerDataBaseM2",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
 			}
 		],
 		"stateMutability": "view",

@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import { useInterval } from "./hooks";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { pickWinnerAction } from "../../redux/actions/pickWinnerAction";
-import { pickWinnerM2Action } from "../../redux/actions/pickWinnerM2Action";
+import { timerDateM1Action } from "../../redux/actions/timerDateM1Action";
+import dayjs from "dayjs";
 
 const useResultOfIntervalCalculator = (calculator, delay) => {
+
+
     const dispatch = useDispatch();
+    const date = dayjs().add(1, "day").$d.toString();
     const [result, setResult] = useState(calculator());
     useInterval(() => {
       const newResult = calculator();
       if (newResult !== result) setResult(newResult);
     }, delay);
-    if(result === 1) {
-      // dispatch(pickWinnerAction.pickWinnerAct());
+    if(result === 3) {
+      dispatch(pickWinnerAction.pickWinnerAct(date));
     }
     return result;
   };
@@ -29,31 +33,15 @@ const useResultOfIntervalCalculator = (calculator, delay) => {
   };
 
 const TimerM1 = () => {
-    const [targetISOString, setTargetISOString] = useState("11 17 2022 16:40:00");
-    const isNotYet = useResultOfIntervalCalculator(
-      () => new Date(targetISOString) - new Date() > 0, 10
-    );
-  
-    const changeTimer = () => {
-        const crt = new Date()
-        const year = crt.getFullYear();
-        const month = crt.getMonth();
-        const date = crt.getDate();
-      const hour = crt.getHours();
-      const minutes = crt.getMinutes();
-      if(!isNotYet) {
-        if(minutes + 1 < 60)
-        setTargetISOString(`${month + 1} ${date} ${year} ${hour}:${minutes + 1}:00 `)
-        else if(minutes + 1 === 60 && hour + 1 < 24)
-        setTargetISOString(`${month + 1} ${date} ${year} ${hour + 1}:00:00 `)
-        else if(minutes + 1 === 60 && hour + 1 === 24)
-        setTargetISOString(`${month + 1} ${date + 1} ${year} 00:00:00 `)
-      }
-    }
+    const dispatch = useDispatch();
+
+    const epochM1 = useSelector(state => state.epochM1.epoch);
+    const targetISOString = useSelector(state => state.epochM1.timerM1);
 
     useEffect(() => {
-      changeTimer();
-    },[isNotYet])
+      dispatch(timerDateM1Action.timerDateM1Act(epochM1));
+    }, [epochM1])
+    // const [targetISOString, setTargetISOString] = useState("11 20 2022 13:40:00");
 
 
     return (

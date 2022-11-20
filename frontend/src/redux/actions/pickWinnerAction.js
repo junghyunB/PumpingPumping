@@ -1,6 +1,6 @@
 import { raffleV1Contract, RAFFLEV1_CONTRACT_ADDRESS, caver} from "../../caverConfig";
 
-function pickWinnerAct() {
+function pickWinnerAct(date) {
 
   return async (dispatch) => {
     try {
@@ -9,7 +9,7 @@ function pickWinnerAct() {
         from: account,
         to: RAFFLEV1_CONTRACT_ADDRESS,
         gas: "3000000",
-        data: raffleV1Contract.methods.winnerOfRaffleM1().encodeABI(),
+        data: raffleV1Contract.methods.winnerOfRaffleM1(date).encodeABI(),
       });
     dispatch({type:"SUCCESS_PICK_WINNER", payload : {pickWinner : true}});
     if(response.status) {

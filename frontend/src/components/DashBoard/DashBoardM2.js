@@ -20,14 +20,15 @@ const DashBoardM2 = () => {
         return arr;
       }
       let dashboardM2Arr = chunk(dashBoardDataM2).reverse();
-
+     
 
       const Paging = () => {
         const [page, setPage] = useState(1);
         const handlePageChange = (page) => { 
           setPage(page); 
         };
-        const pagelist = dashboardM2Arr.slice(((page - 1) * 10) + 1, (page) * 10)
+        const pagelist = dashboardM2Arr.length < 10 ? dashboardM2Arr : dashboardM2Arr.slice(((page - 1) * 10) + 1, (page) * 10)
+
     
         return (
           <>

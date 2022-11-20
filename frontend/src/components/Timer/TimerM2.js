@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import { useInterval } from "./hooks2";
 import { useDispatch, useSelector } from "react-redux";
 import { pickWinnerM2Action } from "../../redux/actions/pickWinnerM2Action";
+import { timerDateM2Action } from "../../redux/actions/timerDateM2Action";
+import dayjs from "dayjs";
 
 const useResultOfIntervalCalculatorM2 = (calculator, delay) => {
     const dispatch = useDispatch();
+    const date = dayjs().add(1, "hour").$d.toString();
     const [resultM2, setResultM2] = useState(calculator());
     useInterval(() => {
       const newResultM2 = calculator();
       if (newResultM2 !== resultM2) setResultM2(newResultM2);
     }, delay);
     if(resultM2 === 3) {
-      // dispatch(pickWinnerM2Action.pickWinnerM2Act());
+      dispatch(pickWinnerM2Action.pickWinnerM2Act(date));
     } 
     return resultM2;
   };
@@ -28,31 +31,14 @@ const useResultOfIntervalCalculatorM2 = (calculator, delay) => {
 
 const TimerM2 = () => {
   const dispatch = useDispatch();
-  const [targetISOStringM2, setTargetISOStringM2] = useState("11 17 2022 15:21:00");
-  const isNotYetM2 = useResultOfIntervalCalculatorM2(
-      () => new Date(targetISOStringM2) - new Date() > 0, 10
-    );
-    const changeTimerM2 = () => {
-      const crt = new Date()
-      const year = crt.getFullYear();
-      const month = crt.getMonth();
-      const date = crt.getDate();
-    const hour = crt.getHours();
-    const minutes = crt.getMinutes();
-    if(!isNotYetM2) {
-      if(minutes + 1 < 60)
-        setTargetISOStringM2(`${month + 1} ${date} ${year} ${hour}:${minutes + 1}:00 `)
-        else if(minutes + 1 === 60 && hour + 1 < 24)
-        setTargetISOStringM2(`${month + 1} ${date} ${year} ${hour + 1}:00:00 `)
-        else if(minutes + 1 === 60 && hour + 1 === 24)
-        setTargetISOStringM2(`${month + 1} ${date + 1} ${year} 00:00:00 `)
-      }
-    }
 
-    useEffect(() => {
-      changeTimerM2();
-    },[isNotYetM2])
+  const epochM2 = useSelector(state => state.epochM2.epochM2);
+  const targetISOStringM2 = useSelector(state => state.epochM2.timerM2);
 
+  useEffect(() => {
+    dispatch(timerDateM2Action.timerDateM2Act(epochM2));
+  }, [epochM2])
+  // const [targetISOStringM2, setTargetISOStringM2] = useState("11 17 2022 15:21:00");
 
     return (
       <div>

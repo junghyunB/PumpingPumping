@@ -35,6 +35,8 @@ contract RaffleMode2 {
     mapping(uint => mapping(uint => uint)) ticketIdToNumberM2;
     mapping(uint => mapping(uint => address)) ticketIdToOwnerM2;
     mapping(uint => uint[]) tieBreakTicketM2;
+    mapping(uint => string) public timerDataBaseM2;
+
 
     uint[] public dashBoardDataM2;
 
@@ -157,9 +159,10 @@ contract RaffleMode2 {
         }
     }
 
-    function winnerOfRaffleM2() public onlyOwner {
+    function winnerOfRaffleM2(string memory date) public onlyOwner {
         require(epochWinnerM2[_epoch].winnerAddress == address(0), "this epoch already electric winner!");
         uint sectionNumber = sectionRandomGenerate();
+        setTimerM2(_epoch + 1, date);
         if(sectionNumber < 30) {
         uint winningNumber = winningNumberGenerate() + 200;
         PickWinner(winningNumber);
@@ -176,6 +179,7 @@ contract RaffleMode2 {
         uint winningNumber = winningNumberGenerate();
         PickWinner(winningNumber);
         }
+
     }
 
     function calculateWinnerFee(uint epoch) internal view returns(uint) {
@@ -253,7 +257,16 @@ contract RaffleMode2 {
        function getDashBoardDataM2() public view returns(uint[] memory) {
         return dashBoardDataM2;
     }
-    
+
+        // 타이머 데이터 세팅
+    function setTimerM2(uint epoch, string memory date) public onlyOwner{
+        timerDataBaseM2[epoch] = date;
+    }
+
+    // 타이머 데이터 조회 함수
+    function getTimerM2(uint epoch) public view returns(string memory) {
+        return timerDataBaseM2[epoch];
+    }
 
 
 }

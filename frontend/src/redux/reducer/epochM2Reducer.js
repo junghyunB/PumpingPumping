@@ -3,7 +3,7 @@ let initialState = {
     epochM2: 0,
     dashBoardDataM2:[],
     pickWinnerM2:false,
-    targetDateM2: "11 17 2122 14:25:15",
+    timerM2: "",
   };
   
   function epochM2Reducer(state = initialState, action) {
@@ -16,8 +16,8 @@ let initialState = {
         return { ...state, dashBoardDataM2: payload.dashBoardDataM2 };
       case "SUCCESS_PICK_WINNERM2":
         return { ...state, pickWinnerM2: payload.pickWinnerM2 };
-      case "TIMERM2_END":
-        return { ...state, targetDateM2 : payload };
+      case "GET_TIMERM2":
+        return { ...state, timerM2 : payload.timerM2 };
       default:
         return { ...state };
     }

@@ -29,6 +29,7 @@ contract RaffleMode1 {
     mapping(uint => winnerInfoM1) public epochWinnerM1;
     mapping(uint => uint) public epochPrizeM1;
     mapping(uint => uint) public epochWinningTicketId;
+    mapping(uint => string) public timerDataBaseM1;
 
     
     address[] private winningTicketPoolM1;
@@ -76,7 +77,7 @@ contract RaffleMode1 {
     }
 
     // 이번 회차 승자 추출
-    function winnerOfRaffleM1() public onlyOwner{
+    function winnerOfRaffleM1(string memory date) public onlyOwner{
         require(epochWinnerM1[_epoch].winnerAddress == address(0), "this epoch already electric winner!");
         if(winningTicketPoolM1.length > 0) {
         uint randomNumber = randomGenerate();
@@ -88,6 +89,7 @@ contract RaffleMode1 {
         ticketId = 1;
         delete winningTicketPoolM1;
         _epoch++;
+        setTimerM1(_epoch, date);
         } else {
             epochWinnerM1[_epoch].winnerAddress = address(0); 
             epochWinningTicketId[_epoch] = 0;
@@ -95,6 +97,7 @@ contract RaffleMode1 {
             ticketId = 1;
             delete winningTicketPoolM1;
             _epoch++;
+            setTimerM1(_epoch, date);
         }
     }
 
@@ -167,6 +170,16 @@ contract RaffleMode1 {
     // 이미 청구 했는지 확인
     function isClaimedRewardM1(address _to, uint epoch) public view returns(uint) {
         return epochWinnerM1[epoch].isclaim[_to];
+    }
+
+    // 타이머 데이터 세팅
+    function setTimerM1(uint epoch, string memory date) public onlyOwner{
+        timerDataBaseM1[epoch] = date;
+    }
+
+    // 타이머 데이터 조회 함수
+    function getTimerM1(uint epoch) public view returns(string memory) {
+        return timerDataBaseM1[epoch];
     }
 
 }

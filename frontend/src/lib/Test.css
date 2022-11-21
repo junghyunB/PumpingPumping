@@ -28,11 +28,45 @@
 }
 
 
-.asd {
-    width: 100%;
-    height: 100%px;
-    justify-content: center;
-    align-items:flex-end;
-    background-color: violet;
+.img-wrap {
+    /* width: 110px; */
+    height: 100px;
+    border: 1px solid black;
+    /* background-color: coral; */
+}
+
+
+.img-wrap img {
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 90%;
+    height: 90%;
+    /* background-color: yellow; */
+}
+
+.img-text {
+    width: 70px;
+    height: 50px;
+    margin-top: 15px;
+    /* background-color: green; */
     
 }
+
+.img-text p {
+    font-size:18px;
+    line-height: 15%;
+}
+.text-interval {
+    padding-left:8px;
+}
+
+
+.slick-slider {
+    width: 68%;
+    margin-left: 70px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black;
+}
+

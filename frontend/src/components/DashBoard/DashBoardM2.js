@@ -20,7 +20,7 @@ const DashBoardM2 = () => {
         return arr;
       }
       let dashboardM2Arr = chunk(dashBoardDataM2).reverse();
-
+     
 
       const Paging = () => {
         const [page, setPage] = useState(1);

@@ -42,12 +42,6 @@ const Navbar = () => {
   const metaMaskNetWork = window.ethereum.networkVersion;
   const kaiKasNetWork = window.klaytn.networkVersion;
 
-  // const changeNetWork = () => {
-  //   if(storedMetaMask !== null && metaMaskNetWork !== "1001") {
-  //     localStorage.removeItem("metamaskAccount");
-  //     localStorage.removeItem("kaikasAccount");
-  //   }
-  // }
 
   const colorstyle = {
     color : "red",

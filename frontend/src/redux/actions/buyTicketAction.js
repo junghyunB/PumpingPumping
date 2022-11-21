@@ -18,7 +18,7 @@ function buyTicketAct(amount) {
       });
     dispatch({type:"SUCCESS_BUY_TICKET", payload : {buyTicketSuccess : true}});
     if(response.status) {
-      alert("구매 성공")
+      alert("purchase success")
       window.location.reload();
     }
     } catch (error) {
@@ -34,7 +34,7 @@ function buyTicketAct(amount) {
     });
     dispatch({type:"SUCCESS_BUY_TICKET", payload : {buyTicketSuccess : true}});
     if(response.status) {
-      alert("구매 성공");
+      alert("purchase success");
       window.location.reload();
     }
   } catch(error) {

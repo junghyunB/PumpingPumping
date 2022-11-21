@@ -11,45 +11,59 @@ import { epochM2Action } from "../redux/actions/epochM2Action";
 import { buyTicketM2Action } from "../redux/actions/buyTicketM2Action";
 import { epochAction } from "../redux/actions/epochAction";
 
-
 const Mode2DetailPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const [selectTicket, setSelectTicket] = useState([]);
   const [transTicket, setTransTicket] = useState([]);
-  const epochM1 = useSelector(state => state.epochM1.epoch);
+  const epochM1 = useSelector((state) => state.epochM1.epoch);
   const localKey = localStorage.key(0);
   const account = localStorage.getItem(localKey);
-  const epoch = useSelector(state => state.epochM2.epochM2);
-  const myTicketCountM2 = useSelector(state => state.userM2.myTicketCountM2);
+  const epoch = useSelector((state) => state.epochM2.epochM2);
+  const myTicketCountM2 = useSelector((state) => state.userM2.myTicketCountM2);
   const remainBuyTicket = 10 - myTicketCountM2;
   const Ticket1 = 6;
-  const amount = (id === "1" ? transTicket.length * Ticket1 : transTicket.length * (parseInt(id) + 1) * 3)
-
+  const amount =
+    id === "1"
+      ? transTicket.length * Ticket1
+      : transTicket.length * (parseInt(id) + 1) * 3;
 
   const choiceTicket = (num) => {
-    if(transTicket.length < remainBuyTicket) {
     if (
+      transTicket.length < remainBuyTicket &&
       selectTicket.includes(num) === false &&
       selectTicket.includes(", " + num) === false
     ) {
       setSelectTicket(
         selectTicket.length === 0
           ? (selectTicket) => [...selectTicket, num]
-          : (selectTicket) => [...selectTicket, ", " + num]
+          : (selectTicket) => [...selectTicket, ", ", num]
       );
       setTransTicket((transTicket) => [...transTicket, num]);
-    } else if (selectTicket.includes(num)) {
-      setSelectTicket(selectTicket.filter((element) => element !== num));
-      setTransTicket(transTicket.filter((element) => element !== num));
-    } 
-    else if (selectTicket.includes(", " + num)) {
-      setSelectTicket(selectTicket.filter((element) => element !== ", " + num));
-      setTransTicket(transTicket.filter((element) => element !== num));
+    } else if (
+      transTicket.length <= remainBuyTicket &&
+      selectTicket.includes(num)
+    ) {
+      const numIndex = selectTicket.indexOf(num);
+      if (numIndex === 0) {
+        const removeItem = selectTicket.splice(0, 2);
+        setSelectTicket(
+          selectTicket.filter((element) => element !== removeItem)
+        );
+        setTransTicket(transTicket.filter((element) => element !== num));
+      } else {
+        const removeItem = [...selectTicket.splice(numIndex - 1, 2)];
+        setSelectTicket(
+          selectTicket.filter((element) => element !== removeItem)
+        );
+        setTransTicket(transTicket.filter((element) => element !== num));
+      }
+    } else if (
+      selectTicket.includes(num) === false &&
+      transTicket.length === remainBuyTicket
+    ) {
+      alert("In Mode 2, you can only hold up to 10 tickets at a time.");
     }
-  } else {
-    alert("In Mode 2, you can only hold up to 10 tickets at a time.")
-  }
   };
 
   let section1 = [];
@@ -128,15 +142,16 @@ const Mode2DetailPage = () => {
   }
 
   const buyTicketM2 = () => {
-    remainBuyTicket < transTicket.length ? alert("허용 갯수보다 많습니다.") : 
-    dispatch(buyTicketM2Action.buyTicketM2Act(amount, id, transTicket));
-  }
+    remainBuyTicket < transTicket.length
+      ? alert("Exceeded the allowable number.")
+      : dispatch(buyTicketM2Action.buyTicketM2Act(amount, id, transTicket));
+  };
 
   useEffect(() => {
     dispatch(epochM2Action.epochM2Act());
     dispatch(myTicketCountM2Action.myTicketCountM2Act(account, epoch));
     dispatch(epochAction.epochAct());
-  },[account, epoch, epochM1])
+  }, [account, epoch, epochM1]);
 
   return (
     <div className="mode2BuyDetailContainer">
@@ -176,7 +191,9 @@ const Mode2DetailPage = () => {
             </div>
           </div>
           <div className="buyButtonSection">
-            <Button variant="outline-dark" onClick={buyTicketM2}>Buy Ticket</Button>
+            <Button variant="outline-dark" onClick={buyTicketM2}>
+              Buy Ticket
+            </Button>
           </div>
         </div>
       </div>

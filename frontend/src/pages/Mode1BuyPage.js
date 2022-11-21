@@ -37,7 +37,7 @@ const Mode1BuyPage = () => {
   }, [account, epoch, epochM2])
 
   const buyTicketM1 = () => {
-    availavble < amount ? alert("허용 갯수보다 많습니다.") : 
+    availavble < amount ? alert("Exceeded the allowable number.") : 
     dispatch(buyTicketAction.buyTicketAct(amount));
   }
 

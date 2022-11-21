@@ -44,7 +44,7 @@ const Mode1MyPage = () => {
 
   const addEpoch = () => {
     if (changeEpoch === currentEpoch) {
-      alert("마지막 회차 입니다");
+      alert("Last Round");
     } else if (changeEpoch < currentEpoch) {
       setChangeEpoch(changeEpoch + 1);
     }
@@ -52,18 +52,18 @@ const Mode1MyPage = () => {
 
   const subEpoch = () => {
     if (changeEpoch === 1) {
-      alert("첫번째 회차 입니다");
+      alert("First Round");
     } else {
       setChangeEpoch(changeEpoch - 1);
     }
   };
 
   const notWinner = () => {
-    alert(`${changeEpoch}회차의 당첨자가 아닙니다.`);
+    alert(`You are Not a winner of the ${changeEpoch}round`);
   };
 
   const alreadyClaim = () => {
-    alert(`${changeEpoch}회차의 보상을 이미 수령 하셨습니다.`);
+    alert(`You have already received the reward for the ${changeEpoch}round`);
   }
 
   useEffect(() => {

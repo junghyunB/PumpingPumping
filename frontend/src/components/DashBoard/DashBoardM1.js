@@ -26,7 +26,7 @@ const DashBoardM1 = () => {
     const handlePageChange = (page) => { 
       setPage(page); 
     };
-    const pagelist = dashboardM1Arr.slice(((page - 1) * 10) + 1, (page) * 10)
+    const pagelist = dashboardM1Arr.slice(((page - 1) * 10) , page * 10)
 
     return (
       <>

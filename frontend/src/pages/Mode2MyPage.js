@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { BiLeftArrow } from "react-icons/bi";
 import { BiRightArrow } from "react-icons/bi";
 import { Right1 } from "../components";
+import Carousel from "nuka-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import { myTicketInfoM2Action } from "../redux/actions/myTicketInfoM2Action";
@@ -59,7 +60,6 @@ const Mode2MyPage = () => {
     }
   };
 
-
   for (let i = 0; i < myTicketInfoM2[0].length; i++) {
     TicketArr.push(
       <div
@@ -78,8 +78,6 @@ const Mode2MyPage = () => {
       </div>
     );
   }
-
-
 
   const addEpoch = () => {
     if (changeEpochM2 === currentEpochM2) {
@@ -115,7 +113,6 @@ const Mode2MyPage = () => {
   return (
     <>
       <div className="mode2MyPageContainer">
-        
         <div className="mode2MyPageSection">
           <div className="mode2selectSection">
             <Link to="/mode2buy" className="z-indexZone">
@@ -141,13 +138,23 @@ const Mode2MyPage = () => {
                   <p>Own Mode#2 Ticket : </p>
                 </div>
                 <div className="ticketListSection">
-                  {TicketArr?.map((item) => item)}
+                  <Carousel
+                    disableAnimation={true}
+                    scrollMode="remainder"
+                    cellSpacing={120}
+                    defaultControlsConfig={{
+                      nextButtonText: ">>",
+                      prevButtonText: "<<",
+                      pagingDotsContainerClassName:"asd"
+                    }}
+                  >
+                    {TicketArr?.map((item) => item)}
+                  </Carousel>
                 </div>
               </div>
               <div className="mode2TicketInfo">
                 <div className="mode2totalTicketSection">
-                  <p>Total Ticket : {totalTicketAmountM2} EA</p> 
- 
+                  <p>Total Ticket : {totalTicketAmountM2} EA</p>
                 </div>
                 <div className="mode2totalAmountSection">
                   <p>Total Prize : {totalAmountM2} KLAY</p>
@@ -192,20 +199,20 @@ const Mode2MyPage = () => {
                     </div>
                   </>
                 ) : (
-                    <div className="winningTicketNotTie">
-                      <div className="winningTicketTitle">
-                        <h3>winningTicket</h3>
-                      </div>
-                      <div className="winningTicketimgSection">
-                        <img src={mode1ticket} alt="Ticket"></img>
-                        <div className="winningNumberData">
-                          <p>#{winningNumberM2}</p>
-                          <p>
-                            {changeEpochM2}, {winningTicketIdM2}
-                          </p>
-                        </div>
+                  <div className="winningTicketNotTie">
+                    <div className="winningTicketTitle">
+                      <h3>winningTicket</h3>
+                    </div>
+                    <div className="winningTicketimgSection">
+                      <img src={mode1ticket} alt="Ticket"></img>
+                      <div className="winningNumberData">
+                        <p>#{winningNumberM2}</p>
+                        <p>
+                          {changeEpochM2}, {winningTicketIdM2}
+                        </p>
                       </div>
                     </div>
+                  </div>
                 )}
               </div>
               <div className="mode2Result">

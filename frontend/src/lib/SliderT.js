@@ -1,39 +1,31 @@
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./Test.css"
+import React from "react";
+import "./Test.css";
+import Carousel from "nuka-carousel";
+
 
 const SliderT = () => {
-  const settings = {
-    className : "slider variable-width",
-    arrows: false,
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      centerMode: true,
-      slidesToScroll: 1,
-      variableWidth: true
-    }
+
   return (
-    <div>
-    <Slider {...settings}>
-    	<div className='sprSlider'>
-    	  <h3>1</h3>
-    	</div>
-    	<div className='sprSlider'>
-    	  <h3>2</h3>
-    	</div>
-    	<div className='sprSlider'>
-    	  <h3>3</h3>
-    	</div>
-    	<div className='sprSlider'>
-    	  <h3>4</h3>
-    	</div>
-    	<div className='sprSlider'>
-    	  <h3>5</h3>
-    	</div>
-      </Slider>
+    <div className="mode2BuyPageContainer">
+      <div className="mode2BuyPageSection">
+        <div className="center">
+          <Carousel  disableAnimation={true} scrollMode="remainder" cellSpacing={120}   defaultControlsConfig={{
+    nextButtonText: 'Next',
+    nextButtonStyle: {
+    
+    },
+    prevButtonText: 'Prev',
+    pagingDotsStyle: {
+      fill: 'red',
+    }
+  }}>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </Carousel>
+        </div>
       </div>
+    </div>
   );
 };
 

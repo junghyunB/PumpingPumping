@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ChoiceMode.css";
+import { useSelector, useDispatch } from "react-redux";
 import { mode1main, mode2main } from "../assets/images";
 import { Link } from "react-router-dom";
+import { epochAction } from "../redux/actions/epochAction";
+import { epochM2Action } from "../redux/actions/epochM2Action";
+
 const ChoiceMode = () => {
+
+  const dispatch = useDispatch();
+
+  const epoch = useSelector(state => state.epochM1.epoch);
+  const epochM2 = useSelector(state => state.epochM2.epochM2);
+  useEffect(() => {
+    dispatch(epochAction.epochAct());
+    dispatch(epochM2Action.epochM2Act());
+  }, [epoch, epochM2])
+
   return (
     <div className="choicePageContainer">
       <div className="choicePageLeftSection">

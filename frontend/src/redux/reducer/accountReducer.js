@@ -3,6 +3,7 @@ let initialState = {
   accountMetaMask: "",
   kaiKasNetWork: 0,
   metamaskNetWork:null,
+  metamaskChainId: "",
 };
 
 function accountReducer(state = initialState, action) {
@@ -16,6 +17,8 @@ function accountReducer(state = initialState, action) {
       return { ...state, kaiKasNetWork: payload };
     case "METAMASK_NETWORK":
       return { ...state, metamaskNetWork: payload };
+    case "METAMASK_CHAINID":
+      return { ...state, metamaskChainId: payload.metamaskChainId };
     default:
       return { ...state };
   }

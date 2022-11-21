@@ -419,6 +419,12 @@
   line-height: 10px;
 }
 
+.mode1Timer h3 {
+  padding-top : 30px;
+  text-align: center;
+  font-weight: 900;
+}
+
 .mode2Timer {
   width: 50%;
   height: 100%;
@@ -434,6 +440,12 @@
   padding-top: 20px;
   font-size: 20px;
   line-height: 10px;
+}
+
+.mode2Timer h3 {
+  padding-top : 30px;
+  text-align: center;
+  font-weight: 900;
 }
 
 
@@ -559,35 +571,23 @@ p {
 
 .fotLeftNav1 {
     display: flex;
-    // padding-right: 39.998px;
+    padding-right: 39.998px;
     // background-color: blueviolet;
 }
 .fotLeftNav1 button {
     width: 80.002px;
-   
     height: 30px;
 }
 
 .fotLeftNav2 {
     display: flex;
     padding-left: 40x;
-    
     // background-color: brown;
 }
 
 .fotLeftNav2 button {
     width: 80.002px;
     height: 30px;
-}
-
-.fotLeftNav3 {
-  display: flex;
-  padding-left:0px;
-}
-
-.fotLeftNav3 button {
-  width: 90px;
-  height: 30px;
 }
 
 .homeimg {

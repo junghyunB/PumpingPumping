@@ -63,7 +63,7 @@ const MainM2 = () => {
             <div className='mainPageRightSectionSilder'>
                 <button className='rightSectionLeftBtn' onClick={subEpoch}><BiLeftArrow size={30}/></button>
                 <button className='rightSectionRightBtn' onClick={addEpoch}><BiRightArrow size={30}/></button>
-                <p>{changeEpochM2} 회차 당첨 번호</p>
+                <p>{changeEpochM2} round Winning Ticket</p>
                 <p>{winningNumberM2 === "0" ? "Proceeding..." : (<a># {winningNumberM2} [{changeEpochM2}, {winningTicketIdM2}]</a>)}</p>
                 <br></br>
                 <br></br>

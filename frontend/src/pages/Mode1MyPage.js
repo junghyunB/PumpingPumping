@@ -15,6 +15,7 @@ import { myRatioAction } from "../redux/actions/myRatioAction";
 import { epochWinnerAction } from "../redux/actions/epochWinnerAction";
 import { claimRewardM1Action } from "../redux/actions/claimRewardM1Action";
 import { isClaimedAction } from "../redux/actions/isClaimedAction";
+import { epochM2Action } from "../redux/actions/epochM2Action";
 
 const Mode1MyPage = () => {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ const Mode1MyPage = () => {
   const localKey = localStorage.key(0);
   const account = localStorage.getItem(localKey);
   let [changeEpoch, setChangeEpoch] = useState(currentEpoch);
+  const epochM2 = useSelector(state => state.epochM2.epochM2);
   epochWinner = epochWinner.toLowerCase();
   const setData = () => {
     setChangeEpoch(currentEpoch);
@@ -139,7 +141,8 @@ const Mode1MyPage = () => {
     dispatch(myRatioAction.myRatioAct(account, changeEpoch));
     dispatch(epochWinnerAction.epochWinnerAct(changeEpoch));
     dispatch(isClaimedAction.isClaimedAct(account, changeEpoch));
-  }, [account, changeEpoch]);
+    dispatch(epochM2Action.epochM2Act());
+  }, [account, changeEpoch, epochM2]);
 
   return (
     <div className="mode1MyPageContainer">

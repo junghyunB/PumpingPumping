@@ -9,12 +9,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { myTicketCountM2Action } from "../redux/actions/myTicketCountM2Action";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import { buyTicketM2Action } from "../redux/actions/buyTicketM2Action";
+import { epochAction } from "../redux/actions/epochAction";
+
 
 const Mode2DetailPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const [selectTicket, setSelectTicket] = useState([]);
   const [transTicket, setTransTicket] = useState([]);
+  const epochM1 = useSelector(state => state.epochM1.epoch);
   const localKey = localStorage.key(0);
   const account = localStorage.getItem(localKey);
   const epoch = useSelector(state => state.epochM2.epochM2);
@@ -132,7 +135,8 @@ const Mode2DetailPage = () => {
   useEffect(() => {
     dispatch(epochM2Action.epochM2Act());
     dispatch(myTicketCountM2Action.myTicketCountM2Act(account, epoch));
-  },[account, epoch])
+    dispatch(epochAction.epochAct());
+  },[account, epoch, epochM1])
 
   return (
     <div className="mode2BuyDetailContainer">

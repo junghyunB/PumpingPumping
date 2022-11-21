@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { connectMetaMaskAccount } from "./redux/actions/connectMetaMaskAccount";
+import { connectKaiKasAccount } from "./redux/actions/connectKaiKasAccount";
 import { metaMaskNetworkAction } from "./redux/actions/metaMaskNetworkAction";
 import {
   MainPage,
@@ -25,10 +27,40 @@ function App() {
   const localKey = localStorage.key(0);
   const dispatch = useDispatch();
   const metamaskNetWork = useSelector((state) => state.account.metamaskNetWork);
+  const selectMetamask = useSelector((state) => state.account.accountMetaMask);
+  const selectKaiKas = useSelector((state) => state.account.accountKaiKas);
 
   const networkChangeMetaMask = () => {
     dispatch(metaMaskNetworkAction.metaMaskNetworkAct());
   }
+
+  useEffect(() => {
+    if(localKey !== "metamaskAccount" && localKey !== null) {
+      window.klaytn?.on("accountsChanged", (handler) => {
+        dispatch(connectKaiKasAccount.getKaiKasAccount());
+        localStorage.setItem("kaikasAccount", handler);
+      });
+    }
+
+    return () => {
+      window.klaytn?.removeListener("accountsChanged", () => {})
+    }
+  }, [selectKaiKas])
+
+
+  useEffect(() => {
+    if(localKey !== "kaikasAccount" && localKey !== null) {
+      window.ethereum?.on("accountsChanged", (handler) => {
+        dispatch(connectMetaMaskAccount.getMetaMaskAccount());
+        localStorage.setItem("metamaskAccount", handler);
+      })
+    }
+    return () => {
+      window.ethereum?.removeListener("accountsChanged", () => {
+
+      })
+    }
+  },[selectMetamask]);
 
   useEffect(() => {
     networkChangeMetaMask();

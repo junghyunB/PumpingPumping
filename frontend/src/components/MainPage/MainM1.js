@@ -58,7 +58,7 @@ const MainM1 = () => {
             <button className="leftSectionLeftBtn" onClick={subEpoch}><BiLeftArrow size={30} /></button>
             <button className="leftSectionRightBtn" onClick={addEpoch}><BiRightArrow size={30} />
             </button>
-            <p>{changeEpoch} 회차 당첨 티켓</p>
+            <p>{changeEpoch} round Winning Ticket</p>
             {changeEpoch === currentEpoch ? <p>Proceeding...</p> : <p>[ {changeEpoch} , {winnigTicket}]</p>}
             <br></br>
             <br></br>

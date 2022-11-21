@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 import { BiLeftArrow } from "react-icons/bi";
 import { BiRightArrow } from "react-icons/bi";
 import { Right1 } from "../components";
-import Carousel from "nuka-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import SliderT from "../lib/SliderT";
 import { epochM2Action } from "../redux/actions/epochM2Action";
+import { epochAction } from "../redux/actions/epochAction";
 import { myTicketInfoM2Action } from "../redux/actions/myTicketInfoM2Action";
 import { totalAmountM2Action } from "../redux/actions/totalAmountM2Action";
 import { totalTicketM2Action } from "../redux/actions/totalTicketM2Action";
@@ -19,10 +19,10 @@ import { isClaimedM2Action } from "../redux/actions/isClaimedM2Action";
 import { tieTicketM2Action } from "../redux/actions/tieTicketM2Action";
 import { claimRewardM2Action } from "../redux/actions/claimRewardM2Action";
 
-
 const Mode2MyPage = () => {
   const dispatch = useDispatch();
 
+  const epochM1 = useSelector(state => state.epochM1.epoch);
   let currentEpochM2 = useSelector((state) => parseInt(state.epochM2.epochM2));
   const myTicketInfoM2 = useSelector((state) => state.userM2.myTicketInfoM2);
   const detailState = useSelector((state) => state.userM2.detailState);
@@ -100,8 +100,9 @@ const Mode2MyPage = () => {
 
   useEffect(() => {
     dispatch(epochM2Action.epochM2Act());
+    dispatch(epochAction.epochAct());
     setData();
-  }, [currentEpochM2]);
+  }, [epochM1,currentEpochM2]);
 
   useEffect(() => {
     dispatch(myTicketInfoM2Action.myTicketInfoM2Act(account, changeEpochM2));

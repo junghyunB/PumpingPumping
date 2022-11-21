@@ -61,7 +61,7 @@ const Mode1BuyPage = () => {
           </div>
           <div className="ticketPictureSection">
             <img src={mode1ticket} className="mode1ticket"></img>
-            <h2>{epoch}회차 Mode#1</h2>
+            <h2>{epoch}round Mode#1</h2>
           </div>
           <div className="ownedTicketAmountSection">
             <h4>Available : {availavble} </h4>

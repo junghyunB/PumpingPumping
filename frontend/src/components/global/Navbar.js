@@ -6,20 +6,27 @@ import { SiDiscord, SiTwitter } from "react-icons/si";
 import { useDispatch, useSelector } from "react-redux";
 import { connectKaiKasAccount } from "../../redux/actions/connectKaiKasAccount";
 import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccount";
-import { pickWinnerAction } from "../../redux/actions/pickWinnerAction";
-import { pickWinnerM2Action } from "../../redux/actions/pickWinnerM2Action";
 import {TimerM1, TimerM2} from "../"
+import { changeNetworkAction } from "../../redux/actions/changeNetworkAction";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  const accountKaiKas = useSelector((state) => state.account.accountKaiKas);
-  const accountMetaMask = useSelector((state) => state.account.accountMetaMask);
+  const metamaskChainId = useSelector((state) => state.account.metamaskChainId);
+  const selectMetamask = useSelector((state) => state.account.accountMetaMask);
+  const selectKaiKas = useSelector((state) => state.account.accountKaiKas);
+  const localKey = localStorage.key(0);
+  const storedMetaMask = localStorage.getItem("metamaskAccount");
+  const storedKaiKas = localStorage.getItem("kaikasAccount");
+  const metaMaskNetWork = window.ethereum.networkVersion;
+  const kaiKasNetWork = window.klaytn.networkVersion;
+
+
   const connectKaiKasWallet = () => {
     dispatch(connectKaiKasAccount.getKaiKasAccount());
   };
 
-
   const connectMetaMaskWallet = () => {
+    metamaskChainId !== "0x3e9" ? dispatch(changeNetworkAction.changeNetworkAct()) : 
     dispatch(connectMetaMaskAccount.getMetaMaskAccount());
   };
 
@@ -29,34 +36,17 @@ const Navbar = () => {
     window.location.reload();
   };
 
-  const walletChangeMetaMask = () => {
-    if (storedMetaMask !== null) {
-      dispatch(connectMetaMaskAccount.getMetaMaskAccount());
-    }
-  };
-  const walletChangeKaiKas = () => {
-    if (storedKaiKas !== null) {
-      dispatch(connectKaiKasAccount.getKaiKasAccount());
-    }
-  };
-  const metaMaskNetWork = window.ethereum.networkVersion;
-  const kaiKasNetWork = window.klaytn.networkVersion;
 
+  window.ethereum.on('chainChanged', () => {
+    if(localKey === "metamaskAccount") window.location.reload();
+  });
 
   const colorstyle = {
     color : "red",
   }
-
-  const pickWinner = () => {
-    dispatch(pickWinnerAction.pickWinnerAct());
-  }
-
-  const pickWinnerM2 = () => {
-    dispatch(pickWinnerM2Action.pickWinnerM2Act());
-  }
-
   const IsConnectedWallet = () => {
-    if (storedKaiKas !== null) {
+
+    if (localKey === "kaikasAccount") {
       return (
         <>
           <p className="secondLeftNavTxt1">Your Wallet Address : </p>
@@ -66,7 +56,7 @@ const Navbar = () => {
           <p>NetWork : {kaiKasNetWork} ( Supported )</p>
         </>
       );
-    } else if (storedMetaMask !== null) {
+    } else if (localKey === "metamaskAccount") {
       return (
         <>
           <p className="secondLeftNavTxt1">Your Wallet Address : </p>
@@ -83,7 +73,7 @@ const Navbar = () => {
           </p>
         </>
       );
-    } else if (storedKaiKas === null && storedMetaMask === null) {
+    } else if (localKey === null) {
       return (
         <>
           <p>Not Connected</p>
@@ -93,21 +83,34 @@ const Navbar = () => {
     }
   };
 
-  const storedMetaMask = localStorage.getItem("metamaskAccount");
-  const storedKaiKas = localStorage.getItem("kaikasAccount");
+  useEffect(() => {
+    if(localKey !== "metamaskAccount" && localKey !== null) {
+      window.klaytn?.on("accountsChanged", (handler) => {
+        dispatch(connectKaiKasAccount.getKaiKasAccount());
+        localStorage.setItem("kaikasAccount", handler);
+      });
+    }
+
+    return () => {
+      window.klaytn?.removeListener("accountsChanged", () => {})
+    }
+  }, [selectKaiKas])
 
   useEffect(() => {
-    if (accountKaiKas === "") walletChangeKaiKas();
-  }, [storedKaiKas]);
-
-  useEffect(() => {
-    if (accountMetaMask === "") walletChangeMetaMask();
-  }, [storedMetaMask]);
+    if(localKey !== "kaikasAccount" && localKey !== null) {
+      window.ethereum?.on("accountsChanged", (handler) => {
+        dispatch(connectMetaMaskAccount.getMetaMaskAccount());
+        localStorage.setItem("metamaskAccount", handler);
+      })
+    }
+    return () => {
+      window.ethereum?.removeListener("accountsChanged", () => {})
+    }
+  },[selectMetamask]);
 
   useEffect(() => {
     dispatch({type:"KAIKAS_NETWORK", payload:kaiKasNetWork});
     dispatch({type:"METAMASK_NETWORK", payload:metaMaskNetWork});
-    // changeNetWork();
   },[metaMaskNetWork, kaiKasNetWork])
 
 
@@ -141,7 +144,7 @@ const Navbar = () => {
                 </li>
               </ol>
             </li>
-            {storedKaiKas === null && storedMetaMask === null ? (
+            {localKey === null ? (
               <>
                 <li className="menu-item">
                   <a className="text-color">Connect Wallet</a>
@@ -212,8 +215,6 @@ const Navbar = () => {
             <div className="fotLeftNav2">
               <SiDiscord size={30} />
             </div>
-            <div className="fotLeftNav3"><button onClick={pickWinner}>PickWinnerM1</button></div>
-            <div className="fotLeftNav3"><button onClick={pickWinnerM2}>PickWinnerM2</button></div>
           </div>
         </div>
       </div>

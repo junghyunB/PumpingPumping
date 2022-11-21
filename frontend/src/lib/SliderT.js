@@ -1,6 +1,8 @@
 import React from "react";
-import "./Test.css";
-import Carousel from "nuka-carousel";
+import "./Slider.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const SliderT = ({ticketArr}) => {
@@ -21,7 +23,6 @@ const SliderT = ({ticketArr}) => {
    {ticketArr?.map((item) => item)} 
       </Slider>
       </div>
-    </div>
   );
 };
 

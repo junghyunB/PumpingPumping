@@ -18,13 +18,14 @@
     /* border-collapse: collapse; */
 }
 
-.dashBoardLeftTable table thead {
-    align-items: center;
+
+.dashBoardLeftTable h3 {
+  text-align: center;
+  padding-bottom: 20px;
+    font-weight: 900;
 }
 
-tr {
-    border: none;
-}
+
 
 th h2 {
   font-weight: 900;

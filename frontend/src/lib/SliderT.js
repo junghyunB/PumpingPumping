@@ -10,10 +10,10 @@ const SliderT = ({ticketArr}) => {
     className : "slider variable-width",
     arrows: true,
       // dots: true,
-      infinite: false,
-      slidesToShow: 2,
+      infinite: true,
+      slidesToShow: 1,
       centerMode: true,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
       variableWidth: true
     }
 

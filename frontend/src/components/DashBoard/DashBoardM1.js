@@ -30,27 +30,27 @@ const DashBoardM1 = () => {
 
     return (
       <>
+      <h3>Mode#1</h3>
+      <div className="leftTableSection">
       <table>
       <thead>
-        <tr>
-          <th colSpan="3"><h2>Mode#1</h2></th>
+      <tr>
+          <th>회차</th>
+          <th>Total Ticket</th>
+          <th>Prize</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>회차</td>
-          <td>Total Ticket</td>
-          <td>Prize</td>
-        </tr>
         {pagelist.map((item) => 
               <tr key={item[0]}>
                 <td>{item[0]}회차</td>
-                <td>{item[1]} Ticket</td>
-                <td>{item[2]} Klay</td>
+                <td>{item[1]}Ticket</td>
+                <td>{item[2]}Klay</td>
               </tr>
         )}
       </tbody>
     </table>
+    </div>
       <Pagination 
       activePage={page}
       itemsCountPerPage={10}

@@ -22,7 +22,7 @@ const MainM1 = () => {
 
     const addEpoch = () => {
       if(changeEpoch === currentEpoch) {
-      alert("마지막 회차 입니다");
+      alert("Last Round.");
   } else if(changeEpoch < currentEpoch){
       setChangeEpoch(changeEpoch + 1);
   }
@@ -30,7 +30,7 @@ const MainM1 = () => {
   
     const subEpoch = () => {
       if(changeEpoch === 1) {
-        alert("첫번째 회차 입니다");
+        alert("First Round.");
       } else {
           setChangeEpoch(changeEpoch - 1);
       }

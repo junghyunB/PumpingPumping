@@ -59,7 +59,6 @@ contract RaffleMode2 {
 
     function buyTicket1(uint[] memory ticketNumber) internal view returns (bool) {
         require(ticket1 * ticketNumber.length * decimals == msg.value, "correct pay");
-        require(msg.value <= msg.sender.balance, "Not enough Klay");
         require(ticketNumber.length <= 10, "please under 10 select");
         require(userdataM2[msg.sender][_epoch].amountTicket + ticketNumber.length <= 10, "maximum 10 Ticket");
         for(uint i = 0; i < ticketNumber.length; i++ ) {
@@ -73,7 +72,6 @@ contract RaffleMode2 {
     function otherTicket(uint ticketType, uint[] memory ticketNumber) internal view returns (bool) {
         uint ticketPrice = (ticketType + 1) * 3;
         require(ticketPrice * ticketNumber.length * decimals == msg.value, "incorrect pay");
-        require(msg.value <= msg.sender.balance, "Not enough Klay");
         require(ticketNumber.length <= 10, "please under 10 select");
         require(userdataM2[msg.sender][_epoch].amountTicket + ticketNumber.length <= 10, "maximum 10 Ticket");
         for(uint i = 0; i < ticketNumber.length; i++) {
@@ -267,6 +265,5 @@ contract RaffleMode2 {
     function getTimerM2(uint epoch) public view returns(string memory) {
         return timerDataBaseM2[epoch];
     }
-
 
 }

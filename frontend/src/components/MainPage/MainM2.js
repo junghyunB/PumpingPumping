@@ -26,7 +26,7 @@ const MainM2 = () => {
 
     const addEpoch = () => {
         if(changeEpochM2 === currentEpochM2) {
-        alert("마지막 회차 입니다");
+        alert("Last Round.");
     } else if(changeEpochM2 < currentEpochM2){
         setChangeEpochM2(changeEpochM2 + 1);
     }
@@ -34,7 +34,7 @@ const MainM2 = () => {
     
       const subEpoch = () => {
         if(changeEpochM2 === 1) {
-          alert("첫번째 회차 입니다");
+          alert("First Round.");
         } else {
             setChangeEpochM2(changeEpochM2 - 1);
         }

@@ -142,10 +142,7 @@ const Mode2MyPage = () => {
                   <p>Own Mode#2 Ticket : </p>
                 </div>
                 <div className="ticketListSection">
-                {TicketArr.length < 3 ? TicketArr.map((item) => item)
-                :
                 <SliderT ticketArr={TicketArr}/>
-              }
                 </div>
               </div>
               <div className="mode2TicketInfo">

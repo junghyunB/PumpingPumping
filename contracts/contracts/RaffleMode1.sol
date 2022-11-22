@@ -47,7 +47,6 @@ contract RaffleMode1 {
      // 티켓 구매
     function buyTicketM1(uint _amount) public payable {
         require(_amount <= 20, "maximum amount 10");
-        require(msg.sender.balance >= msg.value, "Not Enough Ethers");
         require(userdataM1[msg.sender][_epoch].applyCount <= 20, "already entered this system");
         require(userdataM1[msg.sender][_epoch].applyCount + _amount <= 20, "maximum apply are 10");
         require(epochWinnerM1[_epoch].winnerAddress == address(0), "already this epoch pick the winner");

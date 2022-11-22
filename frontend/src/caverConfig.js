@@ -4,7 +4,7 @@ import Caver from "caver-js";
 var global = global || window;
 global.Buffer = global.Buffer || require("buffer").Buffer;
 
-export const RAFFLEV1_CONTRACT_ADDRESS = "0x7F99B7040b738c2d950543B7eED33Bdab0dec96b";
+export const RAFFLEV1_CONTRACT_ADDRESS = "0x4ba9A115f467A526941b98007A13dFc797ff1b06";
 export const RAFFLEV1_CONTRACT_ABI = [
 	{
 		"inputs": [
@@ -458,7 +458,7 @@ export const RAFFLEV1_CONTRACT_ABI = [
 	}
 ];
 
-export const RAFFLEV2_CONTRACT_ADDRESS = "0xbD7bf728d870970118852Cb0FED12e847387866c";
+export const RAFFLEV2_CONTRACT_ADDRESS = "0x63507B297D429a9d4E878d6653A222E9cEebB347";
 export const RAFFLEV2_CONTRACT_ABI = [
 	{
 		"inputs": [

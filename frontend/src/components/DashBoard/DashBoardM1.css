@@ -8,33 +8,39 @@
     margin-right: 80px;
     width: 100%;
     height: 100%;
+    /* background-color: aqua; */
 }
 
 .dashBoardLeftTable table{
     width: 400px;
-    height: 400px;
+    height: 100px;
     text-align: center;
     /* border-top: 1px solid #444444; */
     /* border-collapse: collapse; */
 }
 
+.leftTableSection td {
+  height:10%;
+}
+
+.dashBoardLeftTable tr {
+  height: 50px;
+}
+
 
 .dashBoardLeftTable h3 {
   text-align: center;
-  padding-bottom: 20px;
+  /* padding-bottom: 5px; */
     font-weight: 900;
 }
 
 
 
-th h2 {
-  font-weight: 900;
-}
 
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    padding-top: 20px;
   }
   
   ul {

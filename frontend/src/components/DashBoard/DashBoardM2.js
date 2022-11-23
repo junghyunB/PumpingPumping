@@ -22,89 +22,56 @@ const DashBoardM2 = () => {
 
   const Paging = () => {
     const [page, setPage] = useState(1);
+    const maxContents = 5;
     const handlePageChange = (page) => {
       setPage(page);
     };
-    const pagelist = dashboardM2Arr.slice((page - 1) * 10, page * 10);
+    const pagelist = dashboardM2Arr.slice(
+      (page - 1) * maxContents,
+      page * maxContents
+    );
+    let tableBody = [];
+    for (let i = 0; i < maxContents; i++) {
+      tableBody.push(
+        pagelist[i] ? (
+          <tr>
+            <td>{pagelist[i][0]}</td>
+            <td>{pagelist[i][1]} EA</td>
+            <td>{pagelist[i][2]} KLAY</td>
+            <td>
+              #{pagelist[i][3]} [{pagelist[i][0]}, {pagelist[i][4]}]
+            </td>
+          </tr>
+        ) : (
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        )
+      );
+    }
+
     return (
       <>
-      <h3>Mode#2</h3>
-      <div className="rightTableSection">
-        <table>
-          <thead>
-            <tr>
-              <th>round</th>
-              <th>Total Ticket</th>
-              <th>Prize</th>
-              <th>winningNumber</th>
-            </tr>
-          </thead>
-          <tbody>
-            {pagelist.map((item) => (
-              <tr key={item[0]}>
-                <td>{item[0]}round</td>
-                <td>{item[1]} Ticket</td>
-                <td>{item[2]} Klay</td>
-                <td>
-                  #{item[3]}[{item[0]}, {item[4]}]
-                </td>
+        <h3>Mode#2</h3>
+        <div className="rightTableSection">
+          <table>
+            <thead>
+              <tr>
+                <th>round</th>
+                <th>Total Ticket</th>
+                <th>Prize</th>
+                <th>winningNumber</th>
               </tr>
-            ))}
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-          </tbody>
-        </table>
+            </thead>
+            <tbody>{tableBody?.map((item) => item)}</tbody>
+          </table>
         </div>
         <Pagination
           activePage={page}
-          itemsCountPerPage={10}
+          itemsCountPerPage={5}
           totalItemsCount={dashboardM2Arr.length}
           pageRangeDisplayed={5}
           prevPageText={"‹"}

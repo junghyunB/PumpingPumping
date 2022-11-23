@@ -47,10 +47,10 @@ const Mode2MyPage = () => {
     setChangeEpochM2(currentEpochM2);
   };
 
-  const visiblity = (number, epoch, id) => {
-    dispatch({ type: "GET_MY_TICKET_DETAILM2", payload: [number, epoch, id] });
-    dispatch({ type: "DETAIL_STATE" });
-  };
+  // const visiblity = (number, epoch, id) => {
+  //   dispatch({ type: "GET_MY_TICKET_DETAILM2", payload: [number, epoch, id] });
+  //   dispatch({ type: "DETAIL_STATE" });
+  // };
 
   const claimRewardM2 = () => {
     if (isClaimedM2 === "0") {
@@ -66,10 +66,10 @@ const Mode2MyPage = () => {
     TicketArr.push(
       <div
         className="img-wrap"
-        style={{width:100}}
-        onClick={() =>
-          visiblity(myTicketInfoM2[0][i], changeEpochM2, myTicketInfoM2[1][i])
-        }
+        // style={{width:100}}
+        // onClick={() =>
+        //   visiblity(myTicketInfoM2[0][i], changeEpochM2, myTicketInfoM2[1][i])
+        // }
       >
         <div className="img-text">
           <p>#{myTicketInfoM2[0][i]}</p>

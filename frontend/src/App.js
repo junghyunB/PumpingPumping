@@ -80,7 +80,8 @@ function App() {
         <Route path="/mode2buy/ticket:id" element={<NotConnectedWallet />} />
         <Route path="/mode2my" element={<NotConnectedWallet />} />
       </Routes> 
-      : localKey === "metamaskAccount" && metamaskNetWork !== "1001" ? 
+      : localKey === "metamaskAccount" && metamaskNetWork !== "8217" ? 
+      // : localKey === "metamaskAccount" && metamaskNetWork !== "1001" ? 
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/dashboard" element={<DashBoard />} />

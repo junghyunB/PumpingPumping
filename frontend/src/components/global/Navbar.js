@@ -26,7 +26,8 @@ const Navbar = () => {
   };
 
   const connectMetaMaskWallet = () => {
-    metamaskChainId !== "0x3e9" ? dispatch(changeNetworkAction.changeNetworkAct()) : 
+    metamaskChainId !== "0x2019" ? dispatch(changeNetworkAction.changeNetworkAct()) : 
+    // metamaskChainId !== "0x3e9" ? dispatch(changeNetworkAction.changeNetworkAct()) : 
     dispatch(connectMetaMaskAccount.getMetaMaskAccount());
   };
 
@@ -65,7 +66,8 @@ const Navbar = () => {
           </p>
           <p>
             NetWork : {metaMaskNetWork}
-            {metaMaskNetWork === "1001" || metaMaskNetWork === "8217" ? (
+            {/* {metaMaskNetWork === "1001" ? ( */}
+            {metaMaskNetWork === "8217" ? (
               <a> ( Supported )</a>
             ) : (
               <a style={colorstyle}> ( Unsupported NetWork )</a>

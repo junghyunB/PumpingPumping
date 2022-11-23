@@ -23,10 +23,29 @@ const DashBoardM1 = () => {
 
   const Paging = () => {
     const [page, setPage] = useState(1);
+    const maxContents = 5;
     const handlePageChange = (page) => { 
       setPage(page); 
     };
-    const pagelist = dashboardM1Arr.slice(((page - 1) * 10) , page * 10)
+    const pagelist = dashboardM1Arr.slice(((page - 1) * maxContents) , page * maxContents);
+    let tableBody = [];
+    for (let i = 0; i < maxContents; i++) {
+      tableBody.push(
+        pagelist[i] ? (
+          <tr>
+            <td>{pagelist[i][0]}</td>
+            <td>{pagelist[i][1]} EA</td>
+            <td>{pagelist[i][2]} KLAY</td>
+          </tr>
+        ) : (
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        )
+      );
+        }
 
     return (
       <>
@@ -41,19 +60,13 @@ const DashBoardM1 = () => {
         </tr>
       </thead>
       <tbody>
-        {pagelist.map((item) => 
-              <tr key={item[0]}>
-                <td>{item[0]}회차</td>
-                <td>{item[1]}Ticket</td>
-                <td>{item[2]}Klay</td>
-              </tr>
-        )}
+        {tableBody?.map((item) => item)}
       </tbody>
     </table>
     </div>
       <Pagination 
       activePage={page}
-      itemsCountPerPage={10}
+      itemsCountPerPage={5}
       totalItemsCount={dashboardM1Arr.length}
       pageRangeDisplayed={5}
       prevPageText={"‹"}

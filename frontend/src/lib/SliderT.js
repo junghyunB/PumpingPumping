@@ -1,28 +1,25 @@
 import React from "react";
 import "./Slider.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
-
-const SliderT = ({ticketArr}) => {
-  const settings = {
-    className : "slider variable-width",
-    arrows: true,
-      // dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      centerMode: true,
-      slidesToScroll: 3,
-      variableWidth: true
-    }
+const SliderT = ({ ticketArr }) => {
+  const responsive = {
+    1024: { items: 1 },
+  };
 
   return (
     <div>
-    <Slider {...settings}>
-   {ticketArr?.map((item) => item)} 
-      </Slider>
-      </div>
+      <AliceCarousel
+        mouseTracking
+        items={ticketArr}
+        responsive={responsive}
+        controlsStrategy="alternate"
+        disableDotsControls
+        paddingLeft={170}
+      >
+      </AliceCarousel>
+    </div>
   );
 };
 

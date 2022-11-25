@@ -17,8 +17,8 @@ const Navbar = () => {
   const localKey = localStorage.key(0);
   const storedMetaMask = localStorage.getItem("metamaskAccount");
   const storedKaiKas = localStorage.getItem("kaikasAccount");
-  const metaMaskNetWork = window.ethereum.networkVersion;
-  const kaiKasNetWork = window.klaytn.networkVersion;
+  const metaMaskNetWork = window.ethereum?.networkVersion;
+  const kaiKasNetWork = window.klaytn?.networkVersion;
 
 
   const connectKaiKasWallet = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
 
-  window.ethereum.on('chainChanged', () => {
+  window.ethereum?.on('chainChanged', () => {
     if(localKey === "metamaskAccount") window.location.reload();
   });
 

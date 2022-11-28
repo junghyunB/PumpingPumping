@@ -7,7 +7,7 @@ contract RaffleMode2 {
 
     uint public _epoch = 1;
     uint ticketId = 1;  
-    uint private decimals = 10**18;
+    uint public decimals = 10**18;
   
 
     struct userInfoM2 {
@@ -35,10 +35,10 @@ contract RaffleMode2 {
     mapping(uint => mapping(uint => uint)) ticketIdToNumberM2;
     mapping(uint => mapping(uint => address)) ticketIdToOwnerM2;
     mapping(uint => uint[]) tieBreakTicketM2;
-    mapping(uint => string) public timerDataBaseM2;
+    mapping(uint => string) timerDataBaseM2;
 
 
-    uint[] public dashBoardDataM2;
+    uint[] private dashBoardDataM2;
 
     constructor() {
         owner = msg.sender;

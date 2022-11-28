@@ -10,7 +10,7 @@ contract RaffleMode1 {
     address public owner;
     uint public ticketPriceM1 = 5;
     uint public _epoch = 1;
-    uint private decimals = 10 ** 18; 
+    uint public decimals = 10 ** 18; 
     uint public ticketId = 1;
 
     
@@ -25,15 +25,15 @@ contract RaffleMode1 {
         mapping(address => uint) isclaim;
     }
     
-    mapping(address => mapping(uint => userInfoM1)) public userdataM1;
-    mapping(uint => winnerInfoM1) public epochWinnerM1;
-    mapping(uint => uint) public epochPrizeM1;
-    mapping(uint => uint) public epochWinningTicketId;
-    mapping(uint => string) public timerDataBaseM1;
+    mapping(address => mapping(uint => userInfoM1)) userdataM1;
+    mapping(uint => winnerInfoM1) epochWinnerM1;
+    mapping(uint => uint) epochPrizeM1;
+    mapping(uint => uint) epochWinningTicketId;
+    mapping(uint => string) timerDataBaseM1;
 
     
     address[] private winningTicketPoolM1;
-    uint[] public dashBoardDataM1;
+    uint[] private dashBoardDataM1;
 
     constructor() {
         owner = msg.sender;

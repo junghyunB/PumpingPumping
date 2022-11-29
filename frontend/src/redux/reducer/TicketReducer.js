@@ -3,7 +3,6 @@ let initialState = {
   totalTicketAmount: 0,
   buyTicketSuccess: false,
   winningTicketId: 0,
-
 };
 
 function TicketReducer(state = initialState, action) {

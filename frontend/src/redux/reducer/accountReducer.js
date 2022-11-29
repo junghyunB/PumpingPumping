@@ -2,7 +2,7 @@ let initialState = {
   accountKaiKas: "",
   accountMetaMask: "",
   kaiKasNetWork: 0,
-  metamaskNetWork:null,
+  metamaskNetWork: null,
   metamaskChainId: "",
 };
 

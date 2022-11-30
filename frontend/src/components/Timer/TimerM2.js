@@ -34,11 +34,15 @@ const CountDownViewM2 = ({ targetISOStringM2 }) => {
     );
   else
     return (
-      <div>
-        <p>MODE#2 Remain</p>
-        <p>
-          {hour} H {min} M {sec} S
-        </p>
+      <div className="titleContainer">
+        <div className="mode1timertitleSec">
+          <p>MODE #2 Remaining</p>
+        </div>
+        <div className="mode1timerSec">
+          <p>
+            {hour} : {min} : {sec}{" "}
+          </p>
+        </div>
       </div>
     );
 };

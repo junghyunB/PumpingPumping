@@ -13,7 +13,7 @@ const useResultOfIntervalCalculator = (calculator, delay) => {
     const newResult = calculator();
     if (newResult !== result) setResult(newResult);
   }, delay);
-  if (result === 3 || result < -30 ) {
+  if (result === 3 || result < -30) {
     dispatch(pickWinnerAction.pickWinnerAct(date));
   }
   return result;
@@ -35,11 +35,15 @@ const CountDownView = ({ targetISOString }) => {
     );
   else
     return (
-      <div>
-        <p>MODE#1 Remain</p>
-        <p>
-          {hour} H {min} M {sec} S
-        </p>
+      <div className="titleContainer">
+        <div className="mode1timertitleSec">
+          <p>MODE #1 Remaining</p>
+        </div>
+        <div className="mode1timerSec">
+          <p>
+            {hour} : {min} : {sec}{" "}
+          </p>
+        </div>
       </div>
     );
 };

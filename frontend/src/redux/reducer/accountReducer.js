@@ -4,6 +4,7 @@ let initialState = {
   kaiKasNetWork: 0,
   metamaskNetWork: null,
   metamaskChainId: "",
+  klaybalance: 0,
 };
 
 function accountReducer(state = initialState, action) {
@@ -19,6 +20,8 @@ function accountReducer(state = initialState, action) {
       return { ...state, metamaskNetWork: payload };
     case "METAMASK_CHAINID":
       return { ...state, metamaskChainId: payload.metamaskChainId };
+    case "GET_BALANCE":
+      return { ...state, klaybalance: payload.klaybalance };
     default:
       return { ...state };
   }

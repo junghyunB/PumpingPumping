@@ -1,12 +1,12 @@
 .mainPageLeftSection {
     display: flex;
-    margin-left: 310px;
-    margin-right: 100px;
+    margin-left: 18%;
     justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    /* background-color: blue; */
+    z-index: 1;
 }
 
 .mainPageLeftSection1 {

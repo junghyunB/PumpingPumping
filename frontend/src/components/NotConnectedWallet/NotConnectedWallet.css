@@ -1,18 +1,18 @@
 .notConnectedWalletContainer {
     display: flex;
     flex-direction: row;
-    /* background-color: aqua; */
+    background-color: aqua;
     width: 100%;
     height: 100vh;
-    padding-top: 120px;
 }
 .notConnectedWalletSection {
     display: flex;
-    margin-left: 300px;
+    margin-left: 400px;
+    margin-top: 180px;
     justify-content: center;
     align-items: center;
+    z-index: 0;
     width: 100%;
-    height: 100%;
     /* background-color: blue; */
 }
 .notConnectedWalletSection h1 {

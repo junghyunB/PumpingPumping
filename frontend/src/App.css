@@ -1,8 +1,8 @@
-/* .App {
-    font-family: "googlePoorStory";
+.App {
+    font-family: "BalloThambi2";
 }
 
 @font-face {
-    font-family: "googlePoorStory";
-    src: url(./assets/font/Poor_Story/PoorStory-Regular.ttf);
-  } */
+    font-family: "BalloThambi2";
+    src: url(./assets/font/Baloo_Thambi_2/BalooThambi2-VariableFont_wght.ttf);
+  }

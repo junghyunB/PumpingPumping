@@ -83,9 +83,21 @@ const DashBoardM1 = () => {
 
   return (
     <div className="dashBoardLeftSection">
-      <div className="dashBoardLeftTable">
-        <Paging />
+      <div className="mode1dashboardtitle">
+        <p>MODE #1</p>
       </div>
+      <div className="mode1dashboardtext">
+        <p>
+          Mode#1 game Information.
+          <br />
+          Design comment
+        </p>
+      </div>
+      <div className="mode1dashboardContainer">
+        
+      </div>
+
+      <div className="mode1dashboardpagenation"></div>
     </div>
   );
 };

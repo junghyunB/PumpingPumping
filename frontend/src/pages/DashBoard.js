@@ -19,7 +19,7 @@ const DashBoard = () => {
   return (
     <div className='dashBoardPageContainer'>
         <DashBoardM1 />
-        <DashBoardM2 />
+        {/* <DashBoardM2 /> */}
     </div>
   )
 }

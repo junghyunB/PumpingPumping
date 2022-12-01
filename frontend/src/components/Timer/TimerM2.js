@@ -36,10 +36,10 @@ const CountDownViewM2 = ({ targetISOStringM2 }) => {
     return (
       <div className="titleContainer">
         <div className="mode1timertitleSec">
-          <p>MODE #2 Remaining</p>
+          <p style={{color:"#0060C4"}}>MODE #2 Remaining</p>
         </div>
         <div className="mode1timerSec">
-          <p>
+          <p style={{color:"#0060C4"}}>
             {hour} : {min} : {sec}{" "}
           </p>
         </div>

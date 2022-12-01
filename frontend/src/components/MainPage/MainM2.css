@@ -1,99 +1,108 @@
-.mainPageRightSection {
+.mainPageRightContainer {
     display: flex;
-    /* margin-left: 100px; */
-    justify-content: center;
-    align-items: center;
+    margin-top: 228px;
+    margin-left: 48px;
+    width: 688px;
+    flex-direction: column;
+    z-index: 0;
+    /* background-color: gold; */
+}
+
+.mode2maintitle {
+    display: flex;
     width: 100%;
+    height: 48px;
+    font-size: 48px;
+    color: #0060C4;
+    align-items: center;
+}
+
+.mode2maintext {
+    width: 100%;
+    height: 90px;
+    font-size: 24px;
+}
+
+.mode2mainround {
+    display: flex;
+    width: 100%;
+    height: 192px;
+}
+
+.mode2mainbtn1 {
+    display: flex;
+    width: 48px;
     height: 100%;
-    z-index: 1;
-    /* background-color: white; */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
 }
 
-.mainPageRightSection1 {
+.mode2mainbtn1:hover {
+    background-color: #F2F2F2;
+}
+
+.mode2mainroundsection {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid black;
-    /* background-color: greenyellow; */
-    width: 300px;
-    height: 500px;
+    width: 592px;
+    height: 100%;
 }
 
-.mainPageRightSectionTitle {
+.mode2mainroundsection1 {
     width: 100%;
-    /* background-color: aqua; */
-}
-
-.mainPageRightSectionTitle p {
-    font-size: 20px;
+    height: 50%;
     text-align: center;
+    padding-top: 30px;
+    font-size: 48px;
 }
 
-.mainPageRightSectionTitle hr {
-    border: solid 2px black;
-}
-
-.mainPageRightSectionSilder {
+.mode2mainroundsection2 {
     display: flex;
-    position: relative;
-    /* width: 100%; */
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    height: 50%;
+    font-size: 24px;
     justify-content: center;
 }
 
-.rightSectionLeftBtn {
-    z-index: 20;
-    border: none;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: -35%;
-    top: 10%;
-}
-
-.rightSectionRightBtn {
-    z-index: 20;
-    border: none;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: -30%;
-    top: 10%;
-}
-
-.mainPageRightSectionSilder p {
-    font-size: 20px;
-}
-
-.mainPageRightPrizedSection table {
-    width: 150px;
-    height: 120px;
-    text-align: center;
-    border: 1px solid black;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mainPageRightPrizedSection th, td {
-    border: 1px solid black;
-}
-
-.tableInfo {
-    height: 75px;
-}
-
-.rightBuyBtn {
+.mode2mainbtn2 {
     display: flex;
-    margin-top: 30px;
+    width: 48px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.mode2mainbtn2:hover {
+    background-color: #F2F2F2;
+}
+
+.mode2reaminSection {
+    width: 100%;
+    height: 53px;
+}
+
+.mode2mainBtn {
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100px;
 }
 
-.rightBuyBtn button {
-    width: 150px;
-    height: 50px;
-    z-index: 20;
-    font-weight: 900;
+.mode2mainBtn button {
+    width: 100%;
+    height: 64px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    background-color: #0060C4;
 }
+
+.mode2mainBtn button:hover {
+    background-color: #3591f2;
+}
+

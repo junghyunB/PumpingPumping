@@ -6,9 +6,6 @@ body {
   font-family:'Nanum Gothic', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAPdlF81OiBnbD2SALi6K-Zvs9K_RQsBzhHw&usqp=CAU"); */
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 code {

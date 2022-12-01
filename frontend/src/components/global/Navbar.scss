@@ -4,19 +4,19 @@
     width: 100%;
     height: 100vh;
     position: fixed;
-    background-color: #B1D6BE; 
+    background-color: #EBF2FF; 
 }
 .leftNavSection {
-  position: relative;
+  // display: flex;
   position: fixed;
   left: 0;
   height: 100vh;
-  width: 18%;
+  width: 400px;
   // border-right: 5px solid black;
 }
 
 .rightNavContainer {
-  width:82%;
+  width: 1520px;
   background-color: white;
   height: 100vh;
   border-top-left-radius: 2rem;
@@ -25,19 +25,17 @@
 
 .timerSaction {
   display: flex;
-  justify-content: center;
-  left: 18%;
+  left: 1520px;
   align-items: center;
-  height: 190px;
-  // background-color: #222;
+  height: 228px;
 }
 
 .mode1Timer {
-  width: 40%;
-  height: 50%;
+  width: 688px;
+  height: 136px;
   border-radius: 1.5rem;
-  margin-right: 50px;
-  background-color: #B1D6BE; 
+  margin-left: 48px;
+  background-color: #F2E7FC; 
 }
 
 .titleContainer {
@@ -46,32 +44,33 @@
 }
 .mode1timertitleSec {
   display: flex;
-  width:50%;
-  height: 100%;
-  padding-left: 60px;
+  width:344px;
+  height:136px;
+  padding-left: 48px;
   align-items: center;
-  font-size: 15px;
-  padding-top: 20px;
+  font-size: 32px;
+  padding-top: 10px;
+  // background-color: #0060C4;
 }
 
 .mode1timerSec {
   display: flex;
   justify-content: flex-end;
-  padding-right: 60px;
-  width: 50%;
-  height: 100%;
-  font-size: 15px;
-  padding-top: 20px;
+  padding-right: 48px;
+  width: 344px;
+  height: 136px;
+  font-size: 32px;
+  padding-top: 10px;
   align-items: center;
 }
 
 
 .mode2Timer {
-  width: 40%;
-  height: 50%;
-  margin-left: 50px;
+  width: 688px;
+  height: 136px;
+  margin-left: 48px;
   border-radius: 1.5rem;
-  background-color: #BEEBFD;
+  background-color: #EBF2FF;
 }
 
 .mode2Timer h3 {
@@ -83,18 +82,40 @@
 .leftNavSection {
     display: flex;
     flex-direction: column;
-    // background-color: #FF4500;
 }
 
 .firstLeftNav {
     display: flex;
-    height:120px;
-    padding-left: 20px;
-    padding-top: 20px;
+    height:144px;
+}
+
+.firstLeftNavimgSection {
+  display: flex;
+  width: 90px;
+  height: 100%;
+  padding: 24px 0px 24px 24px;
+}
+
+.firstLeftNavimgSection img {
+  width: 77px;
+  height: 96px;
+}
+
+.firstLeftNavtextSection {
+  display: flex;
+  width: 310px;
+  height: 100%;
+  padding-top: 36px;
+  padding-left: 32px;
+}
+
+.firstLeftNavtextSection img {
+  width: 186px;
+  height: 72px;
 }
 
 p {
-  font-weight: 900;
+  font-weight: bold;
 }
 
 .istmainword {
@@ -106,7 +127,7 @@ p {
 
 .lastmainword {
   font-size: 25px;
-  color: darkgreen;
+  color: #0060C4;
   text-decoration: none;
   font-weight: bold;
 }
@@ -118,7 +139,7 @@ p {
     align-items: center;
     flex-direction: column;
     // background-color: yellow; 
-    padding-left: 20px;
+    padding-left: 24px;
     height: 270px;
 }
 .secondLeftNavMyKlay {
@@ -143,22 +164,57 @@ p {
 }
 
 .secondLeftNavNetWork3 {
+  display: flex;
+  align-items: center;
   width: 50%;
+  // background-color: gold;
 }
 
 .secondLeftNavNetWork4 {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  align-items: center;
   width: 50%;
-  text-align: end;
-  padding-right: 30px;
+  // background-color: #3B3B3B;
+}
+
+.networkstatus {
+  display: flex;
+  width : 90px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+  color:#ffffff;
+  background-color: #28D182;
+  border-radius: 3rem;
+  margin-bottom: 10px;
+}
+
+.networkstatus2 {
+  display: flex;
+  width : 154px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+  color:#ffffff;
+  background-color: #FF9140;
+  border-radius: 3rem;
+  margin-bottom: 10px;
 }
 
 .leftnavsmalltitle {
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
   color: gray;
 }
 
 .leftnavsmalldata {
-  color: darkgreen;
+  font-size: 24px;
+  color: #0060C4;
 }
 
 .secondLeftNavTxt1 {
@@ -183,7 +239,10 @@ p {
 }
 
 .buyklayBtn button {
-  width: 140px;
+  width: 158px;
+  height: 48px;
+  background-color: #0060C4;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -192,6 +251,83 @@ p {
   height: 400px;
   // margin-top: 300px;
 }
+
+.ConnectModal {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 400px;
+}
+
+.metamaskSection {
+  display:flex;
+  flex-direction: column;
+  border: 1px solid #f2f2f2;
+  width: 250px;
+  height: 400px;
+  cursor: pointer;
+  // background-color: #FF9140;
+}
+
+.metamaskimgSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  // background-color: #0060C4;
+}
+
+.metamaskimgSection img {
+  width: 200px;
+  height: 240px;
+}
+
+.metamasktextSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  width: 250px;
+  height: 150px;
+  // background-color: blanchedalmond;
+}
+
+.kaiaksSection {
+  display:flex;
+  flex-direction: column;
+  width: 250px;
+  height: 400px;
+  border: 1px solid #f2f2f2;
+  cursor: pointer;
+  // background-color: #28D182;
+}
+
+.kaikasimgSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  // background-color: #0060C4;
+}
+
+.kaikasimgSection img {
+  width: 160px;
+  height: 200px;
+}
+
+.kaikastextSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  width: 250px;
+  height: 150px;
+  // background-color: blanchedalmond;
+
+}
+
 .buyklayModalContainer {
   display: flex;
   width:100%;
@@ -250,9 +386,12 @@ p {
 }
 
 .walletscanBtn button {
-  width: 140px;
+  width: 158px;
+  height: 48px;
   font-weight: bold;
-  color: darkgreen;
+  border: none;
+  color: #0060C4;
+  background-color: #ffffff;
 }
 
 .thirdLeftNav {
@@ -260,12 +399,13 @@ p {
     align-items: center;
     justify-content: center;
     // background-color: brown; 
-    height: 120px;
+    height: 100px;
 }
 
 .thirdLeftNav button {
-    width: 300px;
-    height: 80px;
+    border: none;
+    width: 352px;
+    height: 48px;
 }
 
 
@@ -274,8 +414,9 @@ p {
   // background-color: blue;
 }
 .contentsection {
-  width:100%;
+  width:  100%;
   height: 60px;
+  padding-left: 20px;
   // background-color: brown;
 }
 
@@ -307,7 +448,6 @@ p {
   width: 22px;
   height: 22px;
   border-radius: 100px;
-
   background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
   position: relative;
 }
@@ -319,7 +459,6 @@ p {
   width: inherit;
   height: inherit;
   border-radius: inherit;
-
   background: hsl(0, 0%, 90%);
   transform: scale(1.1);
   transition: .3s;
@@ -330,7 +469,7 @@ p {
 }
 
 .rad-text {
-  color: hsl(0, 0%, 60%);
+  color: #3B3B3B;
   margin-left: 14px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -341,20 +480,20 @@ p {
 }
 
 .rad-input:checked~.rad-text {
-  color: darkgreen;
+  color: #0060C4;
 }
 
 .channelSection {
   height: 25px;
-  padding-left: 20px;
+  padding-left: 24px;
+  font-size: 18px;
   font-weight: bold;
-  color: white;
-  // background-color: green;
+  color: #0060C4;
 }
 
 .fotLeftNav {
     display: flex;
-    height: 75px;
+    height: 95px;
     // background-color: red;;
 }
 
@@ -363,18 +502,18 @@ p {
   width: 50%;
   height: 100%;
   justify-content: center;
-  padding-top: 5px;
+  padding-top: 10px;
   // background-color: gold;
 }
 .twitterSection button {
-  width: 140px;
-  height: 35px;
+  width: 160px;
+  height: 48px;
   border: none;
-  background-color: #B1D6BE;
+  background-color: #EBF2FF;
 }
 .twitterSection img {
-  width: 130px;
-  height: 35px;
+  width: 160px;
+  height: 48px;
   border-radius: 0.35rem;
 }
 
@@ -383,21 +522,20 @@ p {
   display: flex;
   width: 50%;
   height: 100%;
-  justify-content: center;
-  padding-top: 5px;
+  padding-top: 10px;
   // background-color: whitesmoke;
 }
 
 .discordSection button {
-  width: 140px;
-  height: 35px;
+  width: 160px;
+  height: 48px;
   border: none;
-  background-color: #B1D6BE;
+  background-color: #EBF2FF;
 }
 
 .discordSection img {
-  width: 130px;
-  height: 35px;
+  width: 160px;
+  height: 48px;
   border-radius: 0.35rem;
 }
 

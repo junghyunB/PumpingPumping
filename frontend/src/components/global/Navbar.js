@@ -7,7 +7,7 @@ import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccou
 import { TimerM1, TimerM2 } from "../";
 import { changeNetworkAction } from "../../redux/actions/changeNetworkAction";
 import { balanceAction } from "../../redux/actions/balanceAction";
-import { swapscanner, klayswap, discord, twitter } from "../../assets/images";
+import { swapscanner, klayswap, discord, twitter, maintext, mainimg, metamask, kaikas } from "../../assets/images";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -27,9 +27,13 @@ const Navbar = () => {
   const kaiKasNetWork = window.klaytn?.networkVersion;
 
   const [show, setShow] = useState(false);
+  const [connectShow, setConnectShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleConnectClose = () => setConnectShow(false);
+  const handleConnectShow = () => setConnectShow(true);
 
   const connectKaiKasWallet = () => {
     dispatch(connectKaiKasAccount.getKaiKasAccount());
@@ -79,14 +83,14 @@ const Navbar = () => {
               </div>
               <div className="secondLeftNavNetWork4">
                 {/* {metaMaskNetWork === "1001" ? ( */}
-                {kaiKasNetWork === "8217" ? (
-                  <Badge pill bg="success">
+                {kaiKasNetWork === 8217 ? (
+                  <div className="networkstatus">
                     Supported
-                  </Badge>
+                  </div>
                 ) : (
-                  <Badge pill bg="danger">
-                    UnSupported
-                  </Badge>
+                  <div className="networkstatus2">
+                  UnSupported
+                </div>
                 )}
               </div>
             </div>
@@ -119,13 +123,13 @@ const Navbar = () => {
               <div className="secondLeftNavNetWork4">
                 {/* {metaMaskNetWork === "1001" ? ( */}
                 {metaMaskNetWork === "8217" ? (
-                  <Badge pill bg="success">
-                    Supported
-                  </Badge>
+                 <div className="networkstatus">
+                 Supported
+               </div>
                 ) : (
-                  <Badge pill bg="danger">
-                    UnSupported
-                  </Badge>
+                  <div className="networkstatus2">
+                  UnSupported
+                </div>
                 )}
               </div>
             </div>
@@ -183,10 +187,8 @@ const Navbar = () => {
         <div className="leftNavSection">
           <Link to="/" style={{ textDecoration: "none" }}>
             <div className="firstLeftNav">
-              <a className="istmainword">P</a>
-              <a className="lastmainword">umping</a>
-              <a className="istmainword">P</a>
-              <a className="lastmainword">umping</a>
+              <div className="firstLeftNavimgSection"><img src={mainimg}></img></div>
+              <div className="firstLeftNavtextSection"><img src={maintext}></img></div>
             </div>
           </Link>
           <div className="secondLeftNav">
@@ -194,7 +196,7 @@ const Navbar = () => {
           </div>
           <div className="klaybuyscanNav">
             <div className="buyklayBtn">
-              <Button variant="success" onClick={handleShow}>
+              <Button onClick={handleShow}>
                 Buy Klay
               </Button>
               <Modal
@@ -225,7 +227,6 @@ const Navbar = () => {
             </div>
             <div className="walletscanBtn">
               <Button
-                variant="light"
                 onClick={() => window.open("https://debank.com/")}
               >
                 Wallet Scan
@@ -234,64 +235,67 @@ const Navbar = () => {
           </div>
           <div className="thirdLeftNav">
             {localKey === null ? (
-              <Button variant="outline-success" onClick={connectMetaMaskWallet}>
+              <>
+              <Button variant="outline-success" onClick={handleConnectShow}>
                 Connect Wallet
               </Button>
+
+              <Modal
+                show={connectShow}
+                onHide={handleConnectClose}
+                contentClassName="ConnectModal"
+                centered={true}
+              > 
+              <div className="metamaskSection" onClick={connectMetaMaskWallet}>
+                <div className="metamaskimgSection">
+                <img src={metamask}></img>
+                </div>
+                <div className="metamasktextSection">
+                  <p>Connect Metamask</p>
+                </div>
+              </div>
+              <div className="kaiaksSection" onClick={connectKaiKasWallet}>
+                <div className="kaikasimgSection">
+                <img src={kaikas}></img>
+                </div>
+                <div className="kaikastextSection">
+                  <p>Connect KaiKas</p>
+                </div>
+              </div>
+              </Modal>
+              </>
             ) : (
               <Button variant="outline-danger" onClick={disabledLogin}>
                 DisConnected Wallet
               </Button>
             )}
           </div>
-          {/* <div className="thirdLeftNav">
-            <div className="thirdLeftNav1">
-              <Link to="/dashboard">
-                <button>
-                  <span>DashBorad</span>
-                </button>
-              </Link>
-            </div>
-            <div className="thirdLeftNav1">
-              <Link to="/choicemode">
-                <button>
-                  <span>Raffle</span>
-                </button>
-              </Link>
-            </div>
-            <div className="thirdLeftNav1">
-              <Link to="/">
-                <button onClick={handleShow}>
-                  <span>Guide</span>
-                </button>
-              </Link>
-            </div>
-          </div> */}
           <div className="forthLeftNav">
             <div
               className="contentsection"
               onClick={() => navigate("/dashboard")}
             >
-              <label class="rad-label">
-                <input type="radio" class="rad-input" name="rad" />
-                <div class="rad-design"></div>
-                <div class="rad-text">DashBorad</div>
+              <label className="rad-label">
+                <input type="radio" className="rad-input" name="rad" />
+                <div className="rad-design"></div>
+                <div className="rad-text">DashBorad</div>
               </label>
             </div>
             <div
               className="contentsection"
               onClick={() => navigate("/choicemode")}
             >
-              <label class="rad-label">
-                <input type="radio" class="rad-input" name="rad" />
-                <div class="rad-design"></div>
-                <div class="rad-text">Raffle</div>
+              <label className="rad-label">
+                <input type="radio" className="rad-input" name="rad" />
+                <div className="rad-design"></div>
+                <div className="rad-text">Raffle</div>
               </label>
             </div>
             <div className="contentsection" onClick={() => navigate("/")}>
-              <label class="rad-label">
-                <input type="radio" class="rad-input" name="rad" />
-                <div class="rad-design"></div>
-                <div class="rad-text">Guide</div>
+              <label className="rad-label">
+                <input type="radio" className="rad-input" name="rad" />
+                <div className="rad-design"></div>
+                <div className="rad-text">Guide</div>
               </label>
             </div>
           </div>

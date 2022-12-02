@@ -29,8 +29,8 @@ const CountDownView = ({ targetISOString }) => {
   var sec = remain % 60;
   if (isNaN(sec) || sec < 0)
     return (
-      <div>
-        <h3>Loading...</h3>
+      <div className="LoadingSection1">
+        <p>Loading...</p>
       </div>
     );
   else

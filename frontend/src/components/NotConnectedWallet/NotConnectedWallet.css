@@ -11,10 +11,9 @@
     margin-top: 180px;
     justify-content: center;
     align-items: center;
+    font-size: 50px;
     z-index: 0;
     width: 100%;
+    color : #FF9140;
     /* background-color: blue; */
-}
-.notConnectedWalletSection h1 {
-    font-weight: 900;
 }

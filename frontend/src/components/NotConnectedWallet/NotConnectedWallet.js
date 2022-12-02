@@ -14,10 +14,12 @@ const NotConnectedWallet = () => {
     dispatch(epochM2Action.epochM2Act());
   }, [epoch, epochM2]);
 
+
+
   return (
     <div className="notConnectedWalletContainer">
       <div className="notConnectedWalletSection">
-        <h1>Available after Connect the wallet</h1>
+        <p>Available after Connect the wallet</p>
       </div>
     </div>
   );

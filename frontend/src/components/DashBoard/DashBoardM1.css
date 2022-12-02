@@ -5,7 +5,7 @@
     margin-top: 228px;
     width: 688px;
     z-index: 0;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .mode1dashboardtitle {
@@ -20,77 +20,73 @@
 
 .mode1dashboardtext {
   width: 100%;
-  height: 90px;
+  height: 120px;
   font-size: 24px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .mode1dashboardContainer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 495px;
-  background-color: aquamarine;
+  height: 532px;
+  overflow: auto;
 }
+
+.mode1dashboardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.mode1dashboarddata {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  color: #9D4FE8;
+  font-weight: bold;
+  background-color: #DDC5F7;
+}
+
+.mode1dashboardround {
+  display: flex;
+  align-items: center;
+  width: 140px;
+  height: 48px;
+  padding-left: 20px;
+  /* background-color: aqua; */
+}
+
+.mode1dashboardtotalticketprize {
+  display: flex;
+  align-items: center;
+  width: 274px;
+  height: 100%;
+  padding-left: 20px;
+  /* background-color: darkcyan; */
+}
+
+.mode1dashboardtotalticketprize img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.mode1dashboarddata2 {
+  display: flex;
+  margin-top: 15px;
+  width: 100%;
+  height: 48px;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  color: #3B3B3B;
+  font-weight: bold;
+  background-color: #F2E7FC;
+}
+
 
 .mode1dashboardpagenation {
   width: 100%;
-  height: 115px;
-  background-color: dimgrey;
+  height: 48px;
+  /* background-color: dimgrey; */
 }
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul.pagination li {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #e2e2e2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    z-index: 20;
-    cursor: pointer;
-  }
-
-  ul.pagination li:first-child{
-    border-radius: 5px 0 0 5px;
-  }
-
-  ul.pagination li:last-child{
-    border-radius: 0 5px 5px 0;
-  }
-  
-  ul.pagination li a {
-    text-decoration: none;
-    color: #DDC5F7;
-    font-size: 1rem;
-    z-index: 20;
-  }
-  
-  ul.pagination li.active a {
-    color: white;
-  }
-
-  ul.pagination li.active {
-    background-color: #DDC5F7;
-  }
-  
-  ul.pagination li a:hover,
-  ul.pagination li a.active {
-    color: #DDC5F7;
-  }
-  
-  .page-selection {
-    width: 48px;
-    height: 30px;
-    color: #DDC5F7;
-  }

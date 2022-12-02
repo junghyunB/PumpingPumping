@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Mode1BuyPage.css";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { mode1ticket } from "../assets/images";
+import { useNavigate } from "react-router-dom";
+import { klaytn } from "../assets/images";
 import { epochAction } from "../redux/actions/epochAction";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import { myTicketCountAction } from "../redux/actions/myTicketCountAction";
@@ -18,9 +16,10 @@ const Mode1BuyPage = () => {
   const localKey = localStorage.key(0);
   const account = localStorage.getItem(localKey);
   const availavble = 20 - ownedMyTicket;
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
   const payKlay = amount * 5;
 
+  const navigate = useNavigate();
 
   const displayAmount = (e) => {
     setAmount(e.target.value)
@@ -29,7 +28,6 @@ const Mode1BuyPage = () => {
   const maxBuy = () => {
     setAmount(availavble);
   }
-
   useEffect(() => {
     dispatch(epochAction.epochAct());
     dispatch(epochM2Action.epochM2Act());
@@ -41,38 +39,44 @@ const Mode1BuyPage = () => {
     dispatch(buyTicketAction.buyTicketAct(amount));
   }
 
-
-
   return (
     <div className="mode1BuyPageContainer">
       <div className="mode1BuyPageSection">
-        <Card className="mod1BuyPageSection1">
-          <div className="buymypageselect">
-            <div className="buybuttonSection">
-              <Link to="/mode1buy" className="z-indexZone">
-                <Button variant="outline-dark">BuyTicket</Button>
-              </Link>
-            </div>
-            <div className="mypagebuttonSection">
-              <Link to="/mode1my" className="z-indexZone">
-                <Button variant="outline-dark">MyPage</Button>
-              </Link>
-            </div>
-          </div>
-          <div className="ticketPictureSection">
-            <img src={mode1ticket} className="mode1ticket"></img>
-            <h2>{epoch}round Mode#1</h2>
-          </div>
-          <div className="ownedTicketAmountSection">
-            <h4>Available : {availavble} </h4>
-          </div>
-          <div className="ticketAmountSection">
-            <input type="number" onChange={displayAmount} value={amount}/>
-            <Button onClick={maxBuy} className="maxbuttonposition" variant="outline-dark">MAX</Button>
-          </div>
-          <div className="totalTicketPriceSection"><h4>Amount : {payKlay} Klay</h4></div>
-          <div className="buyTicketButtonSection"><Button onClick={buyTicketM1} variant="outline-dark">BuyTicket</Button></div>
-        </Card>
+      <div className="mode1buypagetitle">
+        <p>MODE #1</p>
+      </div>
+      <div className="mode1buypagetext">
+        <p>
+          Mode#1 game Information.
+          <br />
+          Design comment
+        </p>
+      </div>
+      <div className="mode1SelectSection">
+        <div className="mode1buySection" onClick={() => navigate("/mode1buy")}>
+          <p>Buy</p>
+        </div>
+        <div className="mode1mypageSection" onClick={() => navigate("/mode1my")}>
+          <p>My Page</p>
+        </div>
+      </div>
+      <div className="mode1buyroundpaddingsection"></div>
+      <div className="mode1buyroundContainer">
+        <p>{epoch}th Round</p>
+      </div>
+      <div className="mode1buyavailableSection">
+        <span className="mode1available1">Available</span><span className="mode1available2">{availavble}</span>
+      </div>
+      <div className="mode1userselectSection">
+      <input type="number" placeholder="Amount" onChange={displayAmount} className="mode1availInput" value={amount}/>
+      <div className="mode1usermaxSection" onClick={maxBuy}><p>MAX</p></div>
+      </div>
+      <div className="mode1useramountpaddingsection"></div>
+      <div className="mode1priceamountsection"><p>Amount</p></div>
+      <div className="mode1klaytnamountsection"><img src={klaytn}></img>{payKlay} Klay</div>
+      <div className="mode1buysection">
+        <div className="mode1buybutton" onClick={buyTicketM1}>Buy Ticket</div>
+      </div>
       </div>
     </div>
   );

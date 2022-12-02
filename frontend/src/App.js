@@ -65,7 +65,12 @@ function App() {
 
   const WalletRoute = () => {
     if(window.klaytn === undefined && window.ethereum === undefined) {
-      return <NoneWallet />
+      return (
+      <div className="App">
+      <Navbar />
+       <NoneWallet />
+       </div>
+       )
     } else {
       return (
         <div className="App">

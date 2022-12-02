@@ -1,123 +1,138 @@
 .mode1BuyPageContainer {
     display: flex;
     flex-direction: row;
-    /* background-color: aqua; */
+    background-color: aqua;
     width: 100%;
     height: 100vh;
-    padding-top: 120px;
 }
 .mode1BuyPageSection {
     display: flex;
-    margin-left: 310px;
-    margin-right: 100px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    margin-left: 448px;
+    margin-top: 228px;
+    width: 1424px;
+    z-index: 0;
     /* background-color: blue; */
 }
 
-.mod1BuyPageSection1 {
-    display:flex;
-    width: 500px;
-    height: 600px;
-    margin-left: 100px;
-    /* background-color: white; */
-}
-
-.buymypageselect {
+.mode1buypagetitle {
     display: flex;
-    flex-direction: row;
     width: 100%;
-    height: 100px;
+    height: 48px;
+    font-size: 48px;
+    color: #9D4FE8;
+    align-items: center;
+  }
+
+.mode1buypagetext {
+    width: 100%;
+    height: 120px;
+    font-size: 24px;
+    /* background-color: red; */
+  }
+
+  .mode1SelectSection {
+    display: flex;
+    width: 100%;
+    height: 48px;
     /* background-color: aqua; */
-}
+  }
 
-.buybuttonSection {
+  .mode1buySection {
     display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: red; */
-    justify-content: flex-end;
     align-items: center;
-}
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    font-size: 18px;
+    color: #3B3B3B;
+    cursor: pointer;
+    border-bottom: 3px solid #9D4FE8;
+  }
 
-.buybuttonSection button {
-    z-index: 20;
-    height: 70px;
-    width: 200px;
-    font-weight: 900;
-}
-
-.mypagebuttonSection {
+  .mode1mypageSection {
     display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: black; */
-    justify-content: flex-start;
     align-items: center;
-}
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    margin-left: 48px;
+    font-size: 18px;
+    color: #3B3B3B;
+    cursor: pointer;
+    /* background-color: blue; */
+  }
 
-.mypagebuttonSection button {
-    z-index: 20;
-    height: 70px;
-    width: 200px;
-    font-weight: 900;
-}
+  .mode1mypageSection:hover {
+    border-bottom: 3px solid #9D4FE8;
+  }
 
-.z-indexZone {
-    z-index: 20;
-}
+  .mode1buyroundpaddingsection {
+    width: 100%;
+    height: 61px;
+    /* background-color: gold; */
+  }
 
-.ticketPictureSection {
+  .mode1buyroundContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 59px;
+    /* background-color: aqua; */
+    font-size: 48px;
+  }
+
+
+  .mode1buyavailableSection {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 30px;
+    /* background-color: aquamarine; */
+  }
+
+  .mode1available1 {
+    font-size: 18px;
+    color: #959595;
+    font-weight: bold;
+    padding-right: 19px;
+    padding-bottom: 3px;
+  }
+
+  .mode1available2 {
+    font-size: 24px;
+    color: #3B3B3B;
+    font-weight: bold;
+  }
+
+  .mode1userselectSection {
     display: flex;
     width: 100%;
-    height: 130px;
-    /* justify-content: center;
-    align-items: center; */
-    /* background-color: blueviolet; */
-}
+    height: 48px;
+    margin-top: 21px;
+    /* background-color: antiquewhite; */
+  }
 
-.ticketPictureSection h2 {
-    margin-top: 40px;
-    font-weight: 900;
-    margin-left : 30px;
-}
+  .mode1availInput {
+    width: 1356px;
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 18px;
+    padding-left: 16px;
+  }
 
-.mode1ticket {
-    margin-top: 28px;
-    margin-left : 80px;
-    width: 70px;
-    height: 70px;
-}
-
-.ownedTicketAmountSection {
-    width:100%;
-    height: 50px;
-    /* background-color: red; */
-    /* border-top: solid 1px black; */
-}
-
-.ownedTicketAmountSection h4 {
+  .mode1usermaxSection {
+    display: flex;
+    justify-content: center;
     padding-top: 10px;
-    padding-left: 50px;
-    font-weight: 900;
-}
-
-.ticketAmountSection {
-    width:100%;
-    height: 70px;
-    padding-top: 10px;
-    padding-left: 50px;
-    z-index: 20;
-    /* background-color: blue; */
-}
-
-
-input {
-    width: 250px;
-    height: 36px;
-}
+    width: 68px;
+    font-size: 18px;
+    background-color: #9D4FE8;
+    border-radius: 0.4rem;
+    color: #ffffff;
+    cursor: pointer;
+  }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -125,34 +140,54 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.maxbuttonposition {
-    margin-bottom: 4px;
-    font-weight: 900;
+.mode1useramountpaddingsection {
+    width: 100%;
+    height: 100px;
+    /* background-color: violet; */
+}
+.mode1priceamountsection {
+    width: 100%;
+    font-size: 18px;
+    color:#959595;
 }
 
-.totalTicketPriceSection {
-    width:100%;
-    height: 50px;
-    /* background-color: orange; */
-    /* border-bottom: solid 1px black; */
-    padding-left: 50px;
-}
-.totalTicketPriceSection h4 {
-    font-weight: 900;
-}
-
-.buyTicketButtonSection {
+.mode1klaytnamountsection {
     display: flex;
     width: 100%;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    /* background-color: black; */
+    font-size: 48px;
+    font-weight: bold;
 }
 
-.buyTicketButtonSection button {
-    z-index: 20;
-    width: 80%;
-    height: 80px;
-    font-weight: 900;
+.mode1klaytnamountsection img{
+    margin-right: 18px;
+}
+
+.mode1buysection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 96px;
+    /* background-color: aqua; */
+}
+
+.mode1buybutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    background-color: #9D4FE8;
+    color:#ffffff;
+    border-radius: 0.5rem;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #dadce0;
+}
+
+.mode1buybutton:hover {
+    background-color: #F2E7FC;
+    color: #9D4FE8;
+    box-shadow: 2px 2px 2px 2px #F2E7FC;
 }

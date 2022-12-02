@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Navbar.scss";
+import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { connectKaiKasAccount } from "../../redux/actions/connectKaiKasAccount";
@@ -8,14 +8,12 @@ import { TimerM1, TimerM2 } from "../";
 import { changeNetworkAction } from "../../redux/actions/changeNetworkAction";
 import { balanceAction } from "../../redux/actions/balanceAction";
 import { swapscanner, klayswap, discord, twitter, maintext, mainimg, metamask, kaikas } from "../../assets/images";
-import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const metamaskChainId = useSelector((state) => state.account.metamaskChainId);
   const selectMetamask = useSelector((state) => state.account.accountMetaMask);
   const selectKaiKas = useSelector((state) => state.account.accountKaiKas);
   const klaybalance = useSelector((state) => state.account.klaybalance);
@@ -139,8 +137,10 @@ const Navbar = () => {
     } else if (localKey === null) {
       return (
         <>
+          <div className="notConnectSection">
           <p>Not Connected</p>
           <p>please Connected Wallet</p>
+          </div>
         </>
       );
     }
@@ -202,25 +202,19 @@ const Navbar = () => {
               <Modal
                 show={show}
                 onHide={handleClose}
-                contentClassName="buyklayModal"
+                contentClassName="connectModal"
                 centered={true}
               >
-                <div className="buyklayModalContainer">
-                  <div className="buyKlayModalLeftContainer">
-                    <div
-                      className="swapscannerzone"
-                      onClick={() => window.open("https://swapscanner.io/ko")}
-                    >
-                      <img src={swapscanner}></img>
-                    </div>
+                <div className="klayswapSection">
+                  <div className="klayswapButtonSection" onClick={() => window.open("https://swapscanner.io/ko")}>
+                    <img src={klayswap}></img> 
+                    <p>Klay Swap</p>                    
                   </div>
-                  <div className="buyKlayModalRightContainer">
-                    <div
-                      className="klayswapzone"
-                      onClick={() => window.open("https://klayswap.com/")}
-                    >
-                      <img src={klayswap}></img>
-                    </div>
+                  </div>
+                  <div className="metamaskSection">
+                  <div className="metamaskButtonSection"  onClick={() => window.open("https://klayswap.com/")}> 
+                  <img src={swapscanner}></img> 
+                    <p>Swap Scanner</p>                                 
                   </div>
                 </div>
               </Modal>
@@ -246,20 +240,16 @@ const Navbar = () => {
                 contentClassName="ConnectModal"
                 centered={true}
               > 
-              <div className="metamaskSection" onClick={connectMetaMaskWallet}>
-                <div className="metamaskimgSection">
-                <img src={metamask}></img>
-                </div>
-                <div className="metamasktextSection">
-                  <p>Connect Metamask</p>
+              <div className="kaikasSection">
+                <div className="kaikasButtonSection" onClick={connectKaiKasWallet}>
+                  <img src={kaikas}></img>
+                  <p>Connect KaiKas</p>
                 </div>
               </div>
-              <div className="kaiaksSection" onClick={connectKaiKasWallet}>
-                <div className="kaikasimgSection">
-                <img src={kaikas}></img>
-                </div>
-                <div className="kaikastextSection">
-                  <p>Connect KaiKas</p>
+              <div className="metamaskSection">
+                <div className="metamaskButtonSection" onClick={connectMetaMaskWallet}>
+                <img src={metamask}></img>
+                  <p>Connect MetaMask</p>
                 </div>
               </div>
               </Modal>

@@ -1,30 +1,30 @@
 .navbarContainer {
   display: flex;
   flex-direction: row-reverse;
-    width: 100%;
-    height: 100vh;
+    width: 1920px;
+    height: 100%;
     position: fixed;
     background-color: #EBF2FF; 
 }
 .leftNavSection {
   position: fixed;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 400px;
 }
 
 .rightNavContainer {
   width: 1520px;
   background-color: white;
-  height: 100vh;
+  height: 100%;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem; 
 }
 
 .timerSaction {
   display: flex;
-  left: 1520px;
   align-items: center;
+  width: 1520px;
   height: 228px;
 }
 
@@ -536,15 +536,4 @@ p {
   width: 160px;
   height: 48px;
   border-radius: 0.35rem;
-}
-
-
-
-
-
-
-
-
-@media (max-width:800px) {
-    
 }

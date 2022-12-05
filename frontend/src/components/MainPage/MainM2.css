@@ -39,6 +39,11 @@
     border-radius: 0.5rem;
 }
 
+.mode2mainbtn1 img {
+    width: 36px;
+    height: 24px;
+}
+
 .mode2mainbtn1:hover {
     background-color: #F2F2F2;
 }
@@ -76,6 +81,11 @@
     border-radius: 0.5rem;
 }
 
+.mode2mainbtn2 img {
+    width: 36px;
+    height: 24px;
+}
+
 .mode2mainbtn2:hover {
     background-color: #F2F2F2;
 }
@@ -105,4 +115,3 @@
 .mode2mainBtn button:hover {
     background-color: #3591f2;
 }
-

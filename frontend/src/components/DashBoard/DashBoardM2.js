@@ -19,7 +19,6 @@ const DashBoardM2 = () => {
     return arr;
   }
   let dashboardM2Arr = chunk(dashBoardDataM2).reverse();
-  console.log(dashboardM2Arr);
 
   useEffect(() => {
     dispatch(dashBoardM2Action.dashBoardM2Act());

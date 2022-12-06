@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MainM1.css";
 import { useDispatch, useSelector } from "react-redux";
+import { TimerM1 } from "../"
 import { epochAction } from "../../redux/actions/epochAction";
 import { totalAmountAction } from "../../redux/actions/totalAmountAction";
 import { winningTicketAction } from "../../redux/actions/winningTicketAction";
@@ -47,6 +48,11 @@ const MainM1 = () => {
 
   return (
     <div className="mainPageLeftSection">
+        <div className="timerSaction">
+      <div className="mode1Timer">
+      <TimerM1 />
+      </div>
+      </div>
       <div className="mode1maintitle">
         <p>MODE #1</p>
       </div>

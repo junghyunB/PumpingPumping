@@ -1,6 +1,7 @@
 import React, {useState, useEffect}from 'react'
 import './MainM2.css'
 import {useSelector, useDispatch} from "react-redux";
+import { TimerM2 } from "../"
 import { epochM2Action } from '../../redux/actions/epochM2Action';
 import { winningNumberM2Action } from '../../redux/actions/winningNumberM2Action';
 import { winningTicketIdM2Action } from '../../redux/actions/winningTicketIdM2Action';
@@ -53,6 +54,11 @@ const MainM2 = () => {
 
   return (
       <div className='mainPageRightContainer'>
+        <div className='timerSaction'>
+          <div className='mode2Timer'>
+            <TimerM2 />
+          </div>
+        </div>
               <div className="mode2maintitle">
         <p>MODE #2</p>
       </div>

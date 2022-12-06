@@ -7,6 +7,7 @@ import { epochAction } from "../redux/actions/epochAction";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import { myTicketCountAction } from "../redux/actions/myTicketCountAction";
 import { buyTicketAction } from "../redux/actions/buyTicketAction";
+import { TimerM1, TimerM2 } from "../components/"
 
 const Mode1BuyPage = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,18 @@ const Mode1BuyPage = () => {
 
   return (
     <div className="mode1BuyPageContainer">
+      <div className="mode1BuyTopLine">
+      <div className="timerSaction">
+      <div className="mode1Timer">
+      <TimerM1 />
+      </div>
+      </div>
+      <div className='timerSaction'>
+          <div className='mode2Timer'>
+            <TimerM2 />
+          </div>
+        </div>
+      </div>
       <div className="mode1BuyPageSection">
       <div className="mode1buypagetitle">
         <p>MODE #1</p>

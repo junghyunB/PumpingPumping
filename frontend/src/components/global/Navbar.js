@@ -183,7 +183,6 @@ const Navbar = () => {
 
   return (
     <div className="navbarContainer">
-      <div className="leftNavContainer">
         <div className="leftNavSection">
           <Link to="/" style={{ textDecoration: "none" }}>
             <div className="firstLeftNav">
@@ -295,16 +294,7 @@ const Navbar = () => {
             <div className="discordSection"><button><img src={discord}></img></button></div>
           </div>
         </div>
-      </div>
       <div className="rightNavContainer">
-        <div className="timerSaction">
-          <div className="mode1Timer">
-            <TimerM1 />
-          </div>
-          <div className="mode2Timer">
-            <TimerM2 />
-          </div>
-        </div>
       </div>
     </div>
   );

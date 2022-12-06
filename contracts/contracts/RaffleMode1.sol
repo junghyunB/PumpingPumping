@@ -4,7 +4,6 @@ pragma solidity ^0.8.15;
 import "hardhat/console.sol";
 
 contract RaffleMode1 {
-    bool private initialized;
     address public owner;
     uint public ticketPriceM1 = 5;
     uint public _epoch = 1;
@@ -39,7 +38,11 @@ contract RaffleMode1 {
         _;
     }
 
-    // 티켓 구매
+    /**
+    * @notice Buy Mode 1 Tickets by Entering Quantity
+    * @param  _amount uint
+    */
+
     function buyTicketM1(uint _amount) public payable {
         require(_amount <= 20, "maximum amount 10");
         require(
@@ -69,7 +72,10 @@ contract RaffleMode1 {
         epochPrizeM1[_epoch] += _amount * ticketPriceM1 * decimals;
     }
 
-    // 랜덤 생성
+    /**
+    * @notice Randomly extract one ticket from the victory ticket pool
+    */
+
     function randomGenerate() internal view returns (uint) {
         uint randomNumber = uint(
             keccak256(
@@ -89,7 +95,11 @@ contract RaffleMode1 {
         dashBoardDataM1.push(totalAmountM1(_epoch) / decimals);
     }
 
-    // 이번 회차 승자 추출
+    /**
+    * @notice Extracting the winner of the current round
+    * @param  date string
+    */
+
     function winnerOfRaffleM1(string memory date) public onlyOwner {
         require(
             epochWinnerM1[_epoch].winnerAddress == address(0),
@@ -117,13 +127,28 @@ contract RaffleMode1 {
         }
     }
 
+    /**
+    * @notice Winning allowance excluding the relevant round fee
+    * @param  epoch uint
+    */
+
     function calculateWinnerFee(uint epoch) internal view returns (uint) {
         return (epochPrizeM1[epoch] * 95) / 100;
     }
 
+    /**
+    * @notice Corresponding session fee
+    * @param  epoch uint
+    */
+
     function calculateOwnerFee(uint epoch) internal view returns (uint) {
         return (epochPrizeM1[epoch] * 5) / 100;
     }
+
+    /**
+    * @notice Claiming prize money for the round
+    * @param  epoch uint
+    */
 
     function claimRewardM1(uint epoch) public payable {
         require(epochWinnerM1[epoch].winnerAddress != address(0), "No Winner");
@@ -142,28 +167,49 @@ contract RaffleMode1 {
         require(success2, "Not send Klay2");
     }
 
-    // 컨트랙트 보유 금액
+    /**
+    * @notice Contract holding amount
+    */
+
     function contractBalanceM1() public view returns (uint) {
         return address(this).balance;
     }
 
-    // 역대 회차 쌓인 금액 조회
+    /**
+    * @notice Total prize money per round
+    * @param  epoch uint
+    */
+
     function totalAmountM1(uint epoch) public view returns (uint) {
         return epochPrizeM1[epoch];
     }
 
-    // 역대 회차 총 티켓수 조회
+    /**
+    * @notice Total number of tickets per show
+    * @param  epoch uint
+    */
+
     function totalTicketM1(uint epoch) public view returns (uint) {
         return epochPrizeM1[epoch] / (5 * decimals);
     }
 
-    // 역대 내 당첨 확률 조회
+    /**
+    * @notice Probability of winning in each round
+    * @param  _to address
+    * @param  epoch uint
+    */
+
     function getMyRatioM1(address _to, uint epoch) public view returns (uint) {
         return
             (100000 * userdataM1[_to][epoch].applyCount) / totalTicketM1(epoch);
     }
 
-    // 역대 회차에 내가 보유한 티켓 갯수
+    /**
+    * @notice Number of tickets held by the address per round
+    * @param  _to address
+    * @param  epoch uint
+    */
+
     function getInvestAmountM1(
         address _to,
         uint epoch
@@ -171,7 +217,12 @@ contract RaffleMode1 {
         return userdataM1[_to][epoch].applyCount;
     }
 
-    //  회차 입력시 내가 보유한 모든 티켓 번호 조회
+    /**
+    * @notice Search ticket id held by the address for each round
+    * @param  _to address
+    * @param  epoch uint
+    */
+
     function getMyTicketNumberM1(
         address _to,
         uint epoch
@@ -179,22 +230,34 @@ contract RaffleMode1 {
         return userdataM1[_to][epoch].myTicket;
     }
 
-    // 역대 회차 승리자 조회
+    /**
+    * @notice View winners by round
+    * @param  epoch uint
+    */
+
     function getWinnerM1(uint epoch) public view returns (address) {
         return epochWinnerM1[epoch].winnerAddress;
     }
 
-    // 역대 회차 당첨 티켓Id 조회
+    /**
+    * @notice Search winning ticket ID for each round
+    * @param  epoch uint
+    */
+
     function getWinningTicketId(uint epoch) public view returns (uint) {
         return epochWinningTicketId[epoch];
     }
 
-    // DashBoard에 들어갈 데이터 추출
     function getDashBoardDataM1() public view returns (uint[] memory) {
         return dashBoardDataM1;
     }
 
-    // 이미 청구 했는지 확인
+    /**
+    * @notice Whether or not to claim the winning prize for the corresponding round
+    * @param  _to address
+    * @param  epoch uint
+    */
+
     function isClaimedRewardM1(
         address _to,
         uint epoch
@@ -202,12 +265,21 @@ contract RaffleMode1 {
         return epochWinnerM1[epoch].isclaim[_to];
     }
 
-    // 타이머 데이터 세팅
+    /**
+    * @notice timer target time setting
+    * @param  date string
+    * @param  epoch uint
+    */
+
     function setTimerM1(uint epoch, string memory date) public onlyOwner {
         timerDataBaseM1[epoch] = date;
     }
 
-    // 타이머 데이터 조회 함수
+    /**
+    * @notice timer target time view
+    * @param  epoch uint
+    */
+
     function getTimerM1(uint epoch) public view returns (string memory) {
         return timerDataBaseM1[epoch];
     }

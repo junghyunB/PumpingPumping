@@ -24,15 +24,15 @@
 .timerSaction {
   display: flex;
   align-items: center;
-  width: 1520px;
+  width: 760px;
   height: 228px;
+  /* background-color: #28D182; */
 }
 
 .mode1Timer {
   width: 688px;
   height: 136px;
   border-radius: 1.5rem;
-  margin-left: 48px;
   background-color: #F2E7FC; 
 }
 
@@ -90,7 +90,6 @@
 .mode2Timer {
   width: 688px;
   height: 136px;
-  margin-left: 48px;
   border-radius: 1.5rem;
   background-color: #EBF2FF;
 }
@@ -537,3 +536,590 @@ p {
   height: 48px;
   border-radius: 0.35rem;
 }
+
+/*
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+NoteBook Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+
+
+@media only screen and (max-width: 1440px) and (max-height:796px){
+  .navbarContainer {
+    display: flex;
+    flex-direction: row-reverse;
+      width: 1440px;
+      height: 100%;
+      position: fixed;
+      background-color: #EBF2FF; 
+  }
+  .leftNavSection {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 300px;
+  }
+  
+  .rightNavContainer {
+    width: 1140px;
+    background-color: white;
+    height: 100%;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem; 
+  }
+  
+  .timerSaction {
+    display: flex;
+    align-items: center;
+    width: 570px;
+    height: 171px;
+  }
+  
+  .mode1Timer {
+    width: 516px;
+    height: 102px;
+    border-radius: 1.125rem;
+    background-color: #F2E7FC; 
+  }
+  
+  .LoadingSection1 {
+    width: 100%;
+    height: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 22.5px;
+    color: #9D4FE8;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .LoadingSection2 {
+    width: 100%;
+    height: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 22.5px;
+    color: #0060C4;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  
+  .titleContainer {
+    display: flex;
+    height: 71.25px;
+  }
+  .mode1timertitleSec {
+    display: flex;
+    width:258px;
+    height:102px;
+    padding-left: 36px;
+    align-items: center;
+    font-size: 24px;
+    padding-top: 7.5px;
+  }
+  
+  .mode1timerSec {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 36px;
+    width: 258px;
+    height: 102px;
+    font-size: 24px;
+    padding-top: 7.5px;
+    align-items: center;
+  }
+  
+  
+  .mode2Timer {
+    width: 516px;
+    height: 102px;
+    border-radius: 1.125rem;
+    background-color: #EBF2FF;
+  }
+  
+  
+  .leftNavSection {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .firstLeftNav {
+      display: flex;
+      height: 108px;
+  }
+  
+  .firstLeftNavimgSection {
+    display: flex;
+    width: 67.5px;
+    height: 100%;
+    padding: 18px 0px 18px 18px;
+  }
+  
+  .firstLeftNavimgSection img {
+    width: 57.75px;
+    height: 72px;
+  }
+  
+  .firstLeftNavtextSection {
+    display: flex;
+    width: 232.5px;
+    height: 100%;
+    padding-top: 27px;
+    padding-left: 24px;
+  }
+  
+  .firstLeftNavtextSection img {
+    width: 139.5px;
+    height: 54px;
+  }
+  
+  p {
+    font-weight: bold;
+  }
+  
+  .istmainword {
+    font-size: 20.25px;
+    color: #4B89DC;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .lastmainword {
+    font-size: 18.75px;
+    color: #0060C4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .secondLeftNav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-left: 18px;
+      height: 202.5px;
+  }
+  
+  .notConnectSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width: 282px;
+    height: 202.5px;
+    padding-right: 27px;
+    padding-bottom: 18px;
+    color:#FF9140;
+  }
+  .secondLeftNavMyKlay {
+    width: 100%;
+    height: 67.5px;
+  }
+  
+  .secondLeftNavWallet {
+    width: 100%;
+    height: 67.5px;
+  }
+  
+  .secondLeftNavNetWork {
+    width: 100%;
+    height: 67.5px;
+  }
+  
+  .secondLeftNavNetWork2 {
+    display: flex;
+  }
+  
+  .secondLeftNavNetWork3 {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .secondLeftNavNetWork4 {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .networkstatus {
+    display: flex;
+    width : 67.5px;
+    height: 21px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 9px;
+    color:#ffffff;
+    background-color: #28D182;
+    border-radius: 2.25rem;
+    margin-bottom: 7.5px;
+  }
+  
+  .networkstatus2 {
+    display: flex;
+    width : 115.5px;
+    height: 21px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 9px;
+    color:#ffffff;
+    background-color: #FF9140;
+    border-radius: 2.25rem;
+    margin-bottom: 7.5px;
+  }
+  
+  .leftnavsmalltitle {
+    font-size: 13.5px;
+    color: gray;
+  }
+  
+  .leftnavsmalldata {
+    font-size: 18px;
+    color: #0060C4;
+  }
+  
+  .secondLeftNavTxt1 {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+  }
+  
+  .klaybuyscanNav {
+    display: flex;
+    height: 45px;
+  }
+  
+  .buyklayBtn {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buyklayBtn button {
+    width: 118.5px;
+    height: 36px;
+    background-color: #0060C4;
+    font-size: 13.5px;
+    font-weight: bold;
+  }
+  
+  .buyklayBtn button:hover {
+    background-color: #ffffff;
+    color : #0060C4;
+  }
+  
+  .buyklayModal {
+    width: 360px;
+    height: 174px;
+  }
+  
+  .klayswapSection {
+    display: flex;
+    width: 360px;
+    height: 87px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .klayswapButtonSection {
+    display: flex;
+    align-items: center;
+    width: 324px;
+    height: 60px;
+    padding-top: 11.25px;
+    border-radius: 0.525rem;
+    color: #3B3B3B;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .klayswapButtonSection img {
+    width: 52.5px;
+    height: 60px;
+    margin-right: 4.5px;
+  }
+  
+  .klayswapButtonSection:hover {
+    border: 3px solid #EBF2FF;
+  }
+  
+  .walletscanBtn {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .walletscanBtn button {
+    width: 118.5px;
+    height: 36px;
+    font-weight: bold;
+    border: none;
+    color: #0060C4;
+    background-color: #ffffff;
+  }
+  
+  .thirdLeftNav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 75px;
+  }
+  
+  .thirdLeftNav button {
+      border: none;
+      font-size: 13.5px;
+      font-weight: bold;
+      width: 264px;
+      height: 36px;
+  }
+  
+  .ConnectModal {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 174px;
+  }
+  
+  .kaikasSection {
+    display: flex;
+    width: 360px;
+    height: 87px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .kaikasButtonSection {
+    display: flex;
+    align-items: center;
+    width: 324px;
+    height: 60px;
+    padding-left: 15px;
+    padding-top: 11.25px;
+    border-radius: 0.525rem;
+    color: #3B3B3B;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .kaikasButtonSection:hover {
+    border: 3px solid #EBF2FF;
+  }
+  
+  .kaikasButtonSection img {
+    margin-right: 15px;
+    margin-bottom: 7.5px;
+    width: 27px;
+    height: 27px;
+  }
+  
+  .metamaskSection {
+    display: flex;
+    width: 360px;
+    height: 87px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .metamaskButtonSection {
+    display: flex;
+    align-items: center;
+    width: 324px;
+    height: 60px;
+    padding-left: 9px;
+    padding-top: 11.25px;
+    border-radius: 0.525rem;
+    color: #3B3B3B;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .metamaskButtonSection:hover {
+    border: 3px solid #EBF2FF;
+  }
+  
+  .metamaskButtonSection img {
+    margin-right: 11.25px;
+    margin-bottom: 7.5px;
+    width: 36px;
+    height: 36px;
+  }
+  
+  
+  .forthLeftNav {
+    height: 225px;
+  }
+  .contentsection {
+    width:  100%;
+    height: 45px;
+    padding-left: 15px;
+  }
+  
+  .rad-label {
+    display: flex;
+    align-items: center;
+    padding: 10.5px 12px;
+  
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .rad-label:hover,
+  .rad-label:focus-within {
+    background: #B9DCFD;
+  }
+  
+  .rad-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.75px;
+    height: 0.75px;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .rad-design {
+    width: 16.5px;
+    height: 16.5px;
+    border-radius: 75px;
+    background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+    position: relative;
+  }
+  
+  .rad-design::before {
+    content: '';
+  
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: hsl(0, 0%, 90%);
+    transform: scale(1.1);
+    transition: .3s;
+  }
+  
+  .rad-input:checked+.rad-design::before {
+    transform: scale(0);
+  }
+  
+  .rad-text {
+    color: #3B3B3B;
+    margin-left: 10.5px;
+    letter-spacing: 2.25px;
+    font-size: 13.5px;
+    font-weight: bold;
+  
+    transition: .3s;
+  }
+  
+  .rad-input:checked~.rad-text {
+    color: #0060C4;
+    font-weight: bold;
+  }
+  
+  .channelSection {
+    height: 40px;
+    padding-left: 18px;
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #0060C4;
+  }
+  
+  .fotLeftNav {
+      display: flex;
+      height: 71.25px;
+  }
+  
+  .twitterSection {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    padding-top: 7.5px;
+  }
+  .twitterSection button {
+    width: 120px;
+    height: 36px;
+    border: none;
+    background-color: #EBF2FF;
+  }
+  .twitterSection img {
+    width: 120px;
+    height: 36px;
+    border-radius: 0.2625rem;
+  }
+  
+  
+  .discordSection {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    padding-top: 7.5px;
+  }
+  
+  .discordSection button {
+    width: 120px;
+    height: 36px;
+    border: none;
+    background-color: #EBF2FF;
+  }
+  
+  .discordSection img {
+    width: 120px;
+    height: 36px;
+    border-radius: 0.2625rem;
+  }
+  }
+
+  /*
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  Not overflow
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+  ********************************
+
+  */
+

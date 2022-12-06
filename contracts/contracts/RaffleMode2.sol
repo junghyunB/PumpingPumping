@@ -56,6 +56,11 @@ contract RaffleMode2 {
         dashBoardDataM2.push(getWinningTicketIdM2(_epoch));
     }
 
+    /**
+    * @notice Buy Mode 2 Type 1 ticket
+    * @param  ticketNumber uint[]
+    */
+
     function buyTicket1(
         uint[] memory ticketNumber
     ) internal view returns (bool) {
@@ -76,6 +81,12 @@ contract RaffleMode2 {
         }
         return true;
     }
+
+    /**
+    * @notice Mode 2 Purchase except Type 1
+    * @param  ticketType uint
+    * @param  ticketNumber uint[]
+    */
 
     function otherTicket(
         uint ticketType,
@@ -100,6 +111,10 @@ contract RaffleMode2 {
         return true;
     }
 
+    /**
+    * @notice Mode 2 Saving data to be saved when purchasing tickets
+    */
+
     function insertData(uint[] memory ticketNumber) internal {
         for (uint i = 0; i < ticketNumber.length; i++) {
             userdataM2[msg.sender][_epoch].amountTicket += 1;
@@ -112,6 +127,12 @@ contract RaffleMode2 {
             ticketId++;
         }
     }
+
+    /**
+    * @notice Buy Mode 2 Tickets
+    * @param  ticketType uint
+    * @param  ticketNumber uint[]
+    */
 
     function buyTicketM2(
         uint ticketType,
@@ -133,6 +154,10 @@ contract RaffleMode2 {
         }
     }
 
+    /**
+    * @notice Extract winning number section
+    */
+
     function sectionRandomGenerate() internal view returns (uint) {
         uint randomNumber = uint(
             keccak256(
@@ -145,6 +170,10 @@ contract RaffleMode2 {
         ) % 100;
         return randomNumber;
     }
+
+    /**
+    * @notice Extract winning numbers
+    */
 
     function winningNumberGenerate() internal view returns (uint) {
         uint randomNumber = (uint(
@@ -159,6 +188,11 @@ contract RaffleMode2 {
         return randomNumber;
     }
 
+    /**
+    * @notice Re-raffle in case of duplicate winner
+    * @param  winningNumber uint
+    */
+
     function redraw(uint winningNumber) internal view returns (uint) {
         uint randomNumber = uint(
             keccak256(
@@ -171,6 +205,11 @@ contract RaffleMode2 {
         ) % numberToTicketIdM2[_epoch][winningNumber].length;
         return randomNumber;
     }
+
+    /**
+    * @notice Winner selection
+    * @param  winningNumber uint
+    */
 
     function PickWinner(uint winningNumber) internal {
         winningNumberM2[_epoch].winningNumberM2 = winningNumber;
@@ -229,6 +268,12 @@ contract RaffleMode2 {
         }
     }
 
+    /**
+    * @notice Select the winner for this round and set the timer for the next round
+    * @param  date string
+    */
+
+
     function winnerOfRaffleM2(string memory date) public onlyOwner {
         require(
             epochWinnerM2[_epoch].winnerAddress == address(0),
@@ -254,16 +299,29 @@ contract RaffleMode2 {
         }
     }
 
+    /**
+    * @notice Calculation of winnings excluding fees
+    * @param  epoch uint
+    */
+
     function calculateWinnerFee(uint epoch) internal view returns (uint) {
         return (epochPrizeM2[epoch] * 95) / 100;
     }
 
-    // 
+    /**
+    * @notice fee calculation
+    * @param  epoch uint
+    */
+
     function calculateOwnerFee(uint epoch) internal view returns (uint) {
         return (epochPrizeM2[epoch] * 5) / 100;
     }
 
-    // 승자 보상 청구
+    /**
+    * @notice Claiming prize money per round
+    * @param  epoch uint
+    */
+
     function claimRewardM2(uint epoch) public payable {
         require(epochWinnerM2[epoch].winnerAddress != address(0), "No Winner");
         require(
@@ -284,22 +342,38 @@ contract RaffleMode2 {
         require(success2, "Not send Klay2");
     }
 
-    // 회차별 총 상금 return
+    /**
+    * @notice Total prize money per round
+    * @param  epoch uint
+    */
+   
     function totalAmountM2(uint epoch) public view returns (uint) {
         return epochPrizeM2[epoch];
     }
 
-    // 컨트랙트 보유 금액
+    /**
+    * @notice Contract holding amount
+    */
+
     function contractBalanceM2() public view returns (uint) {
         return address(this).balance;
     }
 
-    // 회차별 티켓 총 수량
+    /**
+    * @notice Total number of tickets for each round
+    * @param  epoch uint
+    */
+
     function totalTicketM2(uint epoch) public view returns (uint) {
         return ticketAmountM2[epoch];
     }
 
-    // 역대 회차 내가 보유한 티켓정보 조회
+    /**
+    * @notice Search ticket number held by the address for each episode
+    * @param  _to address
+    * @param  epoch uint
+    */
+
     function getMyTicketNumberM2(
         address _to,
         uint epoch
@@ -310,7 +384,12 @@ contract RaffleMode2 {
         );
     }
 
-    // 역대 회차 내가 보유한 티켓 갯수 조회
+    /**
+    * @notice Query the number of tickets held by the address for each round
+    * @param  _to address
+    * @param  epoch uint
+    */
+
     function getMyTicketCountM2(
         address _to,
         uint epoch
@@ -318,12 +397,21 @@ contract RaffleMode2 {
         return userdataM2[_to][epoch].amountTicket;
     }
 
-    // 역대 회차 승리자 조회
+    /**
+    * @notice View winners by round
+    * @param  epoch uint
+    */
+
     function getWinnerM2(uint epoch) public view returns (address) {
         return epochWinnerM2[epoch].winnerAddress;
     }
 
-    // 역대 회차 유저 claim 내역 조회
+    /**
+    * @notice Whether to claim compensation for each round
+    * @param  _to address
+    * @param  epoch uint
+    */
+
     function isClaimedRewardM2(
         address _to,
         uint epoch
@@ -331,35 +419,44 @@ contract RaffleMode2 {
         return epochWinnerM2[epoch].isclaim[_to];
     }
 
-    // 역대 회차 승리 티켓 넘버 조회
+    /**
+    * @notice Winning ticket number for each round
+    * @param  epoch uint
+    */
 
     function getWinningNumberM2(uint epoch) public view returns (uint) {
         return winningNumberM2[epoch].winningNumberM2;
     }
 
-    // 역대 회차 승리 티켓 ID 조회
+    /**
+    * @notice Search winning ticket id for each round
+    * @param  epoch uint
+    */
+
     function getWinningTicketIdM2(uint epoch) public view returns (uint) {
         return winningNumberM2[epoch].winningTikcetIdM2;
     }
 
-    // 동점자가 있을때 동점자 TicketId 배열 조회
+    /**
+    * @notice Tie ticket id in case of a tie
+    * @param  epoch uint
+    */
+
     function getTieBreakTicketM2(
         uint epoch
     ) public view returns (uint[] memory) {
         return tieBreakTicketM2[epoch];
     }
 
-    // 대시보드 데이터 조회
     function getDashBoardDataM2() public view returns (uint[] memory) {
         return dashBoardDataM2;
     }
 
-    // 타이머 데이터 세팅
+
     function setTimerM2(uint epoch, string memory date) public onlyOwner {
         timerDataBaseM2[epoch] = date;
     }
 
-    // 타이머 데이터 조회 함수
     function getTimerM2(uint epoch) public view returns (string memory) {
         return timerDataBaseM2[epoch];
     }

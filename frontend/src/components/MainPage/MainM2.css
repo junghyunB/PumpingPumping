@@ -1,6 +1,5 @@
 .mainPageRightContainer {
     display: flex;
-    margin-top: 228px;
     margin-left: 48px;
     width: 688px;
     flex-direction: column;
@@ -114,4 +113,289 @@
 
 .mode2mainBtn button:hover {
     background-color: #3591f2;
+}
+
+
+/*
+***************************
+***************************
+***************************
+***************************
+***************************
+Desktop Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+
+@media only screen and (max-width: 1440px) and (min-height: 800px) {
+    .mainPageRightContainer {
+        display: flex;
+        margin-left: 448px;
+        width: 688px;
+        flex-direction: column;
+        z-index: 0;
+        /* background-color: gold; */
+    }
+}
+
+
+/*
+***************************
+***************************
+***************************
+***************************
+***************************
+NoteBook Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+
+@media only screen and (max-width: 1440px) and (min-width: 961px) and (max-height:796px) {
+    .mainPageRightContainer {
+        display: flex;
+        margin-left: 36px;
+        width: 516px;
+        flex-direction: column;
+        z-index: 0;
+        /* background-color: gold; */
+    }
+    
+    .mode2maintitle {
+        display: flex;
+        width: 100%;
+        height: 36px;
+        font-size: 36px;
+        color: #0060C4;
+        align-items: center;
+    }
+    
+    .mode2maintext {
+        width: 100%;
+        height: 67.5px;
+        font-size: 18px;
+    }
+    
+    .mode2mainround {
+        display: flex;
+        width: 100%;
+        height: 144px;
+    }
+    
+    .mode2mainbtn1 {
+        display: flex;
+        width: 36px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.375rem;
+    }
+    
+    .mode2mainbtn1 img {
+        width: 27px;
+        height: 18px;
+    }
+    
+    .mode2mainbtn1:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .mode2mainroundsection {
+        display: flex;
+        flex-direction: column;
+        width: 444px;
+        height: 100%;
+    }
+    
+    .mode2mainroundsection1 {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        padding-top: 22.5px;
+        font-size: 36px;
+    }
+    
+    .mode2mainroundsection2 {
+        display: flex;
+        width: 100%;
+        height: 50%;
+        font-size: 18px;
+        justify-content: center;
+    }
+    
+    .mode2mainbtn2 {
+        display: flex;
+        width: 36px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.375rem;
+    }
+    
+    .mode2mainbtn2 img {
+        width: 27px;
+        height: 18px;
+    }
+    
+    .mode2mainbtn2:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .mode2reaminSection {
+        width: 100%;
+        height: 39.75px;
+    }
+    
+    .mode2mainBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+    }
+    
+    .mode2mainBtn button {
+        width: 100%;
+        height: 48px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        background-color: #0060C4;
+    }
+    
+    .mode2mainBtn button:hover {
+        background-color: #3591f2;
+    }
+    
+}
+
+
+
+
+
+@media only screen and (max-width: 960px) and (max-height:796px) {
+    .mainPageRightContainer {
+        display: flex;
+        margin-left: 336px;
+        width: 516px;
+        flex-direction: column;
+        z-index: 0;
+        /* background-color: gold; */
+    }
+    
+    .mode2maintitle {
+        display: flex;
+        width: 100%;
+        height: 36px;
+        font-size: 36px;
+        color: #0060C4;
+        align-items: center;
+    }
+    
+    .mode2maintext {
+        width: 100%;
+        height: 67.5px;
+        font-size: 18px;
+    }
+    
+    .mode2mainround {
+        display: flex;
+        width: 100%;
+        height: 144px;
+    }
+    
+    .mode2mainbtn1 {
+        display: flex;
+        width: 36px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.375rem;
+    }
+    
+    .mode2mainbtn1 img {
+        width: 27px;
+        height: 18px;
+    }
+    
+    .mode2mainbtn1:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .mode2mainroundsection {
+        display: flex;
+        flex-direction: column;
+        width: 444px;
+        height: 100%;
+    }
+    
+    .mode2mainroundsection1 {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        padding-top: 22.5px;
+        font-size: 36px;
+    }
+    
+    .mode2mainroundsection2 {
+        display: flex;
+        width: 100%;
+        height: 50%;
+        font-size: 18px;
+        justify-content: center;
+    }
+    
+    .mode2mainbtn2 {
+        display: flex;
+        width: 36px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.375rem;
+    }
+    
+    .mode2mainbtn2 img {
+        width: 27px;
+        height: 18px;
+    }
+    
+    .mode2mainbtn2:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .mode2reaminSection {
+        width: 100%;
+        height: 39.75px;
+    }
+    
+    .mode2mainBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+    }
+    
+    .mode2mainBtn button {
+        width: 100%;
+        height: 48px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        background-color: #0060C4;
+    }
+    
+    .mode2mainBtn button:hover {
+        background-color: #3591f2;
+    }
+    
 }

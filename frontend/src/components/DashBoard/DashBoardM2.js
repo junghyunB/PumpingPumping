@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./DashBoardM2.css";
+import { TimerM2 } from "../";
 import { useSelector, useDispatch } from "react-redux";
 import { dashBoardM2Action } from "../../redux/actions/dashBoardM2Action";
 import { klaytn } from "../../assets/images";
@@ -26,6 +27,11 @@ const DashBoardM2 = () => {
 
   return (
     <div className="dashBoardRightSection">
+              <div className='timerSaction'>
+          <div className='mode2Timer'>
+            <TimerM2 />
+          </div>
+        </div>
       <div className="mode2dashboardtitle">
         <p>MODE #2</p>
       </div>

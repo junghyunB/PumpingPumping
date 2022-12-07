@@ -113,6 +113,109 @@ Desktop Responsive
 ***************************
 */
 
+@media only screen and (max-width: 1920px) and (min-width: 1440px) and (min-height: 800px) {
+  .dashBoardRightSection {
+    display: flex;
+    margin-left: 2.5vw;
+    width: 35.833vw;
+    flex-direction: column;
+    z-index: 0;
+  }
+  
+  .mode2dashboardtitle {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    font-size: 2.5vw;
+    color: #0060C4;
+    align-items: center;
+  }
+  
+  .mode2dashboardContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  .mode2dashboardtext {
+    width: 100%;
+    height: 120px;
+    font-size: 1.25vw;
+    /* background-color: red; */
+  }
+  
+  .mode2dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 532px;
+    overflow: auto;
+  }
+  
+  .mode2dashboarddata {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-radius: 0.5rem;
+    font-size: 0.938vw;
+    color: #0060C4;
+    font-weight: bold;
+    background-color: #B9DCFD;
+  }
+  
+  .mode2dashboardround {
+    display: flex;
+    align-items: center;
+    width: 7.292vw;
+    height: 48px;
+    padding-left: 1.042vw;
+  
+  }
+  
+  .mode2dashboardtotalticket {
+    display: flex;
+    align-items: center;
+    width: 8.542vw;
+    height: 100%;
+    padding-left: 1.042vw;
+  
+  }
+  
+  .mode2dashboardprize {
+    display: flex;
+    align-items: center;
+    width: 10.625vw;
+    height: 100%;
+    padding-left: 1.042vw;
+  }
+  
+  .mode2dashboardprize img {
+    width: 1.25vw;
+    height: 24px;
+    margin-right: 0.521vw;
+  }
+  
+  .mode2dashboardtotalwinningNumber {
+    display: flex;
+    align-items: center;
+    width: 8.333vw;
+    height: 100%;
+    padding-left: 1.042vw;
+  }
+  
+  .mode2dashboarddata2 {
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    height: 48px;
+    border-radius: 0.5rem;
+    font-size: 0.938vw;
+    color: #3B3B3B;
+    font-weight: bold;
+    background-color: #EBF2FF;
+  }
+  
+}
+
 @media only screen and (max-width: 1440px) and (min-height: 800px) {
   .dashBoardRightSection {
     display: flex;
@@ -141,8 +244,8 @@ NoteBook Responsive
 @media only screen and (max-width: 1440px) and (min-width: 961px) and (max-height: 796px) {
   .dashBoardRightSection {
     display: flex;
-    margin-left: 36px;
-    width: 516px;
+    margin-left: 2.5vw;
+    width: 35.833vw;
     flex-direction: column;
     z-index: 0;
   }
@@ -151,7 +254,7 @@ NoteBook Responsive
     display: flex;
     width: 100%;
     height: 36px;
-    font-size: 36px;
+    font-size: 2.5vw;
     color: #0060C4;
     align-items: center;
   }
@@ -164,7 +267,7 @@ NoteBook Responsive
   .mode2dashboardtext {
     width: 100%;
     height: 90px;
-    font-size: 18px;
+    font-size: 1.25vw;
     /* background-color: red; */
   }
   
@@ -181,7 +284,7 @@ NoteBook Responsive
     width: 100%;
     height: 36px;
     border-radius: 0.375rem;
-    font-size: 13.5px;
+    font-size: 0.938vw;
     color: #0060C4;
     font-weight: bold;
     background-color: #B9DCFD;
@@ -190,41 +293,41 @@ NoteBook Responsive
   .mode2dashboardround {
     display: flex;
     align-items: center;
-    width: 105px;
+    width: 7.292vw;
     height: 36px;
-    padding-left: 15px;
+    padding-left: 1.042vw;
   
   }
   
   .mode2dashboardtotalticket {
     display: flex;
     align-items: center;
-    width: 123px;
+    width: 8.542vw;
     height: 100%;
-    padding-left: 15px;
+    padding-left: 1.042vw;
   
   }
   
   .mode2dashboardprize {
     display: flex;
     align-items: center;
-    width: 153px;
+    width: 10.625vw;
     height: 100%;
-    padding-left: 15px;
+    padding-left: 1.042vw;
   }
   
   .mode2dashboardprize img {
-    width: 18px;
+    width: 1.25vw;
     height: 18px;
-    margin-right: 7.5px;
+    margin-right: 0.521vw;
   }
   
   .mode2dashboardtotalwinningNumber {
     display: flex;
     align-items: center;
-    width: 120px;
+    width: 8.333vw;
     height: 100%;
-    padding-left: 15px;
+    padding-left: 1.042vw;
   }
   
   .mode2dashboarddata2 {
@@ -233,7 +336,7 @@ NoteBook Responsive
     width: 100%;
     height: 36px;
     border-radius: 0.375rem;
-    font-size: 13.5px;
+    font-size: 0.938vw;
     color: #3B3B3B;
     font-weight: bold;
     background-color: #EBF2FF;

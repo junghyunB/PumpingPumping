@@ -166,6 +166,193 @@
     background-color: #ae77ed;
 }
 
+/*
+***************************
+***************************
+***************************
+***************************
+***************************
+Desktop Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+
+@media only screen and (max-width: 1920px) and (min-width: 1440px) and (min-height:800px) {
+    .mainPageLeftSection {
+        display:flex;
+        flex-direction: column;
+        margin-left: 448px;
+        z-index: 0;
+        width: 35.833vw;
+        /* background-color: aqua; */
+    }
+    
+    .mode1maintitle {
+        display: flex;
+        width: 100%;
+        height: 48px;
+        font-size: 2.5vw;
+        color: #9D4FE8;
+        align-items: center;
+        /* background-color: gold; */
+    }
+    
+    .mode1maintext {
+        width: 100%;
+        height: 90px;
+        font-size: 1.25vw;
+        /* background-color: red; */
+    }
+    
+    .mode1mainround {
+        display: flex;
+        width: 100%;
+        height: 192px;
+        /* background-color: yellow; */
+    }
+    
+    .mode1mainbtn1 {
+        display: flex;
+        width: 2.5vw;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.5rem;
+    }
+    
+    .mode1mainbtn1 img {
+        width: 1.875vw;
+        height: 24px;
+    }
+    
+    .mode1mainbtn1:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .mode1mainroundsection {
+        display: flex;
+        flex-direction: column;
+        width: 30.833vw;
+        height: 100%;
+        /* background-color: aqua; */
+    }
+    
+    .mode1mainroundsection1 {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        padding-top: 30px;
+        font-size: 2.5vw;
+        /* background-color: gold; */
+    }
+    
+    
+    .mode1mainroundsection2 {
+        display: flex;
+        width: 100%;
+        height: 50%;
+        font-size: 1.25vw;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    
+    .mode1mainbtn2 {
+        display: flex;
+        width: 2.5vw;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.5rem;
+    }
+    
+    .mode1mainbtn2 img {
+        width: 1.875vw;
+        height: 24px;
+    }
+    
+    .mode1mainbtn2:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .mode1remainSection {
+        width: 100%;
+        height: 53px;
+    }
+    
+    .mode1mainprize {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 264px;
+        border: solid 0.104vw #F2F2F2;
+        border-radius: 1rem;
+        /* background-color: blue; */
+    }
+    
+    .mode1mainprizetitle {
+        display: flex;
+        font-size: 1.25vw;
+        width: 100%;
+        height: 87px;
+        justify-content: center;
+        align-items: center;
+        /* background-color: gold; */
+    }
+    
+    .mode1mainprizeklaytn {
+        display: flex;
+        width: 100%;
+        height: 177px;
+        font-size: 2.344vw;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+    
+    .mode1mainprizeklaytn img {
+        width: 2.5vw;
+        height: 48px;
+    }
+    
+    .mode1mainprizeklaytn p {
+        margin-left: 0.521vw;
+    }
+    
+    .mode1mainprizeklaytn img {
+        padding-bottom: 10px;
+    }
+    
+    .mode1mainBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        /* background-color: green; */
+    }
+    
+    .mode1mainBtn button {
+        width: 100%;
+        height: 64px;
+        font-size: 1.25vw;
+        font-weight: bold;
+        border: none;
+        background-color: #9D4FE8;
+    }
+    
+    .mode1mainBtn button:hover {
+        background-color: #ae77ed;
+    }
+}
+
+
+
+
 
 /*
 ***************************
@@ -181,7 +368,178 @@ NoteBook Responsive
 ***************************
 */
 
-@media only screen and (max-width: 1440px) and (max-height:796px){
+@media only screen and (max-width: 1440px) and (min-width: 960px) and (max-height:796px){
+    .mainPageLeftSection {
+        display:flex;
+        flex-direction: column;
+        margin-left: 336px;
+        z-index: 0;
+        width: 35.833vw;
+        /* background-color: aqua; */
+    }
+    
+    .mode1maintitle {
+        display: flex;
+        width: 100%;
+        height: 36px;
+        font-size: 2.5vw;
+        color: #9D4FE8;
+        align-items: center;
+        /* background-color: gold; */
+    }
+    
+    .mode1maintext {
+        width: 100%;
+        height: 67.5px;
+        font-size: 1.25vw;
+        /* background-color: red; */
+    }
+    
+    .mode1mainround {
+        display: flex;
+        width: 100%;
+        height: 144px;
+        /* background-color: yellow; */
+    }
+    
+    .mode1mainbtn1 {
+        display: flex;
+        width: 2.5vw;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.375rem;
+    }
+    
+    .mode1mainbtn1 img {
+        width: 1.875vw;
+        height: 18px;
+    }
+    
+    .mode1mainbtn1:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .mode1mainroundsection {
+        display: flex;
+        flex-direction: column;
+        width: 30.833vw;
+        height: 100%;
+        /* background-color: aqua; */
+    }
+    
+    .mode1mainroundsection1 {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        padding-top: 22.5px;
+        font-size: 2.5vw;
+        /* background-color: gold; */
+    }
+    
+    
+    .mode1mainroundsection2 {
+        display: flex;
+        width: 100%;
+        height: 50%;
+        font-size: 1.25vw;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    
+    .mode1mainbtn2 {
+        display: flex;
+        width: 2.5vw;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.375rem;
+    }
+    
+    .mode1mainbtn2 img {
+        width: 1.875vw;
+        height: 18px;
+    }
+    
+    .mode1mainbtn2:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .mode1remainSection {
+        width: 100%;
+        height: 39.75px;
+    }
+    
+    .mode1mainprize {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 198px;
+        border: solid 0.104vw #F2F2F2;
+        border-radius: 0.75rem;
+        /* background-color: blue; */
+    }
+    
+    .mode1mainprizetitle {
+        display: flex;
+        font-size: 1.25vw;
+        width: 100%;
+        height: 65.25px;
+        justify-content: center;
+        align-items: center;
+        /* background-color: gold; */
+    }
+    
+    .mode1mainprizeklaytn {
+        display: flex;
+        width: 100%;
+        height: 132.75px;
+        font-size: 2.344vw;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+    
+    .mode1mainprizeklaytn img {
+        width: 2.5vw;
+        height: 36px;
+    }
+    
+    .mode1mainprizeklaytn p {
+        margin-left: 0.521vw;
+    }
+    
+    .mode1mainprizeklaytn img {
+        padding-bottom: 7.5px;
+    }
+    
+    .mode1mainBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+        /* background-color: green; */
+    }
+    
+    .mode1mainBtn button {
+        width: 100%;
+        height: 48px;
+        font-size: 1.25vw;
+        font-weight: bold;
+        border: none;
+        background-color: #9D4FE8;
+    }
+    
+    .mode1mainBtn button:hover {
+        background-color: #ae77ed;
+    }
+        
+}
+
+@media only screen and (max-width: 960px) and (max-height:796px){
     .mainPageLeftSection {
         display:flex;
         flex-direction: column;
@@ -351,5 +709,4 @@ NoteBook Responsive
     }
         
 }
-
 

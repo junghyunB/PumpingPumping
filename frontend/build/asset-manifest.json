@@ -1,20 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7afd838.css",
-    "main.js": "/static/js/main.09cab044.js",
+    "main.css": "/static/css/main.9c3f2577.css",
+    "main.js": "/static/js/main.145adad5.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
-    "static/media/PoorStory-Regular.ttf": "/static/media/PoorStory-Regular.bec8ef9a74351552c94e.ttf",
+    "static/media/klaytn.svg": "/static/media/klaytn.d2d9d4973e6b6bbb442e848e37b67a74.svg",
+    "static/media/BalooThambi2-VariableFont_wght.ttf": "/static/media/BalooThambi2-VariableFont_wght.3e992e03b27809db11d2.ttf",
     "static/media/metamask.png": "/static/media/metamask.64800ecb7ced19cf1865.png",
     "static/media/mode2main.png": "/static/media/mode2main.4e519b12853081197a83.png",
+    "static/media/swapscanner.png": "/static/media/swapscanner.d9218caab3a0c14eaf83.png",
     "static/media/mode1main.png": "/static/media/mode1main.c13f1b7a17605ff7c1c2.png",
+    "static/media/maintext.svg": "/static/media/maintext.09c991078c51958f74332c220dd69418.svg",
     "static/media/mode1ticket.png": "/static/media/mode1ticket.7d8f3b86ccb941b9113f.png",
+    "static/media/discord.png": "/static/media/discord.346d0177fb2abde23014.png",
+    "static/media/twitter.png": "/static/media/twitter.1ab4f49ccd63fc0d2030.png",
+    "static/media/mainimg.svg": "/static/media/mainimg.1f1d377baa8c57e899a35ab9298d7292.svg",
     "index.html": "/index.html",
-    "main.d7afd838.css.map": "/static/css/main.d7afd838.css.map",
-    "main.09cab044.js.map": "/static/js/main.09cab044.js.map",
+    "static/media/rightarrow.svg": "/static/media/rightarrow.4ee48d053674885a0f6644a27ff023b3.svg",
+    "static/media/leftarrow.svg": "/static/media/leftarrow.ed7bb6a0330d023e68a6325a58f8baf0.svg",
+    "main.9c3f2577.css.map": "/static/css/main.9c3f2577.css.map",
+    "main.145adad5.js.map": "/static/js/main.145adad5.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7afd838.css",
-    "static/js/main.09cab044.js"
+    "static/css/main.9c3f2577.css",
+    "static/js/main.145adad5.js"
   ]
 }

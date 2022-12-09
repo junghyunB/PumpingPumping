@@ -2,8 +2,12 @@
 pragma solidity ^0.8.15;
 
 import "hardhat/console.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract RaffleMode1 {
+
+contract RaffleMode1 is ReentrancyGuard {
+    using SafeMath for uint256;
     address public owner;
     uint public ticketPriceM1 = 5;
     uint public _epoch = 1;
@@ -43,22 +47,22 @@ contract RaffleMode1 {
     * @param  _amount uint
     */
 
-    function buyTicketM1(uint _amount) public payable {
+    function buyTicketM1(uint _amount) public payable nonReentrant {
         require(_amount <= 20, "maximum amount 10");
         require(
             userdataM1[msg.sender][_epoch].applyCount <= 20,
             "already entered this system"
         );
         require(
-            userdataM1[msg.sender][_epoch].applyCount + _amount <= 20,
-            "maximum apply are 10"
+            userdataM1[msg.sender][_epoch].applyCount.add(_amount) <= 20,
+            "maximum apply are 20"
         );
         require(
             epochWinnerM1[_epoch].winnerAddress == address(0),
             "already this epoch pick the winner"
         );
         require(
-            _amount * ticketPriceM1 * decimals == msg.value,
+            _amount.mul(ticketPriceM1).mul(decimals) == msg.value,
             "correct paid"
         );
 
@@ -69,7 +73,7 @@ contract RaffleMode1 {
             ticketId++;
         }
 
-        epochPrizeM1[_epoch] += _amount * ticketPriceM1 * decimals;
+        epochPrizeM1[_epoch] += _amount.mul(ticketPriceM1).mul(decimals);
     }
 
     /**
@@ -150,7 +154,7 @@ contract RaffleMode1 {
     * @param  epoch uint
     */
 
-    function claimRewardM1(uint epoch) public payable {
+    function claimRewardM1(uint epoch) public payable nonReentrant {
         require(epochWinnerM1[epoch].winnerAddress != address(0), "No Winner");
         require(
             epochWinnerM1[epoch].winnerAddress == msg.sender,

@@ -1,43 +1,47 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 pragma solidity ^0.8.15;
+
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "hardhat/console.sol";
 
-contract RaffleMode2 {
+contract RaffleMode2 is ReentrancyGuard {
+    using SafeMath for uint256;
     address public owner;
-    uint public ticket1 = 6;
+    uint256 public ticket1 = 6;
 
-    uint public _epoch = 1;
-    uint ticketId = 1;
-    uint public decimals = 10 ** 18;
+    uint256 public _epoch = 1;
+    uint256 ticketId = 1;
+    uint256 public decimals = 10**18;
 
     struct userInfoM2 {
-        uint amountTicket;
-        uint[] myTicket;
-        uint[] myTicketId;
+        uint256 amountTicket;
+        uint256[] myTicket;
+        uint256[] myTicketId;
     }
 
     struct winnerInfoM2 {
         address winnerAddress;
-        mapping(address => uint) isclaim;
+        mapping(address => uint256) isclaim;
     }
 
     struct winningNumberInfoM2 {
-        uint winningNumberM2;
-        uint winningTikcetIdM2;
+        uint256 winningNumberM2;
+        uint256 winningTikcetIdM2;
     }
 
-    mapping(address => mapping(uint => userInfoM2)) userdataM2;
-    mapping(uint => uint) epochPrizeM2;
-    mapping(uint => winnerInfoM2) epochWinnerM2;
-    mapping(uint => uint) ticketAmountM2;
-    mapping(uint => winningNumberInfoM2) winningNumberM2;
-    mapping(uint => mapping(uint => uint[])) numberToTicketIdM2;
-    mapping(uint => mapping(uint => uint)) ticketIdToNumberM2;
-    mapping(uint => mapping(uint => address)) ticketIdToOwnerM2;
-    mapping(uint => uint[]) tieBreakTicketM2;
-    mapping(uint => string) timerDataBaseM2;
+    mapping(address => mapping(uint256 => userInfoM2)) userdataM2;
+    mapping(uint256 => uint256) epochPrizeM2;
+    mapping(uint256 => winnerInfoM2) epochWinnerM2;
+    mapping(uint256 => uint256) ticketAmountM2;
+    mapping(uint256 => winningNumberInfoM2) winningNumberM2;
+    mapping(uint256 => mapping(uint256 => uint256[])) numberToTicketIdM2;
+    mapping(uint256 => mapping(uint256 => uint256)) ticketIdToNumberM2;
+    mapping(uint256 => mapping(uint256 => address)) ticketIdToOwnerM2;
+    mapping(uint256 => uint256[]) tieBreakTicketM2;
+    mapping(uint256 => string) timerDataBaseM2;
 
-    uint[] private dashBoardDataM2;
+    uint256[] private dashBoardDataM2;
 
     constructor() {
         owner = msg.sender;
@@ -48,7 +52,7 @@ contract RaffleMode2 {
         _;
     }
 
-    function setDashBoardDataM2(uint winningNumber) internal {
+    function setDashBoardDataM2(uint256 winningNumber) internal {
         dashBoardDataM2.push(_epoch);
         dashBoardDataM2.push(totalTicketM2(_epoch));
         dashBoardDataM2.push(totalAmountM2(_epoch) / decimals);
@@ -57,24 +61,27 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Buy Mode 2 Type 1 ticket
-    * @param  ticketNumber uint[]
-    */
+     * @notice Buy Mode 2 Type 1 ticket
+     * @param  ticketNumber uint[]
+     */
 
-    function buyTicket1(
-        uint[] memory ticketNumber
-    ) internal view returns (bool) {
+    function buyTicket1(uint256[] memory ticketNumber)
+        internal
+        view
+        returns (bool)
+    {
         require(
-            ticket1 * ticketNumber.length * decimals == msg.value,
+            ticket1.mul(ticketNumber.length).mul(decimals) == msg.value,
             "correct pay"
         );
         require(ticketNumber.length <= 10, "please under 10 select");
         require(
-            userdataM2[msg.sender][_epoch].amountTicket + ticketNumber.length <=
-                10,
+            userdataM2[msg.sender][_epoch].amountTicket.add(
+                ticketNumber.length
+            ) <= 10,
             "maximum 10 Ticket"
         );
-        for (uint i = 0; i < ticketNumber.length; i++) {
+        for (uint256 i = 0; i < ticketNumber.length; i++) {
             if (ticketNumber[i] > 50) {
                 return false;
             }
@@ -83,27 +90,29 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Mode 2 Purchase except Type 1
-    * @param  ticketType uint
-    * @param  ticketNumber uint[]
-    */
+     * @notice Mode 2 Purchase except Type 1
+     * @param  ticketType uint
+     * @param  ticketNumber uint[]
+     */
 
-    function otherTicket(
-        uint ticketType,
-        uint[] memory ticketNumber
-    ) internal view returns (bool) {
-        uint ticketPrice = (ticketType + 1) * 3;
+    function otherTicket(uint256 ticketType, uint256[] memory ticketNumber)
+        internal
+        view
+        returns (bool)
+    {
+        uint256 ticketPrice = (ticketType + 1) * 3;
         require(
-            ticketPrice * ticketNumber.length * decimals == msg.value,
+            ticketPrice.mul(ticketNumber.length).mul(decimals) == msg.value,
             "incorrect pay"
         );
         require(ticketNumber.length <= 10, "please under 10 select");
         require(
-            userdataM2[msg.sender][_epoch].amountTicket + ticketNumber.length <=
-                10,
+            userdataM2[msg.sender][_epoch].amountTicket.add(
+                ticketNumber.length
+            ) <= 10,
             "maximum 10 Ticket"
         );
-        for (uint i = 0; i < ticketNumber.length; i++) {
+        for (uint256 i = 0; i < ticketNumber.length; i++) {
             if (ticketNumber[i] > ticketType * 50) {
                 return false;
             }
@@ -112,11 +121,11 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Mode 2 Saving data to be saved when purchasing tickets
-    */
+     * @notice Mode 2 Saving data to be saved when purchasing tickets
+     */
 
-    function insertData(uint[] memory ticketNumber) internal {
-        for (uint i = 0; i < ticketNumber.length; i++) {
+    function insertData(uint256[] memory ticketNumber) internal {
+        for (uint256 i = 0; i < ticketNumber.length; i++) {
             userdataM2[msg.sender][_epoch].amountTicket += 1;
             userdataM2[msg.sender][_epoch].myTicket.push(ticketNumber[i]);
             userdataM2[msg.sender][_epoch].myTicketId.push(ticketId);
@@ -129,37 +138,39 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Buy Mode 2 Tickets
-    * @param  ticketType uint
-    * @param  ticketNumber uint[]
-    */
+     * @notice Buy Mode 2 Tickets
+     * @param  ticketType uint
+     * @param  ticketNumber uint[]
+     */
 
-    function buyTicketM2(
-        uint ticketType,
-        uint[] memory ticketNumber
-    ) public payable {
+    function buyTicketM2(uint256 ticketType, uint256[] memory ticketNumber)
+        public
+        payable
+        nonReentrant
+    {
         require(ticketType < 6, "is not Ticket Type");
-        uint ticketPrice = (ticketType + 1) * 3;
+        uint256 ticketPrice = (ticketType + 1) * 3;
         if (ticketType == 1) {
             require(buyTicket1(ticketNumber));
             insertData(ticketNumber);
-            epochPrizeM2[_epoch] += ticket1 * ticketNumber.length * decimals;
+            epochPrizeM2[_epoch] += ticket1.mul(ticketNumber.length).mul(
+                decimals
+            );
         } else if (ticketType > 1 || ticketType < 6) {
             require(otherTicket(ticketType, ticketNumber));
             insertData(ticketNumber);
-            epochPrizeM2[_epoch] +=
-                ticketPrice *
-                ticketNumber.length *
-                decimals;
+            epochPrizeM2[_epoch] += ticketPrice.mul(ticketNumber.length).mul(
+                decimals
+            );
         }
     }
 
     /**
-    * @notice Extract winning number section
-    */
+     * @notice Extract winning number section
+     */
 
-    function sectionRandomGenerate() internal view returns (uint) {
-        uint randomNumber = uint(
+    function sectionRandomGenerate() internal view returns (uint256) {
+        uint256 randomNumber = uint256(
             keccak256(
                 abi.encodePacked(
                     msg.sender,
@@ -172,11 +183,11 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Extract winning numbers
-    */
+     * @notice Extract winning numbers
+     */
 
-    function winningNumberGenerate() internal view returns (uint) {
-        uint randomNumber = (uint(
+    function winningNumberGenerate() internal view returns (uint256) {
+        uint256 randomNumber = (uint256(
             keccak256(
                 abi.encodePacked(
                     msg.sender,
@@ -189,12 +200,12 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Re-raffle in case of duplicate winner
-    * @param  winningNumber uint
-    */
+     * @notice Re-raffle in case of duplicate winner
+     * @param  winningNumber uint
+     */
 
-    function redraw(uint winningNumber) internal view returns (uint) {
-        uint randomNumber = uint(
+    function redraw(uint256 winningNumber) internal view returns (uint256) {
+        uint256 randomNumber = uint256(
             keccak256(
                 abi.encodePacked(
                     msg.sender,
@@ -207,11 +218,11 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Winner selection
-    * @param  winningNumber uint
-    */
+     * @notice Winner selection
+     * @param  winningNumber uint
+     */
 
-    function PickWinner(uint winningNumber) internal {
+    function PickWinner(uint256 winningNumber) internal {
         winningNumberM2[_epoch].winningNumberM2 = winningNumber;
         if (numberToTicketIdM2[_epoch][winningNumber].length == 0) {
             epochWinnerM2[_epoch].winnerAddress = address(0);
@@ -236,7 +247,7 @@ contract RaffleMode2 {
             ticketId = 1;
             _epoch++;
         } else if (numberToTicketIdM2[_epoch][winningNumber].length > 1) {
-            uint lastPickWinner = redraw(winningNumber);
+            uint256 lastPickWinner = redraw(winningNumber);
             epochWinnerM2[_epoch].winnerAddress = ticketIdToOwnerM2[_epoch][
                 numberToTicketIdM2[_epoch][winningNumber][lastPickWinner]
             ];
@@ -250,7 +261,7 @@ contract RaffleMode2 {
             ][winningNumber][lastPickWinner];
             setDashBoardDataM2(winningNumber);
             for (
-                uint i = 0;
+                uint256 i = 0;
                 i < numberToTicketIdM2[_epoch][winningNumber].length;
                 i++
             ) {
@@ -269,60 +280,59 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Select the winner for this round and set the timer for the next round
-    * @param  date string
-    */
-
+     * @notice Select the winner for this round and set the timer for the next round
+     * @param  date string
+     */
 
     function winnerOfRaffleM2(string memory date) public onlyOwner {
         require(
             epochWinnerM2[_epoch].winnerAddress == address(0),
             "this epoch already electric winner!"
         );
-        uint sectionNumber = sectionRandomGenerate();
+        uint256 sectionNumber = sectionRandomGenerate();
         setTimerM2(_epoch + 1, date);
         if (sectionNumber < 30) {
-            uint winningNumber = winningNumberGenerate() + 200;
+            uint256 winningNumber = winningNumberGenerate() + 200;
             PickWinner(winningNumber);
         } else if (sectionNumber >= 30 && sectionNumber < 45) {
-            uint winningNumber = winningNumberGenerate() + 50;
+            uint256 winningNumber = winningNumberGenerate() + 50;
             PickWinner(winningNumber);
         } else if (sectionNumber >= 45 && sectionNumber < 65) {
-            uint winningNumber = winningNumberGenerate() + 100;
+            uint256 winningNumber = winningNumberGenerate() + 100;
             PickWinner(winningNumber);
         } else if (sectionNumber >= 65 && sectionNumber < 90) {
-            uint winningNumber = winningNumberGenerate() + 150;
+            uint256 winningNumber = winningNumberGenerate() + 150;
             PickWinner(winningNumber);
         } else if (sectionNumber >= 90) {
-            uint winningNumber = winningNumberGenerate();
+            uint256 winningNumber = winningNumberGenerate();
             PickWinner(winningNumber);
         }
     }
 
     /**
-    * @notice Calculation of winnings excluding fees
-    * @param  epoch uint
-    */
+     * @notice Calculation of winnings excluding fees
+     * @param  epoch uint
+     */
 
-    function calculateWinnerFee(uint epoch) internal view returns (uint) {
+    function calculateWinnerFee(uint256 epoch) internal view returns (uint256) {
         return (epochPrizeM2[epoch] * 95) / 100;
     }
 
     /**
-    * @notice fee calculation
-    * @param  epoch uint
-    */
+     * @notice fee calculation
+     * @param  epoch uint
+     */
 
-    function calculateOwnerFee(uint epoch) internal view returns (uint) {
+    function calculateOwnerFee(uint256 epoch) internal view returns (uint256) {
         return (epochPrizeM2[epoch] * 5) / 100;
     }
 
     /**
-    * @notice Claiming prize money per round
-    * @param  epoch uint
-    */
+     * @notice Claiming prize money per round
+     * @param  epoch uint
+     */
 
-    function claimRewardM2(uint epoch) public payable {
+    function claimRewardM2(uint256 epoch) public payable nonReentrant {
         require(epochWinnerM2[epoch].winnerAddress != address(0), "No Winner");
         require(
             epochWinnerM2[epoch].winnerAddress == msg.sender,
@@ -343,41 +353,42 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Total prize money per round
-    * @param  epoch uint
-    */
-   
-    function totalAmountM2(uint epoch) public view returns (uint) {
+     * @notice Total prize money per round
+     * @param  epoch uint
+     */
+
+    function totalAmountM2(uint256 epoch) public view returns (uint256) {
         return epochPrizeM2[epoch];
     }
 
     /**
-    * @notice Contract holding amount
-    */
+     * @notice Contract holding amount
+     */
 
-    function contractBalanceM2() public view returns (uint) {
+    function contractBalanceM2() public view returns (uint256) {
         return address(this).balance;
     }
 
     /**
-    * @notice Total number of tickets for each round
-    * @param  epoch uint
-    */
+     * @notice Total number of tickets for each round
+     * @param  epoch uint
+     */
 
-    function totalTicketM2(uint epoch) public view returns (uint) {
+    function totalTicketM2(uint256 epoch) public view returns (uint256) {
         return ticketAmountM2[epoch];
     }
 
     /**
-    * @notice Search ticket number held by the address for each episode
-    * @param  _to address
-    * @param  epoch uint
-    */
+     * @notice Search ticket number held by the address for each episode
+     * @param  _to address
+     * @param  epoch uint
+     */
 
-    function getMyTicketNumberM2(
-        address _to,
-        uint epoch
-    ) public view returns (uint[] memory, uint[] memory) {
+    function getMyTicketNumberM2(address _to, uint256 epoch)
+        public
+        view
+        returns (uint256[] memory, uint256[] memory)
+    {
         return (
             userdataM2[_to][epoch].myTicket,
             userdataM2[_to][epoch].myTicketId
@@ -385,79 +396,82 @@ contract RaffleMode2 {
     }
 
     /**
-    * @notice Query the number of tickets held by the address for each round
-    * @param  _to address
-    * @param  epoch uint
-    */
+     * @notice Query the number of tickets held by the address for each round
+     * @param  _to address
+     * @param  epoch uint
+     */
 
-    function getMyTicketCountM2(
-        address _to,
-        uint epoch
-    ) public view returns (uint) {
+    function getMyTicketCountM2(address _to, uint256 epoch)
+        public
+        view
+        returns (uint256)
+    {
         return userdataM2[_to][epoch].amountTicket;
     }
 
     /**
-    * @notice View winners by round
-    * @param  epoch uint
-    */
+     * @notice View winners by round
+     * @param  epoch uint
+     */
 
-    function getWinnerM2(uint epoch) public view returns (address) {
+    function getWinnerM2(uint256 epoch) public view returns (address) {
         return epochWinnerM2[epoch].winnerAddress;
     }
 
     /**
-    * @notice Whether to claim compensation for each round
-    * @param  _to address
-    * @param  epoch uint
-    */
+     * @notice Whether to claim compensation for each round
+     * @param  _to address
+     * @param  epoch uint
+     */
 
-    function isClaimedRewardM2(
-        address _to,
-        uint epoch
-    ) public view returns (uint) {
+    function isClaimedRewardM2(address _to, uint256 epoch)
+        public
+        view
+        returns (uint256)
+    {
         return epochWinnerM2[epoch].isclaim[_to];
     }
 
     /**
-    * @notice Winning ticket number for each round
-    * @param  epoch uint
-    */
+     * @notice Winning ticket number for each round
+     * @param  epoch uint
+     */
 
-    function getWinningNumberM2(uint epoch) public view returns (uint) {
+    function getWinningNumberM2(uint256 epoch) public view returns (uint256) {
         return winningNumberM2[epoch].winningNumberM2;
     }
 
     /**
-    * @notice Search winning ticket id for each round
-    * @param  epoch uint
-    */
+     * @notice Search winning ticket id for each round
+     * @param  epoch uint
+     */
 
-    function getWinningTicketIdM2(uint epoch) public view returns (uint) {
+    function getWinningTicketIdM2(uint256 epoch) public view returns (uint256) {
         return winningNumberM2[epoch].winningTikcetIdM2;
     }
 
     /**
-    * @notice Tie ticket id in case of a tie
-    * @param  epoch uint
-    */
+     * @notice Tie ticket id in case of a tie
+     * @param  epoch uint
+     */
 
-    function getTieBreakTicketM2(
-        uint epoch
-    ) public view returns (uint[] memory) {
+    function getTieBreakTicketM2(uint256 epoch)
+        public
+        view
+        returns (uint256[] memory)
+    {
         return tieBreakTicketM2[epoch];
     }
 
-    function getDashBoardDataM2() public view returns (uint[] memory) {
+    function getDashBoardDataM2() public view returns (uint256[] memory) {
         return dashBoardDataM2;
     }
 
-
-    function setTimerM2(uint epoch, string memory date) public onlyOwner {
+    function setTimerM2(uint256 epoch, string memory date) public onlyOwner {
         timerDataBaseM2[epoch] = date;
     }
 
-    function getTimerM2(uint epoch) public view returns (string memory) {
+    function getTimerM2(uint256 epoch) public view returns (string memory) {
         return timerDataBaseM2[epoch];
     }
 }

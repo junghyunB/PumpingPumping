@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { connectKaiKasAccount } from "../../redux/actions/connectKaiKasAccount";
 import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccount";
-import { TimerM1, TimerM2 } from "../";
 import { changeNetworkAction } from "../../redux/actions/changeNetworkAction";
 import { balanceAction } from "../../redux/actions/balanceAction";
 import { swapscanner, klayswap, discord, twitter, maintext, mainimg, metamask, kaikas } from "../../assets/images";
@@ -23,6 +22,7 @@ const Navbar = () => {
   const storedKaiKas = localStorage.getItem("kaikasAccount");
   const metaMaskNetWork = window.ethereum?.networkVersion;
   const kaiKasNetWork = window.klaytn?.networkVersion;
+  const innerWidth = useSelector(state => state.user.innerWidth);
 
   const [show, setShow] = useState(false);
   const [connectShow, setConnectShow] = useState(false);
@@ -146,6 +146,18 @@ const Navbar = () => {
     }
   };
 
+  const handleResize = () => {
+    dispatch({type:"INNER_WIDTH", payload: window.innerWidth});
+  }
+
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return() => {
+      window.removeEventListener("resize", handleResize);
+    }
+  })
+
   useEffect(() => {
     if (localKey !== "metamaskAccount" && localKey !== null) {
       window.klaytn?.on("accountsChanged", (handler) => {
@@ -183,6 +195,7 @@ const Navbar = () => {
 
   return (
     <div className="navbarContainer">
+      {innerWidth < 800 ? <h1>aldjlajdlasdsakdskadjkasjdksjdksjkdjskdjksjdjskaskl</h1> : 
         <div className="leftNavSection">
           <Link to="/" style={{ textDecoration: "none" }}>
             <div className="firstLeftNav">
@@ -294,6 +307,7 @@ const Navbar = () => {
             <div className="discordSection"><button><img src={discord}></img></button></div>
           </div>
         </div>
+}
       <div className="rightNavContainer">
       </div>
     </div>

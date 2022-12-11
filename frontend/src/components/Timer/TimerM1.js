@@ -13,7 +13,7 @@ const useResultOfIntervalCalculator = (calculator, delay) => {
     const newResult = calculator();
     if (newResult !== result) setResult(newResult);
   }, delay);
-  if (result === 3) {
+  if (result === 3 || result < 0) {
     dispatch(pickWinnerAction.pickWinnerAct(date));
   }
   return result;
@@ -27,7 +27,7 @@ const CountDownView = ({ targetISOString }) => {
   var hour = parseInt(remain / 3600);
   var min = parseInt((remain % 3600) / 60);
   var sec = remain % 60;
-  if (isNaN(sec))
+  if (isNaN(sec) || remain < 0)
     return (
       <div>
         <h3>Loading...</h3>

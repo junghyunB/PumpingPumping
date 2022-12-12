@@ -1,0 +1,327 @@
+.OnetimerSection {
+  display: flex;
+  align-items: center;
+  width: 760px;
+  height: 228px;
+}
+
+.Onemode1Timer {
+  width: 688px;
+  height: 136px;
+  border-radius: 1.5rem;
+  background-color: #f2e7fc;
+}
+
+.Onemode2Timer {
+  width: 688px;
+  height: 136px;
+  border-radius: 1.5rem;
+  background-color: #ebf2ff;
+}
+
+.OneLoadingSection1 {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  color: #9d4fe8;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.OneLoadingSection2 {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  color: #0060c4;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.OnetitleContainer {
+  display: flex;
+  height: 95px;
+}
+
+.Onemode1timertitleSec {
+  display: flex;
+  width: 344px;
+  height: 136px;
+  padding-left: 48px;
+  align-items: center;
+  font-size: 32px;
+  padding-top: 10px;
+}
+
+.Onemode1timerSec {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 48px;
+  width: 344px;
+  height: 136px;
+  font-size: 32px;
+  padding-top: 10px;
+  align-items: center;
+}
+
+/*
+***************************
+***************************
+***************************
+***************************
+***************************
+desktop Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+
+@media only screen and (max-width: 1920px) and (min-width: 1700px) and (min-height: 800px) {
+  .OnetimerSection {
+    width: 39.583vw;
+  }
+
+  .Onemode1Timer {
+    width: 35.833vw;
+  }
+
+  .Onemode2Timer {
+    width: 35.833vw;
+  }
+
+  .OneLoadingSection1 {
+    font-size: 2.083vw;
+  }
+
+  .OneLoadingSection2 {
+    font-size: 2.083vw;
+  }
+
+  .Onemode1timertitleSec {
+    width: 17.917vw;
+    padding-left: 2.5vw;
+    font-size: 1.667vw;
+  }
+
+  .Onemode1timerSec {
+    padding-right: 2.5vw;
+    width: 17.917vw;
+    font-size: 1.667vw;
+  }
+}
+
+@media only screen and (max-width: 1700px) and (min-width: 1240px) and (min-height: 800px) {
+  .OnetimerSection {
+    width: 35.625vw;
+  }
+
+  .Onemode1Timer {
+    width: 32.25vw;
+  }
+
+  .Onemode2Timer {
+    width: 32.25vw;
+  }
+
+  .OneLoadingSection1 {
+    font-size: 1.875vw;
+  }
+
+  .OneLoadingSection2 {
+    font-size: 1.875vw;
+  }
+
+  .Onemode1timertitleSec {
+    width: 16.125vw;
+    padding-left: 36px;
+    font-size: 1.5vw;
+  }
+
+  .Onemode1timerSec {
+    width: 16.125vw;
+    height: 136px;
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 1240px) and (min-height: 800px) {
+  .Onemode2Timer {
+    margin-top: 48px;
+  }
+}
+
+/*
+***************************
+***************************
+***************************
+***************************
+***************************
+NoteBook Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+@media only screen and (max-width: 1440px) and (min-width: 1280px) and (max-height: 796px) {
+  .OnetimerSection {
+    width: 39.583vw;
+    height: 171px;
+  }
+
+  .Onemode1Timer {
+    width: 35.833vw;
+    height: 102px;
+  }
+
+  .Onemode2Timer {
+    width: 35.833vw;
+    height: 102px;
+    margin-left: 36px;
+  }
+
+  .OneLoadingSection1 {
+    height: 135px;
+    padding-bottom: 22.5px;
+    font-size: 2.083vw;
+  }
+
+  .OneLoadingSection2 {
+    height: 135px;
+    padding-bottom: 22.5px;
+    font-size: 2.083vw;
+  }
+
+  .OnetitleContainer {
+    height: 71.251px;
+  }
+
+  .Onemode1timertitleSec {
+    width: 17.917vw;
+    height: 102px;
+    padding-left: 2.5vw;
+    font-size: 1.667vw;
+    padding-top: 7.5px;
+  }
+
+  .Onemode1timerSec {
+    padding-right: 2.5vw;
+    width: 17.917vw;
+    height: 102px;
+    font-size: 1.667vw;
+    padding-top: 7.5px;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 960px) and (max-height: 796px) {
+  /*
+    vw to px 1200
+    */
+  .OnetimerSection {
+    width: 35.625vw;
+    height: 171px;
+  }
+
+  .Onemode1Timer {
+    width: 32.25vw;
+    height: 102px;
+  }
+
+  .Onemode2Timer {
+    width: 32.25vw;
+    height: 102px;
+  }
+
+  .OneLoadingSection1 {
+    height: 135px;
+    padding-bottom: 22.5px;
+    font-size: 22.5px;
+  }
+
+  .OneLoadingSection2 {
+    height: 135px;
+    padding-bottom: 22.5px;
+    font-size: 22.5px;
+  }
+
+  .OnetitleContainer {
+    height: 71px;
+  }
+
+  .Onemode1timertitleSec {
+    width: 16.125vw;
+    height: 102px;
+    padding-left: 27px;
+    font-size: 18px;
+    padding-top: 7.5px;
+  }
+
+  .Onemode1timerSec {
+    padding-right: 27px;
+    width: 16.125vw;
+    height: 102px;
+    font-size: 18px;
+    padding-top: 7.5px;
+  }
+}
+
+@media only screen and (max-width: 960px) and (max-height: 796px) {
+  .OnetimerSection {
+    display: flex;
+    align-items: center;
+    width: 570px;
+    height: 171px;
+  }
+
+  .Onemode1Timer {
+    width: 516px;
+    height: 102px;
+    margin-top: 36px;
+  }
+
+  .Onemode2Timer {
+    width: 516px;
+    height: 102px;
+    margin-top: 36px;
+  }
+
+  .OneLoadingSection1 {
+    width: 100%;
+    height: 135px;
+    padding-bottom: 22.5px;
+    font-size: 30px;
+  }
+
+  .OneLoadingSection2 {
+    height: 135px;
+    padding-bottom: 22.5px;
+    font-size: 30px;
+  }
+
+  .OnetitleContainer {
+    height: 71.25px;
+  }
+
+  .Onemode1timertitleSec {
+    width: 258px;
+    height: 102px;
+    padding-left: 36px;
+    font-size: 24px;
+    padding-top: 7.5px;
+  }
+
+  .Onemode1timerSec {
+    padding-right: 36px;
+    width: 258px;
+    height: 102px;
+    font-size: 24px;
+    padding-top: 7.5px;
+  }
+}

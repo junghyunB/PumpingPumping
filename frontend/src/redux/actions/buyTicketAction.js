@@ -4,6 +4,7 @@ import {
   caver,
 } from "../../caverConfig";
 import { web3RaffleV1Contract, web3 } from "../../web3Config";
+import Swal from 'sweetalert2';
 
 function buyTicketAct(amount) {
   const localKey = localStorage.key(0);
@@ -23,8 +24,13 @@ function buyTicketAct(amount) {
           payload: { buyTicketSuccess: true },
         });
         if (response.status) {
-          alert("purchase success");
-          window.location.reload();
+          Swal.fire({
+            title: `Purchase Success!`,
+            icon:"success",
+            confirmButtonText: "OK",
+          }).then(function() {
+            window.location.reload();
+          })
         }
       } catch (error) {
         console.error(error);
@@ -44,7 +50,14 @@ function buyTicketAct(amount) {
           payload: { buyTicketSuccess: true },
         });
         if (response.status) {
-          alert("purchase success");
+          // Swal.fire({
+          //   title: `Purchase Success!`,
+          //   icon:"success",
+          //   confirmButtonText: "OK",
+          // }).then(function() {
+          //   window.location.reload();
+          // })
+          alert("Success");
           window.location.reload();
         }
       } catch (error) {

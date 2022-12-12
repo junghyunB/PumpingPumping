@@ -10,6 +10,8 @@ import { myTicketCountM2Action } from "../redux/actions/myTicketCountM2Action";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import { buyTicketM2Action } from "../redux/actions/buyTicketM2Action";
 import { epochAction } from "../redux/actions/epochAction";
+import Swal from 'sweetalert2';
+
 
 const Mode2DetailPage = () => {
   const { id } = useParams();
@@ -62,7 +64,11 @@ const Mode2DetailPage = () => {
       selectTicket.includes(num) === false &&
       transTicket.length === remainBuyTicket
     ) {
-      alert("In Mode 2, you can only hold up to 10 tickets at a time.");
+      Swal.fire({
+        title: `In Mode 2, you can only hold up to 10 tickets at a time.`,
+        icon:"error",
+        confirmButtonText: "OK",
+      })
     }
   };
 
@@ -143,7 +149,12 @@ const Mode2DetailPage = () => {
 
   const buyTicketM2 = () => {
     remainBuyTicket < transTicket.length
-      ? alert("Exceeded the allowable number.")
+      ? 
+      Swal.fire({
+        title: `Exceeded the allowable number.`,
+        icon:"error",
+        confirmButtonText: "OK",
+      })
       : dispatch(buyTicketM2Action.buyTicketM2Act(amount, id, transTicket));
   };
 

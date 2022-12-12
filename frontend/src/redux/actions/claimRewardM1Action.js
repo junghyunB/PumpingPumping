@@ -4,6 +4,8 @@ import {
   caver,
 } from "../../caverConfig";
 import { web3RaffleV1Contract } from "../../web3Config";
+import Swal from 'sweetalert2';
+
 
 function claimRewardM1Act(epoch) {
   const localKey = localStorage.key(0);
@@ -20,9 +22,14 @@ function claimRewardM1Act(epoch) {
         });
         dispatch({ type: "CLAIM_REWARD_M1", payload: { claimSuccess: true } });
         if (response.status) {
-          alert("Success Claim Reward");
-          window.location.reload();
-        }
+          Swal.fire({
+            title: `Success Claim Reward!`,
+            icon:"success",
+            confirmButtonText: "OK",
+          }).then(function() {
+            window.location.reload();
+          })       
+         }
       } catch (error) {
         console.error(error);
       }
@@ -37,8 +44,13 @@ function claimRewardM1Act(epoch) {
           });
         dispatch({ type: "CLAIM_REWARD_M1", payload: { claimSuccess: true } });
         if (response.status) {
-          alert("Success Claim Reward");
-          window.location.reload();
+          Swal.fire({
+            title: `Success Claim Reward!`,
+            icon:"success",
+            confirmButtonText: "OK",
+          }).then(function() {
+            window.location.reload();
+          })       
         }
       } catch (error) {
         console.error(error);

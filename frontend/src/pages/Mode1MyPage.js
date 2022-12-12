@@ -16,6 +16,7 @@ import { epochWinnerAction } from "../redux/actions/epochWinnerAction";
 import { claimRewardM1Action } from "../redux/actions/claimRewardM1Action";
 import { isClaimedAction } from "../redux/actions/isClaimedAction";
 import { epochM2Action } from "../redux/actions/epochM2Action";
+import Swal from 'sweetalert2';
 
 const Mode1MyPage = () => {
   const dispatch = useDispatch();
@@ -44,7 +45,11 @@ const Mode1MyPage = () => {
 
   const addEpoch = () => {
     if (changeEpoch === currentEpoch) {
-      alert("Last Round");
+      Swal.fire({
+        title: "Last Round!",
+        icon:"error",
+        confirmButtonText: "OK",
+      })
     } else if (changeEpoch < currentEpoch) {
       setChangeEpoch(changeEpoch + 1);
     }
@@ -52,18 +57,30 @@ const Mode1MyPage = () => {
 
   const subEpoch = () => {
     if (changeEpoch === 1) {
-      alert("First Round");
+      Swal.fire({
+        title: "First Round!",
+        icon:"error",
+        confirmButtonText: "OK",
+      })
     } else {
       setChangeEpoch(changeEpoch - 1);
     }
   };
 
   const notWinner = () => {
-    alert(`You are Not a winner of the ${changeEpoch}round`);
+    Swal.fire({
+      title: `You are Not a winner of the ${changeEpoch}round`,
+      icon:"error",
+      confirmButtonText: "OK",
+    })
   };
 
   const alreadyClaim = () => {
-    alert(`You have already received the reward for the ${changeEpoch}round`);
+    Swal.fire({
+      title: `You have already received the reward for the ${changeEpoch}round`,
+      icon:"error",
+      confirmButtonText: "OK",
+    })
   }
 
   useEffect(() => {

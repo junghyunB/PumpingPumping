@@ -22,7 +22,6 @@ const Navbar = () => {
   const storedKaiKas = localStorage.getItem("kaikasAccount");
   const metaMaskNetWork = window.ethereum?.networkVersion;
   const kaiKasNetWork = window.klaytn?.networkVersion;
-  const innerWidth = useSelector(state => state.user.innerWidth);
 
   const [show, setShow] = useState(false);
   const [connectShow, setConnectShow] = useState(false);
@@ -44,6 +43,9 @@ const Navbar = () => {
     else dispatch(connectMetaMaskAccount.getMetaMaskAccount());
   };
 
+  const homeButton = () => {
+    window.location.href = "/";
+  }
 
   const disabledLogin = () => {
     localStorage.removeItem("metamaskAccount");
@@ -146,17 +148,6 @@ const Navbar = () => {
     }
   };
 
-  const handleResize = () => {
-    dispatch({type:"INNER_WIDTH", payload: window.innerWidth});
-  }
-
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return() => {
-      window.removeEventListener("resize", handleResize);
-    }
-  })
 
   useEffect(() => {
     if (localKey !== "metamaskAccount" && localKey !== null) {
@@ -195,14 +186,11 @@ const Navbar = () => {
 
   return (
     <div className="navbarContainer">
-      {innerWidth < 800 ? <h1>aldjlajdlasdsakdskadjkasjdksjdksjkdjskdjksjdjskaskl</h1> : 
         <div className="leftNavSection">
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <div className="firstLeftNav">
+            <div className="firstLeftNav" onClick={homeButton} style={{cursor:"pointer"}}>
               <div className="firstLeftNavimgSection"><img src={mainimg}></img></div>
               <div className="firstLeftNavtextSection"><img src={maintext}></img></div>
             </div>
-          </Link>
           <div className="secondLeftNav">
             <IsConnectedWallet />
           </div>
@@ -307,7 +295,6 @@ const Navbar = () => {
             <div className="discordSection"><button><img src={discord}></img></button></div>
           </div>
         </div>
-}
       <div className="rightNavContainer">
       </div>
     </div>

@@ -791,6 +791,7 @@ NoteBook Responsive
   .firstLeftNav {
       display: flex;
       height: 108px;
+      cursor: pointer;
   }
   
   .firstLeftNavimgSection {

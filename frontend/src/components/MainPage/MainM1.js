@@ -5,9 +5,10 @@ import { TimerM1 } from "../"
 import { epochAction } from "../../redux/actions/epochAction";
 import { totalAmountAction } from "../../redux/actions/totalAmountAction";
 import { winningTicketAction } from "../../redux/actions/winningTicketAction";
-import { leftarrow, rightarrow, klaytn } from "../../assets/images";
+import { leftarrow, rightarrow, klaytn, mode1ticket } from "../../assets/images";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const MainM1 = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,11 @@ const MainM1 = () => {
 
   const addEpoch = () => {
     if (changeEpoch === currentEpoch) {
-      alert("Last Round.");
+      Swal.fire({
+        title: "Last Round!",
+        icon:"error",
+        confirmButtonText: "OK"
+      })
     } else if (changeEpoch < currentEpoch) {
       setChangeEpoch(changeEpoch + 1);
     }
@@ -30,7 +35,11 @@ const MainM1 = () => {
 
   const subEpoch = () => {
     if (changeEpoch === 1) {
-      alert("First Round.");
+      Swal.fire({
+        title: "First Round",
+        icon:"error",
+        confirmButtonText: "OK"
+      })
     } else {
       setChangeEpoch(changeEpoch - 1);
     }
@@ -75,9 +84,17 @@ const MainM1 = () => {
             {changeEpoch === currentEpoch ? (
               <p>Proceeding...</p>
             ) : (
-              <p>
-                [ {changeEpoch} , {winnigTicket}]
-              </p>
+              <>
+              <div className="mode1winningTicketTitle">
+                <p>Winning Ticket</p>
+              </div>
+              <div className="mode1winningTicketData">
+                <img src={mode1ticket}></img>
+                <div className="mode1TicketonDataSection1">
+                {changeEpoch} , {winnigTicket}
+                </div>
+              </div>
+              </>
             )}
           </div>
         </div>

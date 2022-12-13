@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { connectKaiKasAccount } from "../../redux/actions/connectKaiKasAccount";
 import { connectMetaMaskAccount } from "../../redux/actions/connectMetaMaskAccount";
 import { changeNetworkAction } from "../../redux/actions/changeNetworkAction";
 import { balanceAction } from "../../redux/actions/balanceAction";
-import { swapscanner, klayswap, discord, twitter, maintext, mainimg, metamask, kaikas } from "../../assets/images";
+import {
+  swapscanner,
+  klayswap,
+  discord,
+  twitter,
+  maintext,
+  mainimg,
+  metamask,
+  kaikas,
+  klaytn,
+  network,
+  address,
+} from "../../assets/images";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
@@ -17,7 +29,7 @@ const Navbar = () => {
   const selectKaiKas = useSelector((state) => state.account.accountKaiKas);
   const klaybalance = useSelector((state) => state.account.klaybalance);
   const localKey = localStorage.key(0);
-  const account = localStorage.getItem(localKey);  
+  const account = localStorage.getItem(localKey);
   const storedMetaMask = localStorage.getItem("metamaskAccount");
   const storedKaiKas = localStorage.getItem("kaikasAccount");
   const metaMaskNetWork = window.ethereum?.networkVersion;
@@ -45,7 +57,7 @@ const Navbar = () => {
 
   const homeButton = () => {
     window.location.href = "/";
-  }
+  };
 
   const disabledLogin = () => {
     localStorage.removeItem("metamaskAccount");
@@ -84,13 +96,9 @@ const Navbar = () => {
               <div className="secondLeftNavNetWork4">
                 {/* {metaMaskNetWork === "1001" ? ( */}
                 {kaiKasNetWork === 8217 ? (
-                  <div className="networkstatus">
-                    Supported
-                  </div>
+                  <div className="networkstatus">Supported</div>
                 ) : (
-                  <div className="networkstatus2">
-                  UnSupported
-                </div>
+                  <div className="networkstatus2">UnSupported</div>
                 )}
               </div>
             </div>
@@ -101,12 +109,12 @@ const Navbar = () => {
       return (
         <>
           <div className="secondLeftNavMyKlay">
-            <p className="leftnavsmalltitle">My Klay</p>
+            <p className="leftnavsmalltitle"><img src={klaytn}></img>My Klay</p>
             <p className="leftnavsmalldata">{klaybalance} Klay</p>
           </div>
 
           <div className="secondLeftNavWallet">
-            <p className="leftnavsmalltitle">Your Wallet Address </p>
+            <p className="leftnavsmalltitle"><img src={address}></img>Your Wallet Address </p>
             <p className="leftnavsmalldata">
               {storedMetaMask.substr(0, 10)}...{storedMetaMask.slice(-10)}
             </p>
@@ -114,7 +122,7 @@ const Navbar = () => {
 
           <div className="secondLeftNavNetWork">
             <div className="secondLeftNavNetWork1">
-              <p className="leftnavsmalltitle">NetWork</p>
+              <p className="leftnavsmalltitle"><img src={network}></img>NetWork</p>
             </div>
             <div className="secondLeftNavNetWork2">
               <div className="secondLeftNavNetWork3">
@@ -123,13 +131,9 @@ const Navbar = () => {
               <div className="secondLeftNavNetWork4">
                 {/* {metaMaskNetWork === "1001" ? ( */}
                 {metaMaskNetWork === "8217" ? (
-                 <div className="networkstatus">
-                 Supported
-               </div>
+                  <div className="networkstatus">Supported</div>
                 ) : (
-                  <div className="networkstatus2">
-                  UnSupported
-                </div>
+                  <div className="networkstatus2">UnSupported</div>
                 )}
               </div>
             </div>
@@ -140,14 +144,13 @@ const Navbar = () => {
       return (
         <>
           <div className="notConnectSection">
-          <p>Not Connected</p>
-          <p>please Connected Wallet</p>
+            <p>Not Connected</p>
+            <p>please Connected Wallet</p>
           </div>
         </>
       );
     }
   };
-
 
   useEffect(() => {
     if (localKey !== "metamaskAccount" && localKey !== null) {
@@ -181,55 +184,64 @@ const Navbar = () => {
 
   useEffect(() => {
     dispatch(balanceAction.balanceAct(account));
-  },[account])
-
+  }, [account]);
 
   return (
     <div className="navbarContainer">
-        <div className="leftNavSection">
-            <div className="firstLeftNav" onClick={homeButton} style={{cursor:"pointer"}}>
-              <div className="firstLeftNavimgSection"><img src={mainimg}></img></div>
-              <div className="firstLeftNavtextSection"><img src={maintext}></img></div>
-            </div>
-          <div className="secondLeftNav">
-            <IsConnectedWallet />
+      <div className="leftNavSection">
+        <div
+          className="firstLeftNav"
+          onClick={homeButton}
+          style={{ cursor: "pointer" }}
+        >
+          <div className="firstLeftNavimgSection">
+            <img src={mainimg}></img>
           </div>
-          <div className="klaybuyscanNav">
-            <div className="buyklayBtn">
-              <Button onClick={handleShow}>
-                Buy Klay
-              </Button>
-              <Modal
-                show={show}
-                onHide={handleClose}
-                contentClassName="connectModal"
-                centered={true}
-              >
-                <div className="klayswapSection">
-                  <div className="klayswapButtonSection" onClick={() => window.open("https://swapscanner.io/ko")}>
-                    <img src={klayswap}></img> 
-                    <p>Klay Swap</p>                    
-                  </div>
-                  </div>
-                  <div className="metamaskSection">
-                  <div className="metamaskButtonSection"  onClick={() => window.open("https://klayswap.com/")}> 
-                  <img src={swapscanner}></img> 
-                    <p>Swap Scanner</p>                                 
-                  </div>
+          <div className="firstLeftNavtextSection">
+            <img src={maintext}></img>
+          </div>
+        </div>
+        <div className="secondLeftNav">
+          <IsConnectedWallet />
+        </div>
+        <div className="klaybuyscanNav">
+          <div className="buyklayBtn">
+            <Button onClick={handleShow}>Buy Klay</Button>
+            <Modal
+              show={show}
+              onHide={handleClose}
+              contentClassName="ConnectModal"
+              centered={true}
+            >
+              <div className="klayswapSection">
+                <div
+                  className="klayswapButtonSection"
+                  onClick={() => window.open("https://swapscanner.io/ko")}
+                >
+                  <img src={klayswap}></img>
+                  <p>Klay Swap</p>
                 </div>
-              </Modal>
-            </div>
-            <div className="walletscanBtn">
-              <Button
-                onClick={() => window.open("https://debank.com/")}
-              >
-                Wallet Scan
-              </Button>
-            </div>
+              </div>
+              <div className="metamaskSection">
+                <div
+                  className="metamaskButtonSection"
+                  onClick={() => window.open("https://klayswap.com/")}
+                >
+                  <img src={swapscanner}></img>
+                  <p>Swap Scanner</p>
+                </div>
+              </div>
+            </Modal>
           </div>
-          <div className="thirdLeftNav">
-            {localKey === null ? (
-              <>
+          <div className="walletscanBtn">
+            <Button onClick={() => window.open("https://debank.com/")}>
+              Wallet Scan
+            </Button>
+          </div>
+        </div>
+        <div className="thirdLeftNav">
+          {localKey === null ? (
+            <>
               <Button variant="outline-success" onClick={handleConnectShow}>
                 Connect Wallet
               </Button>
@@ -239,64 +251,79 @@ const Navbar = () => {
                 onHide={handleConnectClose}
                 contentClassName="ConnectModal"
                 centered={true}
-              > 
-              <div className="kaikasSection">
-                <div className="kaikasButtonSection" onClick={connectKaiKasWallet}>
-                  <img src={kaikas}></img>
-                  <p>Connect KaiKas</p>
+              >
+                <div className="kaikasSection">
+                  <div
+                    className="kaikasButtonSection"
+                    onClick={connectKaiKasWallet}
+                  >
+                    <img src={kaikas}></img>
+                    <p>Connect KaiKas</p>
+                  </div>
                 </div>
-              </div>
-              <div className="metamaskSection">
-                <div className="metamaskButtonSection" onClick={connectMetaMaskWallet}>
-                <img src={metamask}></img>
-                  <p>Connect MetaMask</p>
+                <div className="metamaskSection">
+                  <div
+                    className="metamaskButtonSection"
+                    onClick={connectMetaMaskWallet}
+                  >
+                    <img src={metamask}></img>
+                    <p>Connect MetaMask</p>
+                  </div>
                 </div>
-              </div>
               </Modal>
-              </>
-            ) : (
-              <Button variant="outline-danger" onClick={disabledLogin}>
-                DisConnected Wallet
-              </Button>
-            )}
+            </>
+          ) : (
+            <Button variant="outline-danger" onClick={disabledLogin}>
+              DisConnected Wallet
+            </Button>
+          )}
+        </div>
+        <div className="forthLeftNav">
+          <div
+            className="contentsection"
+            onClick={() => navigate("/dashboard")}
+          >
+            <label className="rad-label">
+              <input type="radio" className="rad-input" name="rad" />
+              <div className="rad-design"></div>
+              <div className="rad-text">DashBorad</div>
+            </label>
           </div>
-          <div className="forthLeftNav">
-            <div
-              className="contentsection"
-              onClick={() => navigate("/dashboard")}
-            >
-              <label className="rad-label">
-                <input type="radio" className="rad-input" name="rad" />
-                <div className="rad-design"></div>
-                <div className="rad-text">DashBorad</div>
-              </label>
-            </div>
-            <div
-              className="contentsection"
-              onClick={() => navigate("/choicemode")}
-            >
-              <label className="rad-label">
-                <input type="radio" className="rad-input" name="rad" />
-                <div className="rad-design"></div>
-                <div className="rad-text">Raffle</div>
-              </label>
-            </div>
-            <div className="contentsection" onClick={() => navigate("/")}>
-              <label className="rad-label">
-                <input type="radio" className="rad-input" name="rad" />
-                <div className="rad-design"></div>
-                <div className="rad-text">Guide</div>
-              </label>
-            </div>
+          <div
+            className="contentsection"
+            onClick={() => navigate("/choicemode")}
+          >
+            <label className="rad-label">
+              <input type="radio" className="rad-input" name="rad" />
+              <div className="rad-design"></div>
+              <div className="rad-text">Raffle</div>
+            </label>
           </div>
-          <div className="channelSection"><a>Channel</a></div>
-          <div className="fotLeftNav">
-            <div className="twitterSection"><button><img src={twitter}></img></button></div>
-            <div className="discordSection"><button><img src={discord}></img></button></div>
+          <div className="contentsection" onClick={() => navigate("/")}>
+            <label className="rad-label">
+              <input type="radio" className="rad-input" name="rad" />
+              <div className="rad-design"></div>
+              <div className="rad-text">Guide</div>
+            </label>
           </div>
         </div>
-      <div className="rightNavContainer">
+        <div className="channelSection">
+          <a>Channel</a>
+        </div>
+        <div className="fotLeftNav">
+          <div className="twitterSection">
+            <button>
+              <img src={twitter}></img>
+            </button>
+          </div>
+          <div className="discordSection">
+            <button>
+              <img src={discord}></img>
+            </button>
+          </div>
+        </div>
       </div>
+      <div className="rightNavContainer"></div>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import "./ChoiceMode.css";
 import { useSelector, useDispatch } from "react-redux";
 import { mode1main, mode2main } from "../assets/images";
 import { Link } from "react-router-dom";
+import { TimerM1, TimerM2 } from "../components";
 import { epochAction } from "../redux/actions/epochAction";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 
@@ -18,29 +19,33 @@ const ChoiceMode = () => {
 
   return (
     <div className="choicePageContainer">
-      <div className="choicePageLeftSection">
-        <Link
-          to="/mode1buy"
-          style={{ textDecoration: "none" }}
-          className="link-Mode"
-        >
-          <div className="choicePageLeftSection1">
-            <img className="choiceImageLeftSection" src={mode1main}></img>
-            <h1 className="choiceImageLeftSectionText">Mode#1</h1>
+      <div className="choiceModeTopline">
+        <div className="timerSaction">
+          <div className="mode1Timer">
+            <TimerM1 />
           </div>
-        </Link>
+        </div>
+        <div className="timerSaction">
+          <div className="mode2Timer">
+            <TimerM2 />
+          </div>
+        </div>
       </div>
-      <div className="choicePageRightSection">
-        <Link
-          to="/mode2buy"
-          style={{ textDecoration: "none" }}
-          className="link-Mode"
-        >
-          <div className="choicePageRightSection1">
-            <img className="choiceImageRightSection" src={mode2main}></img>
-            <h1 className="choiceImageRightSectionText">Mode#2</h1>
+      <div className="selectModeContainer">
+        <div className="selectModeSection1">
+          <div className="selectMode1Content">
+            <div className="selectMode1Title">
+            <p>123123</p>
+            </div>
+            <div className="selectMode1">
+              <p>asdasdsada</p>
+            </div>
           </div>
-        </Link>
+          <img src={mode1main}></img>
+        </div>
+        <div className="selectModeSection2">
+          <img src={mode2main}></img>
+        </div>
       </div>
     </div>
   );

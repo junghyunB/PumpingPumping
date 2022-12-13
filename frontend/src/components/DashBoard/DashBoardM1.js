@@ -39,9 +39,9 @@ const DashBoardM1 = () => {
       </div>
       <div className="mode1dashboardtext">
         <p>
-          Mode#1 game Information.
+        Participate by spending 5 Klay and take a draw ticket.
           <br />
-          Design comment
+        Winners are chosen randomly.
         </p>
       </div>
       <div className="mode1dashboardContainer">

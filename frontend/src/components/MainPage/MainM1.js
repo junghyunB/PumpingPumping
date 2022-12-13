@@ -5,7 +5,7 @@ import { TimerM1 } from "../"
 import { epochAction } from "../../redux/actions/epochAction";
 import { totalAmountAction } from "../../redux/actions/totalAmountAction";
 import { winningTicketAction } from "../../redux/actions/winningTicketAction";
-import { leftarrow, rightarrow, klaytn, mode1ticket } from "../../assets/images";
+import { leftarrow, rightarrow, klaytn, mode1ticket, trophy } from "../../assets/images";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
@@ -67,9 +67,9 @@ const MainM1 = () => {
       </div>
       <div className="mode1maintext">
         <p>
-          Mode#1 game Information.
-          <br />
-          Design comment
+        Participate by spending 5 Klay and take a draw ticket.
+        <br />
+        Winners are chosen randomly.
         </p>
       </div>
       <div className="mode1mainround">
@@ -86,7 +86,7 @@ const MainM1 = () => {
             ) : (
               <>
               <div className="mode1winningTicketTitle">
-                <p>Winning Ticket</p>
+                <img src={trophy}></img><p>Winning Ticket</p>
               </div>
               <div className="mode1winningTicketData">
                 <img src={mode1ticket}></img>

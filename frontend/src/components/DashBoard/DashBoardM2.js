@@ -37,9 +37,9 @@ const DashBoardM2 = () => {
       </div>
       <div className="mode2dashboardtext">
         <p>
-          Mode#2 game Information.
-          <br />
-          Design comment
+        This is an event to guess the winning number.
+        <br />
+        Select a number between 1 and 250.
         </p>
       </div>
       <div className="mode2dashboardContainer">

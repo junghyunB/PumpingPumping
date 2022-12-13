@@ -1,85 +1,63 @@
 .choicePageContainer {
     display: flex;
-    flex-direction: row;
-    /* background-color: aqua; */
+    flex-direction: column;
     width: 100%;
     height: 100%;
 }
-.choicePageLeftSection {
+
+.choiceModeTopline {
     display: flex;
-    margin-left: 310px;
-    margin-right: 100px;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 1472px;
+    height: 228px;
+    margin-left: 448px;
     z-index: 0;
-    /* background-color: blue; */
 }
 
-.choicePageLeftSection1 {
+.selectModeContainer {
+    display: flex;
+    margin-left: 448px;
+    width: 1424px;
+    height: 748px;
+    z-index: 0;
+}
+
+.selectModeSection1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid black;
-    border-radius: 5rem;
-    /* background-color: greenyellow; */
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
-    z-index: 20;
+    width: 688px;
+    height: 700px;
+    border-radius: 1.5rem;
+    background-color: #F2E7FC;
 }
 
-.choicePageRightSection {
-    display: flex;
-    margin-left: 100px;
-    justify-content: flex-start ;
-    align-items: center;
+.selectModeSection1 img {
     width: 100%;
     height: 100%;
-    /* background-color: blue; */
 }
 
-.choicePageRightSection1 {
+.selectMode1Content {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    width: 688px;
+    height: 250px;
     justify-content: center;
-    align-items: center;
-    border: 3px solid black;
-    border-radius: 5rem;
-    /* background-color: greenyellow; */
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
-    z-index: 20;
+    background-color: aqua;
 }
 
-.choiceImageLeftSection {
-    width: 300px;
-    height: 270px;
+.selectModeSection2 {
+    display: flex;
+    width: 688px;
+    height: 700px;
+    margin-left: 48px;
+    border-radius: 1.5rem;
+    background-color: #EBF2FF;
 }
 
-.choiceImageLeftSectionText {
-    font-weight: bold;
-    color: black;
+.selectModeSection2 img {
+    width: 688px;
+    height: 700px;
 }
-
-.choiceImageRightSection {
-    width: 250px;
-    height: 210px;
-    margin-top: 20px;
-}
-.choiceImageRightSectionText {
-    color: black;
-    padding-top: 40px;
-    font-weight: bold;
-}
-
-.link-Mode {
-    z-index: 20;
-}
-
 
 
 

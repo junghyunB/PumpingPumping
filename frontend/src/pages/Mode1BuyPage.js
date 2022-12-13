@@ -67,9 +67,9 @@ const Mode1BuyPage = () => {
         </div>
         <div className="mode1buypagetext">
           <p>
-            Mode#1 game Information.
-            <br />
-            Design comment
+          Participate by spending 5 Klay and take a draw ticket.
+          <br />
+          Winners are chosen randomly.
           </p>
         </div>
         <div className="mode1SelectSection">

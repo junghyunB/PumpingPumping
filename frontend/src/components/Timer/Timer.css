@@ -1,0 +1,346 @@
+.timerSaction {
+    display: flex;
+    align-items: center;
+    width: 760px;
+    height: 228px;
+    /* background-color: #28D182; */
+  }
+  
+  .mode1Timer {
+    width: 688px;
+    height: 136px;
+    border-radius: 1.5rem;
+    background-color: #f2e7fc;
+  }
+  
+  .LoadingSection1 {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    color: #9d4fe8;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .LoadingSection2 {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    color: #0060c4;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .titleContainer {
+    display: flex;
+    height: 95px;
+  }
+  .mode1timertitleSec {
+    display: flex;
+    width: 344px;
+    height: 136px;
+    padding-left: 48px;
+    align-items: center;
+    font-size: 32px;
+    padding-top: 10px;
+  }
+  
+  .mode1timerSec {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 48px;
+    width: 344px;
+    height: 136px;
+    font-size: 32px;
+    padding-top: 10px;
+    align-items: center;
+  }
+  
+  .mode2Timer {
+    width: 688px;
+    height: 136px;
+    border-radius: 1.5rem;
+    background-color: #ebf2ff;
+  }
+
+  /*
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+desktop Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+  
+  @media only screen and (max-width: 1920px) and (min-width: 1660px) and (min-height: 800px) {
+    .timerSaction {
+        width: 39.583vw;
+      }
+    
+      .mode1Timer {
+        width: 35.833vw;
+      }
+    
+      .LoadingSection1 {
+        font-size: 2.083vw;
+      }
+    
+      .LoadingSection2 {
+        font-size: 2.083vw;
+      }
+    
+      .mode1timertitleSec {
+        width: 17.917vw;
+        padding-left: 2.5vw;
+        font-size: 1.667vw;
+      }
+    
+      .mode1timerSec {
+        padding-right: 2.5vw;
+        width: 17.917vw;
+        font-size: 1.667vw;
+      }
+    
+      .mode2Timer {
+        width: 35.833vw;
+      }
+    
+  }
+
+  @media only screen and (max-width: 1660px) and (min-width: 1440px) and (min-height: 800px) {
+  /*
+  px-to-vw 1600
+  */
+  .timerSaction {
+    width: 35.625vw;
+  }
+  
+  .mode1Timer {
+    width: 32.25vw;
+  }
+  
+  .LoadingSection1 {
+    font-size: 1.875vw;
+  }
+  
+  .LoadingSection2 {
+    font-size: 1.875vw;
+  }
+  .mode1timertitleSec {
+    width: 16.125vw;
+    padding-left: 2.25vw;
+    font-size: 1.5vw;
+  }
+  
+  .mode1timerSec {
+    padding-right: 2.25vw;
+    width: 16.125vw;
+    font-size: 1.5vw;
+  }
+  
+  .mode2Timer {
+    width: 32.25vw;
+  }
+
+  }
+
+  /*
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+NoteBook Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+
+@media only screen and (max-width: 1440px) and (min-width: 1310px) and (max-height: 796px) {
+    .timerSaction {
+        width: 39.583vw;
+        height: 171px;
+      }
+    
+      .mode1Timer {
+        width: 35.833vw;
+        height: 102px;
+        border-radius: 1.125rem;
+      }
+    
+      .LoadingSection1 {
+        height: 135px;
+        padding-bottom: 22.5px;
+        font-size: 2.083vw;
+      }
+    
+      .LoadingSection2 {
+        height: 135px;
+        padding-bottom: 22.5px;
+        font-size: 2.083vw;
+      }
+    
+      .titleContainer {
+        height: 71.25px;
+      }
+      .mode1timertitleSec {
+        width: 17.917vw;
+        height: 102px;
+        padding-left: 2.5vw;
+        font-size: 1.667vw;
+        padding-top: 7.5px;
+      }
+    
+      .mode1timerSec {
+        padding-right: 2.5vw;
+        width: 17.917vw;
+        height: 102px;
+        font-size: 1.667vw;
+        padding-top: 7.5px;
+      }
+    
+      .mode2Timer {
+        width: 35.833vw;
+        height: 102px;
+        border-radius: 1.125rem;
+      }
+    
+}
+
+@media only screen and (max-width: 1310px) and (min-width: 960px) and (max-height: 796px) {
+  /*
+  px-to-vw 1700
+  */
+  .timerSaction {
+    width: 33.529vw;
+    height: 171px;
+  }
+
+  .mode1Timer {
+    width: 30.353vw;
+    height: 102px;
+    border-radius: 1.125rem;
+  }
+
+  .LoadingSection1 {
+    height: 135px;
+    padding-bottom: 22.5px;
+    font-size: 1.764vw;
+  }
+
+  .LoadingSection2 {
+    height: 135px;
+    padding-bottom: 22.5px;
+    font-size: 1.764vw;
+  }
+
+  .titleContainer {
+    height: 71.25px;
+  }
+  .mode1timertitleSec {
+    width: 15.177vw;
+    height: 102px;
+    padding-left: 2.118vw;
+    font-size: 1.412vw;
+    padding-top: 7.5px;
+  }
+
+  .mode1timerSec {
+    padding-right: 2.118vw;
+    width: 15.177vw;
+    height: 102px;
+    font-size: 1.412vw;
+    padding-top: 7.5px;
+  }
+
+  .mode2Timer {
+    width: 30.353vw;
+    height: 102px;
+    border-radius: 1.125rem;
+  }
+
+}
+
+@media only screen and (max-width: 960px) and (max-height: 796px) {
+    .timerSaction {
+        width: 570px;
+        height: 171px;
+      }
+    
+      .mode1Timer {
+        width: 516px;
+        height: 102px;
+        border-radius: 1.125rem;
+      }
+    
+      .LoadingSection1 {
+        height: 135px;
+        padding-bottom: 22.5px;
+        font-size: 30px;
+      }
+    
+      .LoadingSection2 {
+        height: 135px;
+        padding-bottom: 22.5px;
+        font-size: 30px;
+      }
+    
+      .titleContainer {
+        height: 71.25px;
+      }
+      .mode1timertitleSec {
+        width: 258px;
+        height: 102px;
+        padding-left: 36px;
+        font-size: 24px;
+        padding-top: 7.5px;
+      }
+    
+      .mode1timerSec {
+        padding-right: 36px;
+        width: 258px;
+        height: 102px;
+        font-size: 24px;
+        padding-top: 7.5px;
+      }
+    
+      .mode2Timer {
+        width: 516px;
+        height: 102px;
+        border-radius: 1.125rem;
+      }
+    
+}

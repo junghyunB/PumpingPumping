@@ -50,15 +50,15 @@ function buyTicketAct(amount) {
           payload: { buyTicketSuccess: true },
         });
         if (response.status) {
-          // Swal.fire({
-          //   title: `Purchase Success!`,
-          //   icon:"success",
-          //   confirmButtonText: "OK",
-          // }).then(function() {
-          //   window.location.reload();
-          // })
-          alert("Success");
-          window.location.reload();
+          Swal.fire({
+            title: `Purchase Success!`,
+            icon:"success",
+            confirmButtonText: "OK",
+          }).then(function() {
+            window.location.reload();
+          })
+          // alert("Success");
+          // window.location.reload();
         }
       } catch (error) {
         console.error(error);

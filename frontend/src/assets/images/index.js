@@ -1,5 +1,3 @@
-import mode1main from "./mode1main.png"; 
-import mode2main from "./mode2main.png"; 
 import mode1ticket from "./mode1ticket.svg";
 import mode2ball from "./mode2ball.svg";
 import kaikas from "./kaikas.png";
@@ -13,10 +11,13 @@ import mainimg from "./mainimg.svg";
 import leftarrow from "./leftarrow.svg";
 import rightarrow from "./rightarrow.svg";
 import klaytn from "./klaytn.svg";
+import trophy from "./trophy.svg";
+import network from "./network.svg";
+import address from "./address.svg";
+import mode1main from "./raffle_mode1.svg";
+import mode2main from "./raffle_mode2.svg";
 
 export {
-    mode1main,
-    mode2main,
     mode1ticket,
     kaikas,
     metamask,
@@ -30,5 +31,9 @@ export {
     rightarrow,
     klaytn,
     mode2ball,
-
+    trophy,
+    network,
+    address,
+    mode1main,
+    mode2main,
 }

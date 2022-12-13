@@ -30,13 +30,14 @@ function App() {
   const metamaskNetWork = useSelector((state) => state.account.metamaskNetWork);
   const selectMetamask = useSelector((state) => state.account.accountMetaMask);
   const selectKaiKas = useSelector((state) => state.account.accountKaiKas);
+  const klaytnNetWork = window.klaytn.networkVersion;
 
   const networkChangeMetaMask = () => {
     dispatch(metaMaskNetworkAction.metaMaskNetworkAct());
-  }
+  };
 
   useEffect(() => {
-    if(localKey !== "metamaskAccount" && localKey !== null) {
+    if (localKey !== "metamaskAccount" && localKey !== null) {
       window.klaytn?.on("accountsChanged", (handler) => {
         dispatch(connectKaiKasAccount.getKaiKasAccount());
         localStorage.setItem("kaikasAccount", handler);
@@ -44,78 +45,81 @@ function App() {
     }
 
     return () => {
-      window.klaytn?.removeListener("accountsChanged", () => {})
-    }
-  }, [selectKaiKas])
-
+      window.klaytn?.removeListener("accountsChanged", () => {});
+    };
+  }, [selectKaiKas]);
 
   useEffect(() => {
-    if(localKey !== "kaikasAccount" && localKey !== null) {
+    if (localKey !== "kaikasAccount" && localKey !== null) {
       window.ethereum?.on("accountsChanged", (handler) => {
         dispatch(connectMetaMaskAccount.getMetaMaskAccount());
         localStorage.setItem("metamaskAccount", handler);
-      })
+      });
     }
     return () => {
-      window.ethereum?.removeListener("accountsChanged", () => {
-
-      })
-    }
-  },[selectMetamask]);
+      window.ethereum?.removeListener("accountsChanged", () => {});
+    };
+  }, [selectMetamask]);
 
   const WalletRoute = () => {
-    if(window.klaytn === undefined && window.ethereum === undefined) {
+    if (window.klaytn === undefined && window.ethereum === undefined) {
       return (
-      <div className="App">
-      <Navbar />
-       <NoneWallet />
-       </div>
-       )
+        <div className="App">
+          <Navbar />
+          <NoneWallet />
+        </div>
+      );
     } else {
       return (
         <div className="App">
           <Navbar />
-          {localKey === null ?       
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/dashboard" element={<DashBoard />} />
-            <Route path="/choicemode" element={<NotConnectedWallet />} />
-            <Route path="/mode1buy" element={<NotConnectedWallet />} />
-            <Route path="/mode1my" element={<NotConnectedWallet />} />
-            <Route path="/mode2buy" element={<NotConnectedWallet />} />
-            <Route path="/mode2buy/ticket:id" element={<NotConnectedWallet />} />
-            <Route path="/mode2my" element={<NotConnectedWallet />} />
-          </Routes> 
-          : localKey === "metamaskAccount" && metamaskNetWork !== "8217" ? 
-          // : localKey === "metamaskAccount" && metamaskNetWork !== "1001" ? 
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/dashboard" element={<DashBoard />} />
-            <Route path="/choicemode" element={<NotSupportedNetWork />} />
-            <Route path="/mode1buy" element={<NotSupportedNetWork />} />
-            <Route path="/mode1my" element={<NotSupportedNetWork />} />
-            <Route path="/mode2buy" element={<NotSupportedNetWork />} />
-            <Route path="/mode2buy/ticket:id" element={<NotSupportedNetWork />} />
-            <Route path="/mode2my" element={<NotSupportedNetWork />} />
-          </Routes>
-          : 
-          <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/dashboard" element={<DashBoard />} />
-          <Route path="/choicemode" element={<ChoiceMode />} />
-          <Route path="/mode1buy" element={<Mode1BuyPage />} />
-          <Route path="/mode1my" element={<Mode1MyPage />} />
-          <Route path="/mode2buy" element={<Mode2BuyPage />} />
-          <Route path="/mode2buy/ticket:id" element={<Mode2DetailPage />} />
-          <Route path="/mode2my" element={<Mode2MyPage />} />
-          <Route path="/test" element={<SliderT />} />
-        </Routes>
-          }
+          {localKey === null ? (
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/dashboard" element={<DashBoard />} />
+              <Route path="/choicemode" element={<NotConnectedWallet />} />
+              <Route path="/mode1buy" element={<NotConnectedWallet />} />
+              <Route path="/mode1my" element={<NotConnectedWallet />} />
+              <Route path="/mode2buy" element={<NotConnectedWallet />} />
+              <Route
+                path="/mode2buy/ticket:id"
+                element={<NotConnectedWallet />}
+              />
+              <Route path="/mode2my" element={<NotConnectedWallet />} />
+            </Routes>
+          ) : (localKey === "metamaskAccount" && metamaskNetWork !== "8217") ||
+            (localKey === "kaikasAccount" && klaytnNetWork !== 8217) ? (
+            // : localKey === "metamaskAccount" && metamaskNetWork !== "1001" ?
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/dashboard" element={<DashBoard />} />
+              <Route path="/choicemode" element={<NotSupportedNetWork />} />
+              <Route path="/mode1buy" element={<NotSupportedNetWork />} />
+              <Route path="/mode1my" element={<NotSupportedNetWork />} />
+              <Route path="/mode2buy" element={<NotSupportedNetWork />} />
+              <Route
+                path="/mode2buy/ticket:id"
+                element={<NotSupportedNetWork />}
+              />
+              <Route path="/mode2my" element={<NotSupportedNetWork />} />
+            </Routes>
+          ) : (
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/dashboard" element={<DashBoard />} />
+              <Route path="/choicemode" element={<ChoiceMode />} />
+              <Route path="/mode1buy" element={<Mode1BuyPage />} />
+              <Route path="/mode1my" element={<Mode1MyPage />} />
+              <Route path="/mode2buy" element={<Mode2BuyPage />} />
+              <Route path="/mode2buy/ticket:id" element={<Mode2DetailPage />} />
+              <Route path="/mode2my" element={<Mode2MyPage />} />
+              <Route path="/test" element={<SliderT />} />
+            </Routes>
+          )}
         </div>
-      );    
+      );
     }
-  }
-
+  };
 
   useEffect(() => {
     networkChangeMetaMask();
@@ -123,8 +127,8 @@ function App() {
 
   return (
     <div>
-   <WalletRoute />
-   </div>
+      <WalletRoute />
+    </div>
   );
 }
 

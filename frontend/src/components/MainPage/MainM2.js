@@ -6,7 +6,7 @@ import { epochM2Action } from '../../redux/actions/epochM2Action';
 import { winningNumberM2Action } from '../../redux/actions/winningNumberM2Action';
 import { winningTicketIdM2Action } from '../../redux/actions/winningTicketIdM2Action';
 import { totalAmountM2Action } from '../../redux/actions/totalAmountM2Action';
-import { leftarrow, rightarrow, klaytn, mode2ball } from "../../assets/images";
+import { leftarrow, rightarrow, klaytn, mode2ball, trophy } from "../../assets/images";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
@@ -74,9 +74,9 @@ const MainM2 = () => {
       </div>
       <div className="mode2maintext">
         <p>
-          Mode#2 game Information.
-          <br />
-          Design comment
+        This is an event to guess the winning number.
+        <br />
+        Select a number between 1 and 250.
         </p>
       </div>
       <div className="mode2mainround">
@@ -93,7 +93,7 @@ const MainM2 = () => {
           (
             <>
             <div className='mode2winningBallTitle'>
-              <p>Winning Ball</p>
+              <img src={trophy}></img><p>Winning Ball</p>
             </div>
             <div className='mode2BallData'>
               <img src={mode2ball}></img>

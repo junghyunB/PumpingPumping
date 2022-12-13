@@ -1,10 +1,10 @@
 .dashBoardLeftSection {
-    display: flex;
-    flex-direction: column;
-    margin-left: 448px;
-    width: 688px;
-    z-index: 0;
-    /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  margin-left: 448px;
+  width: 688px;
+  z-index: 0;
+  /* background-color: aqua; */
 }
 
 .mode1dashboardtitle {
@@ -12,9 +12,8 @@
   width: 100%;
   height: 48px;
   font-size: 48px;
-  color: #9D4FE8;
+  color: #9d4fe8;
   align-items: center;
-
 }
 
 .mode1dashboardtext {
@@ -42,9 +41,9 @@
   height: 48px;
   border-radius: 0.5rem;
   font-size: 18px;
-  color: #9D4FE8;
+  color: #9d4fe8;
   font-weight: bold;
-  background-color: #DDC5F7;
+  background-color: #ddc5f7;
 }
 
 .mode1dashboardround {
@@ -78,11 +77,10 @@
   height: 48px;
   border-radius: 0.5rem;
   font-size: 18px;
-  color: #3B3B3B;
+  color: #3b3b3b;
   font-weight: bold;
-  background-color: #F2E7FC;
+  background-color: #f2e7fc;
 }
-
 
 .mode1dashboardpagenation {
   width: 100%;
@@ -103,98 +101,77 @@ desktop Responsive
 ***************************
 ***************************
 */
-@media only screen and (max-width: 1920px) and (min-width: 1440px) and (min-height: 800px) {
+@media only screen and (max-width: 1920px) and (min-width: 1660px) and (min-height: 800px) {
   .dashBoardLeftSection {
-    display: flex;
-    flex-direction: column;
-    margin-left: 448px;
     width: 35.833vw;
-    z-index: 0;
-    /* background-color: aqua; */
+  }
+
+  .mode1dashboardtitle {
+    font-size: 2.5vw;
+  }
+
+  .mode1dashboardtext {
+    font-size: 1.25vw;
+  }
+
+  .mode1dashboarddata {
+    font-size: 0.938vw;
+  }
+
+  .mode1dashboardround {
+    width: 7.292vw;
+    padding-left: 1.042vw;
+  }
+
+  .mode1dashboardtotalticketprize {
+    width: 14.271vw;
+    padding-left: 1.042vw;
+  }
+
+  .mode1dashboardtotalticketprize img {
+    width: 1.25vw;
+    margin-right: 0.521vw;
+  }
+
+  .mode1dashboarddata2 {
+    font-size: 0.938vw;
+  }
 }
+@media only screen and (max-width: 1660px) and (min-width: 1440px) and (min-height: 800px) {
+  .dashBoardLeftSection {
+    width: 32.25vw;
+  }
 
-.mode1dashboardtitle {
-  display: flex;
-  width: 100%;
-  height: 48px;
-  font-size: 2.5vw;
-  color: #9D4FE8;
-  align-items: center;
+  .mode1dashboardtitle {
+    font-size: 2.25vw;
+  }
 
-}
+  .mode1dashboardtext {
+    font-size: 1.125vw;
+  }
 
-.mode1dashboardtext {
-  width: 100%;
-  height: 120px;
-  font-size: 1.25vw;
-  /* background-color: red; */
-}
+  .mode1dashboarddata {
+    font-size: 0.844vw;
+  }
 
-.mode1dashboardContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 532px;
-  overflow: auto;
-}
+  .mode1dashboardround {
+    width: 6.563vw;
+    padding-left: 0.938vw;
+  }
 
-.mode1dashboardContainer::-webkit-scrollbar {
-  display: none;
-}
+  .mode1dashboardtotalticketprize {
+    width: 12.844vw;
+    padding-left: 0.938vw;
+  }
 
-.mode1dashboarddata {
-  display: flex;
-  width: 100%;
-  height: 48px;
-  border-radius: 0.5rem;
-  font-size: 0.938vw;
-  color: #9D4FE8;
-  font-weight: bold;
-  background-color: #DDC5F7;
-}
+  .mode1dashboardtotalticketprize img {
+    width: 1.125vw;
+    margin-right: 0.469vw;
+  }
 
-.mode1dashboardround {
-  display: flex;
-  align-items: center;
-  width: 7.292vw;
-  height: 48px;
-  padding-left: 1.042vw;
-  /* background-color: aqua; */
-}
-
-.mode1dashboardtotalticketprize {
-  display: flex;
-  align-items: center;
-  width: 14.271vw;
-  height: 100%;
-  padding-left: 1.042vw;
-  /* background-color: darkcyan; */
-}
-
-.mode1dashboardtotalticketprize img {
-  width: 1.25vw;
-  height: 24px;
-  margin-right: 0.521vw;
-}
-
-.mode1dashboarddata2 {
-  display: flex;
-  margin-top: 15px;
-  width: 100%;
-  height: 48px;
-  border-radius: 0.5rem;
-  font-size: 0.938vw;
-  color: #3B3B3B;
-  font-weight: bold;
-  background-color: #F2E7FC;
-}
-
-
-.mode1dashboardpagenation {
-  width: 100%;
-  height: 48px;
-  /* background-color: dimgrey; */
-}
+  .mode1dashboarddata2 {
+    font-size: 0.844vw;
+  }
 
 }
 
@@ -212,194 +189,167 @@ NoteBook Responsive
 ***************************
 */
 
-
-
-
-@media only screen and (max-width: 1440px) and (min-width: 960px) and (max-height: 796px) {
+@media only screen and (max-width: 1440px) and (min-width: 1310px) and (max-height: 796px) {
   .dashBoardLeftSection {
-    display: flex;
-    flex-direction: column;
     margin-left: 336px;
     width: 35.833vw;
-    z-index: 0;
-    /* background-color: aqua; */
-}
-
-.mode1dashboardtitle {
-  display: flex;
-  width: 100%;
-  height: 36px;
-  font-size: 2.5vw;
-  color: #9D4FE8;
-  align-items: center;
-
-}
-
-.mode1dashboardtext {
-  width: 100%;
-  height: 90px;
-  font-size: 1.25vw;
-  /* background-color: red; */
-}
-
-.mode1dashboardContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 399px;
-  overflow: auto;
-}
-
-.mode1dashboardContainer::-webkit-scrollbar {
-  display: none;
-}
-
-.mode1dashboarddata {
-  display: flex;
-  width: 100%;
-  height: 36px;
-  border-radius: 0.375rem;
-  font-size: 0.938vw;
-  color: #9D4FE8;
-  font-weight: bold;
-  background-color: #DDC5F7;
-}
-
-.mode1dashboardround {
-  display: flex;
-  align-items: center;
-  width: 7.292vw;
-  height: 36px;
-  padding-left: 1.042vw;
-  /* background-color: aqua; */
-}
-
-.mode1dashboardtotalticketprize {
-  display: flex;
-  align-items: center;
-  width: 14.271vw;
-  height: 100%;
-  padding-left: 1.042vw;
-  /* background-color: darkcyan; */
-}
-
-.mode1dashboardtotalticketprize img {
-  width: 1.25vw;
-  height: 18px;
-  margin-right: 0.521vw;
-}
-
-.mode1dashboarddata2 {
-  display: flex;
-  margin-top: 11.25px;
-  width: 100%;
-  height: 36px;
-  border-radius: 0.375rem;
-  font-size: 0.938vw;
-  color: #3B3B3B;
-  font-weight: bold;
-  background-color: #F2E7FC;
-}
-
-
-.mode1dashboardpagenation {
-  width: 100%;
-  height: 36px;
-  /* background-color: dimgrey; */
-}
-
   }
 
-  @media only screen and (max-width: 960px) and (max-height: 796px) {
-    .dashBoardLeftSection {
-      display: flex;
-      flex-direction: column;
-      margin-left: 336px;
-      width: 516px;
-      z-index: 0;
-      /* background-color: aqua; */
-  }
-  
   .mode1dashboardtitle {
-    display: flex;
-    width: 100%;
+    height: 36px;
+    font-size: 2.5vw;
+  }
+
+  .mode1dashboardtext {
+    height: 90px;
+    font-size: 1.25vw;
+  }
+
+  .mode1dashboardContainer {
+    height: 450px;
+  }
+
+  .mode1dashboarddata {
+    height: 36px;
+    border-radius: 0.375rem;
+    font-size: 0.938vw;
+  }
+
+  .mode1dashboardround {
+    width: 7.292vw;
+    height: 36px;
+    padding-left: 1.042vw;
+  }
+
+  .mode1dashboardtotalticketprize {
+    width: 14.271vw;
+    padding-left: 1.042vw;
+  }
+
+  .mode1dashboardtotalticketprize img {
+    width: 1.25vw;
+    height: 18px;
+    margin-right: 0.521vw;
+  }
+
+  .mode1dashboarddata2 {
+    margin-top: 11.25px;
+    height: 36px;
+    border-radius: 0.375rem;
+    font-size: 0.938vw;
+  }
+
+  .mode1dashboardpagenation {
+    height: 36px;
+  }
+}
+@media only screen and (max-width: 1310px) and (min-width: 960px) and (max-height: 796px) {
+  .dashBoardLeftSection {
+    margin-left: 336px;
+    width: 30.353vw;
+  }
+
+  .mode1dashboardtitle {
+    height: 36px;
+    font-size: 2.118vw;
+  }
+
+  .mode1dashboardtext {
+    height: 90px;
+    font-size: 1.059vw;
+  }
+
+  .mode1dashboardContainer {
+    height: 450px;
+  }
+
+  .mode1dashboarddata {
+    height: 36px;
+    border-radius: 0.375rem;
+    font-size: 0.795vw;
+  }
+
+  .mode1dashboardround {
+    width: 6.177vw;
+    height: 36px;
+    padding-left: 0.883vw;
+  }
+
+  .mode1dashboardtotalticketprize {
+    width: 12.088vw;
+    padding-left: 0.883vw;
+  }
+
+  .mode1dashboardtotalticketprize img {
+    width: 1.059vw;
+    height: 18px;
+    margin-right: 0.441vw;
+  }
+
+  .mode1dashboarddata2 {
+    margin-top: 11.25px;
+    height: 36px;
+    border-radius: 0.375rem;
+    font-size: 0.795vw;
+  }
+
+  .mode1dashboardpagenation {
+    height: 36px;
+  }
+
+}
+@media only screen and (max-width: 960px) and (max-height: 796px) {
+  .dashBoardLeftSection {
+    margin-left: 336px;
+    width: 516px;
+  }
+
+  .mode1dashboardtitle {
     height: 36px;
     font-size: 36px;
-    color: #9D4FE8;
-    align-items: center;
-  
   }
-  
+
   .mode1dashboardtext {
-    width: 100%;
     height: 90px;
     font-size: 18px;
-    /* background-color: red; */
   }
-  
+
   .mode1dashboardContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 399px;
-    overflow: auto;
+    height: 450px;
   }
-  
-  .mode1dashboardContainer::-webkit-scrollbar {
-    display: none;
-  }
-  
+
   .mode1dashboarddata {
-    display: flex;
-    width: 100%;
     height: 36px;
     border-radius: 0.375rem;
     font-size: 13.5px;
-    color: #9D4FE8;
-    font-weight: bold;
-    background-color: #DDC5F7;
   }
-  
+
   .mode1dashboardround {
-    display: flex;
-    align-items: center;
     width: 105px;
     height: 36px;
     padding-left: 15px;
-    /* background-color: aqua; */
   }
-  
+
   .mode1dashboardtotalticketprize {
-    display: flex;
-    align-items: center;
     width: 205.5px;
-    height: 100%;
     padding-left: 15px;
-    /* background-color: darkcyan; */
   }
-  
+
   .mode1dashboardtotalticketprize img {
     width: 18px;
     height: 18px;
     margin-right: 7.5px;
   }
-  
+
   .mode1dashboarddata2 {
-    display: flex;
     margin-top: 11.25px;
-    width: 100%;
     height: 36px;
     border-radius: 0.375rem;
     font-size: 13.5px;
-    color: #3B3B3B;
-    font-weight: bold;
-    background-color: #F2E7FC;
   }
-  
-  
+
   .mode1dashboardpagenation {
     width: 100%;
     height: 36px;
-    /* background-color: dimgrey; */
-  }  
   }
+}

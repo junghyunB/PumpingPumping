@@ -14,8 +14,14 @@ import klaytn from "./klaytn.svg";
 import trophy from "./trophy.svg";
 import network from "./network.svg";
 import address from "./address.svg";
-import mode1main from "./raffle_mode1.svg";
-import mode2main from "./raffle_mode2.svg";
+import mode1main from "./raffle_mode1.png";
+import mode2main from "./raffle_mode2.png";
+import proceeding from "./proceeding.svg";
+import ticket_proceeding from "./ticket_proceeding.svg";
+import ball_proceeding from "./ball_proceeding.svg";
+import ticket_basic from "./ticket_basic.svg";
+import result_false from "./false.svg";
+import result_success from "./success.svg";
 
 export {
     mode1ticket,
@@ -36,4 +42,10 @@ export {
     address,
     mode1main,
     mode2main,
+    proceeding,
+    ticket_proceeding,
+    ball_proceeding,
+    ticket_basic,
+    result_false,
+    result_success,
 }

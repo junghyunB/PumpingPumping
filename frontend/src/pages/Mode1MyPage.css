@@ -1,151 +1,327 @@
 .mode1MyPageContainer {
     display: flex;
-    flex-direction: row;
-    /* background-color: aqua; */
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    padding-top: 120px;
 }
-.mode1MyPageSection {
+
+.mypageTopLine {
     display: flex;
-    margin-left: 310px;
-    margin-right: 100px;
+    width: 1472px;
+    height: 228px;
+    margin-left: 448px;
+    z-index: 0;
+}
+
+.mode1myPageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 448px;
+    width: 1424px;
+    height: 748px;
+    z-index: 0;
+}
+
+.mode1mypageTitle {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    font-size: 48px;
+    color: #9d4fe8;
+    align-items: center;  
+}
+
+.mode1mypageText {
+    width: 100%;
+    height: 120px;
+    font-size: 24px;
+  }
+
+.mode1mypageSelectSection {
+    display: flex;
+    width: 100%;
+    height: 48px;
+}
+
+.mode1mybuySection {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    /* background-color: blue; */
-}
-
-.mod1MyPageSection1 {
-    display:flex;
-    width: 500px;
-    height: 600px;
-    margin-left: 100px;
-    /* background-color: white; */
-}
-
-.buyMypageselect {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100px;
-    /* background-color: aqua; */
-}
-
-.buybuttonSection {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: red; */
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.buybuttonSection button {
-    z-index: 20;
-    height: 70px;
-    width: 200px;
-    font-weight: 900;
-}
-
-.mypagebuttonSection {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: black; */
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.mypagebuttonSection button {
-    z-index: 20;
-    height: 70px;
-    width: 200px;
-    font-weight: 900;
-}
-
-.z-indexZone {
-    z-index: 20;
-}
-
-.mode1epochSection {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    z-index: 20;
-    /* background-color: aquamarine; */
-    justify-content: center;
-}
-.mode1epochSection h3 {
-    font-weight: 900;
-    text-align: center;
-    padding-top: 9px;
-}
-.mode1epochSection button {
-    border : none;
-    background-color : white;
-}
-
-.ownedTicketSection {
-    width: 100%;
-    height: 150px;
-    /* background-color: aqua; */
-}
-.ownedTicketEaSection {
-    width: 100%;
-    /* background-color: brown; */
-}
-
-.ownedTicketEaSection p {
-    padding-left: 30px;
-    font-weight: 900;
-}
-
-.ownedTicketNumSection {
-    display: inline;
+    width: 688px;
+    height: 48px;
     font-size: 18px;
-    padding-left: 30px;
-}
+    color: #3b3b3b;
+    cursor: pointer;
+  }
+  
+  .mode1mymypageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    margin-left: 48px;
+    font-size: 18px;
+    color: #3b3b3b;
+    cursor: pointer;
+    border-bottom: 3px solid #9d4fe8;
+  }
 
-.dataSection {
+  .mode1mybuySection:hover {
+    border-bottom: 3px solid #9d4fe8;
+  }
+
+  .mode1mypagepaddingSection {
     width: 100%;
-    height: 40px;
-    padding-top: 10px;
-}
-
-.dataSection h5 {
-  text-align: center;
-  font-weight: bold;
-}
-
-.dataSection2 {
+    height: 48px;
+  }
+  .mode1mypageDataContainer {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 40px;
-    padding-top: 10px;
-}
+    height: 402px;
+  }
 
-.dataSection2 h5 {
-    text-align: center;
-    font-weight: bold;
-    display: inline;
-    margin-left: 80px;
-}
+  .mode1mypageDataSection {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 402px;
+    border-radius: 1.5rem;
+    border: 2px solid #F2F2F2;
+  }
 
-.claimButtonSection {
+  .mode1mypagetotalTicketTitle {
     display: flex;
     width: 100%;
-    height: 105px;
+    height: 44px;
+    padding-left: 16px;
+    padding-top: 21px;
+    font-size : 18px;
+    color: #959595;
+  }
+
+  .mode1mypagetotalTicketimage {
+    display: flex;
+    padding-left: 16px;
+    width: 100%;
+    height: 65px;
+    font-size: 24px;
+  }
+
+  .mode1mypagetotalTicketimage img {
+    margin-right: 8px;
+    margin-top: 6px;
+    width: 48px;
+    height: 24px;
+  }
+
+  .mode1mypagetotalPrizeTitle {
+    display: flex;
+    width: 100%;
+    height: 24px;
+    padding-left: 16px;
+    font-size : 18px;
+    color: #959595;
+  }
+
+  .mode1mypagetotalPrizeimage {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .mode1mypagetotalPrizeimage img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left: 16px;
+    margin-top: 6px;
+  }
+
+  .mode1mypageWinningrate {
+    width: 100%;
+    height: 24px;
+    padding-left: 16px;
+    font-size: 18px;
+    color:#959595;
+  }
+
+  .mode1mypageWinningrateimage {
+    display: flex;
+    width: 100%;
+    height: 92px;
+    font-size: 24px;
+  }
+
+  .mode1mypageWinningrateimage img {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    margin-right: 8px;
+    margin-top: 6px;
+    filter: invert(39%) sepia(55%) saturate(6048%) hue-rotate(254deg) brightness(100%) contrast(83%);
+  }
+
+  .mode1mypageResultTitle {
+    width: 100%;
+    height: 24px;
+    padding-left: 16px;
+    font-size: 18px;
+    color:#959595;
+  }
+
+  .mode1mypageResultImage {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .mode1mypageResultImage img {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    margin-right: 8px;
+    margin-top: 6px;
+  }
+
+  .mode1myRoundTicketSection {
+    display: flex;
+    flex-direction: column;
+    width: 1184px;
+    height: 402px;
+  }
+
+  .mode1myRoundSection {
+    display: flex;
+    width: 100%;
+    height: 160px;
+  }
+
+  .mode1mypagebtn {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-.claimButtonSection button {
-    z-index:20;
-    width : 80%;
-    height: 70px; 
-    font-size: 30px;   
+    width: 48px;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: 2px solid #F2F2F2;
+  }
+
+  .mode1mypagebtn img {
+    width: 36px;
+    height: 24px;
+  }
+
+  .mode1mypagebtn:hover {
+    background-color: #F2F2F2;
+  }
+
+  .mode1mypageRoundBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    width: 664px;
+    height: 100%;
+    border: 2px solid #F2F2F2;
+    /* background-color: aqua; */
+  }
+
+  .mode1mypagewinningBox {
+    display: flex;
+    flex-direction: column;
+    width: 664px;
+    height: 100%;
+    border: 2px solid #F2F2F2;
+  }
+
+  .mode1mypageWinningTicketTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    font-size: 24px;
+    color: #9d4fe8;
+  }
+
+  .mode1mypageWinningTicketTitle img {
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+    margin-right: 8px;
+    filter: invert(39%) sepia(55%) saturate(6048%) hue-rotate(254deg) brightness(100%) contrast(83%);
+
+  }
+
+  .mode1mypageWinningTicketimage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+  }
+
+  .mode1mypageWinningTicketimage img {
+    width: 168px;
+    height: 88px;
+  }
+
+  .mode1mypageWinningTicketData {
+    font-size: 32px;
+    color: #FFFFFF;
+    position: absolute;
     font-weight: bold;
-}
+    margin-top: 16px;
+  }
+  
+
+  .mode1mypagepaddingSection2 {
+    display: flex;
+    width: 100%;
+    height: 48px;
+  }
+
+  .mode1mypageOwnedTicketSection {
+    display: flex;
+    width: 100%;
+    height: 194px;
+  }
+  .mode1mypageClaimSection {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+  }
+
+  .mode1profalseButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    width: 100%;
+    height: 52px;
+    color: #FFFFFF;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
+  .mode1SuccessClaimButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    width: 100%;
+    height: 52px;
+    color: #FFFFFF;
+    background-color: #28D182;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
 
 
 

@@ -5,7 +5,7 @@ import { TimerM1 } from "../"
 import { epochAction } from "../../redux/actions/epochAction";
 import { totalAmountAction } from "../../redux/actions/totalAmountAction";
 import { winningTicketAction } from "../../redux/actions/winningTicketAction";
-import { leftarrow, rightarrow, klaytn, mode1ticket, trophy } from "../../assets/images";
+import { leftarrow, rightarrow, klaytn, mode1ticket, trophy, proceeding, ticket_proceeding } from "../../assets/images";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
@@ -82,7 +82,14 @@ const MainM1 = () => {
           </div>
           <div className="mode1mainroundsection2">
             {changeEpoch === currentEpoch ? (
-              <p>Proceeding...</p>
+              <>
+              <div className="proceedingSection">
+              <img src={proceeding}></img><p>Proceeding...</p>
+              </div>
+              <div className="proceedingTicketSection">
+                <img src={ticket_proceeding}></img>
+                </div>
+                </>
             ) : (
               <>
               <div className="mode1winningTicketTitle">

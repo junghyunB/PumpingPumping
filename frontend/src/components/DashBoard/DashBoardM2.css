@@ -212,8 +212,14 @@ Desktop Responsive
   }
 
 }
+@media only screen and (max-width: 1440px) and (min-width: 1280px) and (min-height: 800px) {
+  .dashBoardRightSection {
+    margin-left: 568px;
+  }
+  
+}
 
-@media only screen and (max-width: 1440px) and (min-height: 800px) {
+@media only screen and (max-width: 1280px) and (min-height: 800px) {
   .dashBoardRightSection {
     margin-left: 448px;
 }

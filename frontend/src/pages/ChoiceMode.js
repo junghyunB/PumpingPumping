@@ -19,33 +19,47 @@ const ChoiceMode = () => {
 
   return (
     <div className="choicePageContainer">
-      <div className="choiceModeTopline">
+      <div className="selectModeContainer">
+        <div className="selectModeSection1">
         <div className="timerSaction">
           <div className="mode1Timer">
             <TimerM1 />
           </div>
         </div>
+        <div className="selectMode1Total">
+        <Link to="/mode1buy">
+          <div className="selectMode1Content">
+            <div className="selectMode1Title">
+            <p>MODE #1</p>
+            </div>
+            <div className="selectMode1Name">
+              <p>Ticket</p>
+            </div>
+          </div>
+          <img src={mode1main} alt="pumpticket"></img>
+        </Link>
+        </div>
+        </div>
+        <div className="selectModeSection2">
         <div className="timerSaction">
           <div className="mode2Timer">
             <TimerM2 />
           </div>
         </div>
-      </div>
-      <div className="selectModeContainer">
-        <div className="selectModeSection1">
-          <div className="selectMode1Content">
-            <div className="selectMode1Title">
-            <p>123123</p>
+        <div className="selectMode2Total">
+        <Link to="/mode2buy">
+        <div className="selectMode1Content">
+            <div className="selectMode2Title">
+            <p>MODE #2</p>
             </div>
-            <div className="selectMode1">
-              <p>asdasdsada</p>
+            <div className="selectMode2Name">
+              <p>Ball</p>
             </div>
           </div>
-          <img src={mode1main}></img>
+          <img src={mode2main} alt="pumpball"></img>
+        </Link>
         </div>
-        <div className="selectModeSection2">
-          <img src={mode2main}></img>
-        </div>
+      </div>
       </div>
     </div>
   );

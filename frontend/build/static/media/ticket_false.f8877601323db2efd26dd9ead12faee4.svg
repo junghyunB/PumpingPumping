@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="48" viewBox="0 0 96 48">
+  <g id="그룹_13367" data-name="그룹 13367" transform="translate(-56.298 -441.944)">
+    <path id="패스_27335" data-name="패스 27335" d="M56.3,441.944v15a9,9,0,0,1,0,18v15h20v-4.5h2v4.5h53v-4.5h2v4.5h19V474.886a9,9,0,0,1,0-17.883V441.944h-19v4.5h-2v-4.5m-53,35.7h-2v-7.8h2Zm0-15.6h-2v-7.8h2Zm0-20.1v4.5h-2v-4.5m57,35.7h-2v-7.8h2Zm0-15.6h-2v-7.8h2Z" fill="#ccc"/>
+    <path id="패스_27336" data-name="패스 27336" d="M150.3,455.361V443.944h-17v2.5h-2v-2.5h-53v2.5h-2v-2.5h-18v11.183a11,11,0,0,1,0,21.635v11.182h18v-2.5h2v2.5h53v-2.5h2v2.5h17V476.527a11,11,0,0,1,0-21.166Zm-72,22.283h-2v-7.8h2Zm0-15.6h-2v-7.8h2Zm55,15.6h-2v-7.8h2Zm0-15.6h-2v-7.8h2Z" fill="#fff" opacity="0.1" style="mix-blend-mode: overlay;isolation: isolate"/>
+    <g id="그룹_13367-2" data-name="그룹 13367" opacity="0.7">
+      <path id="패스_27337" data-name="패스 27337" d="M96.361,452.337h15.875q2.268.744,2.268,5.457v7.938q0,4.713-2.268,5.457h-9.213v6.8q-.106,1.347-1.063,1.559h-6.8q-.957-.211-1.063-1.559v-20.2Q94.093,453.081,96.361,452.337Zm6.662,7.725V464.6h1.842q.78-.07.78-1.134v-3.4Z" fill="#fff" opacity="0.4" style="mix-blend-mode: overlay;isolation: isolate"/>
+    </g>
+  </g>
+</svg>

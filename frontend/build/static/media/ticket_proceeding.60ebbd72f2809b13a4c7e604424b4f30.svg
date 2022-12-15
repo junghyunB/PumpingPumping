@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="191.999" height="96" viewBox="0 0 191.999 96">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9d4fe8"/>
+      <stop offset="0.686" stop-color="#df1991"/>
+      <stop offset="1" stop-color="#ff0068"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_13736" data-name="그룹 13736" transform="translate(-70.303 116.243)">
+    <path id="패스_28058" data-name="패스 28058" d="M70.3-116.243v30a18,18,0,0,1,18,18,18,18,0,0,1-18,18v30h40v-9h4v9h106v-9h4v9h38V-50.359a18,18,0,0,1-16-17.884,18,18,0,0,1,16-17.88v-30.12h-38v9h-4v-9m-106,71.4h-4v-15.6h4Zm0-31.2h-4v-15.6h4Zm0-40.2v9h-4v-9m114,71.4h-4v-15.6h4Zm0-31.2h-4v-15.6h4Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    <path id="패스_28059" data-name="패스 28059" d="M256.3-91.409v-22.834h-34v5h-4v-5h-106v5h-4v-5h-36v22.366a22.032,22.032,0,0,1,18,21.634,22.034,22.034,0,0,1-18,21.636v22.364h36v-5h4v5h106v-5h4v5h34V-49.077a21.962,21.962,0,0,1-16-21.166A21.965,21.965,0,0,1,256.3-91.409Zm-144,44.566h-4v-15.6h4Zm0-31.2h-4v-15.6h4Zm110,31.2h-4v-15.6h4Zm0-31.2h-4v-15.6h4Z" transform="translate(2 2)" fill="#fff" opacity="0.1" style="mix-blend-mode: overlay;isolation: isolate"/>
+    <path id="패스_28060" data-name="패스 28060" d="M151.188-90.416q-.381,8.985-2.816,11.494l-9.668,4.34v1.218q-.228,2.895-2.284,3.35H121.8q-2.055-.459-2.284-3.35v-2.892a5.985,5.985,0,0,1,1.448-4.644l10.124-4.568a2.841,2.841,0,0,0,.914-2.512v-2.436h-5.482v2.436q-.228,2.895-2.284,3.35H109.624q-2.055-.456-2.282-3.35v-7.156q0-10.122,4.87-11.722h34.1q4.872,1.6,4.872,11.722ZM122.87-48.4q-2.055-.456-2.284-3.348v-9.9q.228-2.889,2.284-3.348h12.484q2.055.456,2.284,3.348v9.9q-.228,2.892-2.284,3.348Z" transform="translate(37.039 9.385)" fill="#fff" opacity="0.7" style="mix-blend-mode: overlay;isolation: isolate"/>
+  </g>
+</svg>

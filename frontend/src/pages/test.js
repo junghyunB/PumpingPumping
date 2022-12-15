@@ -1,50 +1,85 @@
-<div className="mode1MyPageSection">
-<Card className="mod1MyPageSection1">
-  <div className="buyMypageselect">
-    <div className="buybuttonSection">
-      <Link to="/mode1buy" className="z-indexZone">
-        <Button variant="outline-dark">BuyTicket</Button>
-      </Link>
-    </div>
-    <div className="mypagebuttonSection">
-      <Link to="/mode1my" className="z-indexZone">
-        <Button variant="outline-dark">MyPage</Button>
-      </Link>
-    </div>
-  </div>
-  <div className="mode1epochSection">
-    <button onClick={subEpoch}>
-      <BiLeftArrow size={30} />
-    </button>
-    {changeEpoch === currentEpoch ? (
-      <h3>{changeEpoch} round proceeding...</h3>
-    ) : (
-      <h3>{changeEpoch} round</h3>
-    )}
-    <button onClick={addEpoch}>
-      <BiRightArrow size={30} />
-    </button>
-  </div>
-  <hr></hr>
-  <div className="ownedTicketSection">
-    <div className="ownedTicketEaSection">
-      <p>Own Mode#1 Ticket : {ownedMyTicket} EA</p>
-    </div>
-    {ownedMyTicketNum.map((item) => (
-      <div className="ownedTicketNumSection">
-        [{changeEpoch}, {item}]
+<div className="mode2BuyPageSection">
+<div className="mode2selectSection">
+  <Link to="/mode2buy" className="z-indexZone">
+    <Button variant="outline-dark">BuyTicket</Button>
+  </Link>
+  <Link to="/mode2my" className="z-indexZone">
+    <Button variant="outline-dark">MyPage</Button>
+  </Link>
+</div>
+<div className="mode2selectTicketSection1">
+  <div className="TicketSection1">
+    <Link to="/mode2buy/ticket1" className="z-indexZone">
+      <div className="Ticket1">
+        <div className="imageSection">
+          <img alt="mode2!" className="imgSize"></img>
+        </div>
+        <div className="textSection">
+          <p className="ticketText">Ticket#1</p>
+          <p>(6 klay)</p>
+        </div>
       </div>
-    ))}
+    </Link>
   </div>
-  <div className="dataSection">
-    <h5>Total Ticket : {totalTicketAmount} EA</h5>
+  <div className="TicketSection2">
+    <Link to="/mode2buy/ticket2" className="z-indexZone">
+      <div className="Ticket2">
+        <div className="imageSection">
+          <img alt="mode2!" className="imgSize"></img>
+        </div>
+        <div className="textSection">
+          <p className="ticketText">Ticket#2</p>
+          <p>(9 klay)</p>
+        </div>
+      </div>
+    </Link>
   </div>
-  <div className="dataSection">
-    <h5>Total Prize : {totalAmount} Klay</h5>
+  <div className="TicketSection3">
+    <Link to="/mode2buy/ticket3" className="z-indexZone">
+      <div className="Ticket3">
+        <div className="imageSection">
+          <img alt="mode2!" className="imgSize" ></img>
+        </div>
+        <div className="textSection">
+          <p className="ticketText">Ticket#3</p>
+          <p>(12 klay)</p>
+        </div>
+      </div>
+    </Link>
   </div>
-  <div className="dataSection">
-    <h5>Winning Rate : {totalAmount === 0 ? "0 %" : `${myRatio} %`}</h5>
+</div>
+<div className="mode2selectTicketSection2">
+  <div className="TicketSection4">
+    <div className="ticketSection4-1"></div>
+    <div className="ticketSection4-2">
+      <Link to="/mode2buy/ticket4" className="z-indexZone">
+        <div className="Ticket4">
+          <div className="imageSection">
+            <img alt="mode2!" className="imgSize"></img>
+          </div>
+          <div className="textSection">
+            <p className="ticketText">Ticket#4</p>
+            <p>(15 klay)</p>
+          </div>
+        </div>
+      </Link>
+    </div>
   </div>
-  <WinningAndClaim />
-</Card>
+  <div className="TicketSection5">
+    <div className="ticketSection5-1">
+      <Link to="/mode2buy/ticket5" className="z-indexZone">
+        <div className="Ticket5">
+          <div className="imageSection">
+            <img alt="mode2!" className="imgSize"></img>
+          </div>
+          <div className="textSection">
+            <p className="ticketText">Ticket#5</p>
+            <p>(18 klay)</p>
+          </div>
+        </div>
+      </Link>
+    </div>
+    <div className="ticketSection5-2"></div>
+  </div>
+</div>
 </div>

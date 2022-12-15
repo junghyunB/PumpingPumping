@@ -793,6 +793,10 @@
     flex-direction: column;
     margin-top: 48px;
   }
+
+  .mode1MyPageContainer {
+    overflow-x: hidden;
+}
   
   .mode1myPageContainer {
       height: 100%;
@@ -935,28 +939,29 @@
   ***************************
   */
 
-  @media only screen and (max-width: 1440px) and (min-width: 1280px) and (max-height: 796px) {
+
+  @media only screen and (max-width: 1640px) and (min-width: 1280px) and (max-height: 796px) {
   
   .mypageTopLine {
-      width: 1104px;
+      width: 74.167vw;
       height: 171px;
       margin-left: 336px;
   }
   
   .mode1myPageContainer {
       margin-left: 336px;
-      width: 1068px;
-      height: 600px;
+      width: 74.167vw;
+      height: 100%;
   }
   
   .mode1mypageTitle {
-      height: 27px;
-      font-size: 27px;
+      height: 36px;
+      font-size: 2.5vw;
   }
   
   .mode1mypageText {
-      height: 67.5px;
-      font-size: 13.5px;
+      height: 90px;
+      font-size: 1.25vw;
     }
   
   .mode1mypageSelectSection {
@@ -964,157 +969,161 @@
   }
   
   .mode1mybuySection {
-      width: 516px;
+      width: 35.833vw;
       height: 36px;
-      font-size: 13.5px;
+      font-size: 0.938vw;
     }
     
     .mode1mymypageSection {
-      width: 516px;
+      width: 35.833vw;
       height: 36px;
       margin-left: 36px;
-      font-size: 13.5px;
+      font-size: 0.938vw;
     }
-    
+  
+    .mode1mybuySection:hover {
+      border-bottom: 2.25px solid #9d4fe8;
+    }
+  
     .mode1mypagepaddingSection {
       height: 36px;
     }
     .mode1mypageDataContainer {
-      height: 350px;
+      height: 360px;
     }
   
     .mode1mypageDataSection {
-      width: 180px;
-      height: 350px;
+      width: 12.5vw;
+      height: 360px;
     }
   
     .mode1mypagetotalTicketTitle {
       height: 33px;
-      padding-left: 12px;
+      padding-left: 0.833vw;
       padding-top: 15.75px;
-      font-size : 13.5px;
+      font-size : 0.938vw;
     }
   
     .mode1mypagetotalTicketimage {
-      padding-left: 12px;
-      height: 48.75px;
-      font-size: 18px;
+      padding-left: 0.833vw;
+      height: 48px;
+      font-size: 1.25vw;
     }
   
     .mode1mypagetotalTicketimage img {
-      margin-right: 6px;
+      margin-right: 0.417vw;
       margin-top: 4.5px;
-      width: 36px;
+      width: 2.5vw;
       height: 18px;
     }
   
     .mode1mypagetotalPrizeTitle {
       height: 18px;
-      padding-left: 12px;
-      font-size : 13.5px;
+      padding-left: 0.833vw;
+      font-size : 0.938vw;
     }
   
     .mode1mypagetotalPrizeimage {
       height: 45px;
-      font-size: 18px;
+      font-size: 1.25vw;
     }
   
     .mode1mypagetotalPrizeimage img {
-      width: 18px;
+      width: 1.25vw;
       height: 18px;
-      margin-right: 6px;
-      margin-left: 12px;
+      margin-right: 0.417vw;
+      margin-left: 0.833vw;
       margin-top: 4.5px;
     }
   
     .mode1mypageWinningrate {
-      height: 18px;
-      padding-left: 12px;
-      font-size: 13.5px;
+      height: 24px;
+      padding-left: 0.833vw;
+      font-size: 0.938vw;
     }
   
     .mode1mypageWinningrateimage {
-      height: 69px;
-      font-size: 18px;
+      height: 92px;
+      font-size: 1.25vw;
     }
   
     .mode1mypageWinningrateimage img {
-      width: 18px;
+      width: 1.25vw;
       height: 18px;
-      margin-left: 12px;
-      margin-right: 6px;
+      margin-left: 0.833vw;
+      margin-right: 0.417vw;
       margin-top: 4.5px;
     }
   
     .mode1mypageResultTitle {
-      height: 18px;
-      padding-left: 12px;
-      font-size: 13.5px;
+      height: 24px;
+      padding-left: 0.833vw;
+      font-size: 0.938vw;
     }
   
     .mode1mypageResultImage {
-      height: 30px;
-      font-size: 18px;
+      height: 40px;
+      font-size: 1.25vw;
     }
   
     .mode1mypageResultImage img {
-      width: 18px;
+      width: 1.25vw;
       height: 18px;
-      margin-left: 12px;
-      margin-right: 6px;
+      margin-left: 0.833vw;
+      margin-right: 0.417vw;
       margin-top: 4.5px;
     }
   
     .mode1mycolPaddingSection {
-      width: 36px;
-      height: 350px;
+      width: 3.333vw;
+      height: 380px;
     }
   
     .mode1myRoundTicketSection {
-      width: 852px;
-      height: 350px;
+      width: 59.167vw;
+      height: 380px;
     }
   
     .mode1myRoundSection {
-      height: 145px;
+      height: 148px;
     }
   
     .mode1mypagebtn {
-      width: 36px;
+      width: 2.5vw;
     }
   
     .mode1mypagebtn img {
-      width: 27px;
+      width: 1.875vw;
       height: 18px;
     }
     
     .mode1mypageRoundBox {
-      font-size: 36px;
-      width: 498px;
+      font-size: 2.5vw;
+      width: 34.583vw;
     }
   
     .mode1mypagewinningBox {
-      width: 498px;
+      width: 34.583vw;
     }
   
     .mode1mypageWinningTicketTitle {
-      font-size: 18px;
+      font-size: 1.25vw;
     }
   
     .mode1mypageWinningTicketTitle img {
-      width: 18px;
+      width: 1.25vw;
       height: 18px;
       margin-top: 3px;
-      margin-right: 6px;
+      margin-right: 0.417vw;  
     }
-  
+    
     .mode1mypageWinningTicketimage img {
-      width: 126px;
+      width: 8.75vw;
       height: 66px;
     }
   
     .mode1mypageWinningTicketData {
-      font-size: 24px;
+      font-size: 1.667vw;
       margin-top: 12px;
     }
     
@@ -1122,29 +1131,28 @@
     .mode1mypagepaddingSection2 {
       height: 36px;
     }
-  
     .mode1mypageOwnedTicketSection {
-      height: 170px;
+      height: 174px;
     }
-    
+      
     .mode1mypageOwnedTicketSection img {
-      width: 36px;
+      width: 2.5vw;
       height: 18px;
-      margin-left: 6px;
-      margin-right: 9px;
+      margin-left: 0.417vw;
+      margin-right: 0.625vw;
     }
     
     .mode1mypageOwnedTitleSection {
       height: 42px;
-      padding-left: 12px;
+      padding-left: 0.833vw;
       padding-top: 15px;
-      font-size: 13.5px;
+      font-size: 0.938vw;
     }
     
     .ownMyTicketText {
-      width: 45px;
-      height: 26.25px;
-      font-size: 18px;
+      width: 3.125vw;
+      height: 32px;
+      font-size: 1.25vw;
     }
   
     .mode1mypageOwnedTikcetImage {
@@ -1152,41 +1160,497 @@
     }
   
     .mode1mypageOwnedTicketEASection {
-      width: 84px;
+      width: 5.833vw;
       height: 45px;
     }
   
+  
     .mode1mypageTicketWrap img {
-      width: 63px;
+      width: 4.375vw;
       height: 31.5px;
     }
   
     .mode1myTicketNumber {
       margin-top: 12px;
-      margin-right: 3px;
-      font-size: 12px;
+      margin-right: 0.208vw;
+      font-size: 0.833vw;
     }
   
     .mode1mypageClaimSection {
-      height: 90px;
+      height: 60px;
     }
   
     .mode1profalseButton {
-      font-size: 18px;
+      font-size: 1.25vw;
       height: 39px;
     }
   
     .mode1SuccessClaimButton {
-      font-size: 18px;
+      font-size: 1.25vw;
       height: 39px;
     }
   
   }
+  @media only screen and (max-width: 1280px) and (min-width: 960px) and (max-height: 796px) {
+  
+    /*
+    px-to-vw 1700
+    */
 
+    .mypageTopLine {
+        width: 69vw;
+        height: 171px;
+        margin-left: 336px;
+    }
+    
+    .mode1myPageContainer {
+        margin-left: 336px;
+        width: 62.824vw;
+        height: 100%;
+    }
+    
+    .mode1mypageTitle {
+        height: 36px;
+        font-size: 2.118vw;
+    }
+    
+    .mode1mypageText {
+        height: 90px;
+        font-size: 1.059vw;
+      }
+    
+    .mode1mypageSelectSection {
+        height: 36px;
+    }
+    
+    .mode1mybuySection {
+        width: 30.353vw;
+        height: 36px;
+        font-size: 0.794vw;
+      }
+      
+      .mode1mymypageSection {
+        width: 30.353vw;
+        height: 36px;
+        margin-left: 36px;
+        font-size: 0.794vw;
+      }
+    
+      .mode1mybuySection:hover {
+        border-bottom: 2.25px solid #9d4fe8;
+      }
+    
+      .mode1mypagepaddingSection {
+        height: 36px;
+      }
+      .mode1mypageDataContainer {
+        width: 100%;
+        height: 360px;
+      }
+    
+      .mode1mypageDataSection {
+        width: 10.588vw;
+        height: 360px;
+      }
+    
+      .mode1mypagetotalTicketTitle {
+        height: 33px;
+        padding-left: 0.706vw;
+        padding-top: 0.926vw;
+        font-size : 0.794vw;
+      }
+    
+      .mode1mypagetotalTicketimage {
+        padding-left: 0.706vw;
+        height: 48px;
+        font-size: 1.059vw;
+      }
+    
+      .mode1mypagetotalTicketimage img {
+        margin-right: 0.353vw;
+        margin-top: 0.265vw;
+        width: 2.118vw;
+        height: 18px;
+      }
+    
+      .mode1mypagetotalPrizeTitle {
+        height: 18px;
+        padding-left: 0.706vw;
+        font-size : 0.794vw;
+      }
+    
+      .mode1mypagetotalPrizeimage {
+        height: 45px;
+        font-size: 1.059vw;
+      }
+    
+      .mode1mypagetotalPrizeimage img {
+        width: 1.059vw;
+        height: 18px;
+        margin-right: 0.353vw;
+        margin-left: 0.706vw;
+        margin-top: 0.265vw;
+      }
+    
+      .mode1mypageWinningrate {
+        height: 24px;
+        padding-left: 0.706vw;
+        font-size: 0.794vw;
+      }
+    
+      .mode1mypageWinningrateimage {
+        height: 92px;
+        font-size: 1.059vw;
+      }
+    
+      .mode1mypageWinningrateimage img {
+        width: 1.059vw;
+        height: 18px;
+        margin-left: 0.706vw;
+        margin-right: 0.353vw;
+        margin-top: 0.265vw;
+      }
+    
+      .mode1mypageResultTitle {
+        height: 24px;
+        padding-left: 0.706vw;
+        font-size: 0.794vw;
+      }
+    
+      .mode1mypageResultImage {
+        height: 40px;
+        font-size: 1.059vw;
+      }
+    
+      .mode1mypageResultImage img {
+        width: 1.059vw;
+        height: 18px;
+        margin-left: 0.706vw;
+        margin-right: 0.353vw;
+        margin-top: 0.265vw;
+      }
+    
+      .mode1mycolPaddingSection {
+        width: 2.824vw;
+        height: 380px;
+      }
+    
+      .mode1myRoundTicketSection {
+        width: 50.118vw;
+        height: 380px;
+      }
+    
+      .mode1myRoundSection {
+        height: 148px;
+      }
+    
+      .mode1mypagebtn {
+        width: 2.118vw;
+      }
+    
+      .mode1mypagebtn img {
+        width: 1.588vw;
+        height: 18px;
+      }
+      
+      .mode1mypageRoundBox {
+        font-size: 2.118vw;
+        width: 29.294vw;
+      }
+    
+      .mode1mypagewinningBox {
+        width: 29.294vw;
+      }
+    
+      .mode1mypageWinningTicketTitle {
+        font-size: 1.059vw;
+      }
+    
+      .mode1mypageWinningTicketTitle img {
+        width: 1.059vw;
+        height: 18px;
+        margin-top: 3px;
+        margin-right: 0.353vw;  
+      }
+      
+      .mode1mypageWinningTicketimage img {
+        width: 7.412vw;
+        height: 66px;
+      }
+    
+      .mode1mypageWinningTicketData {
+        font-size: 1.412vw;
+        margin-top: 20px;
+      }
+      
+    
+      .mode1mypagepaddingSection2 {
+        height: 36px;
+      }
+      .mode1mypageOwnedTicketSection {
+        height: 174px;
+      }
+        
+      .mode1mypageOwnedTicketSection img {
+        width: 2.118vw;
+        height: 18px;
+        margin-left: 0.353vw;
+        margin-right: 0.529vw;
+      }
+      
+      .mode1mypageOwnedTitleSection {
+        height: 42px;
+        padding-left: 0.706vw;
+        padding-top: 15px;
+        font-size: 0.794vw;
+      }
+      
+      .ownMyTicketText {
+        width: 2.647vw;
+        height: 32px;
+        font-size: 1.059vw;
+      }
+    
+      .mode1mypageOwnedTikcetImage {
+        height: 103.5px;
+      }
+    
+      .mode1mypageOwnedTicketEASection {
+        width: 4.941vw;
+        height: 45px;
+      }
+    
+    
+      .mode1mypageTicketWrap img {
+        width: 3.706vw;
+        height: 31.5px;
+      }
+    
+      .mode1myTicketNumber {
+        margin-top: 16px;
+        margin-right: 0.176vw;
+        font-size: 0.706vw;
+      }
+    
+      .mode1mypageClaimSection {
+        height: 60px;
+      }
+    
+      .mode1profalseButton {
+        font-size: 1.059vw;
+        height: 39px;
+      }
+    
+      .mode1SuccessClaimButton {
+        font-size: 1.059vw;
+        height: 39px;
+      }
+    
+  }
 
+  @media only screen and (max-width: 960px) and (max-height: 796px) {
+    .mode1MyPageContainer {
+      overflow-x: hidden;
 
+  }
 
+    .mypageTopLine {
+      flex-direction: column;
+      margin-left: 336px;
+    }
+    
+    .mode1myPageContainer {
+        height: 100%;
+        overflow-x: hidden;
+        margin-left: 336px;
+    }
+    
+    .mode1mypageTitle {
+      margin-top: 90px;
+    }
+      
+    .mode1mypageSelectSection {
+      width:566px;
+        height: 96px;
+        flex-direction: column;
+    }
 
+    .mode1mybuySection {
+      width: 566px;
+    }
+      
+    .mode1mymypageSection {
+      width: 566px;
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+    
+      .mode1mypageDataContainer {
+        display: flex;
+        flex-direction: row;
+        height: 402px;
+      }
+    
+      .mode1mypageDataSection {
+        width: 150px;
+      }
 
+      .mode1mypagetotalTicketTitle {
+        padding-left: 12px;
+        padding-top: 16px;
+        font-size : 13.5px;
+      }
+    
+      .mode1mypagetotalTicketimage {
+        display: flex;
+        padding-left: 12px;
+        height: 48px;
+        font-size: 18px;
+      }
+    
+      .mode1mypagetotalTicketimage img {
+        margin-right: 6px;
+        margin-top: 4.5px;
+        width: 36px;
+      }
+    
+      .mode1mypagetotalPrizeTitle {
+        padding-left: 12px;
+        font-size : 13.5px;
+      }
+    
+      .mode1mypagetotalPrizeimage {
+        font-size: 18px;
+      }
+    
+      .mode1mypagetotalPrizeimage img {
+        width: 18px;
+        margin-right: 6px;
+        margin-left: 12px;
+      }
+    
+      .mode1mypageWinningrate {
+        padding-left: 12px;
+        font-size: 13.5px;
+      }
+    
+      .mode1mypageWinningrateimage {
+        font-size: 18px;
+      }
+    
+      .mode1mypageWinningrateimage img {
+        width: 18px;
+        margin-left: 12px;
+        margin-right: 6px;
+      }
+    
+      .mode1mypageResultTitle {
+        padding-left: 12px;
+        font-size: 13.5px;
+      }
+    
+      .mode1mypageResultImage {
+        font-size: 18px;
+      }
+    
+      .mode1mypageResultImage img {
+        width: 18px;
+        margin-left: 12px;
+        margin-right: 6px;
+      }
 
-
+      .mode1mycolPaddingSection {
+        width: 18px;
+      }
+      
+      .mode1myRoundSection {
+        width: 390px;
+      }
+    
+      .mode1mypagebtn {
+        width: 27px;
+      }
+    
+      .mode1mypagebtn img {
+        width: 20.25px;
+        height: 18px;
+      }
+      
+      .mode1mypageRoundBox {
+        padding-top: 15px;
+        font-size: 18px;
+        width: 180px;
+      }
+    
+      .mode1mypagewinningBox {
+        width: 180px;
+      }
+    
+      .mode1mypageWinningTicketTitle {
+        font-size: 12px;
+      }
+    
+      .mode1mypageWinningTicketTitle img {
+        width: 12px;
+        height: 16px;
+        margin-top: 4px;
+        margin-right: 6px;
+      }
+    
+      .mode1mypageWinningTicketimage img {
+        width: 93px;
+        height: 42px;
+      }
+    
+      .mode1mypageWinningTicketData {
+        font-size: 18px;
+        margin-top: 12px;
+      }
+      
+    
+      .mode1mypagepaddingSection2 {
+        height: 0px;
+      }
+    
+      .mode1mypageOwnedTicketSection {
+        width: 397.5px;
+        height: 270px;
+      }
+      
+      .mode1mypageOwnedTicketSection img {
+        width: 27px;
+        height: 24px;
+        margin-left: 4.5px;
+        margin-right: 6.75px;
+      }
+      
+      .mode1mypageOwnedTitleSection {
+        height: 40px;
+        padding-top: 0px;
+      }
+      
+      .ownMyTicketText {
+        font-size: 15px;
+      }
+    
+      .mode1mypageOwnedTikcetImage {
+        width: 100%;
+        height: 220px;
+      }
+    
+      .mode1mypageOwnedTicketEASection {
+        width: 97.5px;
+        height: 30px;
+      }
+      
+      .mode1mypageTicketWrap img {
+        width: 87px;
+        height: 42px;
+      }
+    
+      .mode1mypageClaimSection {
+        width: 566px;
+        height: 80px;
+      }
+  
+  }

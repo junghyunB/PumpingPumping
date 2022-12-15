@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .selectModeContainer {
@@ -219,6 +219,7 @@
     .choicePageContainer {
         overflow-x: hidden;
     }
+
     .selectModeContainer {
         display: flex;
         flex-direction: column;

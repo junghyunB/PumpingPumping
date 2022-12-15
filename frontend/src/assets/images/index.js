@@ -20,6 +20,7 @@ import proceeding from "./proceeding.svg";
 import ticket_proceeding from "./ticket_proceeding.svg";
 import ball_proceeding from "./ball_proceeding.svg";
 import ticket_basic from "./ticket_basic.svg";
+import ticket_false from "./ticket_false.svg";
 import result_false from "./false.svg";
 import result_success from "./success.svg";
 
@@ -44,8 +45,9 @@ export {
     mode2main,
     proceeding,
     ticket_proceeding,
-    ball_proceeding,
+    ticket_false,
     ticket_basic,
+    ball_proceeding,
     result_false,
     result_success,
 }

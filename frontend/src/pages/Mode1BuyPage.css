@@ -288,10 +288,10 @@ desktop Responsive
 }
 
 @media only screen and (max-width: 1700px) and (min-width: 1240px) and (min-height: 800px) {
+  /*
+1550 
+*/
   .mode1BuyTopLine {
-    /*
-  1550 
-  */
     width: 66.909vw;
   }
   .mode1BuyPageSection {
@@ -624,7 +624,7 @@ vw to px 1200
 
 @media only screen and (max-width: 960px) and (max-height: 796px) {
   .mode1BuyPageContainer {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   .mode1BuyTopLine {

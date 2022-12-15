@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Mode1MyPage.css";
-import Button from "react-bootstrap/Button";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { OneTimerM1, OneTimerM2 } from "../components/";
 import { epochAction } from "../redux/actions/epochAction";
 import { myTicketCountAction } from "../redux/actions/myTicketCountAction";
@@ -16,7 +15,7 @@ import { isClaimedAction } from "../redux/actions/isClaimedAction";
 import { winningTicketAction } from "../redux/actions/winningTicketAction";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import Swal from 'sweetalert2';
-import { ticket_basic, klaytn, trophy, result_false, result_success, proceeding, leftarrow, rightarrow, mode1ticket } from "../assets/images";
+import { ticket_basic, klaytn, trophy, result_false, result_success, proceeding, leftarrow, rightarrow, mode1ticket, ticket_false } from "../assets/images";
 
 
 const Mode1MyPage = () => {
@@ -42,6 +41,8 @@ const Mode1MyPage = () => {
   let [changeEpoch, setChangeEpoch] = useState(currentEpoch);
   const epochM2 = useSelector(state => state.epochM2.epochM2);
   epochWinner = epochWinner.toLowerCase();
+  let maxTicketAmount = 20;
+  let userTicketArr = [];
   const setData = () => {
     setChangeEpoch(currentEpoch);
   };
@@ -84,6 +85,43 @@ const Mode1MyPage = () => {
       icon:"error",
       confirmButtonText: "OK",
     })
+  }
+
+  for(let i = 0; i < maxTicketAmount; i++) {
+    if(i + 1 <= ownedMyTicketNum.length) {
+      if(winningTicket !== 0 && ownedMyTicketNum[i] === winningTicket) {
+        console.log(ownedMyTicketNum[i], winningTicket)
+        userTicketArr.push(
+          <div className="mode1mypageOwnedTicketEASection" key={i}>
+          <div className="mode1mypageTicketWrap"> 
+          <img src={mode1ticket}></img>
+          <div className="mode1myTicketNumber">
+          <p>{changeEpoch}, {ownedMyTicketNum[i]}</p>
+          </div>
+          </div>
+        </div>
+        )
+      } else {
+        userTicketArr.push(
+        <div className="mode1mypageOwnedTicketEASection" key={i}>
+        <div className="mode1mypageTicketWrap"> 
+        <img src={ticket_basic}></img>
+        <div className="mode1myTicketNumber">
+          <p>{changeEpoch}, {ownedMyTicketNum[i]}</p>
+          </div>
+        </div>
+      </div>
+      )
+      }
+    } else {
+      userTicketArr.push(
+      <div className="mode1mypageOwnedTicketEASection" key={i}>
+      <div className="mode1mypageTicketWrap"> 
+      <img src={ticket_false}></img>
+      </div>
+    </div>
+      )
+    }
   }
 
   useEffect(() => {
@@ -182,6 +220,7 @@ const Mode1MyPage = () => {
             }
             </div>
           </div>
+          <div className="mode1mycolPaddingSection"></div>
           <div className="mode1myRoundTicketSection">
           <div className="mode1myRoundSection">
             <div className="mode1mypagebtn" onClick={subEpoch}>
@@ -202,7 +241,14 @@ const Mode1MyPage = () => {
             </div>
           </div>
           <div className="mode1mypagepaddingSection2"></div>
-          <div className="mode1mypageOwnedTicketSection"></div>
+          <div className="mode1mypageOwnedTicketSection">
+            <div className="mode1mypageOwnedTitleSection">
+              <p>Own Mode#1 Ticket </p> <img src={ticket_basic}></img> <div className="ownMyTicketText"><p>{ownedMyTicket} EA</p></div>
+            </div>
+            <div className="mode1mypageOwnedTikcetImage">
+            {userTicketArr.map((item) => item)}
+            </div>
+          </div>
           </div>
         </div>
         <div className="mode1mypageClaimSection">

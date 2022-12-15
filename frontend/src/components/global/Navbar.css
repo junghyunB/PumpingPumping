@@ -1,13 +1,12 @@
 .navbarContainer {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   width: 1920px;
   height: 100%;
   position: fixed;
   background-color: #ebf2ff;
 }
 .leftNavSection {
-  position: fixed;
   left: 0;
   height: 100%;
   width: 400px;
@@ -15,7 +14,7 @@
 
 .rightNavContainer {
   width: 1520px;
-  background-color: white;
+  background-color: #ffffff;
   height: 100%;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
@@ -503,7 +502,6 @@ desktop Responsive
 
   .rightNavContainer {
     width: 79.167vw;
-    margin-left: 400px;
   }
 
 }
@@ -543,7 +541,6 @@ NoteBook Responsive
 
   .rightNavContainer {
     width: 79.167vw;
-    margin-left: 300px;
   }
 
   .firstLeftNav {

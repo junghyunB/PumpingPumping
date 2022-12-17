@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Mode2DetailPage.css";
 import { useParams, useNavigate} from "react-router-dom";
-import { mode1ticket } from "../assets/images";
-import { BiLeftArrow } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { ball_blue, ball_green, ball_orange, ball_pink, ball_purple, rightarrow } from "../assets/images";
 import { useSelector, useDispatch } from "react-redux";
 import { myTicketCountM2Action } from "../redux/actions/myTicketCountM2Action";
 import { epochM2Action } from "../redux/actions/epochM2Action";
@@ -18,6 +16,7 @@ const Mode2DetailPage = () => {
   const dispatch = useDispatch();
   const [selectTicket, setSelectTicket] = useState([]);
   const [transTicket, setTransTicket] = useState([]);
+  const [imgSelectTicket, setImgSelectTicket] = useState([]);
   const epochM1 = useSelector((state) => state.epochM1.epoch);
   const localKey = localStorage.key(0);
   const account = localStorage.getItem(localKey);
@@ -38,23 +37,28 @@ const Mode2DetailPage = () => {
     ) {
       setSelectTicket(
         selectTicket.length === 0
-          ? (selectTicket) => [...selectTicket, num]
-          : (selectTicket) => [...selectTicket, ", ", num]
+          ? (selectTicket) => [...selectTicket,"#", num]
+          : (selectTicket) => [...selectTicket, "/", "#", num]
       );
+      setImgSelectTicket((imgSelectTicket) => [imgSelectTicket, num % 50 < 11 && num % 50 > 0 ?  <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_orange}></img></div> : 
+    num % 50 < 21 && num % 50 > 10 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_blue}></img></div> : num % 50 < 31 && num % 50 > 20 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_purple}></img></div>
+    : num % 50 < 41 && num % 50 > 30 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_pink}></img></div> : <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_green}></img></div>
+    ])
       setTransTicket((transTicket) => [...transTicket, num]);
     } else if (
       transTicket.length <= remainBuyTicket &&
       selectTicket.includes(num)
     ) {
       const numIndex = selectTicket.indexOf(num);
-      if (numIndex === 0) {
-        const removeItem = selectTicket.splice(0, 2);
+      if (numIndex === 1) {
+        const removeItem = selectTicket.splice(0, 3);
         setSelectTicket(
           selectTicket.filter((element) => element !== removeItem)
         );
         setTransTicket(transTicket.filter((element) => element !== num));
+
       } else {
-        const removeItem = [...selectTicket.splice(numIndex - 1, 2)];
+        const removeItem = [...selectTicket.splice(numIndex - 2, 3)];
         setSelectTicket(
           selectTicket.filter((element) => element !== removeItem)
         );
@@ -71,81 +75,68 @@ const Mode2DetailPage = () => {
       })
     }
   };
-
-  let section1 = [];
-  let section2 = [];
-  let section3 = [];
-  let section4 = [];
-  let section5 = [];
+  console.log(imgSelectTicket)
+  let chooseBall = [];
 
   for (let i = 1; i < 51; i++) {
     if (i < 11) {
-      section1.push(
-        <div className="ticketSmallSection">
-          <button
-            onClick={() => {
-              choiceTicket(i + (id - 1) * 50);
-            }}
-          >
-            <img alt="ticket" className="ticketSize" src={mode1ticket}></img>
-            <div className="imgText">#{i + (id - 1) * 50}</div>
-          </button>
-        </div>
+      chooseBall.push(
+        <div className="mode2BallWrap" key={i} onClick={() => {
+          choiceTicket(i + (id - 1) * 50);
+        }}>
+          <div className="mode2BallNumText">
+            <p>#{i + (id - 1) * 50}</p>
+            </div>
+          <img src={ball_orange}></img>
+          </div>
       );
     } else if (i < 21) {
-      section2.push(
-        <div className="ticketSmallSection">
-          <button
-            onClick={() => {
-              choiceTicket(i + (id - 1) * 50);
-            }}
-          >
-            <img alt="ticket" className="ticketSize" src={mode1ticket}></img>
-            <div className="imgText">#{i + (id - 1) * 50}</div>
-          </button>
-        </div>
+      chooseBall.push(
+        <div className="mode2BallWrap" key={i} onClick={() => {
+          choiceTicket(i + (id - 1) * 50);
+        }}>
+          <div className="mode2BallNumText">
+            <p>#{i + (id - 1) * 50}</p>
+            </div>
+          <img src={ball_blue}></img>
+          </div>
       );
     } else if (i < 31) {
-      section3.push(
-        <div className="ticketSmallSection">
-          <button
-            onClick={() => {
-              choiceTicket(i + (id - 1) * 50);
-            }}
-          >
-            <img alt="ticket" className="ticketSize" src={mode1ticket}></img>
-            <div className="imgText">#{i + (id - 1) * 50}</div>
-          </button>
-        </div>
+      chooseBall.push(
+        <div className="mode2BallWrap" key={i} onClick={() => {
+          choiceTicket(i + (id - 1) * 50);
+        }}>
+          <div className="mode2BallNumText">
+            <p>#{i + (id - 1) * 50}</p>
+            </div>
+          <img src={ball_purple}></img>
+          </div>
       );
     } else if (i < 41) {
-      section4.push(
-        <div className="ticketSmallSection">
-          <button
-            onClick={() => {
-              choiceTicket(i + (id - 1) * 50);
-            }}
-          >
-            <img alt="ticket" className="ticketSize" src={mode1ticket}></img>
-            <div className="imgText">#{i + (id - 1) * 50}</div>
-          </button>
-        </div>
+      chooseBall.push(
+        <div className="mode2BallWrap" key={i} onClick={() => {
+          choiceTicket(i + (id - 1) * 50);
+        }}>
+          <div className="mode2BallNumText">
+            <p>#{i + (id - 1) * 50}</p>
+            </div>
+          <img src={ball_pink}></img>
+          </div>
       );
     } else if (i < 51) {
-      section5.push(
-        <div className="ticketSmallSection">
-          <button
-            onClick={() => {
-              choiceTicket(i + (id - 1) * 50);
-            }}
-          >
-            <img alt="ticket" className="ticketSize" src={mode1ticket}></img>
-            <div className="imgText">#{i + (id - 1) * 50}</div>
-          </button>
-        </div>
+      chooseBall.push(
+        <div className="mode2BallWrap" key={i} onClick={() => {
+          choiceTicket(i + (id - 1) * 50);
+        }}>
+          <div className="mode2BallNumText">
+            <p>#{i + (id - 1) * 50}</p>
+            </div>
+          <img src={ball_green}></img>
+          </div>
       );
     }
   }
+
 
   const buyTicketM2 = () => {
     remainBuyTicket < transTicket.length
@@ -178,7 +169,16 @@ const Mode2DetailPage = () => {
           </div>
           </div>
         <div className="mode2BuyDetailSection3">
-          
+          <div className="mode2buyDetailChooseBallContainer">
+            <div className="mode2DetailData1">
+              <div className="mode2ChooseNumSection"><p>Choose Number </p> &nbsp;&nbsp;<p className="ChooseNumFont">{selectTicket}</p></div>
+              <div className="mode2ChooseNumCount"><p>select {transTicket.length} ball</p></div>
+            </div>
+            <div className="mode2DetailData2"><div className="mode2DetailrightArrowimage"><img src={rightarrow}></img></div>{imgSelectTicket.map((item) => item)}</div>
+          </div>
+          <div className="mode2buyDetailBallTrailer">
+              {chooseBall.map((item) => item)}
+              </div>
         </div>
       </div>
     </div>

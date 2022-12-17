@@ -6,9 +6,11 @@ import { epochM2Action } from '../../redux/actions/epochM2Action';
 import { winningNumberM2Action } from '../../redux/actions/winningNumberM2Action';
 import { winningTicketIdM2Action } from '../../redux/actions/winningTicketIdM2Action';
 import { totalAmountM2Action } from '../../redux/actions/totalAmountM2Action';
-import { leftarrow, rightarrow, klaytn } from "../../assets/images";
+import { leftarrow, rightarrow, klaytn, mode2ball, trophy, proceeding, ball_proceeding } from "../../assets/images";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2'
+
 
 
 const MainM2 = () => {
@@ -26,7 +28,11 @@ const MainM2 = () => {
 
     const addEpoch = () => {
         if(changeEpochM2 === currentEpochM2) {
-        alert("Last Round.");
+          Swal.fire({
+            title: "Last Round!",
+            icon:"error",
+            confirmButtonText: "OK",
+          })
     } else if(changeEpochM2 < currentEpochM2){
         setChangeEpochM2(changeEpochM2 + 1);
     }
@@ -34,7 +40,11 @@ const MainM2 = () => {
     
       const subEpoch = () => {
         if(changeEpochM2 === 1) {
-          alert("First Round.");
+          Swal.fire({
+            title: "First Round",
+            icon:"error",
+            confirmButtonText: "OK",
+          })
         } else {
             setChangeEpochM2(changeEpochM2 - 1);
         }
@@ -64,9 +74,9 @@ const MainM2 = () => {
       </div>
       <div className="mode2maintext">
         <p>
-          Mode#2 game Information.
-          <br />
-          Design comment
+        This is an event to guess the winning number.
+        <br />
+        Select a number between 1 and 250.
         </p>
       </div>
       <div className="mode2mainround">
@@ -78,7 +88,32 @@ const MainM2 = () => {
             <p>{changeEpochM2}th ROUND</p>
           </div>
           <div className="mode2mainroundsection2">
-          {<p>{winningNumberM2 === "0" ? "Proceeding..." : (<a># {winningNumberM2} [{changeEpochM2}, {winningTicketIdM2}]</a>)}</p>}
+          {winningNumberM2 === "0" ? 
+          <>
+          <div className="proceedingSection">
+          <img src={proceeding}></img><p>Proceeding...</p> 
+          </div>
+          <div className="proceedingTicketSection">
+            <img src={ball_proceeding}></img>
+            </div>
+          </>
+          : 
+          (
+            <>
+            <div className='mode2winningBallTitle'>
+              <img src={trophy}></img><p>Winning Ball</p>
+            </div>
+            <div className='mode2BallData'>
+              <img src={mode2ball}></img>
+              <div className='mode2MainWinningNumber'>
+          <p>#{winningNumberM2}</p>
+          </div>
+          <div className='mode2MainWinningData'>
+          <p>{changeEpochM2}, {winningTicketIdM2}</p>
+          </div>
+            </div>
+            </>
+          )}
           </div>
         </div>
         <div className="mode2mainbtn2" onClick={addEpoch}>

@@ -4,7 +4,6 @@ let initialState = {
   myTicketAmount: 0,
   claimSuccess: false,
   isclaimM1: 0,
-  innerWidth: window.innerWidth,
 };
 
 function userDataReducer(state = initialState, action) {
@@ -21,8 +20,6 @@ function userDataReducer(state = initialState, action) {
       return { ...state, claimSuccess: payload.claimSuccess };
     case "GET_ISCLAIM_REWARD":
       return { ...state, isclaimM1: payload.isclaimM1 };
-    case "INNER_WIDTH":
-      return { ...state, innerWidth: payload };
     default:
       return { ...state };
   }

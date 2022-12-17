@@ -1,10 +1,10 @@
-.dashBoardPageContainer{
-    display: flex;
-    flex-direction: row;
-    /* background-color: aqua; */
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.dashBoardPageContainer {
+  display: flex;
+  flex-direction: row;
+  /* background-color: aqua; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /*
@@ -22,24 +22,23 @@ NoteBook Responsive
 */
 
 @media only screen and (max-width: 1440px) and (min-width: 960px) and (max-height: 796px) {
-    .dashBoardPageContainer{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    }
+  .dashBoardPageContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+}
 
-    @media only screen and (max-width: 960px) and (max-height: 796px) {
-        .dashBoardPageContainer{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            overflow-x: hidden;
-        }
-        }
-    /*
+@media only screen and (max-width: 960px) and (max-height: 796px) {
+  .dashBoardPageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+}
+/*
 ***************************
 ***************************
 ***************************
@@ -54,21 +53,20 @@ Desktop Responsive
 */
 
 @media only screen and (max-width: 1920px) and (min-width: 1440px) and (min-height: 800px) {
-    .dashBoardPageContainer{
-        display: flex;
-        flex-direction: row;
-        /* background-color: aqua; */
-        width: 100vw;
-        height: 100%;
-    }
+  .dashBoardPageContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    width: 100vw;
+    height: 100%;
+  }
 }
 
 @media only screen and (max-width: 1440px) and (min-height: 800px) {
-    .dashBoardPageContainer{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-    }
-    }
-    
+  .dashBoardPageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}

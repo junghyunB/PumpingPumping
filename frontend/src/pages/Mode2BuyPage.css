@@ -1,194 +1,101 @@
 .mode2BuyPageContainer {
     display: flex;
-    flex-direction: row;
-    /* background-color: aqua; */
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    padding-top: 120px;
-}
+  }
 
-.mode2BuyPageSection {
+  
+  .mode2BuyTopLine {
+    display: flex;
+    width: 1472px;
+    height: 228px;
+    z-index: 0;
+    margin-left: 448px;
+  }
+
+  .mode2BuyPageSection {
     display: flex;
     flex-direction: column;
-    margin-left: 300px;
-    width: 100%;
-    height: 100%;
+    margin-left: 448px;
+    width: 1424px;
+    height: 748px;
+    z-index: 0;
     /* background-color: blue; */
-}
+  }
 
-.mode2selectSection {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    /* background-color: red; */
-}
-
-.z-indexZone {
-    z-index: 20;
-    text-decoration: none;
-    color: black;
-}
-
-.mode2selectSection button {
-    width: 200px;
-    height: 70px;
-}
-
-
-.mode2selectTicketSection1 {
+  .mode2buypagetitle {
     display: flex;
     width: 100%;
-    height: 50%;
-    /* background-color: yellow; */
-}
-.TicketSection1 {
-    display: flex;
-    width: 33.3%;
-    height: 100%;
-    justify-content: flex-end;
+    height: 48px;
+    font-size: 48px;
+    color: #0060C4;
     align-items: center;
-    /* background-color: aquamarine; */
-}
+  }
+  
+  .mode2buypagetext {
+    width: 100%;
+    height: 120px;
+    font-size: 24px;
+  }
 
-.Ticket1 {
-    width:250px;
-    height: 250px;
-    border: 5px solid black;
-    border-radius: 3rem;
-    /* background-color: gray; */
-}
-.TicketSection2 {
-    display: flex;
-    width: 33.3%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    /* background-color: brown; */
-}
-
-.Ticket2 {
-    width:250px;
-    height: 250px;
-    border: 5px solid black;
-    border-radius: 3rem;
-    /* background-color: blue; */
-}
-
-.TicketSection3 {
-    display: flex;
-    width: 33.3%;
-    height: 100%;
-    align-items: center;
-    /* background-color: darksalmon; */
-}
-
-.Ticket3 {
-    width:250px;
-    height: 250px;
-    border: 5px solid black;
-    border-radius: 3rem;
-    /* background-color: yellow; */
-}
-
-
-.mode2selectTicketSection2 {
+  .mode2SelectSection {
     display: flex;
     width: 100%;
-    height: 50%;
-    /* background-color: green; */
-}
-.TicketSection4 {
-    display: flex;
-    width: 50%;
-    height:100%;
-    /* background-color: yellowgreen; */
-}
-.ticketSection4-1 {
-    display: flex;
-    width:50%;
-    height: 100%;
-    /* background-color: bisque; */
-}
-
-.ticketSection4-2 {
-    display: flex;
-    width:50%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    /* background-color: darkblue; */
-}
-
-.Ticket4 {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    height: 250px;
-    border: 5px solid black;
-    border-radius: 3rem;
-    /* background-color: pink; */
-}
-
-.TicketSection5 {
-    display: flex;
-    width: 50%;
-    height:100%;
-    /* background-color: wheat; */
-}
-.ticketSection5-1 {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+    height: 48px;
     /* background-color: aqua; */
-}
-
-.Ticket5 {
+  }
+  
+  .mode2buySection {
     display: flex;
-    flex-direction: column;
-    width: 250px;
-    height: 250px;
-    border: 5px solid black;
-    border-radius: 3rem;
-    /* background-color: blueviolet; */
-}
-
-.ticketSection5-2 {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: green; */
-}
-
-.imageSection {
-    display: flex;
-    width: 100%;
-    height: 80%;
-    justify-content: center;
     align-items: center;
-    /* background-color: cadetblue; */
-}
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    font-size: 18px;
+    color: #3b3b3b;
+    cursor: pointer;
+    border-bottom: 3px solid #0060C4;
+  }
+  
+  .mode2mypageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    margin-left: 48px;
+    font-size: 18px;
+    color: #3b3b3b;
+    cursor: pointer;
+    /* background-color: blue; */
+  }
+  
+  .mode2mypageSection:hover {
+    border-bottom: 3px solid #0060C4;
+  }
 
-.textSection {
-    /* display:flex; */
+  .mode2SelectTicketContainer {
+    display: flex;
     width: 100%;
-    height: 20%;
-    /* background-color: skyblue; */
-    text-align: center;
-}
+    height: 484px;
+  }
 
-.textSection p {
-    line-height: 10px;
-    font-size: larger;
-    font-weight: 900;
-}
-
-
-.imgSize {
-    width: 150px;
-    height: 150px;
-}
+  .firstmode2SelectTicketSection {
+    display: flex;
+    width: 246.4px;
+    height: 100%;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+  }
+  
+  .mode2SelectTicketSection {
+    display: flex;
+    width: 246.4px;
+    height: 100%;
+    margin-left: 48px;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+  }

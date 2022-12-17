@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { pickWinnerM2Action } from "../../redux/actions/pickWinnerM2Action";
 import { timerDateM2Action } from "../../redux/actions/timerDateM2Action";
 import dayjs from "dayjs";
+import "./Timer.css";
 
 const useResultOfIntervalCalculatorM2 = (calculator, delay) => {
   const dispatch = useDispatch();

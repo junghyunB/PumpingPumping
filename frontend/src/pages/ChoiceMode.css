@@ -1,85 +1,427 @@
 .choicePageContainer {
     display: flex;
-    flex-direction: row;
-    /* background-color: aqua; */
+    flex-direction: column;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
-.choicePageLeftSection {
+
+.selectModeContainer {
     display: flex;
-    margin-left: 310px;
-    margin-right: 100px;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
+    margin-left: 448px;
+    width: 1424px;
     height: 100%;
     z-index: 0;
-    /* background-color: blue; */
 }
 
-.choicePageLeftSection1 {
+.selectModeSection1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid black;
-    border-radius: 5rem;
-    /* background-color: greenyellow; */
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
-    z-index: 20;
-}
-
-.choicePageRightSection {
-    display: flex;
-    margin-left: 100px;
-    justify-content: flex-start ;
-    align-items: center;
-    width: 100%;
+    width: 688px;
     height: 100%;
-    /* background-color: blue; */
 }
 
-.choicePageRightSection1 {
+.selectMode1Total {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 700px;
+    border-radius: 1.5rem;
+    background-color: #F2E7FC;
+}
+
+.selectMode1Total img {
+    width: 688px;
+    height: 700px;
+}
+
+.selectMode1Content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 688px;
+    height: 250px;
+}
+
+.selectMode1Title {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    border: 3px solid black;
-    border-radius: 5rem;
-    /* background-color: greenyellow; */
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
-    z-index: 20;
+    align-items: flex-end;
+    font-size: 48px;
+    color: #9D4FE8;
+    width: 100%;
+    height: 50%;
 }
 
-.choiceImageLeftSection {
-    width: 300px;
-    height: 270px;
+.selectMode1Name {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    color: #9D4FE8;
+    font-size: 32px;
 }
 
-.choiceImageLeftSectionText {
-    font-weight: bold;
-    color: black;
+.selectModeSection2 {
+    display: flex;
+    flex-direction: column;
+    width: 688px;
+    height: 100%;
+    margin-left: 48px;
 }
 
-.choiceImageRightSection {
-    width: 250px;
-    height: 210px;
-    margin-top: 20px;
-}
-.choiceImageRightSectionText {
-    color: black;
-    padding-top: 40px;
-    font-weight: bold;
+.selectMode2Total {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+    border-radius: 1.5rem;
+    background-color: #EBF2FF;
 }
 
-.link-Mode {
-    z-index: 20;
+
+.selectMode2Title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 48px;
+    color: #0060C4;
+    width: 100%;
+    height: 50%;
 }
 
+.selectMode2Name {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    color: #0060C4;
+    font-size: 32px;
+}
+
+.selectMode2Total img {
+    width: 688px;
+    height: 700px;
+}
+
+
+  /*
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  Desktop Responsive 
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  */
+
+  @media only screen and (max-width: 1920px) and (min-width: 1660px) and (min-height: 800px) {
+        
+    .selectModeContainer {
+        width: 74.167vw;
+    }
+    
+    .selectModeSection1 {
+        width: 35.833vw;
+    }
+        
+    .selectMode1Content {
+        width: 35.833vw;
+    }
+    .selectMode1Total img {
+        width: 35.833vw;
+    }
+    .selectMode1Title {
+        font-size: 2.5vw;
+    }
+    
+    .selectMode1Name {
+        font-size: 1.667vw;
+    }
+    
+    .selectModeSection2 {
+        width: 35.833vw;
+    }    
+    
+    .selectMode2Title {
+        font-size: 2.5vw;
+    }
+    
+    .selectMode2Name {
+        font-size: 1.667vw;
+    }
+    .selectMode2Total img {
+        width: 35.833vw;
+    }
+  }
+
+  @media only screen and (max-width: 1660px) and (min-width: 1440px) and (min-height: 800px) {
+    
+    .selectModeContainer {
+        width: 66.75vw;
+    }
+    
+    .selectModeSection1 {
+        width: 32.25vw;
+    }
+        
+    .selectMode1Total img {
+        width: 32.25vw;
+    }
+    
+    .selectMode1Content {
+        width: 32.25vw;
+    }
+    
+    .selectMode1Title {
+        font-size: 2.25vw;
+    }
+    
+    .selectMode1Name {
+        font-size: 1.5vw;
+    }
+    
+    .selectModeSection2 {
+        width: 32.25vw;
+        margin-left: 36px;
+    }
+    
+    .selectMode2Title {
+        font-size: 2.25vw;
+    }
+    
+    .selectMode2Name {
+        font-size: 1.5vw;
+    }
+    
+    .selectMode2Total img {
+        width: 32.25vw;
+    }
+}
+
+  @media only screen and (max-width: 1440px) and (min-width: 1280px) and (min-height: 800px) {
+    .selectModeContainer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 586px;
+    }
+    .selectModeSection2 {
+        margin-left: 0px;
+    }
+    
+  }
+
+  @media only screen and (max-width: 1280px) and (min-height: 800px) {
+    .choicePageContainer {
+        overflow-x: hidden;
+    }
+
+    .selectModeContainer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 448px;
+        overflow-x: hidden;
+    }
+    .selectModeSection2 {
+        margin-left: 0px;
+    }
+  }
+  /*
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  NoteBook Responsive 
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  */
+
+@media only screen and (max-width: 1640px) and (min-width: 1310px) and (max-height: 796px) {
+    
+    .selectModeContainer {
+        display: flex;
+        margin-left: 336px;
+        width: 74.167vw;
+    }
+    
+    .selectModeSection1 {
+        width: 35.833vw;
+    }
+    
+    .selectMode1Total {
+        height: 580px;
+    }
+    
+    .selectMode1Total img {
+        width: 35.833vw;
+        height: 580px;
+    }
+    
+    .selectMode1Content {
+        width: 35.833vw;
+        height: 187.5px;
+    }
+    
+    .selectMode1Title {
+        font-size: 2.5vw;
+    }
+    
+    .selectMode1Name {
+        font-size: 1.667vw;
+    }
+    
+    .selectModeSection2 {
+        width: 35.833vw;
+        margin-left: 36px;
+    }
+    
+    .selectMode2Total {
+        height: 580px;
+    }
+    
+    
+    .selectMode2Title {
+        font-size: 2.5vw;
+    }
+    
+    .selectMode2Name {
+        font-size: 1.667vw;
+    }
+    
+    .selectMode2Total img {
+        width: 35.833vw;
+        height: 600px;
+    }
+        
+}
+
+@media only screen and (max-width: 1310px) and (min-width: 960px) and (max-height: 796px) {
+    .selectModeContainer {
+        display: flex;
+        margin-left: 336px;
+        width: 62.824vw;
+    }
+    
+    .selectModeSection1 {
+        width: 30.353vw;
+    }
+    
+    .selectMode1Total {
+        height: 580px;
+    }
+    
+    .selectMode1Total img {
+        width: 30.353vw;
+        height: 580px;
+    }
+    
+    .selectMode1Content {
+        width: 30.353vw;
+        height: 187.5px;
+    }
+    
+    .selectMode1Title {
+        font-size: 2.118vw;
+    }
+    
+    .selectMode1Name {
+        font-size: 1.412vw;
+    }
+    
+    .selectModeSection2 {
+        width: 30.353vw;
+        margin-left: 36px;
+    }
+    
+    .selectMode2Total {
+        height: 580px;
+    }
+    
+    
+    .selectMode2Title {
+        font-size: 2.118vw;
+    }
+    
+    .selectMode2Name {
+        font-size: 1.412vw;
+    }
+    
+    .selectMode2Total img {
+        width: 30.353vw;
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 960px) and (max-height: 796px) {
+    .choicePageContainer {
+        overflow-x: hidden;
+    }
+    
+    .selectModeContainer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 336px;
+        width: 1068.005px;
+    }
+    
+    .selectModeSection1 {
+        width: 515.995px;
+    }
+    
+    .selectMode1Total {
+        height: 580px;
+    }
+    
+    .selectMode1Total img {
+        width: 515.995px;
+        height: 580px;
+    }
+    
+    .selectMode1Content {
+        width: 515.995px;
+        height: 187.5px;
+    }
+    
+    .selectMode1Title {
+        font-size: 36px;
+    }
+    
+    .selectMode1Name {
+        font-size: 24.005px;
+    }
+    
+    .selectModeSection2 {
+        width: 515.995px;
+        margin-left: 0px;
+    }
+    
+    .selectMode2Total {
+        height: 580px;
+    }
+    
+    
+    .selectMode2Title {
+        font-size: 36px;
+    }
+    
+    .selectMode2Name {
+        font-size: 24.005px;
+    }
+    
+    .selectMode2Total img {
+        width: 515.995px;
+        height: 600px;
+    }
+    
+}
 
 
 

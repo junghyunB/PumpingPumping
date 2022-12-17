@@ -1,14 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Mode2BuyPage.css";
-import Button from "react-bootstrap/Button";
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { mode2main } from "../assets/images";
-import { Link } from "react-router-dom";
 import { epochAction } from "../redux/actions/epochAction";
 import { epochM2Action } from "../redux/actions/epochM2Action";
+import { raffle_ball1, raffle_ball2} from '../assets/images';
+import { OneTimerM1, OneTimerM2 } from '../components';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+
 
 const Mode2BuyPage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
 
   const epoch = useSelector(state => state.epochM1.epoch);
   const epochM2 = useSelector(state => state.epochM2.epochM2);
@@ -19,91 +25,52 @@ const Mode2BuyPage = () => {
 
   return (
     <div className="mode2BuyPageContainer">
-      <div className="mode2BuyPageSection">
-        <div className="mode2selectSection">
-          <Link to="/mode2buy" className="z-indexZone">
-            <Button variant="outline-dark">BuyTicket</Button>
-          </Link>
-          <Link to="/mode2my" className="z-indexZone">
-            <Button variant="outline-dark">MyPage</Button>
-          </Link>
-        </div>
-        <div className="mode2selectTicketSection1">
-          <div className="TicketSection1">
-            <Link to="/mode2buy/ticket1" className="z-indexZone">
-              <div className="Ticket1">
-                <div className="imageSection">
-                  <img alt="mode2!" className="imgSize" src={mode2main}></img>
-                </div>
-                <div className="textSection">
-                  <p className="ticketText">Ticket#1</p>
-                  <p>(6 klay)</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="TicketSection2">
-            <Link to="/mode2buy/ticket2" className="z-indexZone">
-              <div className="Ticket2">
-                <div className="imageSection">
-                  <img alt="mode2!" className="imgSize" src={mode2main}></img>
-                </div>
-                <div className="textSection">
-                  <p className="ticketText">Ticket#2</p>
-                  <p>(9 klay)</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="TicketSection3">
-            <Link to="/mode2buy/ticket3" className="z-indexZone">
-              <div className="Ticket3">
-                <div className="imageSection">
-                  <img alt="mode2!" className="imgSize" src={mode2main}></img>
-                </div>
-                <div className="textSection">
-                  <p className="ticketText">Ticket#3</p>
-                  <p>(12 klay)</p>
-                </div>
-              </div>
-            </Link>
+      <div className="mode2BuyTopLine">
+        <div className="OnetimerSection">
+          <div className="Onemode1Timer">
+            <OneTimerM1 />
           </div>
         </div>
-        <div className="mode2selectTicketSection2">
-          <div className="TicketSection4">
-            <div className="ticketSection4-1"></div>
-            <div className="ticketSection4-2">
-              <Link to="/mode2buy/ticket4" className="z-indexZone">
-                <div className="Ticket4">
-                  <div className="imageSection">
-                    <img alt="mode2!" className="imgSize" src={mode2main}></img>
-                  </div>
-                  <div className="textSection">
-                    <p className="ticketText">Ticket#4</p>
-                    <p>(15 klay)</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="TicketSection5">
-            <div className="ticketSection5-1">
-              <Link to="/mode2buy/ticket5" className="z-indexZone">
-                <div className="Ticket5">
-                  <div className="imageSection">
-                    <img alt="mode2!" className="imgSize" src={mode2main}></img>
-                  </div>
-                  <div className="textSection">
-                    <p className="ticketText">Ticket#5</p>
-                    <p>(18 klay)</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="ticketSection5-2"></div>
+        <div className="OnetimerSection">
+          <div className="Onemode2Timer">
+            <OneTimerM2 />
           </div>
         </div>
       </div>
+      <div className="mode2BuyPageSection">
+      <div className="mode2buypagetitle">
+          <p>MODE #2</p>
+        </div>
+        <div className="mode2buypagetext">
+          <p>
+          This is an event to guess the winning number.
+          <br />
+          Select a number between 1 and 250.
+          </p>
+        </div>
+        <div className="mode2SelectSection">
+          <div
+            className="mode2buySection"
+            onClick={() => navigate("/mode2buy")}
+          >
+            <p>Buy</p>
+          </div>
+          <div
+            className="mode2mypageSection"
+            onClick={() => navigate("/mode2my")}
+          >
+            <p>My Page</p>
+          </div>
+        </div>
+        <div className='mode2SelectTicketContainer'>
+          <div className='firstmode2SelectTicketSection' onClick={() => navigate("/mode2buy/ticket1")}>
+          </div>
+          <div className='mode2SelectTicketSection' onClick={() => navigate("/mode2buy/ticket2")}></div>
+          <div className='mode2SelectTicketSection' onClick={() => navigate("/mode2buy/ticket3")}></div>
+          <div className='mode2SelectTicketSection' onClick={() => navigate("/mode2buy/ticket4")}></div>
+          <div className='mode2SelectTicketSection' onClick={() => navigate("/mode2buy/ticket5")}></div>
+        </div>
+        </div>
     </div>
   );
 };

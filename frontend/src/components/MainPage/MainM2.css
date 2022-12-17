@@ -1,120 +1,165 @@
 .mainPageRightContainer {
-    display: flex;
-    margin-left: 48px;
-    width: 688px;
-    flex-direction: column;
-    z-index: 0;
-    /* background-color: gold; */
+  display: flex;
+  margin-left: 48px;
+  width: 688px;
+  flex-direction: column;
+  z-index: 0;
+  /* background-color: gold; */
 }
 
 .mode2maintitle {
-    display: flex;
-    width: 100%;
-    height: 48px;
-    font-size: 48px;
-    color: #0060C4;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 48px;
+  font-size: 48px;
+  color: #0060c4;
+  align-items: center;
 }
 
 .mode2maintext {
-    width: 100%;
-    height: 90px;
-    font-size: 24px;
+  width: 100%;
+  height: 90px;
+  font-size: 24px;
 }
 
 .mode2mainround {
-    display: flex;
-    width: 100%;
-    height: 192px;
+  display: flex;
+  width: 100%;
+  height: 234px;
 }
 
 .mode2mainbtn1 {
-    display: flex;
-    width: 48px;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 0.5rem;
+  display: flex;
+  width: 48px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
 }
 
 .mode2mainbtn1 img {
-    width: 36px;
-    height: 24px;
+  width: 36px;
+  height: 24px;
 }
 
 .mode2mainbtn1:hover {
-    background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .mode2mainroundsection {
-    display: flex;
-    flex-direction: column;
-    width: 592px;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 592px;
+  height: 100%;
 }
 
 .mode2mainroundsection1 {
-    width: 100%;
-    height: 50%;
-    text-align: center;
-    padding-top: 30px;
-    font-size: 48px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 48px;
 }
 
 .mode2mainroundsection2 {
-    display: flex;
-    width: 100%;
-    height: 50%;
-    font-size: 24px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  font-size: 24px;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.mode2winningBallTitle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  font-size: 18px;
+  color: #0060c4;
+  /* background-color: #0060C4; */
+}
+
+.mode2winningBallTitle img {
+  width: 17px;
+  height: 15px;
+  margin-top: 5px;
+  margin-right: 3px;
+  filter: invert(22%) sepia(87%) saturate(2313%) hue-rotate(199deg) brightness(93%) contrast(101%);
+}
+
+.mode2BallData {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+}
+
+.mode2BallData img {
+  width: 96px;
+  height: 96px;
+}
+
+.mode2MainWinningNumber {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  margin-top: 15px;
+}
+
+.mode2MainWinningData {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  margin-top: 40px;
 }
 
 .mode2mainbtn2 {
-    display: flex;
-    width: 48px;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 0.5rem;
+  display: flex;
+  width: 48px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
 }
 
 .mode2mainbtn2 img {
-    width: 36px;
-    height: 24px;
+  width: 36px;
+  height: 24px;
 }
 
 .mode2mainbtn2:hover {
-    background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .mode2reaminSection {
-    width: 100%;
-    height: 53px;
+  width: 100%;
+  height: 53px;
 }
 
 .mode2mainBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
 }
 
 .mode2mainBtn button {
-    width: 100%;
-    height: 64px;
-    font-size: 24px;
-    font-weight: bold;
-    border: none;
-    background-color: #0060C4;
+  width: 100%;
+  height: 64px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: #0060c4;
 }
 
 .mode2mainBtn button:hover {
-    background-color: #3591f2;
+  background-color: #3591f2;
 }
-
 
 /*
 ***************************
@@ -129,136 +174,113 @@ Desktop Responsive
 ***************************
 ***************************
 */
-@media only screen and (max-width: 1920px) and (min-width: 1440px) and (min-height:800px) {
-    .mainPageRightContainer {
-        display: flex;
-        margin-left: 2.5vw;
-        width: 35.833vw;
-        flex-direction: column;
-        z-index: 0;
-        /* background-color: gold; */
-    }
-    
-    .mode2maintitle {
-        display: flex;
-        width: 100%;
-        height: 48px;
-        font-size: 2.5vw;
-        color: #0060C4;
-        align-items: center;
-    }
-    
-    .mode2maintext {
-        width: 100%;
-        height: 90px;
-        font-size: 1.25vw;
-    }
-    
-    .mode2mainround {
-        display: flex;
-        width: 100%;
-        height: 192px;
-    }
-    
-    .mode2mainbtn1 {
-        display: flex;
-        width: 2.5vw;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.5rem;
-    }
-    
-    .mode2mainbtn1 img {
-        width: 1.875vw;
-        height: 24px;
-    }
-    
-    .mode2mainbtn1:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode2mainroundsection {
-        display: flex;
-        flex-direction: column;
-        width: 30.833vw;
-        height: 100%;
-    }
-    
-    .mode2mainroundsection1 {
-        width: 100%;
-        height: 50%;
-        text-align: center;
-        padding-top: 30px;
-        font-size: 2.5vw;
-    }
-    
-    .mode2mainroundsection2 {
-        display: flex;
-        width: 100%;
-        height: 50%;
-        font-size: 1.25vw;
-        justify-content: center;
-    }
-    
-    .mode2mainbtn2 {
-        display: flex;
-        width: 2.5vw;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.5rem;
-    }
-    
-    .mode2mainbtn2 img {
-        width: 1.875vw;
-        height: 24px;
-    }
-    
-    .mode2mainbtn2:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode2reaminSection {
-        width: 100%;
-        height: 53px;
-    }
-    
-    .mode2mainBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100px;
-    }
-    
-    .mode2mainBtn button {
-        width: 100%;
-        height: 64px;
-        font-size: 1.25vw;
-        font-weight: bold;
-        border: none;
-        background-color: #0060C4;
-    }
-    
-    .mode2mainBtn button:hover {
-        background-color: #3591f2;
-    }
-    
-}
-@media only screen and (max-width: 1440px) and (min-height: 800px) {
-    .mainPageRightContainer {
-        display: flex;
-        margin-left: 448px;
-        width: 688px;
-        flex-direction: column;
-        z-index: 0;
-        /* background-color: gold; */
-    }
+@media only screen and (max-width: 1920px) and (min-width: 1660px) and (min-height: 800px) {
+  .mainPageRightContainer {
+    margin-left: 2.5vw;
+    width: 35.833vw;
+  }
+
+  .mode2maintitle {
+    font-size: 2.5vw;
+  }
+
+  .mode2maintext {
+    font-size: 1.25vw;
+  }
+  .mode2mainbtn1 {
+    width: 2.5vw;
+  }
+
+  .mode2mainbtn1 img {
+    width: 1.875vw;
+    height: 24px;
+  }
+
+  .mode2mainroundsection {
+    width: 30.833vw;
+  }
+
+  .mode2mainroundsection1 {
+    font-size: 2.5vw;
+  }
+
+  .mode2mainroundsection2 {
+    font-size: 1.25vw;
+  }
+
+  .mode2mainbtn2 {
+    width: 2.5vw;
+  }
+
+  .mode2mainbtn2 img {
+    width: 1.875vw;
+  }
+
+  .mode2mainBtn button {
+    font-size: 1.25vw;
+  }
 }
 
+@media only screen and (max-width: 1660px) and (min-width: 1440px) and (min-height: 800px) {
+ /*
+ px-to-vw 1600
+ */
+  .mainPageRightContainer {
+    margin-left: 36px;
+    width: 32.25vw;
+  }
+
+  .mode2maintitle {
+    font-size: 2.25vw;
+  }
+
+  .mode2maintext {
+    font-size: 1.125vw;
+  }
+  .mode2mainbtn1 {
+    width: 2.25vw;
+  }
+
+  .mode2mainbtn1 img {
+    width: 2.313vw;
+    height: 1.5vw;
+  }
+
+  .mode2mainroundsection {
+    width: 27.75vw;
+  }
+
+  .mode2mainroundsection1 {
+    font-size: 2.25vw;
+  }
+
+  .mode2mainroundsection2 {
+    font-size: 1.125vw;
+  }
+
+  .mode2mainbtn2 {
+    width: 2.25vw;
+  }
+
+  .mode2mainbtn2 img {
+    width: 1.688vw;
+  }
+
+  .mode2mainBtn button {
+    font-size: 1.125vw;
+  }
+}
+@media only screen and (max-width: 1440px) and (min-width: 1280px) and (min-height: 800px) {
+  .mainPageRightContainer {
+    margin-left: 568px;
+  }
+  
+}
+@media only screen and (max-width: 1280px) and (min-height: 800px) {
+  .mainPageRightContainer {
+    margin-left: 448px;
+  }
+}
 
 /*
 ***************************
@@ -274,246 +296,286 @@ NoteBook Responsive
 ***************************
 */
 
-@media only screen and (max-width: 1440px) and (min-width: 961px) and (max-height:796px) {
-    .mainPageRightContainer {
-        display: flex;
-        margin-left: 2.5vw;
-        width: 35.833vw;
-        flex-direction: column;
-        z-index: 0;
-        /* background-color: gold; */
-    }
-    
-    .mode2maintitle {
-        display: flex;
-        width: 100%;
-        height: 36px;
-        font-size: 2.5vw;
-        color: #0060C4;
-        align-items: center;
-    }
-    
-    .mode2maintext {
-        width: 100%;
-        height: 67.5px;
-        font-size: 1.25vw;
-    }
-    
-    .mode2mainround {
-        display: flex;
-        width: 100%;
-        height: 144px;
-    }
-    
-    .mode2mainbtn1 {
-        display: flex;
-        width: 2.5vw;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.375rem;
-    }
-    
-    .mode2mainbtn1 img {
-        width: 1.875vw;
-        height: 18px;
-    }
-    
-    .mode2mainbtn1:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode2mainroundsection {
-        display: flex;
-        flex-direction: column;
-        width: 30.833vw;
-        height: 100%;
-    }
-    
-    .mode2mainroundsection1 {
-        width: 100%;
-        height: 50%;
-        text-align: center;
-        padding-top: 22.5px;
-        font-size: 2.5vw;
-    }
-    
-    .mode2mainroundsection2 {
-        display: flex;
-        width: 100%;
-        height: 50%;
-        font-size: 1.25vw;
-        justify-content: center;
-    }
-    
-    .mode2mainbtn2 {
-        display: flex;
-        width: 2.5vw;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.375rem;
-    }
-    
-    .mode2mainbtn2 img {
-        width: 1.875vw;
-        height: 18px;
-    }
-    
-    .mode2mainbtn2:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode2reaminSection {
-        width: 100%;
-        height: 39.75px;
-    }
-    
-    .mode2mainBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 120px;
-    }
-    
-    .mode2mainBtn button {
-        width: 100%;
-        height: 48px;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-        background-color: #0060C4;
-    }
-    
-    .mode2mainBtn button:hover {
-        background-color: #3591f2;
-    }
-    
+@media only screen and (max-width: 1640px) and (min-width: 1310px) and (max-height: 796px) {
+  .mainPageRightContainer {
+    margin-left: 2.5vw;
+    width: 35.833vw;
+  }
+
+  .mode2maintitle {
+    height: 36px;
+    font-size: 2.5vw;
+  }
+
+  .mode2maintext {
+    height: 67.5px;
+    font-size: 1.25vw;
+  }
+
+  .mode2mainround {
+    height: 165px;
+  }
+
+  .mode2mainbtn1 {
+    width: 2.5vw;
+    border-radius: 0.375rem;
+  }
+
+  .mode2mainbtn1 img {
+    width: 1.875vw;
+    height: 18px;
+  }
+
+  .mode2mainroundsection {
+    width: 30.833vw;
+  }
+
+  .mode2mainroundsection1 {
+    padding-top: 22.5px;
+    font-size: 2.5vw;
+  }
+
+  .mode2mainroundsection2 {
+    font-size: 1.25vw;
+  }
+
+  .mode2winningBallTitle {
+    font-size: 13.507px;
+  }
+  .mode2winningBallTitle img {
+    width: 12.5px;
+    height: 11.5px;
+    margin-top: 3.75px;
+    margin-right: 2.25px;
+  }
+
+  .mode2BallData img {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .mode2MainWinningNumber {
+    font-size: 1.25vw;
+    margin-top: 11.25px;
+  }
+
+  .mode2MainWinningData {
+    font-size: 1.25vw;
+    margin-top: 30px;
+  }
+
+  .mode2mainbtn2 {
+    width: 2.5vw;
+    border-radius: 0.375rem;
+  }
+
+  .mode2mainbtn2 img {
+    width: 1.875vw;
+    height: 18px;
+  }
+
+  .mode2reaminSection {
+    width: 100%;
+    height: 39.75px;
+  }
+
+  .mode2mainBtn {
+    height: 120px;
+  }
+
+  .mode2mainBtn button {
+    height: 48px;
+    font-size: 18px;
+  }
 }
 
+@media only screen and (max-width: 1310px) and (min-width: 960px) and (max-height: 796px) {
+
+  /*
+  px-to-vw 1700
+  */
+  .mainPageRightContainer {
+    margin-left: 36px;
+    width: 30.353vw;
+  }
+
+  .mode2maintitle {
+    height: 36px;
+    font-size: 2.118vw;
+  }
+
+  .mode2maintext {
+    height: 67.5px;
+    font-size: 1.059vw;
+  }
+
+  .mode2mainround {
+    height: 165px;
+  }
+
+  .mode2mainbtn1 {
+    width: 2.118vw;
+    border-radius: 0.375rem;
+  }
+
+  .mode2mainbtn1 img {
+    width: 1.588vw;
+    height: 18px;
+  }
+
+  .mode2mainroundsection {
+    width: 26.117vw;
+  }
+
+  .mode2mainroundsection1 {
+    padding-top: 22.5px;
+    font-size: 2.118vw;
+  }
+
+  .mode2mainroundsection2 {
+    font-size: 1.059vw;
+  }
+
+  .mode2winningBallTitle {
+    font-size: 13.5px;
+  }
+  .mode2winningBallTitle img {
+    width: 12.5px;
+    height: 11.5px;
+    margin-top: 3.75px;
+    margin-right: 2.25px;
+  }
+
+  .mode2BallData img {
+    width: 4.235vw;
+    height: 4.235vw;
+  }
+
+  .mode2MainWinningNumber {
+    font-size: 1.059vw;
+    margin-top: 11.25px;
+  }
+
+  .mode2MainWinningData {
+    font-size: 1.059vw;
+    margin-top: 30px;
+  }
+
+  .mode2mainbtn2 {
+    width: 2.118vw;
+    border-radius: 0.375rem;
+  }
+
+  .mode2mainbtn2 img {
+    width: 1.588vw;
+    height: 18px;
+  }
+
+  .mode2reaminSection {
+    height: 39.75px;
+  }
+
+  .mode2mainBtn {
+    height: 120px;
+  }
+
+  .mode2mainBtn button {
+    height: 48px;
+    font-size: 1.059vw;
+  }
+
+}
+
+@media only screen and (max-width: 960px) and (max-height: 796px) {
+  .mainPageRightContainer {
+    margin-left: 336px;
+    width: 516px;
+  }
+
+  .mode2maintitle {
+    height: 36px;
+    font-size: 36px;
+  }
+
+  .mode2maintext {
+    height: 67.5px;
+    font-size: 18px;
+  }
+
+  .mode2mainround {
+    height: 165px;
+  }
+
+  .mode2mainbtn1 {
+    width: 36px;
+    border-radius: 0.375rem;
+  }
+
+  .mode2mainbtn1 img {
+    width: 27px;
+    height: 18px;
+  }
+
+  .mode2mainroundsection {
+    width: 444px;
+  }
+
+  .mode2mainroundsection1 {
+    padding-top: 22.5px;
+    font-size: 36px;
+  }
+
+  .mode2mainroundsection2 {
+    font-size: 18px;
+  }
+
+  .mode2winningBallTitle {
+    font-size: 13.5px;
+  }
+
+  .mode2winningBallTitle img {
+    width: 12.5px;
+    height: 11.5px;
+    margin-top: 3.75px;
+    margin-right: 2.25px;
+  }
 
 
+  .mode2BallData img {
+    width: 72px;
+    height: 72px;
+  }
 
+  .mode2MainWinningNumber {
+    font-size: 18px;
+    margin-top: 11.25px;
+  }
 
-@media only screen and (max-width: 960px) and (max-height:796px) {
-    .mainPageRightContainer {
-        display: flex;
-        margin-left: 336px;
-        width: 516px;
-        flex-direction: column;
-        z-index: 0;
-        /* background-color: gold; */
-    }
-    
-    .mode2maintitle {
-        display: flex;
-        width: 100%;
-        height: 36px;
-        font-size: 36px;
-        color: #0060C4;
-        align-items: center;
-    }
-    
-    .mode2maintext {
-        width: 100%;
-        height: 67.5px;
-        font-size: 18px;
-    }
-    
-    .mode2mainround {
-        display: flex;
-        width: 100%;
-        height: 144px;
-    }
-    
-    .mode2mainbtn1 {
-        display: flex;
-        width: 36px;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.375rem;
-    }
-    
-    .mode2mainbtn1 img {
-        width: 27px;
-        height: 18px;
-    }
-    
-    .mode2mainbtn1:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode2mainroundsection {
-        display: flex;
-        flex-direction: column;
-        width: 444px;
-        height: 100%;
-    }
-    
-    .mode2mainroundsection1 {
-        width: 100%;
-        height: 50%;
-        text-align: center;
-        padding-top: 22.5px;
-        font-size: 36px;
-    }
-    
-    .mode2mainroundsection2 {
-        display: flex;
-        width: 100%;
-        height: 50%;
-        font-size: 18px;
-        justify-content: center;
-    }
-    
-    .mode2mainbtn2 {
-        display: flex;
-        width: 36px;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.375rem;
-    }
-    
-    .mode2mainbtn2 img {
-        width: 27px;
-        height: 18px;
-    }
-    
-    .mode2mainbtn2:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode2reaminSection {
-        width: 100%;
-        height: 39.75px;
-    }
-    
-    .mode2mainBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 120px;
-    }
-    
-    .mode2mainBtn button {
-        width: 100%;
-        height: 48px;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-        background-color: #0060C4;
-    }
-    
-    .mode2mainBtn button:hover {
-        background-color: #3591f2;
-    }
-    
+  .mode2MainWinningData {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .mode2mainbtn2 {
+    width: 36px;
+    border-radius: 0.375rem;
+  }
+
+  .mode2mainbtn2 img {
+    width: 27px;
+    height: 18px;
+  }
+
+  .mode2reaminSection {
+    height: 39.75px;
+  }
+
+  .mode2mainBtn {
+    height: 120px;
+  }
+
+  .mode2mainBtn button {
+    height: 48px;
+    font-size: 18px;
+  }
 }

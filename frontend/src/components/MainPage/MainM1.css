@@ -1,37 +1,37 @@
 .mainPageLeftSection {
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin-left: 448px;
     z-index: 0;
     width: 688px;
     /* background-color: aqua; */
-}
-
-.mode1maintitle {
+  }
+  
+  .mode1maintitle {
     display: flex;
     width: 100%;
     height: 48px;
     font-size: 48px;
-    color: #9D4FE8;
+    color: #9d4fe8;
     align-items: center;
     /* background-color: gold; */
-}
-
-.mode1maintext {
+  }
+  
+  .mode1maintext {
     width: 100%;
     height: 90px;
     font-size: 24px;
     /* background-color: red; */
-}
-
-.mode1mainround {
+  }
+  
+  .mode1mainround {
     display: flex;
     width: 100%;
-    height: 192px;
+    height: 234px;
     /* background-color: yellow; */
-}
-
-.mode1mainbtn1 {
+  }
+  
+  .mode1mainbtn1 {
     display: flex;
     width: 48px;
     height: 100%;
@@ -39,45 +39,107 @@
     justify-content: center;
     cursor: pointer;
     border-radius: 0.5rem;
-}
-
-.mode1mainbtn1 img {
+  }
+  
+  .mode1mainbtn1 img {
     width: 36px;
     height: 24px;
-}
-
-.mode1mainbtn1:hover {
-    background-color: #F2F2F2;
-}
-
-.mode1mainroundsection {
+  }
+  
+  .mode1mainbtn1:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .mode1mainroundsection {
     display: flex;
     flex-direction: column;
     width: 592px;
     height: 100%;
     /* background-color: aqua; */
-}
-
-.mode1mainroundsection1 {
+  }
+  
+  .mode1mainroundsection1 {
     width: 100%;
     height: 50%;
     text-align: center;
     padding-top: 30px;
     font-size: 48px;
     /* background-color: gold; */
-}
-
-
-.mode1mainroundsection2 {
+  }
+  
+  .mode1mainroundsection2 {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 50%;
     font-size: 24px;
-    justify-content: center;
-    /* background-color: red; */
-}
+  }
 
-.mode1mainbtn2 {
+  .proceedingSection {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    color: #FF9140;
+    justify-content: center;
+  }
+
+  .proceedingSection img {
+    width: 24px;
+    height: 24px;
+    margin-top: 6px;
+    margin-right: 8px;
+  }
+  
+  .proceedingTicketSection {
+    display: flex;
+    justify-content: center;
+  }
+
+  .proceedingTicketSection img {
+    width: 184px;
+    height: 88px;
+    margin-top: 8px;
+  }
+
+  .mode1winningTicketTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    font-size: 18px;
+    color: #9d4fe8;
+  }
+  
+  .mode1winningTicketTitle img {
+    width: 17px;
+    height: 15px;
+    margin-top: 5px;
+    margin-right: 3px;
+    filter: invert(39%) sepia(55%) saturate(6048%) hue-rotate(254deg) brightness(100%) contrast(83%);
+  }
+  
+  .mode1winningTicketData {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    margin-left: 205px;
+  }
+  
+  .mode1winningTicketData img {
+    width: 184px;
+    height: 88px;
+
+  }
+  
+  .mode1TicketonDataSection1 {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 20px;   
+  }
+  
+  .mode1mainbtn2 {
     display: flex;
     width: 48px;
     height: 100%;
@@ -85,628 +147,763 @@
     justify-content: center;
     cursor: pointer;
     border-radius: 0.5rem;
-}
-
-.mode1mainbtn2 img {
+  }
+  
+  .mode1mainbtn2 img {
     width: 36px;
     height: 24px;
-}
-
-.mode1mainbtn2:hover {
-    background-color: #F2F2F2;
-}
-
-.mode1remainSection {
+  }
+  
+  .mode1mainbtn2:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .mode1remainSection {
     width: 100%;
     height: 53px;
-}
-
-.mode1mainprize {
+  }
+  
+  .mode1mainprize {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 264px;
-    border: solid 2px #F2F2F2;
+    height: 222px;
+    border: solid 2px #f2f2f2;
     border-radius: 1rem;
     /* background-color: blue; */
-}
-
-.mode1mainprizetitle {
+  }
+  
+  .mode1mainprizetitle {
     display: flex;
     font-size: 24px;
     width: 100%;
-    height: 87px;
+    height: 102px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     /* background-color: gold; */
-}
-
-.mode1mainprizeklaytn {
+  }
+  
+  .mode1mainprizeklaytn {
     display: flex;
     width: 100%;
-    height: 177px;
+    height: 120px;
     font-size: 45px;
     justify-content: center;
     align-items: center;
     /* background-color: aqua; */
-}
-
-.mode1mainprizeklaytn img {
+  }
+  
+  .mode1mainprizeklaytn img {
     width: 48px;
     height: 48px;
-}
-
-.mode1mainprizeklaytn p {
+  }
+  
+  .mode1mainprizeklaytn p {
     margin-left: 10px;
-}
-
-.mode1mainprizeklaytn img {
+  }
+  
+  .mode1mainprizeklaytn img {
     padding-bottom: 10px;
-}
-
-.mode1mainBtn {
+  }
+  
+  .mode1mainBtn {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100px;
     /* background-color: green; */
-}
-
-.mode1mainBtn button {
+  }
+  
+  .mode1mainBtn button {
     width: 100%;
     height: 64px;
     font-size: 24px;
     font-weight: bold;
     border: none;
-    background-color: #9D4FE8;
-}
-
-.mode1mainBtn button:hover {
+    background-color: #9d4fe8;
+  }
+  
+  .mode1mainBtn button:hover {
     background-color: #ae77ed;
-}
-
-/*
-***************************
-***************************
-***************************
-***************************
-***************************
-Desktop Responsive 
-***************************
-***************************
-***************************
-***************************
-***************************
-*/
-
-@media only screen and (max-width: 1920px) and (min-width: 1440px) and (min-height:800px) {
+  }
+  
+  /*
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  Desktop Responsive 
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  */
+  
+  @media only screen and (max-width: 1920px) and (min-width: 1660px) and (min-height: 800px) {
     .mainPageLeftSection {
-        display:flex;
-        flex-direction: column;
-        margin-left: 448px;
-        z-index: 0;
-        width: 35.833vw;
-        /* background-color: aqua; */
+      width: 35.833vw;
     }
-    
+  
     .mode1maintitle {
-        display: flex;
-        width: 100%;
-        height: 48px;
-        font-size: 2.5vw;
-        color: #9D4FE8;
-        align-items: center;
-        /* background-color: gold; */
+      font-size: 2.5vw;
     }
-    
+  
     .mode1maintext {
-        width: 100%;
-        height: 90px;
-        font-size: 1.25vw;
-        /* background-color: red; */
+      font-size: 1.25vw;
     }
-    
-    .mode1mainround {
-        display: flex;
-        width: 100%;
-        height: 192px;
-        /* background-color: yellow; */
-    }
-    
+  
     .mode1mainbtn1 {
-        display: flex;
-        width: 2.5vw;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.5rem;
+      width: 2.5vw;
     }
-    
+  
     .mode1mainbtn1 img {
-        width: 1.875vw;
-        height: 24px;
+      width: 1.875vw;
     }
-    
-    .mode1mainbtn1:hover {
-        background-color: #F2F2F2;
-    }
-    
+  
     .mode1mainroundsection {
-        display: flex;
-        flex-direction: column;
-        width: 30.833vw;
-        height: 100%;
-        /* background-color: aqua; */
+      width: 30.833vw;
     }
-    
+  
     .mode1mainroundsection1 {
-        width: 100%;
-        height: 50%;
-        text-align: center;
-        padding-top: 30px;
-        font-size: 2.5vw;
-        /* background-color: gold; */
+      font-size: 2.5vw;
     }
-    
-    
+  
     .mode1mainroundsection2 {
-        display: flex;
-        width: 100%;
-        height: 50%;
-        font-size: 1.25vw;
-        justify-content: center;
-        /* background-color: red; */
+      font-size: 1.25vw;
     }
-    
+
+    .proceedingSection img {
+      width: 1.25vw;
+      height: 1.25vw;
+      margin-top: 0.308vw;
+      margin-right: 0.417vw;
+    }
+
+    .proceedingTicketSection img {
+      width: 9.583vw;
+      height: 4.583vw;
+      margin-top: 8px;
+    }
+  
+    .mode1winningTicketTitle img {
+        width: 0.885vw;
+        height: 0.781vw;
+        margin-top: 0.26vw;
+        margin-right: 0.156vw;
+      }
+    .mode1winningTicketData {
+      margin-left: 10.677vw;
+    }
+
+    .mode1winningTicketData img {
+      width: 9.583vw;
+      height: 4.583vw;
+    }
+  
+    .mode1TicketonDataSection1 {
+      font-size: 1.667vw;
+      color: white;
+      position: relative;
+      font-weight: bold;
+      left: -20.5%;
+    }
+  
     .mode1mainbtn2 {
-        display: flex;
-        width: 2.5vw;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.5rem;
+      width: 2.5vw;
     }
-    
+  
     .mode1mainbtn2 img {
-        width: 1.875vw;
-        height: 24px;
+      width: 1.875vw;
     }
-    
-    .mode1mainbtn2:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode1remainSection {
-        width: 100%;
-        height: 53px;
-    }
-    
+  
     .mode1mainprize {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 264px;
-        border: solid 0.104vw #F2F2F2;
-        border-radius: 1rem;
-        /* background-color: blue; */
+      border: solid 0.104vw #f2f2f2;
     }
-    
+  
     .mode1mainprizetitle {
-        display: flex;
-        font-size: 1.25vw;
-        width: 100%;
-        height: 87px;
-        justify-content: center;
-        align-items: center;
-        /* background-color: gold; */
+      font-size: 1.25vw;
     }
-    
+  
     .mode1mainprizeklaytn {
-        display: flex;
-        width: 100%;
-        height: 177px;
-        font-size: 2.344vw;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
+      font-size: 2.344vw;
     }
-    
+  
     .mode1mainprizeklaytn img {
-        width: 2.5vw;
-        height: 48px;
+      width: 2.5vw;
     }
-    
+  
     .mode1mainprizeklaytn p {
-        margin-left: 0.521vw;
+      margin-left: 0.521vw;
     }
-    
-    .mode1mainprizeklaytn img {
-        padding-bottom: 10px;
-    }
-    
-    .mode1mainBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100px;
-        /* background-color: green; */
-    }
-    
+  
     .mode1mainBtn button {
-        width: 100%;
-        height: 64px;
-        font-size: 1.25vw;
-        font-weight: bold;
-        border: none;
-        background-color: #9D4FE8;
+      font-size: 1.25vw;
     }
-    
-    .mode1mainBtn button:hover {
-        background-color: #ae77ed;
-    }
-}
-
-
-
-
-
-/*
-***************************
-***************************
-***************************
-***************************
-***************************
-NoteBook Responsive 
-***************************
-***************************
-***************************
-***************************
-***************************
-*/
-
-@media only screen and (max-width: 1440px) and (min-width: 960px) and (max-height:796px){
+  }
+  
+  @media only screen and (max-width: 1660px) and (min-width: 1440px) and (min-height: 800px) {
+  
+    /*
+    px-to-vw 1600
+    */
+  
     .mainPageLeftSection {
-        display:flex;
-        flex-direction: column;
-        margin-left: 336px;
-        z-index: 0;
-        width: 35.833vw;
-        /* background-color: aqua; */
+      width: 32.25vw;
     }
-    
+  
     .mode1maintitle {
-        display: flex;
-        width: 100%;
-        height: 36px;
-        font-size: 2.5vw;
-        color: #9D4FE8;
-        align-items: center;
-        /* background-color: gold; */
+      font-size: 2.25vw;
     }
-    
+  
     .mode1maintext {
-        width: 100%;
-        height: 67.5px;
-        font-size: 1.25vw;
-        /* background-color: red; */
+      font-size: 1.125vw;
     }
-    
-    .mode1mainround {
-        display: flex;
-        width: 100%;
-        height: 144px;
-        /* background-color: yellow; */
-    }
-    
+  
     .mode1mainbtn1 {
-        display: flex;
-        width: 2.5vw;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.375rem;
+      width: 2.25vw;
     }
-    
+  
     .mode1mainbtn1 img {
-        width: 1.875vw;
-        height: 18px;
+      width: 1.688vw;
     }
-    
-    .mode1mainbtn1:hover {
-        background-color: #F2F2F2;
-    }
-    
+  
     .mode1mainroundsection {
-        display: flex;
-        flex-direction: column;
-        width: 30.833vw;
-        height: 100%;
-        /* background-color: aqua; */
+      width: 27.75vw;
     }
-    
+  
     .mode1mainroundsection1 {
-        width: 100%;
-        height: 50%;
-        text-align: center;
-        padding-top: 22.5px;
-        font-size: 2.5vw;
-        /* background-color: gold; */
+      font-size: 2.25vw;
     }
-    
-    
+  
     .mode1mainroundsection2 {
-        display: flex;
-        width: 100%;
-        height: 50%;
-        font-size: 1.25vw;
-        justify-content: center;
-        /* background-color: red; */
+      font-size: 1.125vw;
     }
-    
-    .mode1mainbtn2 {
-        display: flex;
-        width: 2.5vw;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.375rem;
-    }
-    
-    .mode1mainbtn2 img {
-        width: 1.875vw;
-        height: 18px;
-    }
-    
-    .mode1mainbtn2:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode1remainSection {
-        width: 100%;
-        height: 39.75px;
-    }
-    
-    .mode1mainprize {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 198px;
-        border: solid 0.104vw #F2F2F2;
-        border-radius: 0.75rem;
-        /* background-color: blue; */
-    }
-    
-    .mode1mainprizetitle {
-        display: flex;
-        font-size: 1.25vw;
-        width: 100%;
-        height: 65.25px;
-        justify-content: center;
-        align-items: center;
-        /* background-color: gold; */
-    }
-    
-    .mode1mainprizeklaytn {
-        display: flex;
-        width: 100%;
-        height: 132.75px;
-        font-size: 2.344vw;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
-    
-    .mode1mainprizeklaytn img {
-        width: 2.5vw;
-        height: 36px;
-    }
-    
-    .mode1mainprizeklaytn p {
-        margin-left: 0.521vw;
-    }
-    
-    .mode1mainprizeklaytn img {
-        padding-bottom: 7.5px;
-    }
-    
-    .mode1mainBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 120px;
-        /* background-color: green; */
-    }
-    
-    .mode1mainBtn button {
-        width: 100%;
-        height: 48px;
-        font-size: 1.25vw;
-        font-weight: bold;
-        border: none;
-        background-color: #9D4FE8;
-    }
-    
-    .mode1mainBtn button:hover {
-        background-color: #ae77ed;
-    }
-        
-}
 
-@media only screen and (max-width: 960px) and (max-height:796px){
+    .proceedingSection img {
+      width: 1.5vw;
+      height: 1.5vw;
+      margin-top: 0.25vw;
+      margin-right: 0.5vw;
+    }
+
+    .proceedingTicketSection img {
+      width: 8.813vw;
+      height: 4.125vw;
+      margin-top: 8px;
+    }
+
+    .mode1winningTicketTitle img {
+        width: 1.063vw;
+        height: 0.938vw;
+        margin-top: 0.313vw;
+        margin-right: 0.188vw;
+      }
+
+      .mode1winningTicketData {
+        margin-left: 9.609vw;
+      }
+    
+    .mode1winningTicketData img {
+      width: 8.625vw;
+      height: 5.5vw;
+    }
+  
+    .mode1TicketonDataSection1 {
+      font-size: 1.5vw;
+      color: white;
+      position: relative;
+      font-weight: bold;
+      left: -20.5%;
+    }
+  
+    .mode1mainbtn2 {
+      width: 2.25vw;
+    }
+  
+    .mode1mainbtn2 img {
+      width: 1.688vw;
+    }
+  
+    .mode1mainprize {
+      border: solid 0.094vw #f2f2f2;
+    }
+  
+    .mode1mainprizetitle {
+      font-size: 1.125vw;
+    }
+  
+    .mode1mainprizeklaytn {
+      font-size: 2.109vw;
+    }
+  
+    .mode1mainprizeklaytn img {
+      width: 2.25vw;
+    }
+  
+    .mode1mainprizeklaytn p {
+      margin-left: 0.469vw;
+    }
+  
+    .mode1mainBtn button {
+      font-size: 1.125vw;
+    }
+  
+  }
+  @media only screen and (max-width: 1440px) and (min-width: 1280px) and (min-height: 800px) {
     .mainPageLeftSection {
-        display:flex;
-        flex-direction: column;
-        margin-left: 336px;
-        z-index: 0;
-        width: 516px;
-        /* background-color: aqua; */
+      margin-left: 568px;
     }
-    
+  }
+  @media only screen and (max-width: 1440px) and (min-height: 800px) {
+    .mode1TicketonDataSection1 {
+      font-size: 32px;
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      margin-top: 20px;   
+      margin-left: 60px;
+    }
+  }
+  
+  /*
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  NoteBook Responsive 
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  */
+  
+  @media only screen and (max-width: 1640px) and (min-width: 1310px) and (max-height: 796px) {
+    .mainPageLeftSection {
+      margin-left: 336px;
+      z-index: 0;
+      width: 35.833vw;
+      /* background-color: aqua; */
+    }
+  
     .mode1maintitle {
-        display: flex;
-        width: 100%;
-        height: 36px;
-        font-size: 36px;
-        color: #9D4FE8;
-        align-items: center;
-        /* background-color: gold; */
+      height: 36px;
+      font-size: 2.5vw;
     }
-    
+  
     .mode1maintext {
-        width: 100%;
-        height: 67.5px;
-        font-size: 18px;
-        /* background-color: red; */
+      width: 100%;
+      height: 67.5px;
+      font-size: 1.25vw;
     }
-    
+  
     .mode1mainround {
-        display: flex;
-        width: 100%;
-        height: 144px;
-        /* background-color: yellow; */
+      width: 100%;
+      height: 165px;
     }
-    
+  
     .mode1mainbtn1 {
-        display: flex;
-        width: 36px;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.375rem;
+      width: 2.5vw;
+      border-radius: 0.375rem;
     }
-    
+  
     .mode1mainbtn1 img {
-        width: 27px;
-        height: 18px;
+      width: 1.875vw;
+      height: 18px;
     }
-    
-    .mode1mainbtn1:hover {
-        background-color: #F2F2F2;
-    }
-    
+  
     .mode1mainroundsection {
-        display: flex;
-        flex-direction: column;
-        width: 444px;
-        height: 100%;
-        /* background-color: aqua; */
+      width: 30.833vw;
     }
-    
+  
     .mode1mainroundsection1 {
-        width: 100%;
-        height: 50%;
-        text-align: center;
-        padding-top: 22.5px;
-        font-size: 36px;
-        /* background-color: gold; */
+      padding-top: 22.5px;
+      font-size: 2.5vw;
     }
-    
-    
+  
     .mode1mainroundsection2 {
-        display: flex;
-        width: 100%;
-        height: 50%;
-        font-size: 18px;
-        justify-content: center;
-        /* background-color: red; */
+      font-size: 1.25vw;
     }
-    
-    .mode1mainbtn2 {
-        display: flex;
-        width: 36px;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.375rem;
+    .proceedingSection img {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      margin-right: 6px;
     }
-    
-    .mode1mainbtn2 img {
-        width: 27px;
-        height: 18px;
+  
+    .mode1winningTicketTitle {
+      font-size: 0.938vw;
     }
-    
-    .mode1mainbtn2:hover {
-        background-color: #F2F2F2;
-    }
-    
-    .mode1remainSection {
-        width: 100%;
-        height: 39.75px;
-    }
-    
-    .mode1mainprize {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 198px;
-        border: solid 1.5px #F2F2F2;
-        border-radius: 0.75rem;
-        /* background-color: blue; */
-    }
-    
-    .mode1mainprizetitle {
-        display: flex;
-        font-size: 18px;
-        width: 100%;
-        height: 65.25px;
-        justify-content: center;
-        align-items: center;
-        /* background-color: gold; */
-    }
-    
-    .mode1mainprizeklaytn {
-        display: flex;
-        width: 100%;
-        height: 132.75px;
-        font-size: 33.75px;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
-    
-    .mode1mainprizeklaytn img {
-        width: 36px;
-        height: 36px;
-    }
-    
-    .mode1mainprizeklaytn p {
-        margin-left: 7.5px;
-    }
-    
-    .mode1mainprizeklaytn img {
-        padding-bottom: 7.5px;
-    }
-    
-    .mode1mainBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 120px;
-        /* background-color: green; */
-    }
-    
-    .mode1mainBtn button {
-        width: 100%;
-        height: 48px;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-        background-color: #9D4FE8;
-    }
-    
-    .mode1mainBtn button:hover {
-        background-color: #ae77ed;
-    }
-        
-}
 
+    .mode1winningTicketTitle img {
+        width: 0.868vw;
+        height: 0.799vw;
+        margin-top: 0.26vw;
+        margin-right: 0.156vw;
+      }
+    
+    .mode1winningTicketData {
+        margin-left: 10.677vw;
+      }
+
+    .mode1winningTicketData img {
+      width: 9.583vw;
+      height: 66px;
+    }
+  
+    .mode1TicketonDataSection1 {
+      font-size: 1.667vw;
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      margin-top: 15px;
+      margin-left: 3.056vw;
+    }
+
+    .proceedingTicketSection img{
+      width: 138px;
+      height: 66px;
+    }
+  
+    .mode1mainbtn2 {
+      width: 2.5vw;
+      border-radius: 0.375rem;
+    }
+  
+    .mode1mainbtn2 img {
+      width: 1.875vw;
+      height: 18px;
+    }
+  
+    .mode1remainSection {
+      width: 100%;
+      height: 39.75px;
+    }
+  
+    .mode1mainprize {
+      width: 100%;
+      height: 198px;
+      border: solid 0.104vw #f2f2f2;
+      border-radius: 0.75rem;
+    }
+  
+    .mode1mainprizetitle {
+      font-size: 1.25vw;
+      height: 97.25px;
+    }
+  
+    .mode1mainprizeklaytn {
+      height: 100.75px;
+      font-size: 2.344vw;
+    }
+  
+    .mode1mainprizeklaytn img {
+      width: 2.5vw;
+      height: 36px;
+    }
+  
+    .mode1mainprizeklaytn p {
+      margin-left: 0.521vw;
+    }
+  
+    .mode1mainprizeklaytn img {
+      padding-bottom: 7.5px;
+    }
+  
+    .mode1mainBtn {
+      height: 120px;
+    }
+  
+    .mode1mainBtn button {
+      height: 48px;
+      font-size: 1.25vw;
+    }
+  }
+  
+  @media only screen and (max-width: 1310px) and (min-width: 960px) and (max-height: 796px) {
+  
+    /*
+    px-to-vw 1700
+    */
+  
+    .mainPageLeftSection {
+      margin-left: 336px;
+      width: 30.353vw;
+    }
+  
+    .mode1maintitle {
+      height: 36px;
+      font-size: 2.118vw;
+    }
+  
+    .mode1maintext {
+      height: 67.5px;
+      font-size: 1.059vw;
+    }
+  
+    .mode1mainround {
+      height: 165px;
+    }
+  
+    .mode1mainbtn1 {
+      width: 2.118vw;
+      border-radius: 0.375rem;
+    }
+  
+    .mode1mainbtn1 img {
+      width: 1.588vw;
+      height: 18px;
+    }
+  
+    .mode1mainroundsection {
+      width: 26.117vw;
+    }
+  
+    .mode1mainroundsection1 {
+      padding-top: 22.5px;
+      font-size: 2.118vw;
+    }
+  
+    .mode1mainroundsection2 {
+      font-size: 1.059vw;
+    }
+
+    .proceedingSection img {
+      width: 1.059vw;
+      height: 1.059vw;
+      margin-top: 0.176vw;
+      margin-right: 0.353vw;
+    }
+  
+    .mode1winningTicketTitle {
+      font-size: 13.515px;
+    }
+    .mode1winningTicketTitle img {
+      width: 12.5px;
+      height: 11.5px;
+      margin-top: 5px;
+      margin-right: 3px;
+    }
+    .mode1winningTicketData {
+      margin-left: 9.044vw;
+    }
+    .mode1winningTicketData img {
+      width: 8.117vw;
+      height: 66px;
+    }
+  
+    .mode1TicketonDataSection1 {
+      font-size: 1.412vw;
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      margin-top: 20px;
+      margin-left: 2.588vw;
+    }
+  
+    .proceedingTicketSection img{
+      width: 8.118vw;
+      height: 66px;
+    }
+
+    .mode1mainbtn2 {
+      width: 2.118vw;
+      border-radius: 0.375rem;
+    }
+  
+    .mode1mainbtn2 img {
+      width: 1.588vw;
+      height: 18px;
+    }
+  
+    .mode1remainSection {
+      height: 39.75px;
+    }
+  
+    .mode1mainprize {
+      height: 198px;
+      border: solid 0.104vw #f2f2f2;
+      border-radius: 0.75rem;
+    }
+  
+    .mode1mainprizetitle {
+      font-size: 1.059vw;
+      height: 97.25px;
+    }
+  
+    .mode1mainprizeklaytn {
+      height: 100.75px;
+      font-size: 1.986vw;
+    }
+  
+    .mode1mainprizeklaytn img {
+      width: 2.118vw;
+      height: 36px;
+    }
+  
+    .mode1mainprizeklaytn p {
+      margin-left: 0.441vw;
+    }
+  
+    .mode1mainprizeklaytn img {
+      padding-bottom: 7.5px;
+    }
+  
+    .mode1mainBtn {
+      height: 120px;
+    }
+  
+    .mode1mainBtn button {
+      height: 48px;
+      font-size: 1.059vw;
+    }
+  }
+  
+  @media only screen and (max-width: 960px) and (max-height: 796px) {
+    .mainPageLeftSection {
+      margin-left: 336px;
+      width: 516px;
+    }
+  
+    .mode1maintitle {
+      height: 36px;
+      font-size: 36px;
+    }
+  
+    .mode1maintext {
+      height: 67.5px;
+      font-size: 18px;
+    }
+  
+    .mode1mainround {
+      height: 165px;
+    }
+  
+    .mode1mainbtn1 {
+      width: 36px;
+      border-radius: 0.375rem;
+    }
+  
+    .mode1mainbtn1 img {
+      width: 27px;
+      height: 18px;
+    }
+  
+    .mode1mainroundsection {
+      width: 444px;
+    }
+  
+    .mode1mainroundsection1 {
+      padding-top: 22.5px;
+      font-size: 36px;
+    }
+  
+    .mode1mainroundsection2 {
+      font-size: 18px;
+    }
+
+    .proceedingSection img {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      margin-right: 6px;
+    }
+    .mode1winningTicketTitle {
+      font-size: 13.5px;
+    }
+
+    .mode1winningTicketTitle img {
+      width: 12.5px;
+      height: 11.5px;
+      margin-top: 5px;
+      margin-right: 3px;
+    }
+
+    .mode1winningTicketTitle img {
+        width: 12.5px;
+        height: 11.5px;
+        margin-top: 3.75px;
+        margin-right: 2.25px;
+      }    
+
+    .mode1TicketonDataSection1 {
+      margin-left: 44px;
+      }
+
+    .mode1winningTicketData {
+        margin-left: 153.75px;
+      }
+  
+    .mode1winningTicketData img {
+      width: 138px;
+      height: 66px;
+    }
+  
+    .mode1TicketonDataSection1 {
+      font-size: 24px;
+      margin-top: 15px;
+    }
+
+    .proceedingTicketSection img{
+      width: 138.006px;
+      height: 66px;
+    }
+
+  
+    .mode1mainbtn2 {
+      width: 36px;
+      border-radius: 0.375rem;
+    }
+  
+    .mode1mainbtn2 img {
+      width: 27px;
+      height: 18px;
+    }
+  
+    .mode1remainSection {
+      height: 39.75px;
+    }
+  
+    .mode1mainprize {
+      height: 163px;
+      border: solid 1.5px #f2f2f2;
+      border-radius: 0.75rem;
+    }
+  
+    .mode1mainprizetitle {
+      font-size: 18px;
+      height: 100.25px;
+    }
+  
+    .mode1mainprizeklaytn {
+      height: 132.75px;
+      font-size: 33.75px;
+    }
+  
+    .mode1mainprizeklaytn img {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .mode1mainprizeklaytn p {
+      margin-left: 7.5px;
+    }
+  
+    .mode1mainprizeklaytn img {
+      padding-bottom: 7.5px;
+    }
+  
+    .mode1mainBtn {
+      height: 120px;
+    }
+  
+    .mode1mainBtn button {
+      height: 48px;
+      font-size: 18px;
+    }
+  }
+  

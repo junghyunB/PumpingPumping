@@ -7,7 +7,6 @@ import { BiLeftArrow } from "react-icons/bi";
 import { BiRightArrow } from "react-icons/bi";
 import { Right1 } from "../components";
 import { useSelector, useDispatch } from "react-redux";
-import SliderT from "../lib/SliderT";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import { epochAction } from "../redux/actions/epochAction";
 import { myTicketInfoM2Action } from "../redux/actions/myTicketInfoM2Action";
@@ -18,6 +17,8 @@ import { winningTicketIdM2Action } from "../redux/actions/winningTicketIdM2Actio
 import { isClaimedM2Action } from "../redux/actions/isClaimedM2Action";
 import { tieTicketM2Action } from "../redux/actions/tieTicketM2Action";
 import { claimRewardM2Action } from "../redux/actions/claimRewardM2Action";
+import Swal from 'sweetalert2';
+
 
 const Mode2MyPage = () => {
   const dispatch = useDispatch();
@@ -54,11 +55,20 @@ const Mode2MyPage = () => {
 
   const claimRewardM2 = () => {
     if (isClaimedM2 === "0") {
-      alert("Not the winner of this round");
+      Swal.fire({
+        title: `Not the winner of ${changeEpochM2}round`,
+        icon:"error",
+        confirmButtonText: "OK",
+      })
     } else if (isClaimedM2 === "1") {
       dispatch(claimRewardM2Action.claimRewardM2Act(changeEpochM2));
     } else if (isClaimedM2 === "2") {
-      alert("You have already received the reward for this round");
+
+      Swal.fire({
+        title: `You have already received the reward for ${changeEpochM2}round`,
+        icon:"error",
+        confirmButtonText: "OK",
+      })
     }
   };
 
@@ -66,10 +76,6 @@ const Mode2MyPage = () => {
     TicketArr.push(
       <div
         className="img-wrap"
-        // style={{width:100}}
-        // onClick={() =>
-        //   visiblity(myTicketInfoM2[0][i], changeEpochM2, myTicketInfoM2[1][i])
-        // }
       >
         <div className="img-text">
           <p>#{myTicketInfoM2[0][i]}</p>
@@ -84,7 +90,11 @@ const Mode2MyPage = () => {
 
   const addEpoch = () => {
     if (changeEpochM2 === currentEpochM2) {
-      alert("Last Round.");
+      Swal.fire({
+        title: `Last Round`,
+        icon:"error",
+        confirmButtonText: "OK",
+      })
     } else if (changeEpochM2 < currentEpochM2) {
       setChangeEpochM2(changeEpochM2 + 1);
     }
@@ -92,7 +102,11 @@ const Mode2MyPage = () => {
 
   const subEpoch = () => {
     if (changeEpochM2 === 1) {
-      alert("First Round.");
+      Swal.fire({
+        title: `First Round`,
+        icon:"error",
+        confirmButtonText: "OK",
+      })
     } else {
       setChangeEpochM2(changeEpochM2 - 1);
     }
@@ -142,7 +156,6 @@ const Mode2MyPage = () => {
                   <p>Own Mode#2 Ticket : </p>
                 </div>
                 <div className="ticketListSection">
-                <SliderT ticketArr={TicketArr}/>
                 </div>
               </div>
               <div className="mode2TicketInfo">

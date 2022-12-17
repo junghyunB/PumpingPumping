@@ -5,9 +5,10 @@ import { TimerM1 } from "../"
 import { epochAction } from "../../redux/actions/epochAction";
 import { totalAmountAction } from "../../redux/actions/totalAmountAction";
 import { winningTicketAction } from "../../redux/actions/winningTicketAction";
-import { leftarrow, rightarrow, klaytn } from "../../assets/images";
+import { leftarrow, rightarrow, klaytn, mode1ticket, trophy, proceeding, ticket_proceeding } from "../../assets/images";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const MainM1 = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,11 @@ const MainM1 = () => {
 
   const addEpoch = () => {
     if (changeEpoch === currentEpoch) {
-      alert("Last Round.");
+      Swal.fire({
+        title: "Last Round!",
+        icon:"error",
+        confirmButtonText: "OK"
+      })
     } else if (changeEpoch < currentEpoch) {
       setChangeEpoch(changeEpoch + 1);
     }
@@ -30,7 +35,11 @@ const MainM1 = () => {
 
   const subEpoch = () => {
     if (changeEpoch === 1) {
-      alert("First Round.");
+      Swal.fire({
+        title: "First Round",
+        icon:"error",
+        confirmButtonText: "OK"
+      })
     } else {
       setChangeEpoch(changeEpoch - 1);
     }
@@ -58,9 +67,9 @@ const MainM1 = () => {
       </div>
       <div className="mode1maintext">
         <p>
-          Mode#1 game Information.
-          <br />
-          Design comment
+        Participate by spending 5 Klay and take a draw ticket.
+        <br />
+        Winners are chosen randomly.
         </p>
       </div>
       <div className="mode1mainround">
@@ -73,11 +82,26 @@ const MainM1 = () => {
           </div>
           <div className="mode1mainroundsection2">
             {changeEpoch === currentEpoch ? (
-              <p>Proceeding...</p>
+              <>
+              <div className="proceedingSection">
+              <img src={proceeding}></img><p>Proceeding...</p>
+              </div>
+              <div className="proceedingTicketSection">
+                <img src={ticket_proceeding}></img>
+                </div>
+                </>
             ) : (
-              <p>
-                [ {changeEpoch} , {winnigTicket}]
-              </p>
+              <>
+              <div className="mode1winningTicketTitle">
+                <img src={trophy}></img><p>Winning Ticket</p>
+              </div>
+              <div className="mode1winningTicketData">
+                <img src={mode1ticket}></img>
+                <div className="mode1TicketonDataSection1">
+                {changeEpoch} , {winnigTicket}
+                </div>
+              </div>
+              </>
             )}
           </div>
         </div>

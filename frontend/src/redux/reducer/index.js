@@ -8,11 +8,11 @@ import userDataReducer from "./userDataReducer";
 import userDataM2Reducer from "./userDataM2Reducer";
 
 export default combineReducers({
-    account : accountReducer,
-    ticket : TicketReducer,
-    epochM1 : epochM1Reducer,
-    user : userDataReducer,
-    epochM2 : epochM2Reducer,
-    ticketM2 : TicketM2Reducer,
-    userM2 : userDataM2Reducer,
-})
+  account: accountReducer,
+  ticket: TicketReducer,
+  epochM1: epochM1Reducer,
+  user: userDataReducer,
+  epochM2: epochM2Reducer,
+  ticketM2: TicketM2Reducer,
+  userM2: userDataM2Reducer,
+});

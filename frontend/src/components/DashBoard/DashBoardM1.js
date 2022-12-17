@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { TimerM1 } from "../";
 import { useDispatch, useSelector } from "react-redux";
 import { dashBoardM1Action } from "../../redux/actions/dashBoardM1Action";
-import Pagination from "react-js-pagination";
+import { klaytn } from "../../assets/images"
 import "./DashBoardM1.css";
+
 
 const DashBoardM1 = () => {
   const dispatch = useDispatch();
@@ -20,62 +22,6 @@ const DashBoardM1 = () => {
   }
 
   let dashboardM1Arr = chunk(dashboardM1).reverse();
-
-  const Paging = () => {
-    const [page, setPage] = useState(1);
-    const maxContents = 5;
-    const handlePageChange = (page) => { 
-      setPage(page); 
-    };
-    const pagelist = dashboardM1Arr.slice(((page - 1) * maxContents) , page * maxContents);
-    let tableBody = [];
-    for (let i = 0; i < maxContents; i++) {
-      tableBody.push(
-        pagelist[i] ? (
-          <tr>
-            <td>{pagelist[i][0]}</td>
-            <td>{pagelist[i][1]} EA</td>
-            <td>{pagelist[i][2]} KLAY</td>
-          </tr>
-        ) : (
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        )
-      );
-        }
-
-    return (
-      <>
-      <h3>Mode#1</h3>
-      <div className="leftTableSection">
-      <table>
-      <thead>
-      <tr>
-          <th>회차</th>
-          <th>Total Ticket</th>
-          <th>Prize</th>
-        </tr>
-      </thead>
-      <tbody>
-        {tableBody?.map((item) => item)}
-      </tbody>
-    </table>
-    </div>
-      <Pagination 
-      activePage={page}
-      itemsCountPerPage={5}
-      totalItemsCount={dashboardM1Arr.length}
-      pageRangeDisplayed={5}
-      prevPageText={"‹"}
-      nextPageText={"›"}
-      onChange={handlePageChange} 
-      />
-      </>
-    ); 
-  }; 
   
   useEffect(() => {
     dispatch(dashBoardM1Action.dashBoardM1Act());
@@ -83,9 +29,36 @@ const DashBoardM1 = () => {
 
   return (
     <div className="dashBoardLeftSection">
-      <div className="dashBoardLeftTable">
-        <Paging />
+              <div className="timerSaction">
+      <div className="mode1Timer">
+      <TimerM1 />
       </div>
+      </div>
+      <div className="mode1dashboardtitle">
+        <p>MODE #1</p>
+      </div>
+      <div className="mode1dashboardtext">
+        <p>
+          Mode#1 game Information.
+          <br />
+          Design comment
+        </p>
+      </div>
+      <div className="mode1dashboardContainer">
+      <div className="mode1dashboarddata">
+        <div className="mode1dashboardround">Round</div>
+        <div className="mode1dashboardtotalticketprize">Total Ticket</div>
+        <div className="mode1dashboardtotalticketprize">Prize</div>
+      </div>
+      {dashboardM1Arr.map(item => (
+              <div key={item} className="mode1dashboarddata2">
+                <div className="mode1dashboardround">{item[0]} Round</div>
+                <div className="mode1dashboardtotalticketprize">{item[1]} Ticket</div>
+                <div className="mode1dashboardtotalticketprize"><img src={klaytn}></img>{item[2]} Klay</div>
+                </div>
+      ))}
+      </div>
+      <div className="mode1dashboardpagenation"></div>
     </div>
   );
 };

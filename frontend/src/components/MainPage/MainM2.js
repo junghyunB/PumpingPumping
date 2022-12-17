@@ -1,12 +1,12 @@
 import React, {useState, useEffect}from 'react'
 import './MainM2.css'
-import {BiLeftArrow} from "react-icons/bi";
-import {BiRightArrow} from "react-icons/bi";
 import {useSelector, useDispatch} from "react-redux";
+import { TimerM2 } from "../"
 import { epochM2Action } from '../../redux/actions/epochM2Action';
 import { winningNumberM2Action } from '../../redux/actions/winningNumberM2Action';
 import { winningTicketIdM2Action } from '../../redux/actions/winningTicketIdM2Action';
 import { totalAmountM2Action } from '../../redux/actions/totalAmountM2Action';
+import { leftarrow, rightarrow, klaytn } from "../../assets/images";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
@@ -53,41 +53,54 @@ const MainM2 = () => {
 
 
   return (
-    <div className='mainPageRightSection'>
-    <div className='mainPageRightSection1'>
-        <div className='mainPageRightSectionTitle'> 
-            <p>Mode#2</p>
-            <hr/>
+      <div className='mainPageRightContainer'>
+        <div className='timerSaction'>
+          <div className='mode2Timer'>
+            <TimerM2 />
+          </div>
         </div>
-        <div className='mainPageRightInfoSection'>
-            <div className='mainPageRightSectionSilder'>
-                <button className='rightSectionLeftBtn' onClick={subEpoch}><BiLeftArrow size={30}/></button>
-                <button className='rightSectionRightBtn' onClick={addEpoch}><BiRightArrow size={30}/></button>
-                <p>{changeEpochM2} round Winning Ticket</p>
-                <p>{winningNumberM2 === "0" ? "Proceeding..." : (<a># {winningNumberM2} [{changeEpochM2}, {winningTicketIdM2}]</a>)}</p>
-                <br></br>
-                <br></br>
-
-            </div>
-            <div className='mainPageRightPrizedSection'>
-                <table>
-                    <tr className='tableTitle'>
-                        <td>Total Prized</td>
-                    </tr>
-                    <tr className='tableInfo'> 
-                        <td>{totalAmountM2} Klay</td>
-                    </tr>
-                </table>
-            </div>
-            <Link to="/mode2buy" style={{ textDecoration: "none" }}>
-            <div className='rightBuyBtn'>
-            <Button variant="outline-dark">BuyTicket</Button>
-            </div>
-            </Link>
+              <div className="mode2maintitle">
+        <p>MODE #2</p>
+      </div>
+      <div className="mode2maintext">
+        <p>
+          Mode#2 game Information.
+          <br />
+          Design comment
+        </p>
+      </div>
+      <div className="mode2mainround">
+        <div className="mode2mainbtn1" onClick={subEpoch}>
+          <img src={leftarrow}></img>
         </div>
-    </div>
-
-</div>
+        <div className="mode2mainroundsection">
+          <div className="mode2mainroundsection1">
+            <p>{changeEpochM2}th ROUND</p>
+          </div>
+          <div className="mode2mainroundsection2">
+          {<p>{winningNumberM2 === "0" ? "Proceeding..." : (<a># {winningNumberM2} [{changeEpochM2}, {winningTicketIdM2}]</a>)}</p>}
+          </div>
+        </div>
+        <div className="mode2mainbtn2" onClick={addEpoch}>
+          <img src={rightarrow}></img>
+        </div>
+      </div>
+      <div className="mode2reaminSection"></div>
+      <div className="mode1mainprize">
+        <div className="mode1mainprizetitle">
+          <p>Total Prize</p>
+        </div>
+        <div className="mode1mainprizeklaytn">
+          <img src={klaytn}></img>
+          <p>{totalAmountM2} klay</p>
+        </div>
+      </div>
+      <Link to="/mode2buy" style={{ textDecoration: "none" }}>
+        <div className="mode2mainBtn">
+          <Button>Buy Ticket</Button>
+        </div>
+      </Link>
+      </div>
   )
 }
 

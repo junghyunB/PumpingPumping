@@ -1,123 +1,146 @@
 .mode1BuyPageContainer {
     display: flex;
-    flex-direction: row;
-    /* background-color: aqua; */
+    flex-direction: column;
+    background-color: aqua;
     width: 100%;
-    height: 100vh;
-    padding-top: 120px;
+    height: 100%;
+}
+
+.mode1BuyTopLine {
+  display: flex;
+  /* background-color: red; */
+  width: 1472px;
+  height: 228px;
+  z-index: 0;
+  margin-left: 448px;
 }
 .mode1BuyPageSection {
     display: flex;
-    margin-left: 310px;
-    margin-right: 100px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    margin-left: 448px;
+    width: 1424px;
+    z-index: 0;
     /* background-color: blue; */
 }
 
-.mod1BuyPageSection1 {
-    display:flex;
-    width: 500px;
-    height: 600px;
-    margin-left: 100px;
-    /* background-color: white; */
-}
-
-.buymypageselect {
+.mode1buypagetitle {
     display: flex;
-    flex-direction: row;
     width: 100%;
-    height: 100px;
+    height: 48px;
+    font-size: 48px;
+    color: #9D4FE8;
+    align-items: center;
+  }
+
+.mode1buypagetext {
+    width: 100%;
+    height: 120px;
+    font-size: 24px;
+    /* background-color: red; */
+  }
+
+  .mode1SelectSection {
+    display: flex;
+    width: 100%;
+    height: 48px;
     /* background-color: aqua; */
-}
+  }
 
-.buybuttonSection {
+  .mode1buySection {
     display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: red; */
-    justify-content: flex-end;
     align-items: center;
-}
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    font-size: 18px;
+    color: #3B3B3B;
+    cursor: pointer;
+    border-bottom: 3px solid #9D4FE8;
+  }
 
-.buybuttonSection button {
-    z-index: 20;
-    height: 70px;
-    width: 200px;
-    font-weight: 900;
-}
-
-.mypagebuttonSection {
+  .mode1mypageSection {
     display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: black; */
-    justify-content: flex-start;
     align-items: center;
-}
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    margin-left: 48px;
+    font-size: 18px;
+    color: #3B3B3B;
+    cursor: pointer;
+    /* background-color: blue; */
+  }
 
-.mypagebuttonSection button {
-    z-index: 20;
-    height: 70px;
-    width: 200px;
-    font-weight: 900;
-}
+  .mode1mypageSection:hover {
+    border-bottom: 3px solid #9D4FE8;
+  }
 
-.z-indexZone {
-    z-index: 20;
-}
+  .mode1buyroundpaddingsection {
+    width: 100%;
+    height: 61px;
+    /* background-color: gold; */
+  }
 
-.ticketPictureSection {
+  .mode1buyroundContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 59px;
+    /* background-color: aqua; */
+    font-size: 48px;
+  }
+
+
+  .mode1buyavailableSection {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 30px;
+    /* background-color: aquamarine; */
+  }
+
+  .mode1available1 {
+    font-size: 18px;
+    color: #959595;
+    font-weight: bold;
+    padding-right: 19px;
+    padding-bottom: 3px;
+  }
+
+  .mode1available2 {
+    font-size: 24px;
+    color: #3B3B3B;
+    font-weight: bold;
+  }
+
+  .mode1userselectSection {
     display: flex;
     width: 100%;
-    height: 130px;
-    /* justify-content: center;
-    align-items: center; */
-    /* background-color: blueviolet; */
-}
+    height: 48px;
+    margin-top: 21px;
+    /* background-color: antiquewhite; */
+  }
 
-.ticketPictureSection h2 {
-    margin-top: 40px;
-    font-weight: 900;
-    margin-left : 30px;
-}
+  .mode1availInput {
+    width: 1356px;
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 18px;
+    padding-left: 16px;
+  }
 
-.mode1ticket {
-    margin-top: 28px;
-    margin-left : 80px;
-    width: 70px;
-    height: 70px;
-}
-
-.ownedTicketAmountSection {
-    width:100%;
-    height: 50px;
-    /* background-color: red; */
-    /* border-top: solid 1px black; */
-}
-
-.ownedTicketAmountSection h4 {
+  .mode1usermaxSection {
+    display: flex;
+    justify-content: center;
     padding-top: 10px;
-    padding-left: 50px;
-    font-weight: 900;
-}
-
-.ticketAmountSection {
-    width:100%;
-    height: 70px;
-    padding-top: 10px;
-    padding-left: 50px;
-    z-index: 20;
-    /* background-color: blue; */
-}
-
-
-input {
-    width: 250px;
-    height: 36px;
-}
+    width: 68px;
+    font-size: 18px;
+    background-color: #9D4FE8;
+    border-radius: 0.4rem;
+    color: #ffffff;
+    cursor: pointer;
+  }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -125,34 +148,698 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.maxbuttonposition {
-    margin-bottom: 4px;
-    font-weight: 900;
+.mode1useramountpaddingsection {
+    width: 100%;
+    height: 100px;
+    /* background-color: violet; */
+}
+.mode1priceamountsection {
+    width: 100%;
+    font-size: 18px;
+    color:#959595;
 }
 
-.totalTicketPriceSection {
-    width:100%;
-    height: 50px;
-    /* background-color: orange; */
-    /* border-bottom: solid 1px black; */
-    padding-left: 50px;
-}
-.totalTicketPriceSection h4 {
-    font-weight: 900;
-}
-
-.buyTicketButtonSection {
+.mode1klaytnamountsection {
     display: flex;
     width: 100%;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    /* background-color: black; */
+    font-size: 48px;
+    font-weight: bold;
 }
 
-.buyTicketButtonSection button {
-    z-index: 20;
-    width: 80%;
-    height: 80px;
-    font-weight: 900;
+.mode1klaytnamountsection img{
+    margin-right: 18px;
 }
+
+.mode1buysection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 96px;
+    /* background-color: aqua; */
+}
+
+.mode1buybutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    background-color: #9D4FE8;
+    color:#ffffff;
+    border-radius: 0.5rem;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #dadce0;
+}
+
+.mode1buybutton:hover {
+    background-color: #F2E7FC;
+    color: #9D4FE8;
+    box-shadow: 2px 2px 2px 2px #F2E7FC;
+}
+
+/*
+***************************
+***************************
+***************************
+***************************
+***************************
+desktop Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+
+@media only screen and (max-width: 1920px) and (min-width:1440px) and (min-height: 800px) {
+  .mode1BuyPageContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+.mode1BuyTopLine {
+  display: flex;
+  /* background-color: red; */
+  width: 76.667vw;
+  height: 228px;
+  z-index: 0;
+  margin-left: 447.994px;
+}
+.mode1BuyPageSection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 448px;
+    width: 74.167vw;
+    z-index: 0;
+    /* background-color: blue; */
+}
+
+.mode1buypagetitle {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    font-size: 2.5vw;
+    color: #9D4FE8;
+    align-items: center;
+  }
+
+.mode1buypagetext {
+    width: 100%;
+    height: 120px;
+    font-size: 1.25vw;
+    /* background-color: red; */
+  }
+
+  .mode1SelectSection {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    /* background-color: aqua; */
+  }
+
+  .mode1buySection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35.833vw;
+    height: 48px;
+    font-size: 0.938vw;
+    color: #3B3B3B;
+    cursor: pointer;
+    border-bottom: 3px solid #9D4FE8;
+  }
+
+  .mode1mypageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35.833vw;
+    height: 48px;
+    margin-left: 2.5vw;
+    font-size: 0.938vw;
+    color: #3B3B3B;
+    cursor: pointer;
+    /* background-color: blue; */
+  }
+
+  .mode1mypageSection:hover {
+    border-bottom: 3px solid #9D4FE8;
+  }
+
+  .mode1buyroundpaddingsection {
+    width: 100%;
+    height: 61px;
+    /* background-color: gold; */
+  }
+
+  .mode1buyroundContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 59px;
+    /* background-color: aqua; */
+    font-size: 2.5vw;
+  }
+
+
+  .mode1buyavailableSection {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 30px;
+    /* background-color: aquamarine; */
+  }
+
+  .mode1available1 {
+    font-size: 0.938vw;
+    color: #959595;
+    font-weight: bold;
+    padding-right: 0.99vw;
+    padding-bottom: 3px;
+  }
+
+  .mode1available2 {
+    font-size: 1.25vw;
+    color: #3B3B3B;
+    font-weight: bold;
+  }
+
+  .mode1userselectSection {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    margin-top: 21px;
+    /* background-color: antiquewhite; */
+  }
+
+  .mode1availInput {
+    width: 70.625vw;
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.938vw;
+    padding-left: 0.833vw;
+  }
+
+  .mode1usermaxSection {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    width: 3.542vw;
+    font-size: 0.938vw;
+    background-color: #9D4FE8;
+    border-radius: 0.4rem;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mode1useramountpaddingsection {
+    width: 100%;
+    height: 100px;
+    /* background-color: violet; */
+}
+.mode1priceamountsection {
+    width: 100%;
+    font-size: 0.938vw;
+    color:#959595;
+}
+
+.mode1klaytnamountsection {
+    display: flex;
+    width: 100%;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.mode1klaytnamountsection img{
+    margin-right: 0.938vw;
+}
+
+.mode1buysection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 96px;
+    /* background-color: aqua; */
+}
+
+.mode1buybutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    background-color: #9D4FE8;
+    color:#ffffff;
+    border-radius: 0.5rem;
+    font-size: 1.25vw;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0.104vw 0.104vw 0.104vw 0.104vw #dadce0;
+}
+
+.mode1buybutton:hover {
+    background-color: #F2E7FC;
+    color: #9D4FE8;
+    box-shadow: 0.104vw 0.104vw 0.104vw 0.104vw #F2E7FC;
+}
+
+}
+/*
+***************************
+***************************
+***************************
+***************************
+***************************
+NoteBook Responsive 
+***************************
+***************************
+***************************
+***************************
+***************************
+*/
+
+
+@media only screen and (max-width: 1440px) and (min-width: 960px) and (max-height: 796px) {
+  .mode1BuyPageContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+.mode1BuyTopLine {
+  display: flex;
+  /* background-color: red; */
+  width: 74.167vw;
+  height: 171px;
+  z-index: 0;
+  margin-left: 336px;
+}
+.mode1BuyPageSection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 336px;
+    width: 74.167vw;
+    z-index: 0;
+    /* background-color: blue; */
+}
+
+.mode1buypagetitle {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    font-size: 2.5vw;
+    color: #9D4FE8;
+    align-items: center;
+  }
+
+.mode1buypagetext {
+    width: 100%;
+    height: 90px;
+    font-size: 1.25vw;
+    /* background-color: red; */
+  }
+
+  .mode1SelectSection {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    /* background-color: aqua; */
+  }
+
+  .mode1buySection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35.833vw;
+    height: 36px;
+    font-size: 0.938vw;
+    color: #3B3B3B;
+    cursor: pointer;
+    border-bottom: 0.156vw solid #9D4FE8;
+  }
+
+  .mode1mypageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35.833vw;
+    height: 36px;
+    margin-left: 2.5vw;
+    font-size: 0.938vw;
+    color: #3B3B3B;
+    cursor: pointer;
+    /* background-color: blue; */
+  }
+
+  .mode1mypageSection:hover {
+    border-bottom: 0.156vw solid #9D4FE8;
+  }
+
+  .mode1buyroundpaddingsection {
+    width: 100%;
+    height: 45.75px;
+    /* background-color: gold; */
+  }
+
+  .mode1buyroundContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 44.25px;
+    /* background-color: aqua; */
+    font-size: 2.5vw;
+  }
+
+
+  .mode1buyavailableSection {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 22.5px;
+    /* background-color: aquamarine; */
+  }
+
+  .mode1available1 {
+    font-size: 0.938vw;
+    color: #959595;
+    font-weight: bold;
+    padding-right: 0.99vw;
+    padding-bottom: 2.25px;
+  }
+
+  .mode1available2 {
+    font-size: 1.25vw;
+    color: #3B3B3B;
+    font-weight: bold;
+  }
+
+  .mode1userselectSection {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    margin-top: 15.75px;
+    /* background-color: antiquewhite; */
+  }
+
+  .mode1availInput {
+    width: 70.625vw;
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.938vw;
+    padding-left: 0.833vw;
+  }
+
+  .mode1usermaxSection {
+    display: flex;
+    justify-content: center;
+    padding-top: 7.5px;
+    width: 3.542vw;
+    font-size: 0.938vw;
+    background-color: #9D4FE8;
+    border-radius: 0.3rem;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mode1useramountpaddingsection {
+    width: 100%;
+    height: 100px;
+    /* background-color: violet; */
+}
+.mode1priceamountsection {
+    width: 100%;
+    font-size: 0.938vw;
+    color:#959595;
+}
+
+.mode1klaytnamountsection {
+    display: flex;
+    width: 100%;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.mode1klaytnamountsection img{
+    margin-right: 0.938vw;
+}
+
+.mode1buysection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 72px;
+    /* background-color: aqua; */
+}
+
+.mode1buybutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+    background-color: #9D4FE8;
+    color:#ffffff;
+    border-radius: 0.375rem;
+    font-size: 1.25vw;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0.104vw 0.104vw 0.104vw 0.104vw #dadce0;
+}
+
+.mode1buybutton:hover {
+    background-color: #F2E7FC;
+    color: #9D4FE8;
+    box-shadow: 0.104vw 0.104vw 0.104vw 0.104vw #dadce0;
+}
+
+  }
+
+@media only screen and (max-width: 960px) and (max-height: 796px) {
+  .mode1BuyPageContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+.mode1BuyTopLine {
+  display: flex;
+  /* background-color: red; */
+  width: 1068px;
+  height: 171px;
+  z-index: 0;
+  margin-left: 336px;
+}
+.mode1BuyPageSection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 336px;
+    width: 1068px;
+    z-index: 0;
+    /* background-color: blue; */
+}
+
+.mode1buypagetitle {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    font-size: 36px;
+    color: #9D4FE8;
+    align-items: center;
+  }
+
+.mode1buypagetext {
+    width: 100%;
+    height: 90px;
+    font-size: 18px;
+    /* background-color: red; */
+  }
+
+  .mode1SelectSection {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    /* background-color: aqua; */
+  }
+
+  .mode1buySection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 516px;
+    height: 36px;
+    font-size: 13.5px;
+    color: #3B3B3B;
+    cursor: pointer;
+    border-bottom: 2.25px solid #9D4FE8;
+  }
+
+  .mode1mypageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 516px;
+    height: 36px;
+    margin-left: 36px;
+    font-size: 13.5px;
+    color: #3B3B3B;
+    cursor: pointer;
+    /* background-color: blue; */
+  }
+
+  .mode1mypageSection:hover {
+    border-bottom: 2.25px solid #9D4FE8;
+  }
+
+  .mode1buyroundpaddingsection {
+    width: 100%;
+    height: 45.75px;
+    /* background-color: gold; */
+  }
+
+  .mode1buyroundContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 44.25px;
+    /* background-color: aqua; */
+    font-size: 36px;
+  }
+
+
+  .mode1buyavailableSection {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 22.5px;
+    /* background-color: aquamarine; */
+  }
+
+  .mode1available1 {
+    font-size: 13.5px;
+    color: #959595;
+    font-weight: bold;
+    padding-right: 14.25px;
+    padding-bottom: 2.25px;
+  }
+
+  .mode1available2 {
+    font-size: 18px;
+    color: #3B3B3B;
+    font-weight: bold;
+  }
+
+  .mode1userselectSection {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    margin-top: 15.75px;
+    /* background-color: antiquewhite; */
+  }
+
+  .mode1availInput {
+    width: 1017px;
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 13.5px;
+    padding-left: 12px;
+  }
+
+  .mode1usermaxSection {
+    display: flex;
+    justify-content: center;
+    padding-top: 7.5px;
+    width: 51px;
+    font-size: 13.5px;
+    background-color: #9D4FE8;
+    border-radius: 0.3rem;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mode1useramountpaddingsection {
+    width: 100%;
+    height: 100px;
+    /* background-color: violet; */
+}
+.mode1priceamountsection {
+    width: 100%;
+    font-size: 13.5px;
+    color:#959595;
+}
+
+.mode1klaytnamountsection {
+    display: flex;
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.mode1klaytnamountsection img{
+    margin-right: 13.5px;
+}
+
+.mode1buysection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 72px;
+    /* background-color: aqua; */
+}
+
+.mode1buybutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+    background-color: #9D4FE8;
+    color:#ffffff;
+    border-radius: 0.375rem;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #dadce0;
+}
+
+.mode1buybutton:hover {
+    background-color: #F2E7FC;
+    color: #9D4FE8;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #dadce0;
+}
+
+  }
+

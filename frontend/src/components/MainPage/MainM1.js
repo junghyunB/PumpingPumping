@@ -1,85 +1,105 @@
 import React, { useEffect, useState } from "react";
 import "./MainM1.css";
-import { BiLeftArrow } from "react-icons/bi";
-import { BiRightArrow } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
+import { TimerM1 } from "../"
 import { epochAction } from "../../redux/actions/epochAction";
 import { totalAmountAction } from "../../redux/actions/totalAmountAction";
 import { winningTicketAction } from "../../redux/actions/winningTicketAction";
-import Button from 'react-bootstrap/Button';
-import {Link} from "react-router-dom";
+import { leftarrow, rightarrow, klaytn } from "../../assets/images";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 const MainM1 = () => {
-    const dispatch = useDispatch();
-    let currentEpoch = useSelector(state => parseInt(state.epochM1.epoch));
-    const totalAmount = useSelector(state => state.ticket.totalAmount);
-    const winnigTicket = useSelector(state => state.ticket.winningTicketId);
-    let [changeEpoch, setChangeEpoch] = useState(currentEpoch);
+  const dispatch = useDispatch();
+  let currentEpoch = useSelector((state) => parseInt(state.epochM1.epoch));
+  const totalAmount = useSelector((state) => state.ticket.totalAmount);
+  const winnigTicket = useSelector((state) => state.ticket.winningTicketId);
+  let [changeEpoch, setChangeEpoch] = useState(currentEpoch);
 
-    const setData = () => {
-        setChangeEpoch(currentEpoch);
-    }
+  const setData = () => {
+    setChangeEpoch(currentEpoch);
+  };
 
-    const addEpoch = () => {
-      if(changeEpoch === currentEpoch) {
+  const addEpoch = () => {
+    if (changeEpoch === currentEpoch) {
       alert("Last Round.");
-  } else if(changeEpoch < currentEpoch){
+    } else if (changeEpoch < currentEpoch) {
       setChangeEpoch(changeEpoch + 1);
-  }
-    };
-  
-    const subEpoch = () => {
-      if(changeEpoch === 1) {
-        alert("First Round.");
-      } else {
-          setChangeEpoch(changeEpoch - 1);
-      }
-    };
+    }
+  };
+
+  const subEpoch = () => {
+    if (changeEpoch === 1) {
+      alert("First Round.");
+    } else {
+      setChangeEpoch(changeEpoch - 1);
+    }
+  };
 
   useEffect(() => {
-      dispatch(epochAction.epochAct());
-      setData()
+    dispatch(epochAction.epochAct());
+    setData();
   }, [currentEpoch]);
 
   useEffect(() => {
     dispatch(totalAmountAction.totalAmountAct(changeEpoch));
     dispatch(winningTicketAction.winningTicketAct(changeEpoch));
-  }, [changeEpoch])
+  }, [changeEpoch]);
 
   return (
     <div className="mainPageLeftSection">
-      <div className="mainPageLeftSection1">
-        <div className="mainPageLeftSectionTitle">
-          <p>Mode#1</p>
-          <hr />
+        <div className="timerSaction">
+      <div className="mode1Timer">
+      <TimerM1 />
+      </div>
+      </div>
+      <div className="mode1maintitle">
+        <p>MODE #1</p>
+      </div>
+      <div className="mode1maintext">
+        <p>
+          Mode#1 game Information.
+          <br />
+          Design comment
+        </p>
+      </div>
+      <div className="mode1mainround">
+        <div className="mode1mainbtn1" onClick={subEpoch}>
+          <img src={leftarrow}></img>
         </div>
-        <div className="mainPageLeftInfoSection">
-          <div className="mainPageLeftSectionSilder">
-            <button className="leftSectionLeftBtn" onClick={subEpoch}><BiLeftArrow size={30} /></button>
-            <button className="leftSectionRightBtn" onClick={addEpoch}><BiRightArrow size={30} />
-            </button>
-            <p>{changeEpoch} round Winning Ticket</p>
-            {changeEpoch === currentEpoch ? <p>Proceeding...</p> : <p>[ {changeEpoch} , {winnigTicket}]</p>}
-            <br></br>
-            <br></br>
+        <div className="mode1mainroundsection">
+          <div className="mode1mainroundsection1">
+            <p>{changeEpoch}th ROUND</p>
           </div>
-          <div className="mainPageLeftPrizedSection">
-            <table>
-              <tr className="tableTitle">
-                <td>Total Prized</td>
-              </tr>
-              <tr className="tableInfo">
-                <td>{totalAmount} Klay</td>
-              </tr>
-            </table>
+          <div className="mode1mainroundsection2">
+            {changeEpoch === currentEpoch ? (
+              <p>Proceeding...</p>
+            ) : (
+              <p>
+                [ {changeEpoch} , {winnigTicket}]
+              </p>
+            )}
           </div>
-          <Link to="/mode1buy" style={{ textDecoration: "none" }}>
-          <div className="LeftBuyBtn">
-          <Button variant="outline-dark">BuyTicket</Button>
-          </div>
-          </Link>
+        </div>
+        <div className="mode1mainbtn2" onClick={addEpoch}>
+          <img src={rightarrow}></img>
         </div>
       </div>
+      <div className="mode1remainSection"></div>
+      <div className="mode1mainprize">
+        <div className="mode1mainprizetitle">
+          <p>Total Prize</p>
+        </div>
+        <div className="mode1mainprizeklaytn">
+          <img src={klaytn}></img>
+          <p>{totalAmount} klay</p>
+        </div>
+      </div>
+      <Link to="/mode1buy" style={{ textDecoration: "none" }}>
+        <div className="mode1mainBtn">
+          <Button>Buy Ticket</Button>
+        </div>
+      </Link>
     </div>
   );
 };

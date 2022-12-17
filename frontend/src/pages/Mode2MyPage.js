@@ -7,7 +7,6 @@ import { BiLeftArrow } from "react-icons/bi";
 import { BiRightArrow } from "react-icons/bi";
 import { Right1 } from "../components";
 import { useSelector, useDispatch } from "react-redux";
-import SliderT from "../lib/SliderT";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import { epochAction } from "../redux/actions/epochAction";
 import { myTicketInfoM2Action } from "../redux/actions/myTicketInfoM2Action";
@@ -157,7 +156,6 @@ const Mode2MyPage = () => {
                   <p>Own Mode#2 Ticket : </p>
                 </div>
                 <div className="ticketListSection">
-                <SliderT ticketArr={TicketArr}/>
                 </div>
               </div>
               <div className="mode2TicketInfo">

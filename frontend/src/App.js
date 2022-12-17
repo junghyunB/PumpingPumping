@@ -22,7 +22,6 @@ import {
   NoneWallet,
 } from "./components/index";
 import "./App.css";
-import SliderT from "./lib/SliderT";
 
 function App() {
   const localKey = localStorage.key(0);
@@ -113,7 +112,6 @@ function App() {
               <Route path="/mode2buy" element={<Mode2BuyPage />} />
               <Route path="/mode2buy/ticket:id" element={<Mode2DetailPage />} />
               <Route path="/mode2my" element={<Mode2MyPage />} />
-              <Route path="/test" element={<SliderT />} />
             </Routes>
           )}
         </div>

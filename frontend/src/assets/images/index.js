@@ -23,6 +23,8 @@ import ticket_basic from "./ticket_basic.svg";
 import ticket_false from "./ticket_false.svg";
 import result_false from "./false.svg";
 import result_success from "./success.svg";
+import raffle_ball1 from "./ball#1-1.png";
+import raffle_ball2 from "./ball#1-2.png";
 
 export {
     mode1ticket,
@@ -50,4 +52,6 @@ export {
     ball_proceeding,
     result_false,
     result_success,
+    raffle_ball1,
+    raffle_ball2,
 }

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Mode2DetailPage.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate} from "react-router-dom";
 import { mode1ticket } from "../assets/images";
 import { BiLeftArrow } from "react-icons/bi";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { myTicketCountM2Action } from "../redux/actions/myTicketCountM2Action";
@@ -15,6 +14,7 @@ import Swal from 'sweetalert2';
 
 const Mode2DetailPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [selectTicket, setSelectTicket] = useState([]);
   const [transTicket, setTransTicket] = useState([]);
@@ -166,46 +166,19 @@ const Mode2DetailPage = () => {
 
   return (
     <div className="mode2BuyDetailContainer">
-      <div className="mode2BuyDetailSection">
-        <div className="mode2selectSection">
-          <div className="chooseNumberSection">
-            <Link to="/mode2buy" className="BackPage">
-              <BiLeftArrow size={40} />
-            </Link>
-            <p>Choose Number : {selectTicket} </p>
+      <div className="mode2BuyDetailBg" onClick={() => navigate("/mode2buy")}></div>
+      <div className="mode2BuyDetailSection1">
+      <div className="mode2BuyDetailSection2">
+          <div className="mode2BuyDetailTitle">
+            <p>Ball#{id} Choose Number</p>
           </div>
-          <div className="availableSection">
-            <div className="availableSection1">
-              <h3>Available : {remainBuyTicket} EA</h3>
-            </div>
-            <div className="amountSection">
-              <h3>Amount : {amount} KLAY</h3>
-            </div>
+          <div className="mode2BuyDetailButton">
+            <div className="mode2BuyDetailClose" onClick={() => navigate("/mode2buy")}><p>Close</p></div>
+            <div className="mode2BuyDetailBuy" onClick={buyTicketM2}><p>Buy Ball</p></div>
           </div>
-        </div>
-        <div className="choiceSection">
-          <div className="ticketSection">
-            <div className="ticketContainer1">
-              {section1?.map((item) => item)}
-            </div>
-            <div className="ticketContainer1">
-              {section2?.map((item) => item)}
-            </div>
-            <div className="ticketContainer1">
-              {section3?.map((item) => item)}
-            </div>
-            <div className="ticketContainer1">
-              {section4?.map((item) => item)}
-            </div>
-            <div className="ticketContainer1">
-              {section5?.map((item) => item)}
-            </div>
           </div>
-          <div className="buyButtonSection">
-            <Button variant="outline-dark" onClick={buyTicketM2}>
-              Buy Ticket
-            </Button>
-          </div>
+        <div className="mode2BuyDetailSection3">
+          
         </div>
       </div>
     </div>

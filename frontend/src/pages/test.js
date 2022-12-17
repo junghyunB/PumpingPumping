@@ -1,85 +1,40 @@
-<div className="mode2BuyPageSection">
 <div className="mode2selectSection">
-  <Link to="/mode2buy" className="z-indexZone">
-    <Button variant="outline-dark">BuyTicket</Button>
+<div className="chooseNumberSection">
+  <Link to="/mode2buy" className="BackPage">
+    <BiLeftArrow size={40} />
   </Link>
-  <Link to="/mode2my" className="z-indexZone">
-    <Button variant="outline-dark">MyPage</Button>
-  </Link>
+  <p>Choose Number : {selectTicket} </p>
 </div>
-<div className="mode2selectTicketSection1">
-  <div className="TicketSection1">
-    <Link to="/mode2buy/ticket1" className="z-indexZone">
-      <div className="Ticket1">
-        <div className="imageSection">
-          <img alt="mode2!" className="imgSize"></img>
-        </div>
-        <div className="textSection">
-          <p className="ticketText">Ticket#1</p>
-          <p>(6 klay)</p>
-        </div>
-      </div>
-    </Link>
+<div className="availableSection">
+  <div className="availableSection1">
+    <h3>Available : {remainBuyTicket} EA</h3>
   </div>
-  <div className="TicketSection2">
-    <Link to="/mode2buy/ticket2" className="z-indexZone">
-      <div className="Ticket2">
-        <div className="imageSection">
-          <img alt="mode2!" className="imgSize"></img>
-        </div>
-        <div className="textSection">
-          <p className="ticketText">Ticket#2</p>
-          <p>(9 klay)</p>
-        </div>
-      </div>
-    </Link>
-  </div>
-  <div className="TicketSection3">
-    <Link to="/mode2buy/ticket3" className="z-indexZone">
-      <div className="Ticket3">
-        <div className="imageSection">
-          <img alt="mode2!" className="imgSize" ></img>
-        </div>
-        <div className="textSection">
-          <p className="ticketText">Ticket#3</p>
-          <p>(12 klay)</p>
-        </div>
-      </div>
-    </Link>
+  <div className="amountSection">
+    <h3>Amount : {amount} KLAY</h3>
   </div>
 </div>
-<div className="mode2selectTicketSection2">
-  <div className="TicketSection4">
-    <div className="ticketSection4-1"></div>
-    <div className="ticketSection4-2">
-      <Link to="/mode2buy/ticket4" className="z-indexZone">
-        <div className="Ticket4">
-          <div className="imageSection">
-            <img alt="mode2!" className="imgSize"></img>
-          </div>
-          <div className="textSection">
-            <p className="ticketText">Ticket#4</p>
-            <p>(15 klay)</p>
-          </div>
-        </div>
-      </Link>
-    </div>
+</div>
+<div className="choiceSection">
+<div className="ticketSection">
+  <div className="ticketContainer1">
+    {section1?.map((item) => item)}
   </div>
-  <div className="TicketSection5">
-    <div className="ticketSection5-1">
-      <Link to="/mode2buy/ticket5" className="z-indexZone">
-        <div className="Ticket5">
-          <div className="imageSection">
-            <img alt="mode2!" className="imgSize"></img>
-          </div>
-          <div className="textSection">
-            <p className="ticketText">Ticket#5</p>
-            <p>(18 klay)</p>
-          </div>
-        </div>
-      </Link>
-    </div>
-    <div className="ticketSection5-2"></div>
+  <div className="ticketContainer1">
+    {section2?.map((item) => item)}
   </div>
+  <div className="ticketContainer1">
+    {section3?.map((item) => item)}
+  </div>
+  <div className="ticketContainer1">
+    {section4?.map((item) => item)}
+  </div>
+  <div className="ticketContainer1">
+    {section5?.map((item) => item)}
+  </div>
+</div>
+<div className="buyButtonSection">
+  <Button variant="outline-dark" onClick={buyTicketM2}>
+    Buy Ticket
+  </Button>
 </div>
 </div>

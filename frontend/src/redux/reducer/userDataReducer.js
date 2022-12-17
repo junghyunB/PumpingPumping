@@ -4,7 +4,7 @@ let initialState = {
   myTicketAmount: 0,
   claimSuccess: false,
   isclaimM1: 0,
-  innerWidth: 0,
+  innerWidth: window.innerWidth,
 };
 
 function userDataReducer(state = initialState, action) {

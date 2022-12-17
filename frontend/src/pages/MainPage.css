@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: row;
     /* background-color: aqua; */
-    width: 1920px;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
+
 }
 
 /*
@@ -59,8 +60,7 @@ Desktop Responsive
     .mainPageContainer {
         display: flex;
         flex-direction: row;
-        /* background-color: aqua; */
-        width: 100vw;
+        width: 100%;
         height: 100%;
         overflow: hidden;
     }
@@ -84,5 +84,6 @@ Desktop Responsive
         overflow-x: hidden;
     }
 }
+
 
 

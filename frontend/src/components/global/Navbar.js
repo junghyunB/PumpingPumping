@@ -146,17 +146,6 @@ const Navbar = () => {
     }
   };
 
-  const handleResize = () => {
-    dispatch({type:"INNER_WIDTH", payload: window.innerWidth});
-  }
-
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return() => {
-      window.removeEventListener("resize", handleResize);
-    }
-  })
 
   useEffect(() => {
     if (localKey !== "metamaskAccount" && localKey !== null) {
@@ -195,7 +184,6 @@ const Navbar = () => {
 
   return (
     <div className="navbarContainer">
-      {innerWidth < 800 ? <h1>aldjlajdlasdsakdskadjkasjdksjdksjkdjskdjksjdjskaskl</h1> : 
         <div className="leftNavSection">
           <Link to="/" style={{ textDecoration: "none" }}>
             <div className="firstLeftNav">
@@ -307,10 +295,9 @@ const Navbar = () => {
             <div className="discordSection"><button><img src={discord}></img></button></div>
           </div>
         </div>
-}
       <div className="rightNavContainer">
       </div>
-    </div>
+      </div>
   );
 };
 

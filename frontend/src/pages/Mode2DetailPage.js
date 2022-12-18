@@ -17,6 +17,7 @@ const Mode2DetailPage = () => {
   const [selectTicket, setSelectTicket] = useState([]);
   const [transTicket, setTransTicket] = useState([]);
   const [imgSelectTicket, setImgSelectTicket] = useState([]);
+  const test1 = [];
   const epochM1 = useSelector((state) => state.epochM1.epoch);
   const localKey = localStorage.key(0);
   const account = localStorage.getItem(localKey);
@@ -44,25 +45,30 @@ const Mode2DetailPage = () => {
     num % 50 < 21 && num % 50 > 10 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_blue}></img></div> : num % 50 < 31 && num % 50 > 20 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_purple}></img></div>
     : num % 50 < 41 && num % 50 > 30 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_pink}></img></div> : <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_green}></img></div>
     ])
+
       setTransTicket((transTicket) => [...transTicket, num]);
     } else if (
       transTicket.length <= remainBuyTicket &&
       selectTicket.includes(num)
     ) {
       const numIndex = selectTicket.indexOf(num);
+      const numIndex2 = transTicket.indexOf(num);
       if (numIndex === 1) {
         const removeItem = selectTicket.splice(0, 3);
         setSelectTicket(
           selectTicket.filter((element) => element !== removeItem)
         );
         setTransTicket(transTicket.filter((element) => element !== num));
-
+        setImgSelectTicket(imgSelectTicket.filter((ele) => imgSelectTicket.length === 1 ? ele !== imgSelectTicket[0] : ele !== imgSelectTicket[1]))
+        console.log("No Real : ", imgSelectTicket)
       } else {
         const removeItem = [...selectTicket.splice(numIndex - 2, 3)];
         setSelectTicket(
           selectTicket.filter((element) => element !== removeItem)
         );
         setTransTicket(transTicket.filter((element) => element !== num));
+        setImgSelectTicket(imgSelectTicket.filter((ele) => ele !== imgSelectTicket[1]))
+        console.log("No Real2 : ", imgSelectTicket)
       }
     } else if (
       selectTicket.includes(num) === false &&
@@ -75,9 +81,12 @@ const Mode2DetailPage = () => {
       })
     }
   };
-  console.log(imgSelectTicket)
-  let chooseBall = [];
 
+  let chooseBall = [];
+  // console.log("1", imgSelectTicket[0])
+  // console.log("2", imgSelectTicket[1])
+  // console.log("3", imgSelectTicket[2])
+  console.log("real : ", imgSelectTicket);
   for (let i = 1; i < 51; i++) {
     if (i < 11) {
       chooseBall.push(
@@ -155,6 +164,7 @@ const Mode2DetailPage = () => {
     dispatch(epochAction.epochAct());
   }, [account, epoch, epochM1]);
 
+
   return (
     <div className="mode2BuyDetailContainer">
       <div className="mode2BuyDetailBg" onClick={() => navigate("/mode2buy")}></div>
@@ -174,7 +184,7 @@ const Mode2DetailPage = () => {
               <div className="mode2ChooseNumSection"><p>Choose Number </p> &nbsp;&nbsp;<p className="ChooseNumFont">{selectTicket}</p></div>
               <div className="mode2ChooseNumCount"><p>select {transTicket.length} ball</p></div>
             </div>
-            <div className="mode2DetailData2"><div className="mode2DetailrightArrowimage"><img src={rightarrow}></img></div>{imgSelectTicket.map((item) => item)}</div>
+            <div className="mode2DetailData2"><div className="mode2DetailrightArrowimage"><img src={rightarrow}></img></div>{imgSelectTicket?.map((item) => item)}</div>
           </div>
           <div className="mode2buyDetailBallTrailer">
               {chooseBall.map((item) => item)}

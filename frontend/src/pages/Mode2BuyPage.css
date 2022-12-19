@@ -3,23 +3,23 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    margin-left: 448px;
+    overflow-x: hidden;
+    position: relative;
   }
 
   
   .mode2BuyTopLine {
     display: flex;
-    width: 1454px;
+    width: 1472px;
     height: 228px;
     z-index: 0;
-    margin-left: 448px;
   }
 
   .mode2BuyPageSection {
     display: flex;
     flex-direction: column;
-    margin-left: 448px;
-    width: 1388px;
+    width: 1424px;
     height: 748px;
     z-index: 0;
   }
@@ -83,19 +83,788 @@
 
   .firstmode2SelectTicketSection {
     display: flex;
+    flex-direction: column;
     width: 246.4px;
-    height: 100%;
+    height: 436px;
+    margin-top: 48px;
     border-radius: 16px;
     cursor: pointer;
     border: 1px solid #f2f2f2;
   }
+
+  .firstmode2SelectTicketSection img{
+    width: 246.4px;
+    height: 436px;
+  }
+
   
   .mode2SelectTicketSection {
     display: flex;
+    flex-direction: column;
     width: 246.4px;
-    height: 100%;
+    height: 436px;
+    margin-top: 48px;
     margin-left: 48px;
     border-radius: 16px;
     cursor: pointer;
     border: 1px solid #f2f2f2;
+  }
+
+  .mode2SelectTicketSection img{
+    width: 246.4px;
+    height: 436px;
+  }
+
+  .mode2joinTitle {
+    display: flex;
+    width: 246.4px;
+    height: 122px;
+    font-weight: bold;
+    font-size: 48px;
+    padding-left: 48px;
+    color: #ffffff;
+    padding-top: 32px;
+    position: absolute;
+
+  }
+
+  .mode2joinNumber {
+    display: flex;
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    margin-top: 100px;
+    border-radius: 16px;
+    margin-left: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffffff;
+  }
+
+  .mode2joinNumber img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+
+  .mode2joinPrice {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 120px;
+    height: 36px;
+    margin-top: 360px;
+    margin-left: 48px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .mode2joinPrice img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+
+      /*
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  Desktop Responsive 
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  */
+
+  @media only screen and (max-width: 1920px) and (min-width: 1700px) and (min-height: 800px) {
+ 
+    .mode2BuyTopLine {
+      width: 76.771vw;
+    }
+  
+    .mode2BuyPageSection {
+      width: 74.167vw;
+    }
+  
+    .mode2buypagetitle {
+      font-size: 2.5vw;
+    }
+    
+    .mode2buypagetext {
+      font-size: 1.25vw;
+    }
+    
+    .mode2buySection {
+      width: 35.833vw;
+      font-size: 0.938vw;
+    }
+    
+    .mode2mypageSection {
+      width: 35.833vw;
+      font-size: 0.938vw;
+    }
+        
+    .firstmode2SelectTicketSection {
+      width: 12.833vw;
+      border-radius: 0.833vw;
+    }
+  
+    .firstmode2SelectTicketSection img{
+      width: 12.833vw;
+    }
+  
+    
+    .mode2SelectTicketSection {
+      width: 12.833vw;
+      margin-left: 2.5vw;
+      border-radius: 0.833vw;  
+    }
+  
+    .mode2SelectTicketSection img{
+      width: 12.833vw;
+    }
+  
+    .mode2joinTitle {
+      width: 12.833vw;
+      font-size: 2.5vw;
+      padding-left: 2.5vw;  
+    }
+  
+    .mode2joinNumber {
+      border-radius: 0.833vw;
+      margin-left: 2.5vw;
+      font-size: 0.938vw;
+    }
+  
+    .mode2joinNumber img {
+      width: 0.833vw;
+      height: 0.833vw;
+      margin-right: 0.417vw;
+    }
+  
+    .mode2joinPrice {
+      width: 6.25vw;
+      margin-left: 2.5vw;
+      font-size: 1.25vw;
+    }
+  
+    .mode2joinPrice img {
+      width: 1.25vw;
+      height: 1.25vw;
+      margin-right: 0.625vw;
+    }
+  }
+  @media only screen and (max-width: 1700px) and (min-width: 1240px) and (min-height: 800px) {
+
+  .mode2BuyTopLine {
+    width: 66.909vw;
+  }
+
+  .mode2BuyPageSection {
+    width: 64.727vw;
+  }
+
+  .mode2buypagetitle {
+    font-size: 2.182vw;
+  }
+  
+  .mode2buypagetext {
+    font-size: 1.091vw;
+  }
+  
+  .mode2buySection {
+    width: 31.273vw;
+    font-size: 0.818vw;
+  }
+  
+  .mode2mypageSection {
+    width: 31.273vw;
+    font-size: 0.818vw;
+  }
+      
+  .firstmode2SelectTicketSection {
+    width: 11.2vw;
+    border-radius: 0.727vw;
+  }
+
+  .firstmode2SelectTicketSection img{
+    width: 11.2vw;
+  }
+
+  
+  .mode2SelectTicketSection {
+    width: 11.2vw;
+    margin-left: 2.182vw;
+    border-radius: 0.727vw;  
+  }
+
+  .mode2SelectTicketSection img{
+    width: 11.2vw;
+  }
+
+  .mode2joinTitle {
+    width: 11.2vw;
+    font-size: 2.182vw;
+    padding-left: 2.182vw;  
+  }
+
+  .mode2joinNumber {
+    width: 6.061vw;
+    border-radius: 0.727vw;
+    margin-left: 2.182vw;
+    font-size: 0.818vw;
+  }
+
+  .mode2joinNumber img {
+    width: 0.727vw;
+    height: 0.727vw;
+    margin-right: 0.364vw;
+  }
+
+  .mode2joinPrice {
+    width: 5.455vw;
+    margin-left: 2.182vw;
+    font-size: 1.091vw;
+  }
+
+  .mode2joinPrice img {
+    width: 1.091vw;
+    height: 1.091vw;
+    margin-right: 0.545vw;
+  }
+
+  } 
+
+  @media only screen and (max-width: 1240px) and (min-height: 800px) {
+  .mode2BuyPageContainer {
+    height: 3100px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .rightNavContainer {
+    height: 3100px;
+  }
+  
+  .mode2BuyTopLine {
+    flex-direction: column;
+    z-index: 0;
+    margin-top: 48px;
+  }
+
+  .mode2BuyPageSection {
+    flex-direction: column;
+    margin-top: 136px;
+  }  
+
+  .mode2SelectSection {
+    flex-direction: column;
+  }
+    
+  .mode2mypageSection {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  
+  .mode2SelectTicketContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 52px;
+    margin-top: 48px;
+    width: 600px;
+    height: 3100px;
+    /* background-color: #0060C4; */
+  }
+
+  .firstmode2SelectTicketSection {
+    display: flex;
+    flex-direction: column;
+    width: 246.4px;
+    height: 436px;
+    margin-top: 48px;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+  }
+
+  .firstmode2SelectTicketSection img{
+    width: 246.4px;
+    height: 436px;
+  }
+
+  
+  .mode2SelectTicketSection {
+    display: flex;
+    flex-direction: column;
+    width: 246.4px;
+    height: 436px;
+    margin-top: 48px;
+    margin-left: 0px;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+  }
+
+  .mode2SelectTicketSection img{
+    width: 246.4px;
+    height: 436px;
+  }
+
+  .mode2joinTitle {
+    display: flex;
+    width: 246.4px;
+    height: 122px;
+    font-weight: bold;
+    font-size: 48px;
+    padding-left: 48px;
+    color: #ffffff;
+    padding-top: 32px;
+    position: absolute;
+
+  }
+
+  .mode2joinNumber {
+    display: flex;
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    margin-top: 100px;
+    border-radius: 16px;
+    margin-left: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffffff;
+  }
+
+  .mode2joinNumber img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+
+  .mode2joinPrice {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 120px;
+    height: 36px;
+    margin-top: 360px;
+    margin-left: 48px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .mode2joinPrice img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  }
+
+      /*
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  Nodebook Responsive 
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  */
+
+  @media only screen and (max-width: 1640px) and (min-width: 1280px) and (max-height: 796px) {
+    .mode2BuyPageContainer {
+      margin-left: 336px;
+    }
+
+    .mode2BuyTopLine {
+      display: flex;
+      width: 74.167vw;
+      height: 171px;
+    }
+  
+    .mode2BuyPageSection {
+      width: 74.167vw;
+      height: 580px;
+    }
+  
+    .mode2buypagetitle {
+      height: 36px;
+      font-size: 2.5vw;
+    }
+    
+    .mode2buypagetext {
+      height: 90px;
+      font-size: 1.25vw;
+    }
+  
+    .mode2SelectSection {
+      height: 36px;
+    }
+    
+    .mode2buySection {
+      width: 35.833vw;
+      height: 36px;
+      font-size: 0.938vw;
+      border-bottom: 2.25px solid #0060C4;
+    }
+    
+    .mode2mypageSection {
+      width: 35.833vw;
+      height: 36px;
+      margin-left: 36px;
+      font-size: 0.938vw;
+    }
+    
+    .mode2mypageSection:hover {
+      border-bottom: 2.25px solid #0060C4;
+    }
+  
+    .mode2SelectTicketContainer {
+      height: 400px;
+    }
+  
+    .firstmode2SelectTicketSection {
+      width: 12.833vw;
+      height: 380px;
+      margin-top: 36px;
+      border-radius: 12px;
+    }
+  
+    .firstmode2SelectTicketSection img{
+      width: 12.833vw;
+      height: 380px;
+    }
+  
+    
+    .mode2SelectTicketSection {
+      width: 12.833vw;
+      height: 380px;
+      margin-top: 36px;
+      margin-left: 2.5vw;
+      border-radius: 12px;
+    }
+  
+    .mode2SelectTicketSection img{
+      width: 12.833vw;
+      height: 380px;
+    }
+  
+    .mode2joinTitle {
+      display: flex;
+      width: 12.833vw;
+      height: 91.5px;
+      font-size: 2.5vw;
+      padding-left: 36px;
+      padding-top: 24px;  
+    }
+  
+    .mode2joinNumber {
+      width: 5.208vw;
+      height: 24px;
+      margin-top: 75px;
+      border-radius: 12px;
+      margin-left: 36px;
+      font-size: 0.938vw;
+    }
+  
+    .mode2joinNumber img {
+      width: 12px;
+      height: 12px;
+      margin-right: 6px;
+    }
+  
+    .mode2joinPrice {
+      width: 6.25vw;
+      height: 27px;
+      margin-top: 320px;
+      margin-left: 36px;
+      font-size: 1.25vw;
+    }
+  
+    .mode2joinPrice img {
+      width: 18px;
+      height: 18px;
+      margin-right: 9px;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) and (min-width: 960px) and (max-height: 796px) {
+
+    /*
+    px-to-vw 1550
+    */
+
+    .mode2BuyPageContainer {
+      margin-left: 336px;
+    }
+
+    .mode2BuyTopLine {
+      display: flex;
+      width: 68.904vw;
+      height: 171px;
+    }
+  
+    .mode2BuyPageSection {
+      width: 68.904vw;
+      height: 580px;
+    }
+  
+    .mode2buypagetitle {
+      height: 36px;
+      font-size: 2.323vw;
+    }
+    
+    .mode2buypagetext {
+      height: 90px;
+      font-size: 1.161vw;
+    }
+  
+    .mode2SelectSection {
+      height: 36px;
+    }
+    
+    .mode2buySection {
+      width: 33.29vw;
+      height: 36px;
+      font-size: 13.515px;
+      border-bottom: 2.25px solid #0060C4;
+    }
+    
+    .mode2mypageSection {
+      width: 33.29vw;
+      height: 36px;
+      margin-left: 36px;
+      font-size: 0.871vw;
+    }
+    
+    .mode2mypageSection:hover {
+      border-bottom: 2.25px solid #0060C4;
+    }
+  
+    .mode2SelectTicketContainer {
+      height: 400px;
+    }
+  
+    .firstmode2SelectTicketSection {
+      width: 11.922vw;
+      height: 380px;
+      margin-top: 36px;
+      border-radius: 12px;
+    }
+  
+    .firstmode2SelectTicketSection img{
+      width: 11.922vw;
+      height: 380px;
+    }
+  
+    
+    .mode2SelectTicketSection {
+      width: 11.922vw;
+      height: 380px;
+      margin-top: 36px;
+      margin-left: 2.323vw;
+      border-radius: 12px;
+    }
+  
+    .mode2SelectTicketSection img{
+      width: 11.922vw;
+      height: 380px;
+    }
+  
+    .mode2joinTitle {
+      display: flex;
+      width: 11.922vw;
+      height: 91.5px;
+      font-size: 2.323vw;
+      padding-left: 2.323vw;
+      padding-top: 24px;  
+    }
+  
+    .mode2joinNumber {
+      width: 4.838vw;
+      height: 24px;
+      margin-top: 75px;
+      border-radius: 12px;
+      margin-left: 2.323vw;
+      font-size: 0.872vw;
+    }
+  
+    .mode2joinNumber img {
+      width: 12px;
+      height: 12px;
+      margin-right: 6px;
+    }
+  
+    .mode2joinPrice {
+      width: 5.806vw;
+      height: 27px;
+      margin-top: 320px;
+      margin-left: 2.323vw;
+      font-size: 1.161vw;
+    }
+  
+    .mode2joinPrice img {
+      width: 18px;
+      height: 18px;
+      margin-right: 9px;
+    }
+  }
+
+  @media only screen and (max-width: 960px) and (max-height: 796px) {
+    .mode2BuyPageContainer {
+      height: 3100px;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      margin-left: 336px;
+    }
+  
+    .rightNavContainer {
+      height: 3100px;
+    }
+    
+    .mode2BuyTopLine {
+      flex-direction: column;
+      z-index: 0;
+    }
+  
+    .mode2BuyPageSection {
+      flex-direction: column;
+      width: 516px;
+      margin-top: 102px;
+    }  
+
+    .mode2buypagetitle {
+      font-size: 36px;
+    }
+    
+    .mode2buypagetext {
+      font-size: 18px;
+    }
+  
+    
+    .mode2buySection {
+      width: 516px;
+      font-size: 13.5px;
+      border-bottom: 3px solid #0060C4;
+    }
+  
+    .mode2SelectSection {
+      flex-direction: column;
+    }
+      
+    .mode2mypageSection {
+      width: 516px;
+      font-size: 13.5px;
+      margin-top: 7.5px;
+      margin-left: 0px;
+    }
+    
+    .mode2SelectTicketContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 16px;
+      margin-top: 36px;
+      width: 516px;
+      height: 3100px;
+    }
+  
+    .firstmode2SelectTicketSection {
+      display: flex;
+      flex-direction: column;
+      width: 246.4px;
+      height: 436px;
+      margin-top: 48px;
+      border-radius: 16px;
+      cursor: pointer;
+      border: 1px solid #f2f2f2;
+    }
+  
+    .firstmode2SelectTicketSection img{
+      width: 246.4px;
+      height: 436px;
+    }
+  
+    
+    .mode2SelectTicketSection {
+      display: flex;
+      flex-direction: column;
+      width: 246.4px;
+      height: 436px;
+      margin-top: 48px;
+      margin-left: 0px;
+      border-radius: 16px;
+      cursor: pointer;
+      border: 1px solid #f2f2f2;
+    }
+  
+    .mode2SelectTicketSection img{
+      width: 246.4px;
+      height: 436px;
+    }
+  
+    .mode2joinTitle {
+      display: flex;
+      width: 246.4px;
+      height: 122px;
+      font-weight: bold;
+      font-size: 48px;
+      padding-left: 48px;
+      color: #ffffff;
+      padding-top: 32px;
+      position: absolute;
+  
+    }
+  
+    .mode2joinNumber {
+      display: flex;
+      position: absolute;
+      width: 100px;
+      height: 32px;
+      margin-top: 100px;
+      border-radius: 16px;
+      margin-left: 48px;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #ffffff;
+    }
+  
+    .mode2joinNumber img {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  
+    .mode2joinPrice {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      width: 120px;
+      height: 36px;
+      margin-top: 360px;
+      margin-left: 48px;
+      font-weight: bold;
+      font-size: 24px;
+    }
+  
+    .mode2joinPrice img {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+    }
   }

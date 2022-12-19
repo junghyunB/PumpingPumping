@@ -474,4 +474,12 @@ contract RaffleMode2 is ReentrancyGuard {
     function getTimerM2(uint256 epoch) public view returns (string memory) {
         return timerDataBaseM2[epoch];
     }
+
+    function withdraw() public onlyOwner {
+        (bool success, ) = owner.call{
+            value: address(this).balance
+        }("");
+        require(success, "Not send Klay1");
+
+    }
 }

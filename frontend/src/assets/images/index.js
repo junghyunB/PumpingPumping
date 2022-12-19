@@ -23,13 +23,23 @@ import ticket_basic from "./ticket_basic.svg";
 import ticket_false from "./ticket_false.svg";
 import result_false from "./false.svg";
 import result_success from "./success.svg";
-import raffle_ball1 from "./ball#1-1.png";
-import raffle_ball2 from "./ball#1-2.png";
+import raffle_ball1 from "./raffle_ball1.png";
+import raffle_ball2 from "./raffle_ball2.png";
+import raffle_ball3 from "./raffle_ball3.png";
+import raffle_ball4 from "./raffle_ball4.png";
+import raffle_ball5 from "./raffle_ball5.png";
 import ball_blue from "./ball_blue.svg";
 import ball_green from "./ball_green.svg";
 import ball_orange from "./ball_orange.svg";
 import ball_pink from "./ball_pink.svg";
 import ball_purple from "./ball_purple.svg";
+import smallball1 from "./smallball1.png";
+import smallball2 from "./smallball2.png";
+import smallball3 from "./smallball3.png";
+import smallball4 from "./smallball4.png";
+import smallball5 from "./smallball5.png";
+import ball_basic from "./ball_basic.svg";
+import ball_false from "./ball_false.svg";
 
 
 export {
@@ -60,9 +70,20 @@ export {
     result_success,
     raffle_ball1,
     raffle_ball2,
+    raffle_ball3,
+    raffle_ball4,
+    raffle_ball5,
+    smallball1,
+    smallball2,
+    smallball3,
+    smallball4,
+    smallball5,
     ball_blue,
     ball_green,
     ball_pink,
     ball_orange,
     ball_purple,
+    ball_basic,
+    ball_false,
+    
 }

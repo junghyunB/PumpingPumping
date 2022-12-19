@@ -1,369 +1,373 @@
 .mode2MyPageContainer {
     display: flex;
-    flex-direction: row;
-    /* background-color: aqua; */
+    flex-direction: column;
+    position: relative;
     width: 100%;
     height: 100%;
-    padding-top: 120px;
+    margin-left: 448px;
+    overflow-x: hidden;
 }
 
-.mode2MyPageSection {
+.mode2MyTopLine {
+    display: flex;
+    width: 1472px;
+    height: 228px;
+    z-index: 0;
+  }
+
+.mode2MySection {
     display: flex;
     flex-direction: column;
-    margin-left: 300px;
-    width: 100%;
-    height: 100%;
-    /* background-color: blue; */
+    width: 1424px;
+    height: 748px;
+    z-index: 0;
 }
 
-.mode2selectSection {
+.mode2Mypagetitle {
     display: flex;
-    flex-direction: row;
     width: 100%;
-    height: 150px;
-    justify-content: center;
+    height: 48px;
+    font-size: 48px;
+    color: #0060C4;
     align-items: center;
-    /* background-color: red; */
 }
 
-.z-indexZone {
-    z-index: 20;
-    text-decoration: none;
-    color: black;
+.mode2Mypagetext {
+    width: 100%;
+    height: 120px;
+    font-size: 24px;
 }
 
-.mode2selectSection button {
-    width: 200px;
-    height: 70px;
-}
-
-/* --------------- MainSection --------------- */
-.mode2MyPageMainSelectSection {
+.mode2mybuySection {
     display: flex;
-    flex-direction: row;
-    /* align-items: center; */
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    /* background-color: brown; */
-}
-
-.mode2MyContents {
-    display:flex;
-    flex-direction: column;
-    width: 450px;
-    height: 530px;
-    border-radius: 3rem;
-    border: solid 2px black;
-    box-shadow: 5px 5px 15px 5px #dadce0;
-    background-color: white;
-}
-
-.mode2MyTitle {
-    width: 100%;
-    height: 80px;
-    border-radius: 3rem;
-    text-align: center;
-    justify-content: center;
     align-items: center;
-    display: flex;
-    /* background-color: brown; */
-    z-index: 20;
-}
-
-.mode2MyTitle h3 {
-    padding-top: 10px;
-    font-weight: 900;
-}
-
-
-.mode2MyTitle button {
-    border: none;
-    z-index: 20;
-    background-color: white;
-}
-
-.mode2MyTicketList {
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    height: 150px;
-    border-bottom: solid 1px black;
-    border-top: solid 1px black;
-}
-
-.myTicketTitle {
-    display: flex;
-    width: 100%;
-    height: 25px;
-    padding-left: 15px;
-    /* background-color: yellow; */
-}
-
-.ticketListSection {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    font-size: 18px;
+    color: #3b3b3b;
     cursor: pointer;
-    justify-content: center;
+}
+
+.mode2mybuySection:hover {
+    border-bottom: 3px solid #0060C4;
+  }
+
+.mode2myMySection {
+    display: flex;
     align-items: center;
-    /* background-color: chocolate; */
+    justify-content: center;
+    width: 688px;
+    height: 48px;
+    margin-left: 48px;
+    font-size: 18px;
+    color: #3b3b3b;
+    cursor: pointer;
+    border-bottom: 3px solid #0060C4;
 }
 
-.img-wrap {
-    display: inline-block;
-    width: 20%;
-    height: 62px;
-    /* background-color: coral; */
+.mode2MypaddingSection {
+    width: 100%;
+    height: 48px;    
 }
 
-
-.img-wrap img {
-    padding-left: 10px;
-    padding-top: 10px;
-    width: 90%;
-    height: 90%;
-    /* background-color: yellow; */
-}
-
-.img-text {
-    position: absolute;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    /* padding: 5px 10px; */
-    transform: translate( 20%, 5% );
-    text-align: center;
-    padding-top: 20px;
-    /* background-color: green; */
-}
-
-.img-text p {
-    line-height: 10%;
-}
-.text-interval {
-    padding-left:8px;
-}
-
-.mode2TicketInfo {
+.mode2MyDataContainer {
     display: flex;
     width: 100%;
-    height: 50px;
-    border-bottom: solid 1px black;
-    /* background-color: yellow; */
+    height: 402px;
 }
 
-.mode2totalTicketSection {
-    width: 50%;
+.mode2MyDataSection {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 100%;
+    border-radius: 16px;
+    border: 1px solid #F2F2F2;
+}
+
+.mode2MytotalballTitle {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color:#959595;
+    padding-left: 16px;
+    padding-top: 21px;
+}
+
+.mode2MyTotalBallEA {
+    display: flex;
+    width: 100%;
+    height: 76px;
+    padding-left: 16px;
+    padding-top: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mode2MyTotalBallEA img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    margin-top: 6px;
+}
+
+.mode2MyTotalPrizeTitle {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    font-size: 18px;
+    color:#959595;
+    padding-left: 16px;
+}
+
+.mode2MyTotalPrizeKlay {
+    width: 100%;
+    height: 160px;
+    padding-left: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mode2MyTotalPrizeKlay img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.mode2MyResultTitle {
+    width: 100%;
+    height: 32px;
+    font-size: 18px;
+    color: #959595;
+    padding-left: 16px;
+}
+
+.mode2MyResultStatus {
+    width: 100%;
+    height: 28px;
+    padding-left: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mode2MyResultStatus img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.mode2MyPaddingsection2 {
+    width: 48px;
     height: 100%;
 }
-.mode2totalTicketSection p {
-    text-align: center;
-    padding-top: 15px;
-}
 
-.mode2totalAmountSection {
-    width: 50%;
+.mode2MyWinningOwnBallContainer {
+    display: flex;
+    flex-direction: column;
+    width: 1136px;
     height: 100%;
 }
 
-.mode2totalAmountSection p {
-    text-align: center;
-    padding-top: 15px;
-}
-
-.winningTicketSection {
+.mode2MyRoundWinningSection {
     display: flex;
     width: 100%;
     height: 160px;
-    border-bottom: solid 1px black;
-    /* background-color: brown; */
 }
 
-.winningTicket {
+.mode2MyRoundBtn {
     display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 100%;
-    /* background-color: aqua; */
-}
-
-.winningTicketNotTie {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    /* background-color: aquamarine; */
-}
-
-.winningTicketTitle h3 {
-    padding-left: 150px;
-    font-weight: 900;
-}
-
-.winningTicketTitle {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    /* background-color: blueviolet; */
-}
-
-
-.winningTicketTitle h4 { 
-    padding-left: 12px;
-    font-weight: 900;
-    padding-top: 10px;
-}
-
-.winningTicketimgSection {
-    display: flex;
-    width: 100%;
+    width: 48px;
     height: 100%;
     align-items: center;
     justify-content: center;
-    /* background-color: brown; */
+    cursor: pointer;
+    border-radius: 8px;
 }
 
-.winningTicketimgSection img {
-    width: 100px;
-    height: 70px;
+.mode2MyRoundBtn:hover {
+    background-color: #f2f2f2;
 }
 
-.winningNumberData {
-    position: absolute;
-    padding-top: 10px;
-    padding-left: 12px;
-}
-.winningNumberData p {
-    line-height: 10px;
-    font-size: 20px;
+.mode2MyRoundBtn img {
+    width: 36px;
+    height: 24px;
 }
 
-.tieTicket {
+.mode2MyRoundContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #3B3B3B;
+    width: 520px;
+    height: 100%;
+    border-right: 1px solid #F2F2F2;
+}
+
+.mode2MyRoundWinningBallContainer {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 520px;
     height: 100%;
 }
 
-.tieTicketTitle {
+.mode2MyWinningTicketTitle {
     display: flex;
-    width: 100%;
-    height: 50px;
     justify-content: center;
-}
-.tieTicketTitle h4 {
-    padding-top: 10px;
-    font-weight: 900;
-}
-
-.tieTicketImgSection {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    font-size: 24px;
+    color:#0060C4;
+    font-weight: bold;
     width: 100%;
-    height: 100%;
-    /* background-color: aqua; */
-}
-.tieImgSmallSection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:25%;
-    height: 100%;
-    /* background-color: blueviolet; */
-}
-
-.tieTicketImgSection img {
-    width: 80px;
     height: 60px;
 }
 
-
-.tieNumberData {
-    position: absolute;
+.mode2MyWinningTicketTitle img{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    filter: invert(22%) sepia(87%) saturate(2313%) hue-rotate(199deg) brightness(93%) contrast(101%);
 }
 
-.tieNumberData p {
-    line-height: 6px;
-    font-size: 17px;
-}
-
-.currnetEpochWinningTicket {
-    width: 100%;
-    height: 100%;
-    text-align: center;  
-    padding-top: 10px;  
-}
-
-.currnetEpochWinningTicket h2 {
-    font-weight: 900;
-}
-
-.mode2Result {
+.mode2MyWinningTicketNumber {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.mode2MyWinningTicketNumber img{
+    width: 96px;
+    height: 96px;
+}
+
+.mode2MyWinningTicketNumberText {
+    
+    position: absolute;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+}
+
+.mode2WinningRoundId {
+    font-size: 18px;
+    font-weight: bold;
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.mode2MypaddingSection3 {
+    display: flex;
+    width: 100%;
+    height: 48px;
+}
+
+.mode2MyOwnBallSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 194px;
+    border-radius: 16px;
+    border: 1px solid #f2f2f2;
+}
+
+.mode2OwnBallNumber {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-size: 18px;
+    color: #959595;
+    width: 100%;
+    height: 60px;
+}
+
+.mode2OwnBallNumber img {
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+.modeMyOnwBallNumberText {
+    text-decoration: none;
+    color:#3B3B3B;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mode2OwnBallImage {
+    display: flex;
+    width: 100%;
+    height: 130px;
+}
+
+.mode2OwnBallEAImage {
+    display: flex;
+    width: 113.6px;
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode2OwnBallEAImage img{
+    width: 96px;
+    height: 96px;
+}
+
+.mode2OwnBallText {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+.mode2MyClaimSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 80px;
-    border-bottom: solid 1px black;
 }
 
-.resultSection {
-    padding-top: 7px;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    /* background-color: aqua; */
-}
-
-.resultSection p {
-    font-size: 30px;
-}
-
-.winningresultSection {
+.modeMyClaimButton {
     display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: blue; */
     justify-content: center;
-}
-
-.winningresultSection p {
-    padding-top: 17px;
-    font-size: 20px;
-}
-
-.winningclaimSection {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    /* background-color: blueviolet; */
-    justify-content: center;
-}
-
-.winningclaimSection p {
-    padding-top: 17px;
-    font-size: 20px;
-}
-
-
-.mode2Claim {
-    display: flex;
-    width: 100%;
-    height: 160px;
-    /* background-color: chocolate; */
     align-items: center;
-    justify-content: center;
-    border-radius: 3rem;
+    height: 64px;
+    width: 100%;
+    background-color: #D9D9D9;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.mode2Claim button{
-    width: 80%;
-    height: 70px;
-    font-size: 25px;
-    z-index: 20;
+.modeMyClaimSuccessButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    background-color: #28D182;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+
 }
+
 
 
 

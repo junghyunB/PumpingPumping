@@ -40,6 +40,7 @@ import smallball4 from "./smallball4.png";
 import smallball5 from "./smallball5.png";
 import ball_basic from "./ball_basic.svg";
 import ball_false from "./ball_false.svg";
+import disconnect from "./disconnect.svg";
 
 
 export {
@@ -85,5 +86,5 @@ export {
     ball_purple,
     ball_basic,
     ball_false,
-    
+    disconnect
 }

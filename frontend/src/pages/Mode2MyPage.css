@@ -365,10 +365,1262 @@
     font-size: 24px;
     border-radius: 8px;
     cursor: pointer;
-
 }
 
+  
+  /*
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  Desktop Responsive 
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  */
 
+@media only screen and (max-width: 1920px) and (min-width: 1700px) and (min-height: 800px) {
+    
+    .mode2MyTopLine {
+        width: 76.667vw;
+      }
+    
+    .mode2MySection {
+        width: 74.167vw;
+    }
+    
+    .mode2Mypagetitle {
+        font-size: 2.5vw;
+    }
+    
+    .mode2Mypagetext {
+        font-size: 1.25vw;
+    }
+    
+    .mode2mybuySection {
+        width: 35.833vw;
+        font-size: 0.938vw;
+    }
+    
+    .mode2myMySection {
+        width: 35.833vw;
+        font-size: 0.938vw;
+    }
+    
+    .mode2MyDataSection {
+        width: 12.5vw;
+    }
+    
+    .mode2MytotalballTitle {
+        font-size: 0.938vw;
+    }
+    
+    .mode2MyTotalBallEA {
+        font-size: 1.25vw;
+    }
+    
+    .mode2MyTotalBallEA img {
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    
+    .mode2MyTotalPrizeTitle {
+        font-size: 0.938vw;
+    }
+    
+    .mode2MyTotalPrizeKlay {
+        font-size: 1.25vw;
+    }
+    
+    .mode2MyTotalPrizeKlay img {
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    
+    .mode2MyResultTitle {
+        font-size: 0.938vw;
+    }
+    
+    .mode2MyResultStatus {
+        font-size: 1.25vw;
+    }
+    
+    .mode2MyResultStatus img {
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    
+    .mode2MyPaddingsection2 {
+        width: 2.5vw;
+    }
+    
+    .mode2MyWinningOwnBallContainer {
+        width: 59.167vw;
+    }
+    
+    .mode2MyRoundBtn {
+        width: 2.5vw;
+    }
+    
+    .mode2MyRoundBtn img {
+        width: 1.875vw;
+        height: 1.25vw;
+    }
+    
+    .mode2MyRoundContainer {
+        font-size: 2.5vw;
+        width: 27.083vw;
+    }
+    
+    .mode2MyRoundWinningBallContainer {
+        width: 27.083vw;
+    }
+    
+    .mode2MyWinningTicketTitle {
+        font-size: 1.25vw;
+    }
+    
+    .mode2MyWinningTicketTitle img{
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+        
+    .mode2MyWinningTicketNumber img{
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .mode2MyWinningTicketNumberText {
+        font-size: 1.25vw;
+        line-height: 1.042vw;
+    }
+    
+    .mode2WinningRoundId {
+        font-size: 0.938vw;
+    }
+    
+    .mode2OwnBallNumber {
+        font-size: 0.938vw;
+    }
+    
+    .mode2OwnBallNumber img {
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    
+    .modeMyOnwBallNumberText {
+        font-size: 1.25vw;
+    }
+        
+    .mode2OwnBallEAImage {
+        width: 5.917vw;
+    }
+    
+    .mode2OwnBallEAImage img{
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .mode2OwnBallText {
+        font-size: 1.25vw;
+        line-height: 1.042vw;    
+    }
+    
+    .modeMyClaimButton {
+        font-size: 1.25vw;
+    }
+    
+    .modeMyClaimSuccessButton {
+        font-size: 1.25vw;
+    }
+    
+}
+
+@media only screen and (max-width: 1700px) and (min-width: 1240px) and (min-height: 800px) {
+    
+    /*
+    px-to-vw 1650
+    */
+
+    .mode2MyTopLine {
+        width: 66.909vw;
+      }
+    
+    .mode2MySection {
+        width: 64.727vw;
+    }
+    
+    .mode2Mypagetitle {
+        font-size: 2.182vw;
+    }
+    
+    .mode2Mypagetext {
+        font-size: 1.091vw;
+    }
+    
+    .mode2mybuySection {
+        width: 31.273vw;
+        font-size: 0.818vw;
+    }
+    
+    .mode2mybuySection:hover {
+        border-bottom: 0.136vw solid #0060C4;
+      }
+    
+    .mode2myMySection {
+        width: 31.273vw;
+        font-size: 0.818vw;
+        border-bottom: 0.136vw solid #0060C4;
+    }
+    
+    .mode2MyDataSection {
+        width: 10.909vw;
+    }
+    
+    .mode2MytotalballTitle {
+        font-size: 0.818vw;
+        padding-left: 0.727vw;
+    }
+    
+    .mode2MyTotalBallEA {
+        padding-left: 0.727vw;
+        font-size: 1.091vw;
+    }
+    
+    .mode2MyTotalBallEA img {
+        width: 1.091vw;
+        margin-right: 0.545vw;
+    }
+    
+    .mode2MyTotalPrizeTitle {
+        height: 1.636vw;
+        font-size: 0.818vw;
+        padding-left: 0.727vw;
+    }
+    
+    .mode2MyTotalPrizeKlay {
+        padding-left: 0.727vw;
+        font-size: 1.091vw;
+    }
+    
+    .mode2MyTotalPrizeKlay img {
+        width: 1.091vw;
+        height: 1.091vw;
+        margin-right: 0.545vw;
+    }
+    
+    .mode2MyResultTitle {
+        font-size: 0.818vw;
+        padding-left: 0.727vw;
+    }
+    
+    .mode2MyResultStatus {
+        padding-left: 0.727vw;
+        font-size: 1.091vw;
+    }
+    
+    .mode2MyResultStatus img {
+        width: 1.091vw;
+        height: 1.091vw;
+        margin-right: 0.545vw;
+    }
+    
+    .mode2MyPaddingsection2 {
+        width: 2.182vw;
+    }
+    
+    .mode2MyWinningOwnBallContainer {
+        width: 51.636vw;
+    }
+    
+    .mode2MyRoundBtn {
+        width: 2.182vw;
+    }
+    
+    .mode2MyRoundBtn img {
+        width: 1.636vw;
+        height: 1.091vw;
+    }
+    
+    .mode2MyRoundContainer {
+        font-size: 2.182vw;
+        width: 23.636vw;
+    }
+    
+    .mode2MyRoundWinningBallContainer {
+        width: 23.636vw;
+    }
+    
+    .mode2MyWinningTicketTitle {
+        font-size: 1.091vw;
+    }
+    
+    .mode2MyWinningTicketTitle img{
+        width: 1.091vw;
+        height: 1.091vw;
+        margin-right: 0.364vw;
+    }
+    
+    
+    .mode2MyWinningTicketNumber img{
+        width: 4.364vw;
+        height: 4.364vw;
+    }
+    
+    .mode2MyWinningTicketNumberText {     
+        font-size: 1.091vw;
+        line-height: 0.909vw;
+        height: 1.818vw;
+    }
+    
+    .mode2WinningRoundId {
+        font-size: 0.818vw;
+    }
+        
+    .mode2OwnBallNumber {
+        padding-left: 0.727vw;
+        font-size: 0.818vw;
+    }
+    
+    .mode2OwnBallNumber img {
+        margin-left: 0.545vw;
+        margin-right: 0.545vw;
+        width: 1.091vw;
+        height: 1.091vw;
+    }
+    
+    .modeMyOnwBallNumberText {
+        font-size: 1.091vw;
+    }
+        
+    .mode2OwnBallEAImage {
+        width: 5.164vw;
+        height: 5.909vw;
+    }
+    
+    .mode2OwnBallEAImage img{
+        width: 4.364vw;
+        height: 4.364vw;
+    }
+    
+    .mode2OwnBallText {
+        font-size: 1.091vw;
+        line-height: 0.909vw;    
+    }
+        
+    .modeMyClaimButton {
+        font-size: 1.091vw;
+    }
+    
+    .modeMyClaimSuccessButton {
+        font-size: 1.091vw;
+    }
+    
+}
+
+@media only screen and (max-width: 1240px) and (min-height: 800px) {
+
+    .mode2MyTopLine {
+        flex-direction: column;
+        margin-top: 48px;
+    }
+
+    .mode2MySection {
+        display: flex;
+        flex-direction: column;
+        width: 1424px;
+        height: 100%;
+        z-index: 0;
+    }
+    
+    .mode2Mypagetitle {
+        margin-top: 136px;
+    }
+    
+    .mode2myMySection {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    
+    .mode2MyDataContainer {
+        width: 700px;
+        margin-top: 150px;
+    }
+    
+    .mode2MyDataSection {
+        width: 180px;
+    }
+
+    .mode2MytotalballTitle {
+        font-size: 13.5px;
+        padding-left: 12px;
+        padding-top: 15px;
+    }
+    
+    .mode2MyTotalBallEA {
+        padding-left: 12px;
+        padding-top: 6px;
+        font-size: 18px;
+    }
+    
+    .mode2MyTotalBallEA img {
+        width: 18px;
+        height: 18px;
+        margin-right: 9px;
+        margin-top: 4.5px;
+    }
+    
+    .mode2MyTotalPrizeTitle {
+        font-size: 13.5px;
+        padding-left: 12px;
+    }
+    
+    .mode2MyTotalPrizeKlay {
+        padding-left: 12px;
+        font-size: 18px;
+    }
+    
+    .mode2MyTotalPrizeKlay img {
+        width: 18px;
+        height: 18px;
+        margin-right: 9px;
+    }
+    
+    .mode2MyResultTitle {
+        font-size: 13.5px;
+        padding-left: 12px;
+    }
+    
+    .mode2MyResultStatus {
+        padding-left: 12px;
+        font-size: 18px;
+    }
+    
+    .mode2MyResultStatus img {
+        width: 18px;
+        height: 18px;
+        margin-right: 9px;
+    }
+    
+        
+    .mode2MyPaddingsection2 {
+        width: 24px;
+        height: 100%;
+    }
+    
+    .mode2MyWinningOwnBallContainer {
+        width: 520px;
+    }
+        
+    .mode2MyRoundBtn {
+        width: 36px;
+    }
+        
+    .mode2MyRoundBtn img {
+        width: 27px;
+        height: 18px;
+    }
+    
+    .mode2MyRoundContainer {
+        font-size: 24px;
+        width: 240px;
+    }
+    
+    .mode2MyRoundWinningBallContainer {
+        width: 240px;
+    }
+    
+    .mode2MyWinningTicketTitle {
+        font-size: 18px;
+    }
+    
+    .mode2MyWinningTicketTitle img{
+        width: 18px;
+        height: 18px;
+        margin-right: 6px;
+    }
+        
+    .mode2MyWinningTicketNumber img{
+        width: 72px;
+        height: 72px;
+    }
+    
+    .mode2MyWinningTicketNumberText {
+        font-size: 18px;
+        line-height: 15px;
+        height: 30px;
+    }
+    
+    .mode2WinningRoundId {
+        font-size: 13.5px;
+    }
+        
+    .mode2OwnBallImage {
+        display: flex;
+        flex-wrap: wrap;
+        width: 520px;
+        height: 130px;
+    }
+    
+    .mode2OwnBallEAImage {
+        display: flex;
+        width: 102px;
+        height: 65px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mode2OwnBallEAImage img{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .mode2OwnBallText {
+        font-size: 16px;
+        line-height: 12px;    
+    }
+    
+    .mode2MyClaimSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 700px;
+        height: 120px;
+    }
+}
+
+  /*
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  NoteBook Responsive 
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  ***************************
+  */
+
+  @media only screen and (max-width: 1640px) and (min-width: 1310px) and (max-height: 796px) {
+    .mode2MyPageContainer {
+        margin-left: 336px;
+    }
+    
+    .mode2MyTopLine {
+        width: 74.167vw;
+        height: 171px;
+      }
+    
+    .mode2MySection {
+        width: 74.167vw;
+        height: 620px;
+    }
+    
+    .mode2Mypagetitle {
+        height: 36px;
+        font-size: 2.5vw;
+    }
+    
+    .mode2Mypagetext {
+        height: 90px;
+        font-size: 1.25vw;
+    }
+    
+    .mode2mybuySection {
+        width: 35.833vw;
+        height: 36px;
+        font-size: 0.938vw;
+    }
+    
+    .mode2mybuySection:hover {
+        border-bottom: 2.25px solid #0060C4;
+      }
+    
+    .mode2myMySection {
+        width: 35.833vw;
+        height: 36px;
+        margin-left: 36px;
+        font-size: 0.938vw;
+        border-bottom: 2.25px solid #0060C4;
+    }
+    
+    .mode2MypaddingSection {
+        height: 36px;    
+    }
+    
+    .mode2MyDataContainer {
+        height: 360px;
+    }
+    
+    .mode2MyDataSection {
+        width: 12.5vw;
+    }
+    
+    .mode2MytotalballTitle {
+        height: 30px;
+        font-size: 0.938vw;
+        padding-left: 0.833vw;
+        padding-top: 1.094vw;
+    }
+    
+    .mode2MyTotalBallEA {
+        height: 57px;
+        padding-left: 0.833vw;
+        padding-top: 0.417vw;
+        font-size: 1.25vw;
+    }
+    
+    .mode2MyTotalBallEA img {
+        width: 1.25vw;
+        height: 1.25vw;
+        margin-right: 0.625vw;
+        margin-top: 0.313vw;
+    }
+    
+    .mode2MyTotalPrizeTitle {
+        height: 27px;
+        font-size: 0.938vw;
+        padding-left: 0.833vw;
+    }
+    
+    .mode2MyTotalPrizeKlay {
+        height: 90px;
+        padding-left: 0.833vw;
+        font-size: 1.25vw;
+    }
+    
+    .mode2MyTotalPrizeKlay img {
+        width: 1.25vw;
+        height: 1.25vw;
+        margin-right: 0.625vw;
+    }
+    
+    .mode2MyResultTitle {
+        height: 24px;
+        font-size: 0.938vw;
+        padding-left: 0.833vw;
+    }
+    
+    .mode2MyResultStatus {
+        height: 21px;
+        padding-left: 0.833vw;
+        font-size: 1.25vw;
+    }
+    
+    .mode2MyResultStatus img {
+        width: 1.25vw;
+        height: 1.25vw;
+        margin-right: 0.625vw;
+    }
+    
+    .mode2MyPaddingsection2 {
+        width: 2.5vw;
+    }
+    
+    .mode2MyWinningOwnBallContainer {
+        width: 59.167vw;
+    }
+    
+    .mode2MyRoundWinningSection {
+        height: 150px;
+    }
+    
+    .mode2MyRoundBtn {
+        width: 2.5vw;
+        border-radius: 6px;
+    }
+        
+    .mode2MyRoundBtn img {
+        width: 1.875vw;
+        height: 1.25vw;
+    }
+    
+    .mode2MyRoundContainer {
+        font-size: 2.5vw;
+        width: 27.083vw;
+    }
+    
+    .mode2MyRoundWinningBallContainer {
+        width: 27.083vw;
+    }
+    
+    .mode2MyWinningTicketTitle {
+        font-size: 1.25vw;
+        height: 45px;
+    }
+    
+    .mode2MyWinningTicketTitle img{
+        width: 1.25vw;
+        height: 1.25vw;
+        margin-right: 0.417vw;
+    }
+    
+    .mode2MyWinningTicketNumber {
+        height: 75px;
+    }
+    
+    .mode2MyWinningTicketNumber img{
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .mode2MyWinningTicketNumberText {
+        font-size: 1.25vw;
+        line-height: 1.042vw;
+        height: 2.083vw;
+    }
+    
+    .mode2WinningRoundId {
+        font-size: 0.938vw;
+    }
+    
+    .mode2MypaddingSection3 {
+        height: 36px;
+    }
+    
+    .mode2MyOwnBallSection {
+        height: 145.5px;
+        border-radius: 12px;
+    }
+    
+    .mode2OwnBallNumber {
+        padding-left: 0.833vw;
+        font-size: 0.938vw;
+        height: 45px;
+    }
+    
+    .mode2OwnBallNumber img {
+        margin-left: 0.625vw;
+        margin-right: 0.625vw;
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    
+    .modeMyOnwBallNumberText {
+        font-size: 1.25vw;
+    }
+    
+    .mode2OwnBallImage {
+        height: 97.5px;
+    }
+    
+    .mode2OwnBallEAImage {
+        width: 5.917vw;
+        height: 97.5px;
+    }
+    
+    .mode2OwnBallEAImage img{
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .mode2OwnBallText {
+        font-size: 1.25vw;
+        line-height: 1.042vw;    
+    }
+    
+    .mode2MyClaimSection {
+        height: 120px;
+    }
+    
+    .modeMyClaimButton {
+        height: 48px;
+        font-size: 1.25vw;
+        border-radius: 6px;
+    }
+    
+    .modeMyClaimSuccessButton {
+        height: 48px;
+        font-size: 1.25vw;
+        border-radius: 6px;
+    }
+    
+  }
+  @media only screen and (max-width: 1310px) and (min-width: 960px) and (max-height: 796px) {
+    .mode2MyPageContainer {
+        margin-left: 336px;
+    }
+    
+    .mode2MyTopLine {
+        width: 62.824vw;
+        height: 171px;
+      }
+    
+    .mode2MySection {
+        width: 62.824vw;
+        height: 620px;
+    }
+    
+    .mode2Mypagetitle {
+        height: 36px;
+        font-size: 2.118vw;
+    }
+    
+    .mode2Mypagetext {
+        height: 90px;
+        font-size: 1.059vw;
+    }
+    
+    .mode2mybuySection {
+        width: 30.353vw;
+        height: 36px;
+        font-size: 0.795vw;
+    }
+    
+    .mode2mybuySection:hover {
+        border-bottom: 2.25px solid #0060C4;
+      }
+    
+    .mode2myMySection {
+        width: 30.353vw;
+        height: 36px;
+        margin-left: 36px;
+        font-size: 0.795vw;
+        border-bottom: 2.25px solid #0060C4;
+    }
+    
+    .mode2MypaddingSection {
+        height: 36px;    
+    }
+    
+    .mode2MyDataContainer {
+        height: 360px;
+    }
+    
+    .mode2MyDataSection {
+        width: 10.588vw;
+    }
+    
+    .mode2MytotalballTitle {
+        height: 30px;
+        font-size: 0.795vw;
+        padding-left: 0.706vw;
+        padding-top: 0.927vw;
+    }
+    
+    .mode2MyTotalBallEA {
+        height: 57px;
+        padding-left: 0.706vw;
+        padding-top: 6.005px;
+        font-size: 1.059vw;
+    }
+    
+    .mode2MyTotalBallEA img {
+        width: 1.059vw;
+        height: 1.059vw;
+        margin-right: 0.529vw;
+        margin-top: 0.265vw;
+    }
+    
+    .mode2MyTotalPrizeTitle {
+        height: 27px;
+        font-size: 0.795vw;
+        padding-left: 0.706vw;
+    }
+    
+    .mode2MyTotalPrizeKlay {
+        height: 90px;
+        padding-left: 0.706vw;
+        font-size: 1.059vw;
+    }
+    
+    .mode2MyTotalPrizeKlay img {
+        width: 1.059vw;
+        height: 1.059vw;
+        margin-right: 0.529vw;
+    }
+    
+    .mode2MyResultTitle {
+        height: 24px;
+        font-size: 0.795vw;
+        padding-left: 0.706vw;
+    }
+    
+    .mode2MyResultStatus {
+        height: 21px;
+        padding-left: 0.706vw;
+        font-size: 1.059vw;
+    }
+    
+    .mode2MyResultStatus img {
+        width: 1.059vw;
+        height: 1.059vw;
+        margin-right: 0.529vw;
+    }
+    
+    .mode2MyPaddingsection2 {
+        width: 2.118vw;
+    }
+    
+    .mode2MyWinningOwnBallContainer {
+        width: 50.118vw;
+    }
+    
+    .mode2MyRoundWinningSection {
+        height: 150px;
+    }
+    
+    .mode2MyRoundBtn {
+        width: 2.118vw;
+        border-radius: 6px;
+    }
+        
+    .mode2MyRoundBtn img {
+        width: 1.588vw;
+        height: 18px;
+    }
+    
+    .mode2MyRoundContainer {
+        font-size: 2.118vw;
+        width: 22.941vw;
+    }
+    
+    .mode2MyRoundWinningBallContainer {
+        width: 22.941vw;
+    }
+    
+    .mode2MyWinningTicketTitle {
+        font-size: 1.059vw;
+        height: 45px;
+    }
+    
+    .mode2MyWinningTicketTitle img{
+        width: 1.059vw;
+        height: 1.059vw;
+        margin-right: 0.353vw;
+    }
+    
+    .mode2MyWinningTicketNumber {
+        height: 75px;
+    }
+    
+    .mode2MyWinningTicketNumber img{
+        width: 4.235vw;
+        height: 4.235vw;
+    }
+    
+    .mode2MyWinningTicketNumberText {
+        font-size: 1.059vw;
+        line-height: 0.883vw;
+        height: 29.995px;
+    }
+    
+    .mode2WinningRoundId {
+        font-size: 0.795vw;
+    }
+    
+    .mode2MypaddingSection3 {
+        height: 36px;
+    }
+    
+    .mode2MyOwnBallSection {
+        height: 145.5px;
+        border-radius: 12px;
+    }
+    
+    .mode2OwnBallNumber {
+        padding-left: 0.706vw;
+        font-size: 0.795vw;
+        height: 45px;
+    }
+    
+    .mode2OwnBallNumber img {
+        margin-left: 0.529vw;
+        margin-right: 0.529vw;
+        width: 1.059vw;
+        height: 1.059vw;
+    }
+    
+    .modeMyOnwBallNumberText {
+        font-size: 1.059vw;
+    }
+    
+    .mode2OwnBallImage {
+        height: 97.5px;
+    }
+    
+    .mode2OwnBallEAImage {
+        width: 5.012vw;
+        height: 97.5px;
+    }
+    
+    .mode2OwnBallEAImage img{
+        width: 4.235vw;
+        height: 4.235vw;
+    }
+    
+    .mode2OwnBallText {
+        font-size: 1.059vw;
+        line-height: 0.883vw;    
+    }
+    
+    .mode2MyClaimSection {
+        height: 120px;
+    }
+    
+    .modeMyClaimButton {
+        height: 48px;
+        font-size: 1.059vw;
+        border-radius: 6px;
+    }
+    
+    .modeMyClaimSuccessButton {
+        height: 48px;
+        font-size: 1.059vw;
+        border-radius: 6px;
+    }
+
+  }
+
+  @media only screen and (max-width: 960px) and (max-height: 796px) {
+    .mode2MyPageContainer {
+        margin-left: 336px;
+    }
+    
+    .mode2MyTopLine {
+        flex-direction: column;
+        width: 1068.008px;
+        height: 171px;
+      }
+    
+    .mode2MySection {
+        width: 1068.008px;
+        height: 100%;
+    }
+    
+    .mode2Mypagetitle {
+        margin-top: 144px;
+        height: 36px;
+        font-size: 36.006px;
+    }
+    
+    .mode2Mypagetext {
+        margin-top: 4px;
+        height: 90px;
+        font-size: 18.003px;
+    }
+    
+    .mode2mybuySection {
+        width: 516.001px;
+        height: 36px;
+        font-size: 13.515px;
+    }
+    
+    .mode2mybuySection:hover {
+        border-bottom: 3px solid #0060C4;
+      }
+    
+    .mode2myMySection {
+        width: 516.001px;
+        height: 36px;
+        margin-left: 0px;
+        margin-top: 7.5px;
+        font-size: 13.515px;
+        border-bottom: 3px solid #0060C4;
+    }
+    
+    .mode2MypaddingSection {
+        height: 36px;    
+    }
+    
+    .mode2MyDataContainer {
+        margin-top: 60px;
+        height: 360px;
+    }
+    
+    .mode2MyDataSection {
+        width: 140px;
+    }
+    
+    .mode2MytotalballTitle {
+        height: 30px;
+        font-size: 13.515px;
+        padding-left: 12.002px;
+        padding-top: 15.759px;
+    }
+    
+    .mode2MyTotalBallEA {
+        height: 57px;
+        padding-left: 12.002px;
+        padding-top: 6.005px;
+        font-size: 18.003px;
+    }
+    
+    .mode2MyTotalBallEA img {
+        width: 18.003px;
+        height: 18.003px;
+        margin-right: 8.993px;
+        margin-top: 4.505px;
+    }
+    
+    .mode2MyTotalPrizeTitle {
+        height: 27px;
+        font-size: 13.515px;
+        padding-left: 12.002px;
+    }
+    
+    .mode2MyTotalPrizeKlay {
+        height: 170px;
+        padding-left: 12.002px;
+        font-size: 18.003px;
+    }
+    
+    .mode2MyTotalPrizeKlay img {
+        width: 18.003px;
+        height: 18.003px;
+        margin-right: 8.993px;
+    }
+    
+    .mode2MyResultTitle {
+        height: 24px;
+        font-size: 13.515px;
+        padding-left: 12.002px;
+    }
+    
+    .mode2MyResultStatus {
+        height: 21px;
+        padding-left: 12.002px;
+        font-size: 18.003px;
+    }
+    
+    .mode2MyResultStatus img {
+        width: 18.003px;
+        height: 18.003px;
+        margin-right: 8.993px;
+    }
+    
+    .mode2MyPaddingsection2 {
+        width: 18.006px;
+    }
+    
+    .mode2MyWinningOwnBallContainer {
+        width: 360px;
+    }
+    
+    .mode2MyRoundWinningSection {
+        height: 150px;
+    }
+    
+    .mode2MyRoundBtn {
+        width: 27.006px;
+        border-radius: 6px;
+    }
+        
+    .mode2MyRoundBtn img {
+        width: 21px;
+        height: 13.5px;
+    }
+    
+    .mode2MyRoundContainer {
+        font-size: 27px;
+        width: 45%;
+    }
+    
+    .mode2MyRoundWinningBallContainer {
+        width: 45%;
+    }
+    
+    .mode2MyWinningTicketTitle {
+        font-size: 13.5px;
+        height: 45px;
+    }
+    
+    .mode2MyWinningTicketTitle img{
+        width: 13.5px;
+        height: 13.5px;
+        margin-right: 4.5px;
+    }
+    
+    .mode2MyWinningTicketNumber {
+        height: 75px;
+    }
+    
+    .mode2MyWinningTicketNumber img{
+        width: 71.995px;
+        height: 71.995px;
+    }
+    
+    .mode2MyWinningTicketNumberText {
+        font-size: 18.003px;
+        line-height: 15.011px;
+        height: 29.995px;
+    }
+    
+    .mode2WinningRoundId {
+        font-size: 13.515px;
+    }
+    
+    .mode2MypaddingSection3 {
+        height: 36px;
+    }
+    
+    .mode2MyOwnBallSection {
+        width: 360px;
+        height: 180px;
+        border-radius: 12px;
+    }
+    
+    .mode2OwnBallNumber {
+        padding-left: 12.002px;
+        font-size: 13.515px;
+        height: 45px;
+    }
+    
+    .mode2OwnBallNumber img {
+        margin-left: 8.993px;
+        margin-right: 8.993px;
+        width: 18.003px;
+        height: 18.003px;
+    }
+    
+    .modeMyOnwBallNumberText {
+        font-size: 18.003px;
+    }
+    
+    .mode2OwnBallImage {
+        display: flex;
+        flex-wrap: wrap;
+        height: 97.5px;
+    }
+    
+    .mode2OwnBallEAImage {
+        width: 71px;
+        height: 60px;
+    }
+    
+    .mode2OwnBallEAImage img{
+        width: 71px;
+        height: 50px;
+    }
+    
+    .mode2OwnBallText {
+        font-size: 12px;
+        line-height: 10px;    
+    }
+    
+    .mode2MyClaimSection {
+        width: 520px;
+        height: 120px;
+    }
+    
+    .modeMyClaimButton {
+        height: 48px;
+        font-size: 18.003px;
+        border-radius: 6px;
+    }
+    
+    .modeMyClaimSuccessButton {
+        height: 48px;
+        font-size: 18.003px;
+        border-radius: 6px;
+    }
+
+  }
 
 
 

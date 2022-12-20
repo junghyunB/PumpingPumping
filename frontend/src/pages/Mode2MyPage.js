@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Mode2MyPage.css";
 import { useNavigate } from "react-router-dom";
-import { ball_basic, mode1ticket, klaytn, proceeding, result_false, result_success, rightarrow, leftarrow, trophy, ball_proceeding, mode2ball, ball_blue, ball_green, ball_orange, ball_pink, ball_purple, ball_false } from "../assets/images";
+import { ball_basic, klaytn, proceeding, result_false, result_success, rightarrow, leftarrow, trophy, ball_proceeding, mode2ball, ball_blue, ball_green, ball_orange, ball_pink, ball_purple, ball_false } from "../assets/images";
 import { OneTimerM1, OneTimerM2 } from "../components";
 import { useSelector, useDispatch } from "react-redux";
 import { epochM2Action } from "../redux/actions/epochM2Action";
@@ -70,7 +70,7 @@ const Mode2MyPage = () => {
         TicketArr.push(
           <div className="mode2OwnBallEAImage" key={i}>
           <div className="mode2OwnBallText">#{myTicketInfoM2[0][i]} <br /> {changeEpochM2}, {myTicketInfoM2[1][i]}</div>
-          {myTicketInfoM2[0][i] === winningNumberM2 ?
+          {myTicketInfoM2[0][i] === winningNumberM2 && myTicketInfoM2[1][i] === winningTicketIdM2 ?
           <img src={mode2ball}></img>
           :
           <img src={ball_orange}></img>
@@ -81,7 +81,7 @@ const Mode2MyPage = () => {
         TicketArr.push(
           <div className="mode2OwnBallEAImage" key={i}>
           <div className="mode2OwnBallText">#{myTicketInfoM2[0][i]} <br /> {changeEpochM2}, {myTicketInfoM2[1][i]}</div>
-          {myTicketInfoM2[0][i] === winningNumberM2 ?
+          {myTicketInfoM2[0][i] === winningNumberM2 && myTicketInfoM2[1][i] === winningTicketIdM2 ?
           <img src={mode2ball}></img>
           :
           <img src={ball_blue}></img>
@@ -92,7 +92,7 @@ const Mode2MyPage = () => {
         TicketArr.push(
           <div className="mode2OwnBallEAImage" key={i}>
           <div className="mode2OwnBallText">#{myTicketInfoM2[0][i]} <br /> {changeEpochM2}, {myTicketInfoM2[1][i]}</div>
-          {myTicketInfoM2[0][i] === winningNumberM2 ?
+          {myTicketInfoM2[0][i] === winningNumberM2 && myTicketInfoM2[1][i] === winningTicketIdM2 ?
           <img src={mode2ball}></img>
           :
           <img src={ball_purple}></img>
@@ -103,7 +103,7 @@ const Mode2MyPage = () => {
         TicketArr.push(
           <div className="mode2OwnBallEAImage" key={i}>
           <div className="mode2OwnBallText">#{myTicketInfoM2[0][i]} <br /> {changeEpochM2}, {myTicketInfoM2[1][i]}</div>
-          {myTicketInfoM2[0][i] === winningNumberM2 ?
+          {myTicketInfoM2[0][i] === winningNumberM2 && myTicketInfoM2[1][i] === winningTicketIdM2 ?
           <img src={mode2ball}></img>
           :
           <img src={ball_pink}></img>
@@ -114,7 +114,7 @@ const Mode2MyPage = () => {
         TicketArr.push(
           <div className="mode2OwnBallEAImage" key={i}>
           <div className="mode2OwnBallText">#{myTicketInfoM2[0][i]} <br /> {changeEpochM2}, {myTicketInfoM2[1][i]}</div>
-          {myTicketInfoM2[0][i] === winningNumberM2 ?
+          {myTicketInfoM2[0][i] === winningNumberM2 && myTicketInfoM2[1][i] === winningTicketIdM2 ?
           <img src={mode2ball}></img>
           :
           <img src={ball_green}></img>

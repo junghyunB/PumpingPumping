@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "./Mode2DetailPage.css";
-import { useParams, useNavigate} from "react-router-dom";
-import { ball_blue, ball_green, ball_orange, ball_pink, ball_purple, rightarrow } from "../assets/images";
+import { useParams, useNavigate } from "react-router-dom";
+import {
+  ball_blue,
+  ball_green,
+  ball_orange,
+  ball_pink,
+  ball_purple,
+  rightarrow,
+} from "../assets/images";
 import { useSelector, useDispatch } from "react-redux";
 import { myTicketCountM2Action } from "../redux/actions/myTicketCountM2Action";
 import { epochM2Action } from "../redux/actions/epochM2Action";
 import { buyTicketM2Action } from "../redux/actions/buyTicketM2Action";
 import { epochAction } from "../redux/actions/epochAction";
-import Swal from 'sweetalert2';
-
+import Swal from "sweetalert2";
 
 const Mode2DetailPage = () => {
   const { id } = useParams();
@@ -38,13 +44,39 @@ const Mode2DetailPage = () => {
     ) {
       setSelectTicket(
         selectTicket.length === 0
-          ? (selectTicket) => [...selectTicket,"#", num]
+          ? (selectTicket) => [...selectTicket, "#", num]
           : (selectTicket) => [...selectTicket, "/", "#", num]
       );
-      setImgSelectTicket((imgSelectTicket) => [imgSelectTicket, num % 50 < 11 && num % 50 > 0 ?  <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_orange}></img></div> : 
-    num % 50 < 21 && num % 50 > 10 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_blue}></img></div> : num % 50 < 31 && num % 50 > 20 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_purple}></img></div>
-    : num % 50 < 41 && num % 50 > 30 ? <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_pink}></img></div> : <div className="mode2SelectImg"><div className="mode2SelectText">#{num}</div><img src={ball_green}></img></div>
-    ])
+
+      setImgSelectTicket([
+        ...imgSelectTicket,
+        num % 50 < 11 && num % 50 > 0 ? (
+          <div className="mode2SelectImg" key={num}>
+            <div className="mode2SelectText">#{num}</div>
+            <img src={ball_orange}></img>
+          </div>
+        ) : num % 50 < 21 && num % 50 > 10 ? (
+          <div className="mode2SelectImg" key={num}>
+            <div className="mode2SelectText">#{num}</div>
+            <img src={ball_blue}></img>
+          </div>
+        ) : num % 50 < 31 && num % 50 > 20 ? (
+          <div className="mode2SelectImg" key={num}>
+            <div className="mode2SelectText">#{num}</div>
+            <img src={ball_purple}></img>
+          </div>
+        ) : num % 50 < 41 && num % 50 > 30 ? (
+          <div className="mode2SelectImg" key={num}>
+            <div className="mode2SelectText">#{num}</div>
+            <img src={ball_pink}></img>
+          </div>
+        ) : (
+          <div className="mode2SelectImg" key={num}>
+            <div className="mode2SelectText">#{num}</div>
+            <img src={ball_green}></img>
+          </div>
+        ),
+      ]);
 
       setTransTicket((transTicket) => [...transTicket, num]);
     } else if (
@@ -59,16 +91,18 @@ const Mode2DetailPage = () => {
           selectTicket.filter((element) => element !== removeItem)
         );
         setTransTicket(transTicket.filter((element) => element !== num));
-        setImgSelectTicket(imgSelectTicket.filter((ele) => imgSelectTicket.length === 1 ? ele !== imgSelectTicket[0] : ele !== imgSelectTicket[1]))
-        console.log("No Real : ", imgSelectTicket)
+        setImgSelectTicket(
+          imgSelectTicket.filter((ele) => ele !== imgSelectTicket[numIndex2])
+        );
       } else {
         const removeItem = [...selectTicket.splice(numIndex - 2, 3)];
         setSelectTicket(
           selectTicket.filter((element) => element !== removeItem)
         );
         setTransTicket(transTicket.filter((element) => element !== num));
-        setImgSelectTicket(imgSelectTicket.filter((ele) => ele !== imgSelectTicket[1]))
-        console.log("No Real2 : ", imgSelectTicket)
+        setImgSelectTicket(
+          imgSelectTicket.filter((ele) => ele !== imgSelectTicket[numIndex2])
+        );
       }
     } else if (
       selectTicket.includes(num) === false &&
@@ -76,85 +110,99 @@ const Mode2DetailPage = () => {
     ) {
       Swal.fire({
         title: `In Mode 2, you can only hold up to 10 tickets at a time.`,
-        icon:"error",
+        icon: "error",
         confirmButtonText: "OK",
-      })
+      });
     }
   };
 
   let chooseBall = [];
-  // console.log("1", imgSelectTicket[0])
-  // console.log("2", imgSelectTicket[1])
-  // console.log("3", imgSelectTicket[2])
-  console.log("real : ", imgSelectTicket);
   for (let i = 1; i < 51; i++) {
     if (i < 11) {
       chooseBall.push(
-        <div className="mode2BallWrap" key={i} onClick={() => {
-          choiceTicket(i + (id - 1) * 50);
-        }}>
+        <div
+          className="mode2BallWrap"
+          key={i}
+          onClick={() => {
+            choiceTicket(i + (id - 1) * 50);
+          }}
+        >
           <div className="mode2BallNumText">
             <p>#{i + (id - 1) * 50}</p>
-            </div>
-          <img src={ball_orange}></img>
           </div>
+          <img src={ball_orange}></img>
+        </div>
       );
     } else if (i < 21) {
       chooseBall.push(
-        <div className="mode2BallWrap" key={i} onClick={() => {
-          choiceTicket(i + (id - 1) * 50);
-        }}>
+        <div
+          className="mode2BallWrap"
+          key={i}
+          onClick={() => {
+            choiceTicket(i + (id - 1) * 50);
+          }}
+        >
           <div className="mode2BallNumText">
             <p>#{i + (id - 1) * 50}</p>
-            </div>
-          <img src={ball_blue}></img>
           </div>
+          <img src={ball_blue}></img>
+        </div>
       );
     } else if (i < 31) {
       chooseBall.push(
-        <div className="mode2BallWrap" key={i} onClick={() => {
-          choiceTicket(i + (id - 1) * 50);
-        }}>
+        <div
+          className="mode2BallWrap"
+          key={i}
+          onClick={() => {
+            choiceTicket(i + (id - 1) * 50);
+          }}
+        >
           <div className="mode2BallNumText">
             <p>#{i + (id - 1) * 50}</p>
-            </div>
-          <img src={ball_purple}></img>
           </div>
+          <img src={ball_purple}></img>
+        </div>
       );
     } else if (i < 41) {
       chooseBall.push(
-        <div className="mode2BallWrap" key={i} onClick={() => {
-          choiceTicket(i + (id - 1) * 50);
-        }}>
+        <div
+          className="mode2BallWrap"
+          key={i}
+          onClick={() => {
+            choiceTicket(i + (id - 1) * 50);
+          }}
+        >
           <div className="mode2BallNumText">
             <p>#{i + (id - 1) * 50}</p>
-            </div>
-          <img src={ball_pink}></img>
           </div>
+          <img src={ball_pink}></img>
+        </div>
       );
     } else if (i < 51) {
       chooseBall.push(
-        <div className="mode2BallWrap" key={i} onClick={() => {
-          choiceTicket(i + (id - 1) * 50);
-        }}>
+        <div
+          className="mode2BallWrap"
+          key={i}
+          onClick={() => {
+            choiceTicket(i + (id - 1) * 50);
+          }}
+        >
           <div className="mode2BallNumText">
             <p>#{i + (id - 1) * 50}</p>
-            </div>
-          <img src={ball_green}></img>
           </div>
+          <img src={ball_green}></img>
+        </div>
       );
     }
   }
 
-
   const buyTicketM2 = () => {
     remainBuyTicket < transTicket.length
-      ? 
-      Swal.fire({
-        title: `Exceeded the allowable number.`,
-        icon:"error",
-        confirmButtonText: "OK",
-      })
+      ? Swal.fire({
+          title: `Exceeded the allowable number.`,
+          icon: "error",
+          confirmButtonText: "OK",
+        })
       : dispatch(buyTicketM2Action.buyTicketM2Act(amount, id, transTicket));
   };
 
@@ -164,31 +212,50 @@ const Mode2DetailPage = () => {
     dispatch(epochAction.epochAct());
   }, [account, epoch, epochM1]);
 
-
   return (
     <div className="mode2BuyDetailContainer">
-      <div className="mode2BuyDetailBg" onClick={() => navigate("/mode2buy")}></div>
+      <div
+        className="mode2BuyDetailBg"
+        onClick={() => navigate("/mode2buy")}
+      ></div>
       <div className="mode2BuyDetailSection1">
-      <div className="mode2BuyDetailSection2">
+        <div className="mode2BuyDetailSection2">
           <div className="mode2BuyDetailTitle">
             <p>Ball#{id} Choose Number</p>
           </div>
           <div className="mode2BuyDetailButton">
-            <div className="mode2BuyDetailClose" onClick={() => navigate("/mode2buy")}><p>Close</p></div>
-            <div className="mode2BuyDetailBuy" onClick={buyTicketM2}><p>Buy Ball</p></div>
+            <div
+              className="mode2BuyDetailClose"
+              onClick={() => navigate("/mode2buy")}
+            >
+              <p>Close</p>
+            </div>
+            <div className="mode2BuyDetailBuy" onClick={buyTicketM2}>
+              <p>Buy Ball</p>
+            </div>
           </div>
-          </div>
+        </div>
         <div className="mode2BuyDetailSection3">
           <div className="mode2buyDetailChooseBallContainer">
             <div className="mode2DetailData1">
-              <div className="mode2ChooseNumSection"><p>Choose Number </p> &nbsp;&nbsp;<p className="ChooseNumFont">{selectTicket}</p></div>
-              <div className="mode2ChooseNumCount"><p>select {transTicket.length} ball</p></div>
+              <div className="mode2ChooseNumSection">
+                <p>Choose Number </p> &nbsp;&nbsp;
+                <p className="ChooseNumFont">{selectTicket}</p>
+              </div>
+              <div className="mode2ChooseNumCount">
+                <p>select {transTicket.length} ball</p>
+              </div>
             </div>
-            <div className="mode2DetailData2"><div className="mode2DetailrightArrowimage"><img src={rightarrow}></img></div>{imgSelectTicket?.map((item) => item)}</div>
+            <div className="mode2DetailData2">
+              <div className="mode2DetailrightArrowimage">
+                <img src={rightarrow}></img>
+              </div>
+              {imgSelectTicket?.map((item) => item)}
+            </div>
           </div>
           <div className="mode2buyDetailBallTrailer">
-              {chooseBall.map((item) => item)}
-              </div>
+            {chooseBall.map((item) => item)}
+          </div>
         </div>
       </div>
     </div>

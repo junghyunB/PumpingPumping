@@ -192,8 +192,6 @@ input::-webkit-inner-spin-button {
 }
 
 .mode1buybutton:hover {
-  background-color: #f2e7fc;
-  color: #9d4fe8;
   box-shadow: 2px 2px 2px 2px #f2e7fc;
 }
 

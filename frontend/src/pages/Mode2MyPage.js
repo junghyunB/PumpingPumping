@@ -63,7 +63,7 @@ const Mode2MyPage = () => {
       })
     }
   };
-
+  const mode2OwnTicket = () => {
   for (let i = 0; i < limitedTicketCount; i++) {
     if(i + 1 <= myTicketInfoM2[0].length) {
       if(myTicketInfoM2[0][i] % 50 > 0 && myTicketInfoM2[0][i] % 50 < 11) {
@@ -124,13 +124,13 @@ const Mode2MyPage = () => {
       }
     } else {
       TicketArr.push(
-        <div className="mode2OwnBallEAImage">
+        <div className="mode2OwnBallEAImage" key={i}>
         <img src={ball_false}></img>
       </div>
       );
     }
-
   }
+}
 
   const addEpoch = () => {
     if (changeEpochM2 === currentEpochM2) {
@@ -155,6 +155,8 @@ const Mode2MyPage = () => {
       setChangeEpochM2(changeEpochM2 - 1);
     }
   };
+
+  mode2OwnTicket();
 
   useEffect(() => {
     dispatch(epochM2Action.epochM2Act());

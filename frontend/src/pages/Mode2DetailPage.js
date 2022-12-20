@@ -117,6 +117,8 @@ const Mode2DetailPage = () => {
   };
 
   let chooseBall = [];
+
+  const mode2DetailChooseBall = () => {
   for (let i = 1; i < 51; i++) {
     if (i < 11) {
       chooseBall.push(
@@ -195,6 +197,7 @@ const Mode2DetailPage = () => {
       );
     }
   }
+}
 
   const buyTicketM2 = () => {
     remainBuyTicket < transTicket.length
@@ -205,6 +208,8 @@ const Mode2DetailPage = () => {
         })
       : dispatch(buyTicketM2Action.buyTicketM2Act(amount, id, transTicket));
   };
+
+  mode2DetailChooseBall();
 
   useEffect(() => {
     dispatch(epochM2Action.epochM2Act());

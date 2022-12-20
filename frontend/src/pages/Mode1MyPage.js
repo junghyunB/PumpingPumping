@@ -96,6 +96,7 @@ const Mode1MyPage = () => {
       confirmButtonText: "OK",
     });
   };
+const mode1OwnTicket = () => { 
 
   for (let i = 0; i < maxTicketAmount; i++) {
     if (i + 1 <= ownedMyTicketNum.length) {
@@ -136,6 +137,9 @@ const Mode1MyPage = () => {
       );
     }
   }
+}
+
+ mode1OwnTicket();
 
   useEffect(() => {
     dispatch(epochAction.epochAct());
